@@ -6,7 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/x-icon" href="../src/assets/images/logo.svg" />
   <title>Vite + TS</title>
-
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <!--  vanilla-lazyload 17 -->
   <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17/dist/lazyload.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
@@ -350,12 +352,24 @@
         có thể tìm thấy các dịch vụ phát triển phần mềm chất lượng cao với giá cả hợp lý nhất.
 
       </p>
-      <div class="swiper swiper-initialized swiper-horizontal mt-14 swiper-backface-hidden">
+      <div class="swiper swiper-initialized swiper-horizontal swiper-backface-hidden mt-14">
         <div class="swiper-wrapper" style="transform: translate3d(0px, 0px, 0px);">
           <div class="swiper-slide lg:flex items-center swiper-slide-active" data-swiper-slide-index="0"><img alt="Ari"
               class="lazy lg:w-1/2 lg:pr-14 entered loaded"
               data-src="https://api.ari.com.vn/files/1690729387279-digital-transformation.webp" data-ll-status="loaded"
-              src="https://api.ari.com.vn/files/1690729387279-digital-transformation.webp">
+              src="	https://ari.com.vn/assets/images/home/services-4.jpeg">
+            <div class="lg:w-1/2 mt-5 lg:mt-0">
+              <h3 class="text-2xl text-blue-500 font-bold mb-1 gsap top">Tư vấn chuyển đổi số</h3>
+              <p class="gsap bottom">Chúng tôi cung cấp dịch vụ tư vấn chuyển đổi số giúp doanh nghiệp từng bước xây
+                dựng nên nguồn lực đồng thời tận dụng các công nghệ để giải quyết những bài toán cụ thể gắn liền với
+                định hướng phát triển của doanh nghiệp và tạo ra các giá trị mới ngoài các giá trị truyền thống vốn
+                có cho doanh nghiệp.</p>
+            </div>
+          </div>
+          <div class="swiper-slide lg:flex items-center swiper-slide-active" data-swiper-slide-index="0"><img alt="Ari"
+              class="lazy lg:w-1/2 lg:pr-14 entered loaded"
+              data-src="https://api.ari.com.vn/files/1690729387279-digital-transformation.webp" data-ll-status="loaded"
+              src="	https://ari.com.vn/assets/images/home/services-4.jpeg">
             <div class="lg:w-1/2 mt-5 lg:mt-0">
               <h3 class="text-2xl text-blue-500 font-bold mb-1 gsap top">Tư vấn chuyển đổi số</h3>
               <p class="gsap bottom">Chúng tôi cung cấp dịch vụ tư vấn chuyển đổi số giúp doanh nghiệp từng bước xây
@@ -365,6 +379,7 @@
             </div>
           </div>
         </div>
+        <div class="swiper-pagination"></div>
         <!-- <div class="w-20">
           <span class="swiper-pagination-bullet swiper-pagination-bullet-active swiper-pagination-bullet-active-main"
             style="left: 24px;"></span>
