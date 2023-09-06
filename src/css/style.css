@@ -1,0 +1,40 @@
+.hamburger {
+    display: flex;
+    height: 1.5rem;
+    width: 1.5rem;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: center;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+}
+
+.hamburger span {
+    height: 0.125rem;
+    width: 100%;
+    align-self: flex-end;
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+    transition-property: all;
+    transition-duration: .3s;
+    transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+}
+
+.hamburger .meat {
+    width: 83.333333%;
+    transition-property: all;
+    transition-duration: .15s;
+    transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+}
+
+.hamburger .bottom-bun {
+    width: 58.333333%;
+}
+
+.truncate-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}

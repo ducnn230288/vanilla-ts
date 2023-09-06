@@ -1,166 +1,698 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
 
-    <!--  vanilla-lazyload 17 -->
-    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17/dist/lazyload.min.js"></script>
-  </head>
-  <body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="../src/assets/images/logo.svg" />
+  <title>Vite + TS</title>
 
-  <!--  swiper 10  -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <!--  vanilla-lazyload 17 -->
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17/dist/lazyload.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+</head>
 
-  <!--  gsap 3  -->
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
-
-  <div class="relative group">
-    <div class="absolute z-10 w-full h-0 top-[calc(50%-1.125rem)]">
-      <div class="flex justify-between container mx-auto">
-        <span id="home-left" class="transition-all duration-500 ease-in-out relative sm:-left-10 group-hover:sm:left-0 opacity-0 group-hover:opacity-100 bg-gray-300 hover:bg-blue-600 hover:text-white p-2 rounded-full cursor-pointer">a</span>
-        <span id="home-right" class="transition-all duration-500 ease-in-out relative sm:-right-10 group-hover:sm:right-0 opacity-0 group-hover:opacity-100 bg-gray-300 hover:bg-blue-600 hover:text-white p-2 rounded-full cursor-pointer">a</span>
-      </div>
+<body>
+  <div class="container px-6 mx-auto py-5 items-center justify-between hidden lg:flex">
+    <div class="flex items-center">
+      <img src="../src/assets/images/logo.svg" class="h-12 lg:h-14" alt="logo" />
     </div>
-    <div class="swiper mySwiper w-full h-96">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <div class="container mx-auto px-12">
-            <h1 class="gsap left text-2xl xl:text-4xl text-blue-500 font-bold leading-none mt-8">
-              Enhance Vietnam’s intellectual value
-            </h1>
-            <p class="gsap top text-gray-500 leading-none"> Choose the service you want us to help with </p>
-            <div class="gsap right mt-10 mb-3">
-              <p class="font-bold text-2xl xl:text-3xl text-blue-800">Digital Transformation </p>
-              <p class="font-bold text-2xl xl:text-3xl text-blue-800">
-                <i class="las la-check-circle"></i> R&amp;D Services
-              </p>
-              <p class="font-bold text-2xl xl:text-3xl text-blue-800">
-                <i class="las la-check-circle"></i> Outsourcing Services
-              </p>
-              <p class="font-bold text-2xl xl:text-3xl text-blue-800">
-                <i class="las la-check-circle"></i> Product Development
-              </p>
-            </div>
-            <a class="gsap bottom bg-blue-500 text-white px-5 py-3 inline-block rounded-3xl">
-              Get Started
-            </a>
-          </div>
-          <img
-            alt="Row 01, col 01"
-            class="lazy gsap zoom w-full h-96 object-cover absolute top-0 left-0 -z-10"
-            data-src="https://via.placeholder.com/440x560?text=slider1"
-          />
-        </div>
-        <div class="swiper-slide">
-          <div class="container mx-auto px-12">
-            <h1 class="gsap left text-2xl xl:text-4xl text-blue-500 font-bold leading-none mt-8">
-              Enhance Vietnam’s intellectual value
-            </h1>
-            <p class="gsap top text-gray-500 leading-none"> Choose the service you want us to help with </p>
-            <div class="gsap right mt-10 mb-3">
-              <p class="font-bold text-2xl xl:text-3xl text-blue-800">Digital Transformation </p>
-              <p class="font-bold text-2xl xl:text-3xl text-blue-800">
-                <i class="las la-check-circle"></i> R&amp;D Services
-              </p>
-              <p class="font-bold text-2xl xl:text-3xl text-blue-800">
-                <i class="las la-check-circle"></i> Outsourcing Services
-              </p>
-              <p class="font-bold text-2xl xl:text-3xl text-blue-800">
-                <i class="las la-check-circle"></i> Product Development
-              </p>
-            </div>
-            <a class="gsap bottom bg-blue-500 text-white px-5 py-3 inline-block rounded-3xl">
-              Get Started
-            </a>
-          </div>
-          <img
-            alt="Row 01, col 01"
-            class="lazy gsap zoom w-full h-96 object-cover absolute top-0 left-0 -z-10"
-            data-src="https://via.placeholder.com/440x560?text=slider2"
-          />
+    <div class="flex items-center">
+      <div class="flex items-center pr-5 mr-5 border-r">
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+          x="0px" y="0px" width="32px" height="32px" viewBox="0 0 512 512" enable-background="new 0 0 512 512"
+          xml:space="preserve" class='w-8 h-8 mr-3 fill-blue-600'>
+          <path
+            d="M267,0c9.1,1.8,18.4,2.9,27.3,5.7c52.1,16.2,82.3,52.3,93.7,104.9c7.8,36.1,2.1,70.7-11.6,104.6c-14.9,36.9-34.8,71.1-57.8,103.5c-15.7,22.1-32.6,43.4-49.4,64.7c-8.1,10.3-18,10-26.3,0c-38.1-45.6-72.5-93.8-98.2-147.7c-11-23.1-20.7-46.8-22.9-72.5c-4.7-54.7,8.8-102.9,54.5-137.8c18.6-14.2,40.2-21.9,63.5-24.5c1.1-0.1,2.2-0.6,3.3-0.9C251,0,259,0,267,0z M256,180.3c25,0,45.1-20.1,45.1-45c0-24.9-20.3-45.1-45.1-45.1c-24.8,0-45.1,20.3-45.1,45.1C210.9,160.3,231,180.3,256,180.3z M0,501c2.4,4.9,6,8.6,11,11c75.3,0,150.7,0,226,0c2.4-1.6,4.8-3.2,7.3-4.9c-0.5-0.7-0.9-1.3-1.3-1.7c-33-32.9-66-65.8-98.9-98.9c-2.6-2.6-4.4-1.1-6.5,0C96,427.7,54.4,448.9,12.9,470.3c-2,1-3.8,3.1-4.8,5.2C5.1,481.2,2.7,487.1,0,493C0,495.7,0,498.3,0,501z M501,512c5-2.4,8.6-6.1,11-11c0-2.7,0-5.3,0-8c-0.6-1-1.2-1.9-1.7-2.9c-9.5-22-18.9-44-28.3-65.9c-0.6-1.5-1.4-3-2.2-4.7c-1.8,0.9-3.2,1.6-4.7,2.3c-46.6,24.1-93.3,48.3-139.9,72.5c-11.2,5.8-22.2,11.8-33.3,17.8C368.3,512,434.7,512,501,512z M172.9,392.8c32.4,32.4,64.9,64.7,97.2,97.2c2.8,2.8,4.6,1.8,7.3,0.4c53-27.5,106-55,159.1-82.5c10.4-5.4,20.9-10.9,31.5-16.4c-16.1-37.4-32-74.4-48-111.3c-2.3-5.3-6.8-8.2-12.6-8.4c-6.5-0.2-13,0-19.5-0.3c-3.3-0.2-5,1.1-6.6,3.9c-25.4,46.3-55.9,89.1-90.1,129.3c-4,4.7-9.1,8.9-14.6,11.9c-18.9,10.3-41.4,5.4-55.9-11.6c-8.1-9.5-15.8-19.2-23.8-28.9c-9,4.6-17.6,9-26.7,13.7C171.5,391.1,172.2,392,172.9,392.8zM175.5,346.7c-12.6-19.4-25.2-38.8-37.6-58.3c-3.5-5.4-5.4-13.3-10.3-16c-5.1-2.8-13-0.7-19.6-0.9c-8.8-0.3-14.2,3.7-17.6,11.8c-19.9,46.7-40,93.2-60,139.8c-0.6,1.4-1.1,2.9-2,5.4c50.8-25.9,100.4-51.3,150.5-76.9C177.6,349.7,176.5,348.2,175.5,346.7zM271,135.3c0-8.1-6.9-14.9-14.9-15c-8.3,0-15.2,7-15.1,15.4c0.1,8.2,6.9,14.7,15.2,14.6C264.5,150.1,271,143.5,271,135.3z" />
+        </svg>
+        <div class="leading-5">
+          <strong>Trụ sở</strong>
+          <br />
+          <span class="text-gray-600 text-sm">P3A.01.03, Picity High Park, 9A đường Thạnh Xuân 13, P. Thạnh Xuân, Q.12,
+            TP. Hồ Chí Minh, Việt Nam.</span>
         </div>
       </div>
-      <div class="swiper-pagination"></div>
+
+      <div class="flex items-center pr-5 mr-5 border-r">
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+          x="0px" y="0px" width="32px" height="32px" viewBox="0 0 384 384" enable-background="new 0 0 384 384"
+          xml:space="preserve" class='w-8 h-8 mr-3 fill-blue-600'>
+          <path
+            d="M384,129c0,58.8,0,117.5,0,176.3c-0.1,0.2-0.4,0.4-0.4,0.6c-5.1,20.3-17.4,30-38.4,30c-51.6,0-103.2,0-154.8,0c-51,0-102,0-153,0c-10.2,0-19.1-3-26.6-10.1C4.8,320.2,1.8,313,0,305.2C0,246.5,0,187.7,0,129c0.6,0.2,1.2,0.4,1.7,0.7c51.9,34.6,103.7,69.2,155.6,103.7c23.2,15.5,46.3,15.5,69.6,0c46.4-30.9,92.7-61.8,139-92.7C371.9,136.8,377.9,132.9,384,129zM0.6,89.8c1.9,9.7,7.2,17.1,15.4,22.5c51.7,34.4,103.3,68.9,154.9,103.3c13.8,9.2,27.8,9.4,41.7,0.2c51.8-34.4,103.5-69,155.3-103.4c8.7-5.8,13.6-13.9,16-23.9c0-3.3,0-6.5,0-9.8c-0.6-2.1-1.2-4.3-1.9-6.4c-4.7-14.1-17.2-23.3-32.5-24.2c-1.1-0.1-2.2-0.1-3.4-0.1c-102.9,0-205.7,0-308.6,0c-17.4,0-30.8,9-35.9,24.2c-0.7,2.1-1.2,4.3-1.9,6.4c0,3.3,0,6.5,0,9.8C0.2,88.9,0.5,89.3,0.6,89.8z" />
+        </svg>
+
+        <div class="leading-5">
+          <strong>Hộp thư</strong>
+          <br />
+          <a class="text-gray-600 text-sm" href="mailto:contact@ari.com.vn">
+            contact@ari.com.vn
+          </a>
+        </div>
+      </div>
+
+      <div class="flex items-center">
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+          x="0px" y="0px" width="32px" height="32px" viewBox="0 0 257.8 257.8" enable-background="new 0 0 257.8 257.8"
+          xml:space="preserve" class='w-8 h-8 mr-3 fill-blue-600'>
+          <path
+            d="M148,0.3c4.5,0.6,8.9,1.1,13.4,1.9c17.6,3.2,33.3,10.7,47.4,21.7c17.5,13.6,30.3,30.7,38.4,51.5c5.7,14.8,7.4,30.1,6.8,45.8c-0.2,5.8-3.9,9.3-9.6,9.5c-5.8,0.2-9.7-3-10.5-8.9c-0.8-6-1.1-12-2.1-17.9c-2.9-16.7-7.9-32.6-18.1-46.6c-9-12.4-21-21-35-26.8c-13-5.4-26.6-8.4-40.5-10c-6.1-0.7-9.3-3.2-9.7-8c-0.4-5.4,2-10.7,7.7-11.8c0.2,0,0.4-0.3,0.6-0.4C140.6,0.3,144.3,0.3,148,0.3zM8.5,80.3c9.7,23.4,21.7,45.6,36.5,66.2c15.9,22.1,34.4,41.7,55.5,58.8c24.5,19.8,51.4,35.6,80.3,48c7.2,3.1,14.7,5.5,22.9,3.2c18.8-5.3,32.4-16.7,40.3-34.5c5.4-12.1,2.9-21.8-7.4-30.2c-7.2-5.9-14.5-11.6-22.1-16.9c-6.7-4.7-13.5-9.3-20.8-13.1c-6.8-3.6-14.3-4-21.6-0.8c-5.4,2.4-9.4,6.5-13.1,11.1c-2.1,2.7-4.4,5.6-7.3,7.4c-4.8,3-9.9,1-14.6-1.1c-14.7-6.8-27.9-15.9-38.6-28.2c-7.6-8.7-13.7-18.4-17.8-29.2c-3.4-9-1.4-15.4,6.1-21.2c1.5-1.2,3.1-2.3,4.6-3.4c9-6.8,13.7-16.9,7.6-28.4c-4.5-8.6-9.6-17.1-15.1-25.1c-6-8.9-13-17-21.2-24c-4.9-4.2-10.5-5.9-16.9-5.5c-6.1,0.4-11.5,2.8-16.8,5.5C13.3,27.2,4.1,40,3.7,58.4C3.7,66,5.6,73.3,8.5,80.3z M211.9,75.5c-15-26.5-38.2-39.9-68.1-42.4c-7.7-0.6-12.9,6.1-11,13.6c1.3,4.9,5.1,6.3,9.5,7.4c7.2,1.7,14.5,3.2,21.6,5.5c10,3.2,18.7,8.6,24.8,17.5c5.6,8.2,8.3,17.5,10.1,27.1c0.9,4.5,1.1,9.1,2.2,13.6c1.1,4.6,4.7,6.8,9.7,6.6c5.2-0.2,8.5-2.7,9.4-7.4c0.5-2.8,0.4-5.7,0.6-8.5C220.4,96.8,217.7,85.7,211.9,75.5z M141.8,68.7c-3.7,1.5-5.9,6.1-5.6,10.4c0.4,4.1,2.9,6.4,6.6,7.6c2.2,0.7,4.5,1.1,6.8,1.6c9.7,2.2,15.9,8.9,17.4,18.8c0.3,2.3,0.7,4.7,1.5,6.8c1.6,4.4,5.4,6.8,9.9,6.5c4.5-0.3,7.8-2.9,8.8-7.6c0.6-2.6,0.8-5.3,0.6-8c-0.7-10.3-5.6-18.6-12.7-25.7c-7-7-15.1-11.8-25.5-12.5C147.1,67.3,144.3,67.6,141.8,68.7z" />
+        </svg>
+
+        <div class="leading-5">
+          <strong>Liên hệ</strong>
+          <br />
+          <a class="text-gray-600 text-sm" href="tel:(+84)363672405">
+            (+84) 098 7765926
+          </a>
+        </div>
+      </div>
     </div>
   </div>
+  <header class="w-full sticky top-0 left-0 z-30">
+    <div class="max-w-screen-2xl mx-auto py-3.5 pl-5 pr-3.5 flex items-center justify-between bg-blue-500">
+      <div class="text-center hidden lg:block">
+        <div class="flex gap-10 font-bold items-center">
+          <span class="text-white font-bold hover:text-white cursor-pointer">
+            Trang chủ
+          </span>
+          <span class="text-white font-bold hover:text-white cursor-pointer">
+            Giới thiệu
+          </span>
+          <span class="text-white font-bold hover:text-white cursor-pointer">
+            Tin tức
+          </span>
+          <span class="text-white font-bold hover:text-white cursor-pointer">
+            Dự án
+          </span>
+          <span class="text-white font-bold hover:text-white cursor-pointer">
+            Liên hệ
+          </span>
+        </div>
+      </div>
+      <div class="flex items-center lg:hidden">
+        <img src="../src/assets/images/logo.svg" class="h-12" alt="logo" />
+      </div>
+      <div class="flex items-center mr-12 sm:mr-12">
+        <div class="lg:mr-4 lg:border-r lg:pr-4">
+          <img src='../src/assets/svg/vn.svg' alt="" class="w-6" />
+        </div>
+        <div class="hidden lg:flex items-center gap-2">
+          <a class="text-white inline-flex" href="https://www.facebook.com/ARI-Technology-103059672364812"
+            target="_blank" rel="noreferrer">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="134.1px" height="134.1px"
+              viewBox="0 0 134.1 134.1" enable-background="new 0 0 134.1 134.1" xml:space="preserve"
+              class='w-5 h-5 inline fill-white'>
+              <path
+                d="M133.9,63.2c0,2.6,0,5.2,0,7.8c-0.1,0.4-0.2,0.8-0.2,1.3c-0.5,3.3-0.7,6.7-1.5,9.9c-6.2,24.3-21.3,40.5-44.9,48.6c-3.8,1.3-7.9,1.9-12,2.9c0-17.8,0-35.1,0-52.7c5.4,0,10.7,0,16,0c0.8-6.3,1.6-12.4,2.4-18.7c-6.2,0-12.3,0-18.5,0c0-4.6-0.1-9.1,0-13.6c0-1.3,0.4-2.6,1-3.7c1.2-2.5,3.6-3.3,6.2-3.5c3.5-0.2,7-0.1,10.4-0.2c0.5,0,0.9,0,1.5-0.1c0-5.4,0-10.6,0-15.8c0-0.3-0.6-0.9-0.9-0.9c-5.3-0.2-10.5-0.6-15.8-0.5c-5.1,0.1-9.8,1.8-13.8,5.1c-5.2,4.4-7.4,10.2-7.7,16.7c-0.3,5-0.1,9.9-0.2,14.9c0,0.5,0,1,0,1.7c-5.4,0-10.7,0-16,0c0,6.3,0,12.4,0,18.7c5.4,0,10.6,0,15.9,0c0,17.4,0,34.6,0,51.8c-0.3,0-0.6,0-0.8-0.1c-10.7-2-20.3-6.3-28.9-13c-10.2-7.9-17.6-18-22-30.2c-5.7-16-5.3-31.9,0.9-47.7c9.6-24.2,33.6-41,59.5-41.7c12-0.4,23.5,2.1,34,7.9c18.8,10.4,30.3,26.2,34.3,47.4C133.4,58.2,133.6,60.7,133.9,63.2z" />
+            </svg>
+          </a>
+          <a class="text-white inline-flex" href="https://www.linkedin.com/company/aritechnology/" target="_blank"
+            rel="noreferrer">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="384px" height="384px"
+              viewBox="0 0 384 384" enable-background="new 0 0 384 384" xml:space="preserve"
+              class='w-5 h-5 inline fill-white'>
+              <path
+                d="M135.8,384c0-83.7,0-167.5,0-251.2c0-1.6,0-3.2,0-5c25.5,0,50.7,0,76.4,0c0,11.5,0,23,0,35.6c1.3-1.6,1.8-2.1,2.2-2.8c13.8-22.5,34.5-34.5,60.1-38.3c15.7-2.3,31.4-1.2,46.9,2.6c28.9,7.1,46.6,25.7,55.1,53.7c4.1,13.3,5.9,27,6.8,40.9c0.1,2.1,0.5,4.2,0.7,6.2c0,52.8,0,105.5,0,158.2c-26.5,0-53,0-79.5,0c0-44.6,0.1-89.2-0.2-133.8c0-8.3-0.9-16.7-2.2-25c-3.2-20.4-14.3-31.8-33.5-33.5c-26.2-2.4-45,8-50.4,35.5c-2,10.1-2.7,20.6-2.8,30.9c-0.3,42-0.2,84-0.2,125.9C188.8,384,162.2,384,135.8,384z M86.2,384c-0.1-1.7-0.2-3.5-0.2-5.2c0-82,0-164,0-246c0-1.7,0-3.4,0-5c-26.9,0-53.1,0-79.7,0c0,1.9,0,3.7,0,5.4c0,81.9,0,163.7,0,245.6c0,1.7-0.2,3.5-0.3,5.2C32.8,384,59.5,384,86.2,384z M40.5,0c-7.7,1.8-15.1,4.1-21.6,8.9C9.1,16.3,3,26,0.7,38c-0.2,0.8-0.5,1.7-0.7,2.5c0,3.8,0,7.5,0,11.2c0.3,1.1,0.6,2.1,0.8,3.2c4.2,21.7,23.8,37.9,45.6,37.7c21.9-0.2,41.2-16.4,45-37.8c4-22.4-8.1-44.1-29.3-51.9c-3.4-1.2-6.9-2-10.4-3C48,0,44.2,0,40.5,0z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <span class='hamburger lg:!hidden fixed z-50 right-6 top-6'>
+    <span class="top-bun"></span>
+    <span class="meat"></span>
+    <span class="bottom-bun"></span>
+  </span>
+  <!--<div className={classNames('fixed top-0 h-full bg-black transition-all duration-500 ease-in-out w-full z-30',
+    { 'opacity-70 right-0' : showMenu, 'opacity-0 -right-full' : !showMenu, })} {{!-- onClick={()=> set_showMenu(false)}
+    --}}
+    ></div>
+  {{!-- <div
+    className={classNames( 'w-80 bg-blue-500 h-screen z-40 fixed top-0 p-5 text-white transition-all duration-500 ease-in-out flex justify-between flex-col'
+    , { 'right-0 ' : showMenu, '-right-80' : !showMenu }, )}>
+    <div className={classNames('transition-all duration-1000 ease-in-out relative', { 'top-0 opacity-100' :
+      showMenu, 'top-10 opacity-0' : !showMenu, })}>
+      <div className="font-medium flex flex-col text-white mt-10">
+        {data.map((item: any, index: number) => (
+        <Fragment key={index}>
+          <button className={classNames('text-white border-white py-3 flex justify-between', { 'border-b ' :
+            !item.children, })} onClick={()=> {
+            window.scroll({ top: 0 });
+            navigate(item.slug);
+            set_showMenu(false);
+            }}
+            >
+            {item.title}
+            {!item.children &&
+            <Arrow className={'w-4 h-4 relative'} />}
+          </button>
+          {!!item.children?.length &&
+          item.children.map((sub: any, subIndex: number) => (
+          <button key={subIndex} className="text-white border-white py-3 flex justify-between pl-5" onClick={()=> {
+            window.scroll({ top: 0 });
+            navigate(sub.slug);
+            set_showMenu(false);
+            }}
+            >
+            {sub.title}
+            <Arrow className={'w-4 h-4 relative'} />
+          </button>
+          ))}
+        </Fragment>
+        ))}
+        <a className="text-white border-white py-3 flex justify-between" onClick={()=>
+          handleScrollTo('form-contact-us')}
+          >
+          {t('layout.header.Contact Us')}
+          <Arrow className={'w-4 h-4 relative'} />
+        </a>
+      </div>
+    </div>
 
+    <div className={classNames('transition-all duration-1000 ease-in-out relative', { 'top-0 opacity-100' :
+      showMenu, '-top-10 opacity-0' : !showMenu, })}>
+      <div className="flex items-center mt-5">
+        <MapMarked className={'w-12 h-8 mr-3'} />
+        <div className="leading-5">
+          <strong>{t('layout.header.Location')}</strong>
+          <br />
+          <span className="text-sm">{t('layout.header.Address')}</span>
+        </div>
+      </div>
 
-  <!--  glightbox 3  -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3/dist/css/glightbox.min.css" />
-  <script src="https://cdn.jsdelivr.net/npm/glightbox@3/dist/js/glightbox.min.js"></script>
+      <div className="flex items-center mt-3 border-t border-white pt-3">
+        <Envelope className={'w-8 h-8 mr-3'} />
+        <div className="leading-5">
+          <strong>{t('layout.header.Mail us')}</strong>
+          <br />
+          <a className="text-sm text-white" href="mailto:contact@ari.com.vn">
+            contact@ari.com.vn
+          </a>
+        </div>
+      </div>
 
-  <ul class="grid grid-cols-3 gap-3 container mx-auto mt-3">
-    <li class="relative group">
-      <a href="https://biati-digital.github.io/glightbox/demo/img/large/gm1.jpg" class="glightbox w-full overflow-hidden block">
-        <span class="absolute top-0 left-0 bg-black w-full h-full z-10 opacity-0 duration-500 transition-all ease-in-out group-hover:opacity-30"></span>
-        <img
-          class="w-[calc(100%+40px)] max-w-[calc(100%+40px)] duration-500 transition-all ease-in-out translate-x-[-40px] group-hover:translate-x-0"
-          src="https://biati-digital.github.io/glightbox/demo/img/small/gm1.jpg" alt="image"/>
-      </a>
-    </li>
-    <li class="relative group">
-      <a href="https://biati-digital.github.io/glightbox/demo/img/large/gm2.jpg" class="glightbox w-full overflow-hidden block">
-        <span class="absolute top-0 left-0 bg-black w-full h-full z-10 opacity-0 duration-500 transition-all ease-in-out group-hover:opacity-30"></span>
-        <img
-          class="w-[calc(100%+40px)] max-w-[calc(100%+40px)] duration-500 transition-all ease-in-out translate-x-[-40px] group-hover:translate-x-0"
-          src="https://biati-digital.github.io/glightbox/demo/img/small/gm2.jpg" alt="image" />
-      </a>
-    </li>
-    <li class="relative group">
-      <a href="https://biati-digital.github.io/glightbox/demo/img/large/gm3.jpg" class="glightbox w-full overflow-hidden block">
-        <span class="absolute top-0 left-0 bg-black w-full h-full z-10 opacity-0 duration-500 transition-all ease-in-out group-hover:opacity-30"></span>
-        <img
-          class="w-[calc(100%+40px)] max-w-[calc(100%+40px)] duration-500 transition-all ease-in-out translate-x-[-40px] group-hover:translate-x-0"
-          src="https://biati-digital.github.io/glightbox/demo/img/small/gm3.jpg" alt="image" />
-      </a>
-    </li>
-    <li class="relative group">
-      <a href="https://biati-digital.github.io/glightbox/demo/img/large/gm4.jpg" class="glightbox w-full overflow-hidden block">
-        <span class="absolute top-0 left-0 bg-black w-full h-full z-10 opacity-0 duration-500 transition-all ease-in-out group-hover:opacity-30"></span>
-        <img
-          class="w-[calc(100%+40px)] max-w-[calc(100%+40px)] duration-500 transition-all ease-in-out translate-x-[-40px] group-hover:translate-x-0"
-          src="https://biati-digital.github.io/glightbox/demo/img/small/gm4.jpg" alt="image" />
-      </a>
-    </li>
-    <li class="relative group">
-      <a href="https://biati-digital.github.io/glightbox/demo/img/large/gm5.jpg" class="glightbox w-full overflow-hidden block">
-        <span class="absolute top-0 left-0 bg-black w-full h-full z-10 opacity-0 duration-500 transition-all ease-in-out group-hover:opacity-30"></span>
-        <img
-          class="w-[calc(100%+40px)] max-w-[calc(100%+40px)] duration-500 transition-all ease-in-out translate-x-[-40px] group-hover:translate-x-0"
-          src="https://biati-digital.github.io/glightbox/demo/img/small/gm5.jpg" alt="image" />
-      </a>
-    </li>
-    <li class="relative group">
-      <a href="https://biati-digital.github.io/glightbox/demo/img/large/gm6.jpg" class="glightbox w-full overflow-hidden block">
-        <span class="absolute top-0 left-0 bg-black w-full h-full z-10 opacity-0 duration-500 transition-all ease-in-out group-hover:opacity-30"></span>
-        <img
-          class="w-[calc(100%+40px)] max-w-[calc(100%+40px)] duration-500 transition-all ease-in-out translate-x-[-40px] group-hover:translate-x-0"
-          src="https://biati-digital.github.io/glightbox/demo/img/small/gm6.jpg" alt="image" />
-      </a>
-    </li>
-  </ul>
+      <div className="flex items-center mt-3 border-t border-white pt-3">
+        <Phone className={'w-8 h-8 mr-3'} />
+        <div className="leading-5">
+          <strong>{t('layout.header.Call us')}</strong>
+          <br />
+          <a className="text-sm text-white" href="tel:(+84)363672405">
+            (+84) 098 7765926
+          </a>
+        </div>
+      </div>
+    </div>
+  </div> --}} -->
+  <section id='title' class='relative group'>
+    <div class='flex items-center min-h-[500px] max-h-[650px] h-[41vw]'>
+      <div class='container mx-auto px-12'>
+        <h1 class="gsap left text-2xl xl:text-4xl text-blue-500 font-bold leading-none mt-8">
+          Nâng cao giá trị trí tuệ Việt
+        </h1>
+        <p class="text-gray-500 leading-none gsap top mt-4">Chọn dịch vụ bạn cần chúng tôi hỗ trợ
+        </p>
+        <ul class="mt-8 mb-3">
+          <li class="gsap right font-bold text-2xl xl:text-3xl text-blue-900 mb-4">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="512px" height="512px"
+              viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"
+              class='w-8 h-8 inline-block relative -top-1 mr-4'>
+              <path
+                d="M269.5,0c11.8,1.7,23.8,2.9,35.5,5.1c34.7,6.4,66.4,20.2,95.5,40.1c9.3,6.4,11.6,18.1,5.8,27.3c-5.8,9.1-17.7,12.2-27.2,6.1c-17.9-11.4-36.3-21.7-56.7-27.9c-68.7-20.9-133.1-11.8-192,29.7C87.4,110.7,58.9,151.8,46.2,203c-15.3,61.8-5.7,120,29.8,172.8c35.3,52.5,85,84.3,147.8,93.8c47.6,7.2,92.8-1.2,135.2-24.1c2.9-1.6,5.8-3.3,8.8-4.8c10.2-5.2,21.5-2.1,26.9,7.3c5.6,9.6,2.9,21.9-7.4,27.2c-15.9,8.2-32.1,16.2-48.8,22.7c-20.5,8-42.3,11.8-64.3,13.4c-1.3,0.1-2.6,0.5-3.9,0.8c-10,0-20,0-30,0c-10.7-1.4-21.5-2.4-32.1-4.4C108.3,489.5,27,410.8,5.5,311.3c-2-9.1-3.4-18.2-5.1-27.3c0-18.7,0-37.3,0-56c1.2-6.7,2.2-13.4,3.5-20c9.8-51,33-95,69.4-131.9c38.3-38.6,84.2-62.9,137.9-72.2c9.6-1.7,19.4-2.6,29.1-3.9C250.1,0,259.8,0,269.5,0z M297.7,333.9c62.7-78,125.5-156,188.2-234.1c7.4-9.2,15-18.3,22-27.8c5.6-7.7,4.6-17.5-1.7-24.4c-6-6.7-16-8.9-23.7-4.3c-4.3,2.6-7.8,6.7-11,10.6C403.8,138,336.2,222.2,268.6,306.3c-7.8,9.7-13.8,10.1-22.7,1.6c-33.4-31.6-66.7-63.3-100.1-94.9c-9.6-9.1-21.6-9.3-29.8-0.7c-8.1,8.6-7.3,20.6,2.3,29.7c33.8,32.1,67.7,64.2,101.5,96.3c10.6,10.1,23,15.6,40.7,15.7C274,353.4,287.4,346.8,297.7,333.9z M503.5,192.7c-3.3-12.1-15-18.5-26.3-14.4c-10.1,3.7-14.9,13.5-12.1,25.3c8.2,34.1,8.5,68.2,0.4,102.4c-6,25-16.6,48-30.4,69.7c-6.5,10.2-3.7,22.5,5.5,28.1c10.2,6.2,21.7,3.2,28.5-7.3c27-41.7,41.3-87.3,42.2-137C511.9,239.2,508.6,211.7,503.5,192.7z" />
+            </svg>
+            Tư vấn chuyển đổi số
+          </li>
+          <li class="gsap right font-bold text-2xl xl:text-3xl text-blue-900 mb-4">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="512px" height="512px"
+              viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"
+              class='w-8 h-8 inline-block relative -top-1 mr-4'>
+              <path
+                d="M269.5,0c11.8,1.7,23.8,2.9,35.5,5.1c34.7,6.4,66.4,20.2,95.5,40.1c9.3,6.4,11.6,18.1,5.8,27.3c-5.8,9.1-17.7,12.2-27.2,6.1c-17.9-11.4-36.3-21.7-56.7-27.9c-68.7-20.9-133.1-11.8-192,29.7C87.4,110.7,58.9,151.8,46.2,203c-15.3,61.8-5.7,120,29.8,172.8c35.3,52.5,85,84.3,147.8,93.8c47.6,7.2,92.8-1.2,135.2-24.1c2.9-1.6,5.8-3.3,8.8-4.8c10.2-5.2,21.5-2.1,26.9,7.3c5.6,9.6,2.9,21.9-7.4,27.2c-15.9,8.2-32.1,16.2-48.8,22.7c-20.5,8-42.3,11.8-64.3,13.4c-1.3,0.1-2.6,0.5-3.9,0.8c-10,0-20,0-30,0c-10.7-1.4-21.5-2.4-32.1-4.4C108.3,489.5,27,410.8,5.5,311.3c-2-9.1-3.4-18.2-5.1-27.3c0-18.7,0-37.3,0-56c1.2-6.7,2.2-13.4,3.5-20c9.8-51,33-95,69.4-131.9c38.3-38.6,84.2-62.9,137.9-72.2c9.6-1.7,19.4-2.6,29.1-3.9C250.1,0,259.8,0,269.5,0z M297.7,333.9c62.7-78,125.5-156,188.2-234.1c7.4-9.2,15-18.3,22-27.8c5.6-7.7,4.6-17.5-1.7-24.4c-6-6.7-16-8.9-23.7-4.3c-4.3,2.6-7.8,6.7-11,10.6C403.8,138,336.2,222.2,268.6,306.3c-7.8,9.7-13.8,10.1-22.7,1.6c-33.4-31.6-66.7-63.3-100.1-94.9c-9.6-9.1-21.6-9.3-29.8-0.7c-8.1,8.6-7.3,20.6,2.3,29.7c33.8,32.1,67.7,64.2,101.5,96.3c10.6,10.1,23,15.6,40.7,15.7C274,353.4,287.4,346.8,297.7,333.9z M503.5,192.7c-3.3-12.1-15-18.5-26.3-14.4c-10.1,3.7-14.9,13.5-12.1,25.3c8.2,34.1,8.5,68.2,0.4,102.4c-6,25-16.6,48-30.4,69.7c-6.5,10.2-3.7,22.5,5.5,28.1c10.2,6.2,21.7,3.2,28.5-7.3c27-41.7,41.3-87.3,42.2-137C511.9,239.2,508.6,211.7,503.5,192.7z" />
+            </svg>
+            Dịch vụ nghiên cứu và phát triển
+          </li>
+          <li class="gsap right font-bold text-2xl xl:text-3xl text-blue-900 mb-4">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="512px" height="512px"
+              viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"
+              class='w-8 h-8 inline-block relative -top-1 mr-4'>
+              <path
+                d="M269.5,0c11.8,1.7,23.8,2.9,35.5,5.1c34.7,6.4,66.4,20.2,95.5,40.1c9.3,6.4,11.6,18.1,5.8,27.3c-5.8,9.1-17.7,12.2-27.2,6.1c-17.9-11.4-36.3-21.7-56.7-27.9c-68.7-20.9-133.1-11.8-192,29.7C87.4,110.7,58.9,151.8,46.2,203c-15.3,61.8-5.7,120,29.8,172.8c35.3,52.5,85,84.3,147.8,93.8c47.6,7.2,92.8-1.2,135.2-24.1c2.9-1.6,5.8-3.3,8.8-4.8c10.2-5.2,21.5-2.1,26.9,7.3c5.6,9.6,2.9,21.9-7.4,27.2c-15.9,8.2-32.1,16.2-48.8,22.7c-20.5,8-42.3,11.8-64.3,13.4c-1.3,0.1-2.6,0.5-3.9,0.8c-10,0-20,0-30,0c-10.7-1.4-21.5-2.4-32.1-4.4C108.3,489.5,27,410.8,5.5,311.3c-2-9.1-3.4-18.2-5.1-27.3c0-18.7,0-37.3,0-56c1.2-6.7,2.2-13.4,3.5-20c9.8-51,33-95,69.4-131.9c38.3-38.6,84.2-62.9,137.9-72.2c9.6-1.7,19.4-2.6,29.1-3.9C250.1,0,259.8,0,269.5,0z M297.7,333.9c62.7-78,125.5-156,188.2-234.1c7.4-9.2,15-18.3,22-27.8c5.6-7.7,4.6-17.5-1.7-24.4c-6-6.7-16-8.9-23.7-4.3c-4.3,2.6-7.8,6.7-11,10.6C403.8,138,336.2,222.2,268.6,306.3c-7.8,9.7-13.8,10.1-22.7,1.6c-33.4-31.6-66.7-63.3-100.1-94.9c-9.6-9.1-21.6-9.3-29.8-0.7c-8.1,8.6-7.3,20.6,2.3,29.7c33.8,32.1,67.7,64.2,101.5,96.3c10.6,10.1,23,15.6,40.7,15.7C274,353.4,287.4,346.8,297.7,333.9z M503.5,192.7c-3.3-12.1-15-18.5-26.3-14.4c-10.1,3.7-14.9,13.5-12.1,25.3c8.2,34.1,8.5,68.2,0.4,102.4c-6,25-16.6,48-30.4,69.7c-6.5,10.2-3.7,22.5,5.5,28.1c10.2,6.2,21.7,3.2,28.5-7.3c27-41.7,41.3-87.3,42.2-137C511.9,239.2,508.6,211.7,503.5,192.7z" />
+            </svg>
+            Dịch vụ gia công phần mềm
+          </li>
+          <li class="gsap right font-bold text-2xl xl:text-3xl text-blue-900">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="512px" height="512px"
+              viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"
+              class='w-8 h-8 inline-block relative -top-1 mr-4'>
+              <path
+                d="M269.5,0c11.8,1.7,23.8,2.9,35.5,5.1c34.7,6.4,66.4,20.2,95.5,40.1c9.3,6.4,11.6,18.1,5.8,27.3c-5.8,9.1-17.7,12.2-27.2,6.1c-17.9-11.4-36.3-21.7-56.7-27.9c-68.7-20.9-133.1-11.8-192,29.7C87.4,110.7,58.9,151.8,46.2,203c-15.3,61.8-5.7,120,29.8,172.8c35.3,52.5,85,84.3,147.8,93.8c47.6,7.2,92.8-1.2,135.2-24.1c2.9-1.6,5.8-3.3,8.8-4.8c10.2-5.2,21.5-2.1,26.9,7.3c5.6,9.6,2.9,21.9-7.4,27.2c-15.9,8.2-32.1,16.2-48.8,22.7c-20.5,8-42.3,11.8-64.3,13.4c-1.3,0.1-2.6,0.5-3.9,0.8c-10,0-20,0-30,0c-10.7-1.4-21.5-2.4-32.1-4.4C108.3,489.5,27,410.8,5.5,311.3c-2-9.1-3.4-18.2-5.1-27.3c0-18.7,0-37.3,0-56c1.2-6.7,2.2-13.4,3.5-20c9.8-51,33-95,69.4-131.9c38.3-38.6,84.2-62.9,137.9-72.2c9.6-1.7,19.4-2.6,29.1-3.9C250.1,0,259.8,0,269.5,0z M297.7,333.9c62.7-78,125.5-156,188.2-234.1c7.4-9.2,15-18.3,22-27.8c5.6-7.7,4.6-17.5-1.7-24.4c-6-6.7-16-8.9-23.7-4.3c-4.3,2.6-7.8,6.7-11,10.6C403.8,138,336.2,222.2,268.6,306.3c-7.8,9.7-13.8,10.1-22.7,1.6c-33.4-31.6-66.7-63.3-100.1-94.9c-9.6-9.1-21.6-9.3-29.8-0.7c-8.1,8.6-7.3,20.6,2.3,29.7c33.8,32.1,67.7,64.2,101.5,96.3c10.6,10.1,23,15.6,40.7,15.7C274,353.4,287.4,346.8,297.7,333.9z M503.5,192.7c-3.3-12.1-15-18.5-26.3-14.4c-10.1,3.7-14.9,13.5-12.1,25.3c8.2,34.1,8.5,68.2,0.4,102.4c-6,25-16.6,48-30.4,69.7c-6.5,10.2-3.7,22.5,5.5,28.1c10.2,6.2,21.7,3.2,28.5-7.3c27-41.7,41.3-87.3,42.2-137C511.9,239.2,508.6,211.7,503.5,192.7z" />
+            </svg>
+            Phát triển sản phẩm phần mềm
+          </li>
+        </ul>
+        <button class="gsap bottom bg-blue-500 hover:bg-blue-600 text-white px-5 py-3 rounded-3xl mt-4">
+          Bắt đầu
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px" y="0px" width="384px" height="384px" viewBox="0 0 384 384" enable-background="new 0 0 384 384"
+            xml:space="preserve" class='w-4 h-4 ml-1 inline-block fill-white'>
+            <path
+              d="M251,192.2c-4.7-4.5-8.7-8.4-12.7-12.4C196,137.5,153.7,95.3,111.6,53c-2.1-2.2-3.9-5.3-4.5-8.3c-1-4.8,1.6-9,5.8-11.1c4.5-2.2,8.7-1.7,12.6,1.3c1,0.8,1.8,1.7,2.7,2.6c47.8,47.8,95.6,95.6,143.5,143.4c7.3,7.3,7.3,14.8,0,22.2C223.8,251,175.8,298.9,128,346.8c-3.6,3.6-7.4,6-12.6,4.5c-7.9-2.2-11.1-11.4-6.1-17.9c0.9-1.2,2-2.2,3.1-3.3c45.1-45.1,90.1-90.1,135.2-135.2C248.5,194.1,249.5,193.4,251,192.2z" />
+          </svg>
+        </button>
+      </div>
+      <img class='lazy gsap zoom w-full min-h-[500px] max-h-[650px] h-[41vw] object-cover absolute top-0 left-0 -z-10'
+        src='../src/assets/images/banner.jpg' />
+    </div>
+  </section>
 
-  <!--  echarts 5  -->
-  <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
-  <div id="echarts" class="w-full h-52"></div>
+  <section class="bg-[url('../src/assets/images/home/choose-bg3.jpg')] w-full bg-cover bg-bottom">
+    <div class="container px-6 mx-auto md:flex items-center sm:py-24 py-10">
+      <div class="md:w-1/3">
+        <img src="../src/assets/images/home/about.jpg" alt="ARI" class="lazy w-full rounded-tr-[120px]" />
+      </div>
+      <div class="md:w-2/3 md:pl-12 text-gray-500 pt-10 md:pt-0">
+        <p class="text-blue-500 uppercase font-bold mb-4">GIỚI THIỆU ARI</p>
+        <h2 class="text-4xl text-blue-900 font-bold  mb-8">
+          ARI là một trong những <br />
+          công ty công nghệ tốt nhất
+        </h2>
+        <p class="border-l-4 border-blue-500 pl-4 mb-4">Công Ty Cổ Phần Công Nghệ ARI được thành lập vào năm 2018 và có
+          trụ sở chính tại Thành phố Hồ Chí Minh.</p>
+        <p class="border-l-4 border-blue-500 pl-4 mb-4">Chúng tôi chuyên tư vấn và cung cấp các giải pháp chuyển đổi số
+          nhằm giải quyết các vấn đề thực tế, giúp khách hàng vượt qua những thách thức, rào cản và đạt được hiệu quả
+          cao nhất trong quá trình vận hành, kinh doanh.</p>
+        <p class="border-l-4 border-blue-500 pl-4">Với đội ngũ tài năng trẻ và sáng tạo, ARI luôn hướng đến những sản
+          phẩm chất lượng và tiên tiến nhất, đảm bảo đáp ứng tối đa yêu cầu của khách hàng.</p>
+      </div>
+    </div>
+  </section>
 
-  <!--  inputmask 5  -->
-  <script src="https://cdn.jsdelivr.net/npm/inputmask@5/dist/inputmask.min.js"></script>
-  <input data-inputmask="'mask': '99-9999999'" />
+  <section
+    class="bg-[url('../src/assets/images/home/ser-bg3.jpg')] w-full bg-cover bg-center bg-gray-100 bg-blend-multiply">
+    <div class="container px-6 mx-auto sm:py-24 py-10">
+      <p class="text-blue-500 uppercase font-bold text-center mb-4">SỨ MỆNH</p>
+      <h2 class="text-4xl text-blue-900 font-bold text-center">Chúng tôi cung cấp kỹ thuật & tư vấn phần mềm</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mt-14">
+        <div
+          class="drop-shadow bg-white rounded-xl p-5 hover:scale-110 duration-500 transition-all ease-in-out text-center lg:text-left h-64">
+          <img alt="ARI" class="lazy h-20 mb-5 mx-auto entered loaded"
+            data-src="https://api.ari.com.vn/files/1690729868304-for-the-social.webp" data-ll-status="loaded"
+            src="https://api.ari.com.vn/files/1690729868304-for-the-social.webp">
+          <h3 class="text-xl text-blue-500 font-bold mb-1">Đối với xã hội</h3>
+          <p>Từng bước hiện đại hóa công tác quản lý doanh nghiệp theo hướng công nghiệp 4.0.
+          </p>
+        </div>
+        <div
+          class="drop-shadow bg-white rounded-xl p-5 hover:scale-110 duration-500 transition-all ease-in-out text-center lg:text-left h-64">
+          <img alt="ARI" class="lazy h-20 mb-5 mx-auto entered loaded"
+            data-src="https://api.ari.com.vn/files/1690729911632-for-the-market.webp" data-ll-status="loaded"
+            src="https://api.ari.com.vn/files/1690729911632-for-the-market.webp">
+          <h3 class="text-xl text-blue-500 font-bold mb-1">Đối với thị trường</h3>
+          <p>Cung cấp các sản phẩm và dịch vụ đạt tiêu chuẩn quốc tế.
+          </p>
+        </div>
+        <div
+          class="drop-shadow bg-white rounded-xl p-5 hover:scale-110 duration-500 transition-all ease-in-out text-center lg:text-left h-64">
+          <img alt="ARI" class="lazy h-20 mb-5 mx-auto entered loaded"
+            data-src="https://api.ari.com.vn/files/1690729935181-for-shareholders-and-partners.webp"
+            data-ll-status="loaded" src="https://api.ari.com.vn/files/1690729935181-for-shareholders-and-partners.webp">
+          <h3 class="text-xl text-blue-500 font-bold mb-1">Đối với các cổ đông và đối tác</h3>
+          <p>Thúc đẩy tinh thần hợp tác đôi bên cùng có lợi cũng như các giá trị đầu tư bền vững.
+          </p>
+        </div>
+        <div
+          class="drop-shadow bg-white rounded-xl p-5 hover:scale-110 duration-500 transition-all ease-in-out text-center lg:text-left h-64">
+          <img alt="ARI" class="lazy h-20 mb-5 mx-auto entered loaded"
+            data-src="https://api.ari.com.vn/files/1690729952712-for-employees.webp" data-ll-status="loaded"
+            src="https://api.ari.com.vn/files/1690729952712-for-employees.webp">
+          <h3 class="text-xl text-blue-500 font-bold mb-1">Đối với nhân viên</h3>
+          <p>Tạo điều kiện tối đa cho sự phát triển của nhân viên. Mang tới môi trường làm việc chuyên nghiệp, năng
+            động và sáng tạo.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <!--  sweetalert2 11  -->
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
-  <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
-  <div>
-    <button class="bg-blue-600 text-white py-2 px-3 m-2 rounded-2xl" id="counter" type="button"></button>
-    <button class="bg-green-600 text-white py-2 px-3 m-2 rounded-2xl" id="success" type="button">Success</button>
-    <button class="bg-yellow-600 text-white py-2 px-3 m-2 rounded-2xl" id="warning" type="button">Warning</button>
-    <button class="bg-yellow-600 text-white py-2 px-3 m-2 rounded-2xl" id="confirm" type="button">Confirm</button>
-    <button class="bg-red-600 text-white py-2 px-3 m-2 rounded-2xl" id="error" type="button">Error</button>
-  </div>
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+  <section id="services" class="bg-[url('../src/assets/images/home/team-bg3.jpg')] w-full bg-cover bg-center">
+    <div class="container px-6 mx-auto sm:py-24 py-10">
+      <p class="text-blue-500 uppercase font-bold text-center mb-4">DỊCH VỤ</p>
+      <h2 class="text-4xl text-blue-900 font-bold text-center mb-4">Sự lựa chọn đúng đắn mang đến những giá trị khác
+        biệt</h2>
+      <p class="text-gray-500 text-center">ARI phấn đấu trở thành một trong những công ty công nghệ dẫn đầu cuộc Cách
+        mạng Công nghiệp 4.0 tại Việt Nam, đồng thời cũng là một công ty gia công phần mềm đáng tin cậy, nơi khách hàng
+        có thể tìm thấy các dịch vụ phát triển phần mềm chất lượng cao với giá cả hợp lý nhất.
+
+      </p>
+      <div class="swiper swiper-initialized swiper-horizontal mt-14 swiper-backface-hidden">
+        <div class="swiper-wrapper" style="transform: translate3d(0px, 0px, 0px);">
+          <div class="swiper-slide lg:flex items-center swiper-slide-active" data-swiper-slide-index="0"><img alt="Ari"
+              class="lazy lg:w-1/2 lg:pr-14 entered loaded"
+              data-src="https://api.ari.com.vn/files/1690729387279-digital-transformation.webp" data-ll-status="loaded"
+              src="https://api.ari.com.vn/files/1690729387279-digital-transformation.webp">
+            <div class="lg:w-1/2 mt-5 lg:mt-0">
+              <h3 class="text-2xl text-blue-500 font-bold mb-1 gsap top">Tư vấn chuyển đổi số</h3>
+              <p class="gsap bottom">Chúng tôi cung cấp dịch vụ tư vấn chuyển đổi số giúp doanh nghiệp từng bước xây
+                dựng nên nguồn lực đồng thời tận dụng các công nghệ để giải quyết những bài toán cụ thể gắn liền với
+                định hướng phát triển của doanh nghiệp và tạo ra các giá trị mới ngoài các giá trị truyền thống vốn
+                có cho doanh nghiệp.</p>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="w-20">
+          <span class="swiper-pagination-bullet swiper-pagination-bullet-active swiper-pagination-bullet-active-main"
+            style="left: 24px;"></span>
+          <span class="swiper-pagination-bullet swiper-pagination-bullet-active-next" style="left: 24px;"></span>
+          <span class="swiper-pagination-bullet swiper-pagination-bullet-active-next-next" style="left: 24px;"></span>
+          <span class="swiper-pagination-bullet" style="left: 24px;"></span>
+        </div> -->
+      </div>
+    </div>
+  </section>
+
+  <section
+    class="bg-[url('../src/assets/images/home/blog-bg3.jpg')] w-full bg-cover bg-center bg-gray-100 bg-blend-multiply">
+    <div class="container px-6 mx-auto sm:py-24 py-10">
+      <p class="text-blue-500 uppercase font-bold text-center">GIÁ TRỊ CỐT LÕI</p>
+      <div class='grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mt-14'>
+        <div
+          class="drop-shadow bg-white rounded-xl p-5 hover:scale-110 duration-500 transition-all ease-in-out text-center lg:text-left h-64">
+          <img alt="ARI" class="lazy h-20 mb-5 mx-auto"
+            src="https://api.ari.com.vn/files/1690729059098-our-philosophy.webp" />
+          <h3 class="text-xl text-blue-500 font-bold mb-1">
+            Triết lý của chúng tôi
+          </h3>
+          <p class="text-sm">
+            Không ngừng thúc đẩy sự phát triển cá nhân, nuôi dưỡng sự sáng tạo và lan tỏa giá trị tới cộng đồng.
+          </p>
+        </div>
+        <div
+          class="drop-shadow bg-white rounded-xl p-5 hover:scale-110 duration-500 transition-all ease-in-out text-center lg:text-left h-64">
+          <img alt="ARI" class="lazy h-20 mb-5 mx-auto"
+            src="https://api.ari.com.vn/files/1690729059098-our-philosophy.webp" />
+          <h3 class="text-xl text-blue-500 font-bold mb-1">
+            Triết lý của chúng tôi
+          </h3>
+          <p class="text-sm">
+            Không ngừng thúc đẩy sự phát triển cá nhân, nuôi dưỡng sự sáng tạo và lan tỏa giá trị tới cộng đồng.
+          </p>
+        </div>
+        <div
+          class="drop-shadow bg-white rounded-xl p-5 hover:scale-110 duration-500 transition-all ease-in-out text-center lg:text-left h-64">
+          <img alt="ARI" class="lazy h-20 mb-5 mx-auto"
+            src="https://api.ari.com.vn/files/1690729059098-our-philosophy.webp" />
+          <h3 class="text-xl text-blue-500 font-bold mb-1">
+            Triết lý của chúng tôi
+          </h3>
+          <p class="text-sm">
+            Không ngừng thúc đẩy sự phát triển cá nhân, nuôi dưỡng sự sáng tạo và lan tỏa giá trị tới cộng đồng.
+          </p>
+        </div>
+        <div
+          class="drop-shadow bg-white rounded-xl p-5 hover:scale-110 duration-500 transition-all ease-in-out text-center lg:text-left h-64">
+          <img alt="ARI" class="lazy h-20 mb-5 mx-auto"
+            src="https://api.ari.com.vn/files/1690729059098-our-philosophy.webp" />
+          <h3 class="text-xl text-blue-500 font-bold mb-1">
+            Triết lý của chúng tôi
+          </h3>
+          <p class="text-sm">
+            Không ngừng thúc đẩy sự phát triển cá nhân, nuôi dưỡng sự sáng tạo và lan tỏa giá trị tới cộng đồng.
+          </p>
+        </div>
+      </div>
+  </section>
+
+  <section class="bg-[url('../src/assets/images/home/choose-bg3.jpg')] w-full bg-cover bg-center">
+    <div class="container px-6 mx-auto sm:py-24 py-10">
+      <p class="text-blue-500 uppercase font-bold text-center mb-4">HỘI ĐỒNG QUẢN TRỊ</p>
+      <h2 class="text-3xl text-blue-900 text-center">“Chúng tôi yêu thích tích hợp công nghệ vào cuộc sống hằng
+        ngày,giúp mọi thứ trở nên thoải mái và dễ dàng hơn.”</h2>
+      <div class="mt-14">
+        <div class="border border-gray-200 text-left p-5 sm:p-10 sm:pb-0 lg:pt-5 lg:pr-3 lg:pl-0 bg-gray-50 container">
+          <div class="lg:flex items-center">
+            <div class='gsap zoom lg:w-1/3'>
+              <img alt="Ari" class="lazy w-full lg:p-10 lg:pt-5 text-center mx-auto"
+                src="https://api.ari.com.vn/files/1690726982010-ung-tien-dung.webp" />
+            </div>
+            <div class="lg:w-2/3 mt-5 lg:mt-0">
+              <h3 class="text-3xl sm:text-4xl text-blue-500 mb-1 gsap top">
+                Ung Tiến Dũng
+              </h3>
+              <div class='gsap right'>
+                <p class="text-blue-900 text-lg mb-0 capitalize font-bold ">
+                  Chủ Tịch & Giám Đốc Điều Hành
+                </p>
+                <div class="w-52 h-0.5 bg-gray-300 mb-5 lg:mx-0" />
+              </div>
+
+              <div class='gsap bottom'>
+                <p class="hidden text-justify sm:block">
+                  Xuất thân là một kỹ sư Công nghệ thông tin, tốt nghiệp trường Đại học Bách Khoa Thành phố Hồ Chí Minh.
+                  Với
+                  hơn 10 năm kinh nghiệm trong ngành và các dự án lớn nhỏ, là chuyên gia trong lĩnh vực tư vấn chuyển
+                  đổi
+                  số.
+                </p>
+                <button class='text-blue-500 hover:text-blue-600 hidden sm:inline-block mt-3' tabIndex={-1}>
+                  Xem thêm
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="384px" height="384px"
+                    viewBox="0 0 384 384" enable-background="new 0 0 384 384" xml:space="preserve"
+                    class="h-5 w-4 inline-block fill-blue-600">
+                    <path
+                      d="M251,192.2c-4.7-4.5-8.7-8.4-12.7-12.4C196,137.5,153.7,95.3,111.6,53c-2.1-2.2-3.9-5.3-4.5-8.3c-1-4.8,1.6-9,5.8-11.1c4.5-2.2,8.7-1.7,12.6,1.3c1,0.8,1.8,1.7,2.7,2.6c47.8,47.8,95.6,95.6,143.5,143.4c7.3,7.3,7.3,14.8,0,22.2C223.8,251,175.8,298.9,128,346.8c-3.6,3.6-7.4,6-12.6,4.5c-7.9-2.2-11.1-11.4-6.1-17.9c0.9-1.2,2-2.2,3.1-3.3c45.1-45.1,90.1-90.1,135.2-135.2C248.5,194.1,249.5,193.4,251,192.2z" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-[url('../src/assets/images/partner.jpg')] w-full bg-cover bg-center">
+    <div class="container px-6 mx-auto sm:py-24 py-10">
+      <p class="text-blue-500 uppercase font-bold text-center mb-4">ĐỐI TÁC VÀ KHÁCH HÀNG</p>
+      <h2 class="text-3xl text-blue-900 text-center font-bold">Đối tác của chúng tôi</h2>
+      <div class="mt-14">
+        <div class="grid grid-cols-5 gap-5">
+          <div class="col-span-1 border border-gray-200 rounded-lg bg-white mb-10">
+            <img alt="Shariot - Singapore's Premier Car Sharing Platform" class="p-2 h-20 w-64"
+              data-src="https://api.ari.com.vn/files/1690725164849-shariot-singapores-premier-car-sharing-platform.webp"
+              src="https://api.ari.com.vn/files/1690725164849-shariot-singapores-premier-car-sharing-platform.webp">
+          </div>
+          <div class="col-span-1 border border-gray-200 rounded-lg bg-white mb-10 ">
+            <img alt="Vitalify Asia" class="p-2 h-20 w-64"
+              data-src="https://api.ari.com.vn/files/1690724483354-vitalify-asia.webp"
+              src="https://api.ari.com.vn/files/1690724483354-vitalify-asia.webp">
+          </div>
+          <div class="col-span-1 border border-gray-200 rounded-lg bg-white mb-10">
+            <img alt="Thermomix" class="p-2 h-20 w-64"
+              data-src="https://api.ari.com.vn/files/1690725410977-thermomix.webp"
+              src="https://api.ari.com.vn/files/1690725410977-thermomix.webp">
+          </div>
+          <div class="col-span-1 border border-gray-200 rounded-lg bg-white mb-10">
+            <img alt="Uhouse - Stay with U" class="p-2 h-20 w-64 "
+              data-src="https://api.ari.com.vn/files/1690725517172-uhouse-stay-with-u.webp"
+              src="https://api.ari.com.vn/files/1690725517172-uhouse-stay-with-u.webp">
+          </div>
+          <div class="col-span-1 border border-gray-200 rounded-lg bg-white mb-10">
+            <img alt="Vitalify Asia" class="p-2 h-20 w-64 "
+              data-src="https://api.ari.com.vn/files/1690724483354-vitalify-asia.webp"
+              src="https://api.ari.com.vn/files/1690724483354-vitalify-asia.webp">
+          </div>
+        </div>
+      </div>
+      <div id="form-contact-us" class="bg-gray-100 bg-opacity-80 rounded-3xl px-10 pt-10 pb-7 mt-14 xl:flex">
+        <div class="xl:w-1/3 xl:pr-14">
+          <h2 class="text-4xl text-blue-500 font-bold mb-4">Liên hệ</h2>
+          <p>Nếu bạn có câu hỏi hoặc muốn liên hệ với chúng tôi, vui lòng điền thông tin liên lạc và chi tiết yêu cầu
+            của bạn vào biểu mẫu. Chúng tôi sẽ liên hệ lại trong vòng 24 giờ.</p>
+        </div>
+        <div class="xl:w-2/3">
+          <form class="grid grid-cols-12 gap-x-5">
+            <div class="col-span-6 mb-4">
+              <div class="pb-2 text-start">
+                <label class="font-medium text-zinc-600">Tên</label>
+              </div>
+              <input class="w-full h-10 text-gray-600 bg-white px-4 border border-gray-300 rounded-xl"
+                placeholder="Nhập tên" />
+            </div>
+            <div class="col-span-6 mb-4">
+              <div class="pb-2 text-start">
+                <label class="font-medium text-zinc-600">Họ</label>
+              </div>
+              <input class="w-full h-10 text-gray-600 bg-white px-4 border border-gray-300 rounded-xl"
+                placeholder="Nhập họ" />
+            </div>
+            <div class="col-span-6 mb-4">
+              <div class="pb-2 text-start">
+                <label class="font-medium text-zinc-600">Số điện thoại</label>
+              </div>
+              <input class="w-full h-10 text-gray-600 bg-white px-4 border border-gray-300 rounded-xl"
+                placeholder="Nhập số điện thoại" />
+            </div>
+            <div class="col-span-6 mb-4">
+              <div class="pb-2 text-start">
+                <label class="font-medium text-zinc-600">Email</label>
+              </div>
+              <input class="w-full h-10 text-gray-600 bg-white px-4 border border-gray-300 rounded-xl"
+                placeholder="Nhập email" />
+            </div>
+            <div class="col-span-12 mb-4">
+              <div class="pb-2 text-start">
+                <label class="font-medium text-zinc-600">Nội dung</label>
+              </div>
+              <textarea class="px-4 py-2.5 w-full rounded-xl text-gray-600 bg-white border border-solid border-gray-300"
+                placeholder="Nhập nội dung" rows="4"></textarea>
+            </div>
+          </form>
+          <div class="flex w-full justify-center">
+            <div class="flex gap-2">
+              <button type="submit" title="Gửi"
+                class="inline-flex items-center rounded-3xl border border-transparent bg-blue-500 text-white px-10 py-3 font-medium w-full justify-center"
+                id="idSubmit">Gửi</button>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <footer
+    class="text-white font-medium bg-gray-900 bg-[url('/assets/images/footer-shape.png')] bg-cover bg-[center_top_9rem] bg-no-repeat">
+    <div class="container mx-auto px-6 py-28 leading-8">
+      <div class="grid grid-cols-2 gap-16 lg:flex lg:justify-between">
+        <div class='lg:max-w-xs'>
+          <img src="../src/assets/images/logo-white.svg" class="h-12 mb-5" alt="logo" />
+          <div class='gap-4 flex mt-8'>
+            <a class="text-white inline-flex bg-gray-700 p-3 rounded-md"
+              href="https://www.facebook.com/ARI-Technology-103059672364812" target="_blank" rel="noreferrer">
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="134.1px" height="134.1px"
+                viewBox="0 0 134.1 134.1" enable-background="new 0 0 134.1 134.1" xml:space="preserve"
+                class='w-5 h-5 inline fill-white'>
+                <path
+                  d="M133.9,63.2c0,2.6,0,5.2,0,7.8c-0.1,0.4-0.2,0.8-0.2,1.3c-0.5,3.3-0.7,6.7-1.5,9.9c-6.2,24.3-21.3,40.5-44.9,48.6c-3.8,1.3-7.9,1.9-12,2.9c0-17.8,0-35.1,0-52.7c5.4,0,10.7,0,16,0c0.8-6.3,1.6-12.4,2.4-18.7c-6.2,0-12.3,0-18.5,0c0-4.6-0.1-9.1,0-13.6c0-1.3,0.4-2.6,1-3.7c1.2-2.5,3.6-3.3,6.2-3.5c3.5-0.2,7-0.1,10.4-0.2c0.5,0,0.9,0,1.5-0.1c0-5.4,0-10.6,0-15.8c0-0.3-0.6-0.9-0.9-0.9c-5.3-0.2-10.5-0.6-15.8-0.5c-5.1,0.1-9.8,1.8-13.8,5.1c-5.2,4.4-7.4,10.2-7.7,16.7c-0.3,5-0.1,9.9-0.2,14.9c0,0.5,0,1,0,1.7c-5.4,0-10.7,0-16,0c0,6.3,0,12.4,0,18.7c5.4,0,10.6,0,15.9,0c0,17.4,0,34.6,0,51.8c-0.3,0-0.6,0-0.8-0.1c-10.7-2-20.3-6.3-28.9-13c-10.2-7.9-17.6-18-22-30.2c-5.7-16-5.3-31.9,0.9-47.7c9.6-24.2,33.6-41,59.5-41.7c12-0.4,23.5,2.1,34,7.9c18.8,10.4,30.3,26.2,34.3,47.4C133.4,58.2,133.6,60.7,133.9,63.2z" />
+              </svg>
+            </a>
+            <a class="text-white inline-flex bg-gray-700 p-3 rounded-md"
+              href="https://www.linkedin.com/company/aritechnology/" target="_blank" rel="noreferrer">
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="384px" height="384px"
+                viewBox="0 0 384 384" enable-background="new 0 0 384 384" xml:space="preserve"
+                class='w-5 h-5 inline fill-white'>
+                <path
+                  d="M135.8,384c0-83.7,0-167.5,0-251.2c0-1.6,0-3.2,0-5c25.5,0,50.7,0,76.4,0c0,11.5,0,23,0,35.6c1.3-1.6,1.8-2.1,2.2-2.8c13.8-22.5,34.5-34.5,60.1-38.3c15.7-2.3,31.4-1.2,46.9,2.6c28.9,7.1,46.6,25.7,55.1,53.7c4.1,13.3,5.9,27,6.8,40.9c0.1,2.1,0.5,4.2,0.7,6.2c0,52.8,0,105.5,0,158.2c-26.5,0-53,0-79.5,0c0-44.6,0.1-89.2-0.2-133.8c0-8.3-0.9-16.7-2.2-25c-3.2-20.4-14.3-31.8-33.5-33.5c-26.2-2.4-45,8-50.4,35.5c-2,10.1-2.7,20.6-2.8,30.9c-0.3,42-0.2,84-0.2,125.9C188.8,384,162.2,384,135.8,384z M86.2,384c-0.1-1.7-0.2-3.5-0.2-5.2c0-82,0-164,0-246c0-1.7,0-3.4,0-5c-26.9,0-53.1,0-79.7,0c0,1.9,0,3.7,0,5.4c0,81.9,0,163.7,0,245.6c0,1.7-0.2,3.5-0.3,5.2C32.8,384,59.5,384,86.2,384z M40.5,0c-7.7,1.8-15.1,4.1-21.6,8.9C9.1,16.3,3,26,0.7,38c-0.2,0.8-0.5,1.7-0.7,2.5c0,3.8,0,7.5,0,11.2c0.3,1.1,0.6,2.1,0.8,3.2c4.2,21.7,23.8,37.9,45.6,37.7c21.9-0.2,41.2-16.4,45-37.8c4-22.4-8.1-44.1-29.3-51.9c-3.4-1.2-6.9-2-10.4-3C48,0,44.2,0,40.5,0z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class='lg:max-w-xs'>
+          <h3 class='text-xl font-bold pb-2 mb-5 border-b-2 border-blue-500'>
+            Dịch vụ
+          </h3>
+          <div class='leading-10'>
+            <a class="text-white font-bold hover:text-white cursor-pointer block">
+              Chuyển đổi số
+            </a>
+            <a class="text-white font-bold hover:text-white cursor-pointer block">
+              Nghiên cứu & phát triển
+            </a>
+            <a class="text-white font-bold hover:text-white cursor-pointer block">
+              Gia công phần mềm
+            </a>
+            <a class="text-white font-bold hover:text-white cursor-pointer block">
+              Phát triển sản phẩm
+            </a>
+          </div>
+        </div>
+        <div class='lg:max-w-xs'>
+          <h3 class='text-xl font-bold pb-2 mb-5 border-b-2 border-blue-500'>
+            Liên kết hữu ích
+          </h3>
+          <div class='leading-10'>
+            <a class="text-white font-bold hover:text-white cursor-pointer block">
+              Trang chủ
+            </a>
+            <a class="text-white font-bold hover:text-white cursor-pointer block">
+              Giới thiệu
+            </a>
+            <a class="text-white font-bold hover:text-white cursor-pointer block">
+              Tin tức
+            </a>
+            <a class="text-white font-bold hover:text-white cursor-pointer block">
+              Dự án
+            </a>
+            <a class="text-white font-bold hover:text-white cursor-pointer block">
+              Liên hệ
+            </a>
+          </div>
+        </div>
+        <div class='lg:max-w-xs'>
+          <h3 class='text-xl font-bold pb-2 mb-5 border-b-2 border-blue-500'>
+            Liên hệ
+          </h3>
+
+          <div class='flex flex-col gap-6'>
+            <div class="flex items-center">
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px"
+                viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"
+                class='w-16 h-10 lg:mr-3 mr-0.5 fill-white lg:ml-0 -ml-2'>
+                <path
+                  d="M267,0c9.1,1.8,18.4,2.9,27.3,5.7c52.1,16.2,82.3,52.3,93.7,104.9c7.8,36.1,2.1,70.7-11.6,104.6c-14.9,36.9-34.8,71.1-57.8,103.5c-15.7,22.1-32.6,43.4-49.4,64.7c-8.1,10.3-18,10-26.3,0c-38.1-45.6-72.5-93.8-98.2-147.7c-11-23.1-20.7-46.8-22.9-72.5c-4.7-54.7,8.8-102.9,54.5-137.8c18.6-14.2,40.2-21.9,63.5-24.5c1.1-0.1,2.2-0.6,3.3-0.9C251,0,259,0,267,0z M256,180.3c25,0,45.1-20.1,45.1-45c0-24.9-20.3-45.1-45.1-45.1c-24.8,0-45.1,20.3-45.1,45.1C210.9,160.3,231,180.3,256,180.3z M0,501c2.4,4.9,6,8.6,11,11c75.3,0,150.7,0,226,0c2.4-1.6,4.8-3.2,7.3-4.9c-0.5-0.7-0.9-1.3-1.3-1.7c-33-32.9-66-65.8-98.9-98.9c-2.6-2.6-4.4-1.1-6.5,0C96,427.7,54.4,448.9,12.9,470.3c-2,1-3.8,3.1-4.8,5.2C5.1,481.2,2.7,487.1,0,493C0,495.7,0,498.3,0,501z M501,512c5-2.4,8.6-6.1,11-11c0-2.7,0-5.3,0-8c-0.6-1-1.2-1.9-1.7-2.9c-9.5-22-18.9-44-28.3-65.9c-0.6-1.5-1.4-3-2.2-4.7c-1.8,0.9-3.2,1.6-4.7,2.3c-46.6,24.1-93.3,48.3-139.9,72.5c-11.2,5.8-22.2,11.8-33.3,17.8C368.3,512,434.7,512,501,512z M172.9,392.8c32.4,32.4,64.9,64.7,97.2,97.2c2.8,2.8,4.6,1.8,7.3,0.4c53-27.5,106-55,159.1-82.5c10.4-5.4,20.9-10.9,31.5-16.4c-16.1-37.4-32-74.4-48-111.3c-2.3-5.3-6.8-8.2-12.6-8.4c-6.5-0.2-13,0-19.5-0.3c-3.3-0.2-5,1.1-6.6,3.9c-25.4,46.3-55.9,89.1-90.1,129.3c-4,4.7-9.1,8.9-14.6,11.9c-18.9,10.3-41.4,5.4-55.9-11.6c-8.1-9.5-15.8-19.2-23.8-28.9c-9,4.6-17.6,9-26.7,13.7C171.5,391.1,172.2,392,172.9,392.8zM175.5,346.7c-12.6-19.4-25.2-38.8-37.6-58.3c-3.5-5.4-5.4-13.3-10.3-16c-5.1-2.8-13-0.7-19.6-0.9c-8.8-0.3-14.2,3.7-17.6,11.8c-19.9,46.7-40,93.2-60,139.8c-0.6,1.4-1.1,2.9-2,5.4c50.8-25.9,100.4-51.3,150.5-76.9C177.6,349.7,176.5,348.2,175.5,346.7zM271,135.3c0-8.1-6.9-14.9-14.9-15c-8.3,0-15.2,7-15.1,15.4c0.1,8.2,6.9,14.7,15.2,14.6C264.5,150.1,271,143.5,271,135.3z" />
+              </svg>
+              <div class="leading-5">
+                <span class="text-sm font-medium">P3A.01.03, Picity High Park, 9A đường Thạnh Xuân 13, P. Thạnh Xuân,
+                  Q.12, TP. Hồ Chí Minh, Việt Nam.</span>
+              </div>
+            </div>
+
+            <div class="flex items-center ">
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px"
+                viewBox="0 0 384 384" enable-background="new 0 0 384 384" xml:space="preserve"
+                class='w-8 h-8 mr-3 fill-white'>
+                <path
+                  d="M384,129c0,58.8,0,117.5,0,176.3c-0.1,0.2-0.4,0.4-0.4,0.6c-5.1,20.3-17.4,30-38.4,30c-51.6,0-103.2,0-154.8,0c-51,0-102,0-153,0c-10.2,0-19.1-3-26.6-10.1C4.8,320.2,1.8,313,0,305.2C0,246.5,0,187.7,0,129c0.6,0.2,1.2,0.4,1.7,0.7c51.9,34.6,103.7,69.2,155.6,103.7c23.2,15.5,46.3,15.5,69.6,0c46.4-30.9,92.7-61.8,139-92.7C371.9,136.8,377.9,132.9,384,129zM0.6,89.8c1.9,9.7,7.2,17.1,15.4,22.5c51.7,34.4,103.3,68.9,154.9,103.3c13.8,9.2,27.8,9.4,41.7,0.2c51.8-34.4,103.5-69,155.3-103.4c8.7-5.8,13.6-13.9,16-23.9c0-3.3,0-6.5,0-9.8c-0.6-2.1-1.2-4.3-1.9-6.4c-4.7-14.1-17.2-23.3-32.5-24.2c-1.1-0.1-2.2-0.1-3.4-0.1c-102.9,0-205.7,0-308.6,0c-17.4,0-30.8,9-35.9,24.2c-0.7,2.1-1.2,4.3-1.9,6.4c0,3.3,0,6.5,0,9.8C0.2,88.9,0.5,89.3,0.6,89.8z" />
+              </svg>
+              <div class="leading-5">
+                <a class="text-sm text-white font-medium" href="mailto:contact@ari.com.vn">
+                  contact@ari.com.vn
+                </a>
+              </div>
+            </div>
+
+            <div class="flex items-center ">
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px"
+                viewBox="0 0 257.8 257.8" enable-background="new 0 0 257.8 257.8" xml:space="preserve"
+                class='w-8 h-8 mr-3 fill-white'>
+                <path
+                  d="M148,0.3c4.5,0.6,8.9,1.1,13.4,1.9c17.6,3.2,33.3,10.7,47.4,21.7c17.5,13.6,30.3,30.7,38.4,51.5c5.7,14.8,7.4,30.1,6.8,45.8c-0.2,5.8-3.9,9.3-9.6,9.5c-5.8,0.2-9.7-3-10.5-8.9c-0.8-6-1.1-12-2.1-17.9c-2.9-16.7-7.9-32.6-18.1-46.6c-9-12.4-21-21-35-26.8c-13-5.4-26.6-8.4-40.5-10c-6.1-0.7-9.3-3.2-9.7-8c-0.4-5.4,2-10.7,7.7-11.8c0.2,0,0.4-0.3,0.6-0.4C140.6,0.3,144.3,0.3,148,0.3zM8.5,80.3c9.7,23.4,21.7,45.6,36.5,66.2c15.9,22.1,34.4,41.7,55.5,58.8c24.5,19.8,51.4,35.6,80.3,48c7.2,3.1,14.7,5.5,22.9,3.2c18.8-5.3,32.4-16.7,40.3-34.5c5.4-12.1,2.9-21.8-7.4-30.2c-7.2-5.9-14.5-11.6-22.1-16.9c-6.7-4.7-13.5-9.3-20.8-13.1c-6.8-3.6-14.3-4-21.6-0.8c-5.4,2.4-9.4,6.5-13.1,11.1c-2.1,2.7-4.4,5.6-7.3,7.4c-4.8,3-9.9,1-14.6-1.1c-14.7-6.8-27.9-15.9-38.6-28.2c-7.6-8.7-13.7-18.4-17.8-29.2c-3.4-9-1.4-15.4,6.1-21.2c1.5-1.2,3.1-2.3,4.6-3.4c9-6.8,13.7-16.9,7.6-28.4c-4.5-8.6-9.6-17.1-15.1-25.1c-6-8.9-13-17-21.2-24c-4.9-4.2-10.5-5.9-16.9-5.5c-6.1,0.4-11.5,2.8-16.8,5.5C13.3,27.2,4.1,40,3.7,58.4C3.7,66,5.6,73.3,8.5,80.3z M211.9,75.5c-15-26.5-38.2-39.9-68.1-42.4c-7.7-0.6-12.9,6.1-11,13.6c1.3,4.9,5.1,6.3,9.5,7.4c7.2,1.7,14.5,3.2,21.6,5.5c10,3.2,18.7,8.6,24.8,17.5c5.6,8.2,8.3,17.5,10.1,27.1c0.9,4.5,1.1,9.1,2.2,13.6c1.1,4.6,4.7,6.8,9.7,6.6c5.2-0.2,8.5-2.7,9.4-7.4c0.5-2.8,0.4-5.7,0.6-8.5C220.4,96.8,217.7,85.7,211.9,75.5z M141.8,68.7c-3.7,1.5-5.9,6.1-5.6,10.4c0.4,4.1,2.9,6.4,6.6,7.6c2.2,0.7,4.5,1.1,6.8,1.6c9.7,2.2,15.9,8.9,17.4,18.8c0.3,2.3,0.7,4.7,1.5,6.8c1.6,4.4,5.4,6.8,9.9,6.5c4.5-0.3,7.8-2.9,8.8-7.6c0.6-2.6,0.8-5.3,0.6-8c-0.7-10.3-5.6-18.6-12.7-25.7c-7-7-15.1-11.8-25.5-12.5C147.1,67.3,144.3,67.6,141.8,68.7z" />
+              </svg>
+              <div class="leading-5">
+                <a class="text-sm text-white font-medium" href="tel:(+84)363672405">
+                  (+84) 098 7765926
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="py-8 text-center border-t border-gray-800">
+      Bản quyền ©2023 ARI Technology Co., JSC. Bảo lưu mọi quyền.
+    </div>
+  </footer>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
 </html>
