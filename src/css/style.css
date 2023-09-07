@@ -32,9 +32,8 @@
     width: 58.333333%;
 }
 
-.truncate-3 {
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+.swiper-pagination-bullet {
+    width: 0.625rem;
+    height: 0.625rem;
+    margin-right: 0.5rem !important;
 }

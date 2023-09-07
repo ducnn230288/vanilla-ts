@@ -11,19 +11,72 @@ new Swiper(".mySwiper", {
   loop: true,
   spaceBetween: 0,
   slidesPerView: 1,
-  effect: 'fade',
   pagination: {
-    el: ".swiper-pagination",
-  },
-  navigation: {
-    nextEl: "#home-right",
-    prevEl: "#home-left",
+    el: '.swiper-pagination',
+    type: 'bullets',
+    clickable: true
   },
   on: {
     init: (el: any) => animationSlide(el.slides[el.activeIndex], 0),
     slideChangeTransitionEnd: (el: any) => animationSlide(el.slides[el.activeIndex], 0),
   },
 });
+
+new Swiper(".swiperSectionContact", {
+  loop: true,
+  slidesPerView: 1,
+  spaceBetween: 16,
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+    clickable: true,
+  },
+  breakpoints: {
+    1366: {
+      slidesPerView: 5,
+    },
+    1024: {
+      slidesPerView: 4,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+    500: {
+      slidesPerView: 2,
+    },
+  },
+  on: {
+    init: (el: any) => animationSlide(el.slides[el.activeIndex], 0),
+    slideChangeTransitionEnd: (el: any) => animationSlide(el.slides[el.activeIndex], 0),
+  },
+});
+
+new Swiper(".projectSwiper", {
+  loop: true,
+  spaceBetween: 30,
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+    clickable: true
+  },
+  breakpoints: {
+    1024: {
+      slidesPerView: 3,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    640: {
+      slidesPerView: 1,
+    },
+
+  },
+  on: {
+    init: (el: any) => animationSlide(el.slides[el.activeIndex], 0),
+    slideChangeTransitionEnd: (el: any) => animationSlide(el.slides[el.activeIndex], 0),
+  },
+});
+
 
 // glightbox 3
 GLightbox({});
