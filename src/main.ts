@@ -6,6 +6,7 @@ new LazyLoad({ callback_error: (el: any) => (el.src = 'https://via.placeholder.c
 // gsap 3
 import { animationSlide } from "./gasp.ts";
 
+animationSlide(document.getElementById('title')!, 0);
 // swiper 10
 new Swiper(".mySwiper", {
   loop: true,
@@ -20,16 +21,19 @@ new Swiper(".mySwiper", {
     init: (el: any) => animationSlide(el.slides[el.activeIndex], 0),
     slideChangeTransitionEnd: (el: any) => animationSlide(el.slides[el.activeIndex], 0),
   },
+  autoplay: {
+    delay: 5000,
+  },
 });
 
 new Swiper(".swiperSectionContact", {
   loop: true,
+  spaceBetween: 20,
   slidesPerView: 1,
-  spaceBetween: 16,
   pagination: {
     el: '.swiper-pagination',
     type: 'bullets',
-    clickable: true,
+    clickable: true
   },
   breakpoints: {
     1366: {
@@ -51,9 +55,10 @@ new Swiper(".swiperSectionContact", {
   },
 });
 
-new Swiper(".projectSwiper", {
+new Swiper(".relatedSwiper", {
   loop: true,
-  spaceBetween: 30,
+  spaceBetween: 20,
+  slidesPerView: 1,
   pagination: {
     el: '.swiper-pagination',
     type: 'bullets',
@@ -63,20 +68,25 @@ new Swiper(".projectSwiper", {
     1024: {
       slidesPerView: 3,
     },
-    768: {
+    640: {
       slidesPerView: 2,
     },
-    640: {
-      slidesPerView: 1,
-    },
-
   },
   on: {
     init: (el: any) => animationSlide(el.slides[el.activeIndex], 0),
     slideChangeTransitionEnd: (el: any) => animationSlide(el.slides[el.activeIndex], 0),
   },
+  autoplay: {
+    delay: 5000,
+  },
 });
-
+/// menu
+document.querySelector('.hamburger')!.addEventListener('click', () => {
+  document.getElementById('menu')?.classList.toggle('right-0')
+  document.getElementById('bg-menu')?.classList.toggle('right-0')
+  // document.getElementById('list-menu')?.classList.toggle("top-0")
+  // document.getElementById('contact-menu')?.classList.toggle("-top-4")
+})
 
 // glightbox 3
 GLightbox({});

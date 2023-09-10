@@ -6,9 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="../src/assets/images/logo.svg" />
     <title>Vite + TS</title>
-
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <!--  vanilla-lazyload 17 -->
     <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17/dist/lazyload.min.js"></script>
+    <!-- gsap -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/gsap.min.js"></script>
 </head>
 
 <body>
@@ -116,17 +120,19 @@
     </span>
 
     <!-- news -->
-    <section id='title' class="-mt-2 relative">
+    <section id='title' class="relative -mt-2 overflow-x-hidden">
         <div class="container h-[350px] px-6 mx-auto flex items-center text-right justify-end">
             <div>
                 <h1 class="text-4xl text-blue-500 leading-none mt-8 font-black gsap right">
                     Tin tức
                 </h1>
-                <p class="text-gray-200 text-xl max-w-[600px] mt-2 gsap right">Tin tức được cập nhật liên tục</p>
+                <p class="text-gray-200 text-xl max-w-[600px] mt-2 gsap right">Tin tức được cập nhật liên
+                    tục</p>
             </div>
         </div>
         <img class='lazy gsap zoom w-full h-[350px] object-cover absolute top-0 left-0 -z-10'
             src='../src/assets/images/header.jpg' />
+
     </section>
 
     <section class="bg-white w-full">

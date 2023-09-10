@@ -11,6 +11,8 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <!--  vanilla-lazyload 17 -->
     <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17/dist/lazyload.min.js"></script>
+    <!-- gsap -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/gsap.min.js"></script>
 </head>
 
 <body>
@@ -118,18 +120,20 @@
     </span>
 
     <!-- news detail -->
-    <section id='title' class="-mt-2 relative">
+    <section id='title' class="relative -mt-2 overflow-x-hidden">
         <div class="container h-[350px] px-6 mx-auto flex items-center text-right justify-end">
             <div>
                 <h1 class="text-4xl text-blue-500 leading-none mt-8 font-black gsap right">
                     Dự án thành công
                 </h1>
-                <p class="text-gray-200 text-xl max-w-[600px] mt-2 gsap right">Các dự án của chúng tôi với các đối tác
+                <p class="text-gray-200 text-xl max-w-[600px] mt-2 gsap right">Các dự án của chúng tôi với
+                    các đối tác
                 </p>
             </div>
         </div>
         <img class='lazy gsap zoom w-full h-[350px] object-cover absolute top-0 left-0 -z-10'
             src='../src/assets/images/header.jpg' />
+
     </section>
 
     <section class="bg-white w-full">
@@ -145,7 +149,7 @@
                 lập. Hàng trăm nghìn cố vấn trên khắp thế giới đang bán sản phẩm Thermomix​® . Giữa Singapore và
                 Malaysia,​ ​hiện có hơn 1000 cố vấn bán sản phẩm Thermomix.</p>
             <div class="py-5">
-                <img class='lazy' alt="subItem.data.caption"
+                <img class='lazy mx-auto' alt="subItem.data.caption"
                     src="https://api.ari.com.vn/files/1690901416969-thermomix-system.webp"
                     data-src="https://api.ari.com.vn/files/1690901416969-thermomix-system.webp" />
             </div>
@@ -155,137 +159,131 @@
     <section class="bg-[url('../src/assets/images/home/team-bg3.jpg')] w-full bg-cover bg-center">
         <div class="container px-6 mx-auto pt-10 pb-24">
             <h2 class="text-4xl text-blue-900 font-bold text-center mb-4">BÀI VIẾT LIÊN QUAN</h2>
-            <!-- <div class="swiper projectSwiper">
+            <div class="swiper relatedSwiper">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div
-                            class="flex flex-col relative border-2 border-sky-800 shadow-md rounded-2xl overflow-hidden">
-                            <img alt="" class="w-full h-[400px] object-cover"
-                                src="https://api.ari.com.vn/files/1690901416969-thermomix-system.webp" />
-                            <div class="p-5">
-                                <div class="font-bold text-xl text-sky-800 mb-5 h-14 line-clamp-2">
-                                    <button class="text-left text-sky-800">
-                                        Hệ thống Thermomix
-                                    </button>
-                                </div>
-                                <div class="text-black mb-5 text-sm line-clamp-5">
-                                    ARI đã tư vấn và đề ra giải pháp xây dựng hệ thống e-thermomix® ​​, một phần mềm
-                                    điện toán
-                                    đám mây với công nghệ Progressive Web App có thể truy cập được từ thiết bị di động
-                                    cũng như
-                                    máy tính. Hệ thống mới này có thể mở rộng để cung cấp thông tin gần thời gian thực
-                                    giúp cho
-                                    Thermomix tăng.
-                                </div>
-                                <span class="flex justify-between">
-                                    <div class="bg-slate-100 rounded-md flex items-center text-sky-800 w-max p-2">
-                                        <span class="mx-auto capitalize text-sm">
-                                            08-12-2022
-                                        </span>
-                                    </div>
-                                    <span class="flex items-center">
-                                        <button class="hover:text-sky-800 cursor-pointer">
-                                            Xem thêm
-                                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="384px"
-                                                height="384px" viewBox="0 0 384 384" enable-background="new 0 0 384 384"
-                                                xml:space="preserve" class="h-5 w-4 inline-block fill-blue-600">
-                                                <path
-                                                    d="M251,192.2c-4.7-4.5-8.7-8.4-12.7-12.4C196,137.5,153.7,95.3,111.6,53c-2.1-2.2-3.9-5.3-4.5-8.3c-1-4.8,1.6-9,5.8-11.1c4.5-2.2,8.7-1.7,12.6,1.3c1,0.8,1.8,1.7,2.7,2.6c47.8,47.8,95.6,95.6,143.5,143.4c7.3,7.3,7.3,14.8,0,22.2C223.8,251,175.8,298.9,128,346.8c-3.6,3.6-7.4,6-12.6,4.5c-7.9-2.2-11.1-11.4-6.1-17.9c0.9-1.2,2-2.2,3.1-3.3c45.1-45.1,90.1-90.1,135.2-135.2C248.5,194.1,249.5,193.4,251,192.2z" />
-                                            </svg>
-                                        </button>
-                                    </span>
-                                </span>
+                    <div
+                        class="swiper-slide flex flex-col relative border-2 border-sky-800 shadow-md rounded-2xl overflow-hidden">
+                        <img alt="" class="w-full h-[400px] object-cover"
+                            src="https://api.ari.com.vn/files/1690901416969-thermomix-system.webp" />
+                        <div class="p-5">
+                            <div class="font-bold text-xl text-sky-800 mb-5 h-14 line-clamp-2">
+                                <button class="text-left text-sky-800">
+                                    Hệ thống Thermomix
+                                </button>
                             </div>
+                            <div class="text-black mb-5 text-sm line-clamp-5">
+                                ARI đã tư vấn và đề ra giải pháp xây dựng hệ thống e-thermomix® ​​, một phần mềm
+                                điện toán
+                                đám mây với công nghệ Progressive Web App có thể truy cập được từ thiết bị di động
+                                cũng như
+                                máy tính. Hệ thống mới này có thể mở rộng để cung cấp thông tin gần thời gian thực
+                                giúp cho
+                                Thermomix tăng.
+                            </div>
+                            <span class="flex justify-between">
+                                <div class="bg-slate-100 rounded-md flex items-center text-sky-800 w-max p-2">
+                                    <span class="mx-auto capitalize text-sm">
+                                        08-12-2022
+                                    </span>
+                                </div>
+                                <span class="flex items-center">
+                                    <button class="hover:text-sky-800 cursor-pointer">
+                                        Xem thêm
+                                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="384px"
+                                            height="384px" viewBox="0 0 384 384" enable-background="new 0 0 384 384"
+                                            xml:space="preserve" class="h-5 w-4 inline-block fill-blue-600">
+                                            <path
+                                                d="M251,192.2c-4.7-4.5-8.7-8.4-12.7-12.4C196,137.5,153.7,95.3,111.6,53c-2.1-2.2-3.9-5.3-4.5-8.3c-1-4.8,1.6-9,5.8-11.1c4.5-2.2,8.7-1.7,12.6,1.3c1,0.8,1.8,1.7,2.7,2.6c47.8,47.8,95.6,95.6,143.5,143.4c7.3,7.3,7.3,14.8,0,22.2C223.8,251,175.8,298.9,128,346.8c-3.6,3.6-7.4,6-12.6,4.5c-7.9-2.2-11.1-11.4-6.1-17.9c0.9-1.2,2-2.2,3.1-3.3c45.1-45.1,90.1-90.1,135.2-135.2C248.5,194.1,249.5,193.4,251,192.2z" />
+                                        </svg>
+                                    </button>
+                                </span>
+                            </span>
                         </div>
                     </div>
-                    <div class="swiper-slide">
-                        <div
-                            class="flex flex-col relative border-2 border-sky-800 shadow-md rounded-2xl overflow-hidden">
-                            <img alt="" class="w-full h-[400px] object-cover"
-                                src="https://api.ari.com.vn/files/1690901416969-thermomix-system.webp" />
-                            <div class="p-5">
-                                <div class="font-bold text-xl text-sky-800 mb-5 h-14 line-clamp-2">
-                                    <button class="text-left text-sky-800">
-                                        Hệ thống Thermomix
-                                    </button>
-                                </div>
-                                <div class="text-black mb-5 text-sm line-clamp-5">
-                                    ARI đã tư vấn và đề ra giải pháp xây dựng hệ thống e-thermomix® ​​, một phần mềm
-                                    điện toán
-                                    đám mây với công nghệ Progressive Web App có thể truy cập được từ thiết bị di động
-                                    cũng như
-                                    máy tính. Hệ thống mới này có thể mở rộng để cung cấp thông tin gần thời gian thực
-                                    giúp cho
-                                    Thermomix tăng.
-                                </div>
-                                <span class="flex justify-between">
-                                    <div class="bg-slate-100 rounded-md flex items-center text-sky-800 w-max p-2">
-                                        <span class="mx-auto capitalize text-sm">
-                                            08-12-2022
-                                        </span>
-                                    </div>
-                                    <span class="flex items-center">
-                                        <button class="hover:text-sky-800 cursor-pointer">
-                                            Xem thêm
-                                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="384px"
-                                                height="384px" viewBox="0 0 384 384" enable-background="new 0 0 384 384"
-                                                xml:space="preserve" class="h-5 w-4 inline-block fill-blue-600">
-                                                <path
-                                                    d="M251,192.2c-4.7-4.5-8.7-8.4-12.7-12.4C196,137.5,153.7,95.3,111.6,53c-2.1-2.2-3.9-5.3-4.5-8.3c-1-4.8,1.6-9,5.8-11.1c4.5-2.2,8.7-1.7,12.6,1.3c1,0.8,1.8,1.7,2.7,2.6c47.8,47.8,95.6,95.6,143.5,143.4c7.3,7.3,7.3,14.8,0,22.2C223.8,251,175.8,298.9,128,346.8c-3.6,3.6-7.4,6-12.6,4.5c-7.9-2.2-11.1-11.4-6.1-17.9c0.9-1.2,2-2.2,3.1-3.3c45.1-45.1,90.1-90.1,135.2-135.2C248.5,194.1,249.5,193.4,251,192.2z" />
-                                            </svg>
-                                        </button>
-                                    </span>
-                                </span>
+                    <div
+                        class="swiper-slide flex flex-col relative border-2 border-sky-800 shadow-md rounded-2xl overflow-hidden">
+                        <img alt="" class="w-full h-[400px] object-cover"
+                            src="https://api.ari.com.vn/files/1690901416969-thermomix-system.webp" />
+                        <div class="p-5">
+                            <div class="font-bold text-xl text-sky-800 mb-5 h-14 line-clamp-2">
+                                <button class="text-left text-sky-800">
+                                    Hệ thống Thermomix
+                                </button>
                             </div>
+                            <div class="text-black mb-5 text-sm line-clamp-5">
+                                ARI đã tư vấn và đề ra giải pháp xây dựng hệ thống e-thermomix® ​​, một phần mềm
+                                điện toán
+                                đám mây với công nghệ Progressive Web App có thể truy cập được từ thiết bị di động
+                                cũng như
+                                máy tính. Hệ thống mới này có thể mở rộng để cung cấp thông tin gần thời gian thực
+                                giúp cho
+                                Thermomix tăng.
+                            </div>
+                            <span class="flex justify-between">
+                                <div class="bg-slate-100 rounded-md flex items-center text-sky-800 w-max p-2">
+                                    <span class="mx-auto capitalize text-sm">
+                                        08-12-2022
+                                    </span>
+                                </div>
+                                <span class="flex items-center">
+                                    <button class="hover:text-sky-800 cursor-pointer">
+                                        Xem thêm
+                                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="384px"
+                                            height="384px" viewBox="0 0 384 384" enable-background="new 0 0 384 384"
+                                            xml:space="preserve" class="h-5 w-4 inline-block fill-blue-600">
+                                            <path
+                                                d="M251,192.2c-4.7-4.5-8.7-8.4-12.7-12.4C196,137.5,153.7,95.3,111.6,53c-2.1-2.2-3.9-5.3-4.5-8.3c-1-4.8,1.6-9,5.8-11.1c4.5-2.2,8.7-1.7,12.6,1.3c1,0.8,1.8,1.7,2.7,2.6c47.8,47.8,95.6,95.6,143.5,143.4c7.3,7.3,7.3,14.8,0,22.2C223.8,251,175.8,298.9,128,346.8c-3.6,3.6-7.4,6-12.6,4.5c-7.9-2.2-11.1-11.4-6.1-17.9c0.9-1.2,2-2.2,3.1-3.3c45.1-45.1,90.1-90.1,135.2-135.2C248.5,194.1,249.5,193.4,251,192.2z" />
+                                        </svg>
+                                    </button>
+                                </span>
+                            </span>
                         </div>
                     </div>
-                    <div class="swiper-slide">
-                        <div
-                            class="flex flex-col relative border-2 border-sky-800 shadow-md rounded-2xl overflow-hidden">
-                            <img alt="" class="w-full h-[400px] object-cover"
-                                src="https://api.ari.com.vn/files/1690901416969-thermomix-system.webp" />
-                            <div class="p-5">
-                                <div class="font-bold text-xl text-sky-800 mb-5 h-14 line-clamp-2">
-                                    <button class="text-left text-sky-800">
-                                        Hệ thống Thermomix
-                                    </button>
-                                </div>
-                                <div class="text-black mb-5 text-sm line-clamp-5">
-                                    ARI đã tư vấn và đề ra giải pháp xây dựng hệ thống e-thermomix® ​​, một phần mềm
-                                    điện toán
-                                    đám mây với công nghệ Progressive Web App có thể truy cập được từ thiết bị di động
-                                    cũng như
-                                    máy tính. Hệ thống mới này có thể mở rộng để cung cấp thông tin gần thời gian thực
-                                    giúp cho
-                                    Thermomix tăng.
-                                </div>
-                                <span class="flex justify-between">
-                                    <div class="bg-slate-100 rounded-md flex items-center text-sky-800 w-max p-2">
-                                        <span class="mx-auto capitalize text-sm">
-                                            08-12-2022
-                                        </span>
-                                    </div>
-                                    <span class="flex items-center">
-                                        <button class="hover:text-sky-800 cursor-pointer">
-                                            Xem thêm
-                                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="384px"
-                                                height="384px" viewBox="0 0 384 384" enable-background="new 0 0 384 384"
-                                                xml:space="preserve" class="h-5 w-4 inline-block fill-blue-600">
-                                                <path
-                                                    d="M251,192.2c-4.7-4.5-8.7-8.4-12.7-12.4C196,137.5,153.7,95.3,111.6,53c-2.1-2.2-3.9-5.3-4.5-8.3c-1-4.8,1.6-9,5.8-11.1c4.5-2.2,8.7-1.7,12.6,1.3c1,0.8,1.8,1.7,2.7,2.6c47.8,47.8,95.6,95.6,143.5,143.4c7.3,7.3,7.3,14.8,0,22.2C223.8,251,175.8,298.9,128,346.8c-3.6,3.6-7.4,6-12.6,4.5c-7.9-2.2-11.1-11.4-6.1-17.9c0.9-1.2,2-2.2,3.1-3.3c45.1-45.1,90.1-90.1,135.2-135.2C248.5,194.1,249.5,193.4,251,192.2z" />
-                                            </svg>
-                                        </button>
-                                    </span>
-                                </span>
+                    <div
+                        class="swiper-slide flex flex-col relative border-2 border-sky-800 shadow-md rounded-2xl overflow-hidden">
+                        <img alt="" class="w-full h-[400px] object-cover"
+                            src="https://api.ari.com.vn/files/1690901416969-thermomix-system.webp" />
+                        <div class="p-5">
+                            <div class="font-bold text-xl text-sky-800 mb-5 h-14 line-clamp-2">
+                                <button class="text-left text-sky-800">
+                                    Hệ thống Thermomix
+                                </button>
                             </div>
+                            <div class="text-black mb-5 text-sm line-clamp-5">
+                                ARI đã tư vấn và đề ra giải pháp xây dựng hệ thống e-thermomix® ​​, một phần mềm
+                                điện toán
+                                đám mây với công nghệ Progressive Web App có thể truy cập được từ thiết bị di động
+                                cũng như
+                                máy tính. Hệ thống mới này có thể mở rộng để cung cấp thông tin gần thời gian thực
+                                giúp cho
+                                Thermomix tăng.
+                            </div>
+                            <span class="flex justify-between">
+                                <div class="bg-slate-100 rounded-md flex items-center text-sky-800 w-max p-2">
+                                    <span class="mx-auto capitalize text-sm">
+                                        08-12-2022
+                                    </span>
+                                </div>
+                                <span class="flex items-center">
+                                    <button class="hover:text-sky-800 cursor-pointer">
+                                        Xem thêm
+                                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="384px"
+                                            height="384px" viewBox="0 0 384 384" enable-background="new 0 0 384 384"
+                                            xml:space="preserve" class="h-5 w-4 inline-block fill-blue-600">
+                                            <path
+                                                d="M251,192.2c-4.7-4.5-8.7-8.4-12.7-12.4C196,137.5,153.7,95.3,111.6,53c-2.1-2.2-3.9-5.3-4.5-8.3c-1-4.8,1.6-9,5.8-11.1c4.5-2.2,8.7-1.7,12.6,1.3c1,0.8,1.8,1.7,2.7,2.6c47.8,47.8,95.6,95.6,143.5,143.4c7.3,7.3,7.3,14.8,0,22.2C223.8,251,175.8,298.9,128,346.8c-3.6,3.6-7.4,6-12.6,4.5c-7.9-2.2-11.1-11.4-6.1-17.9c0.9-1.2,2-2.2,3.1-3.3c45.1-45.1,90.1-90.1,135.2-135.2C248.5,194.1,249.5,193.4,251,192.2z" />
+                                        </svg>
+                                    </button>
+                                </span>
+                            </span>
                         </div>
                     </div>
                 </div>
                 <div class="swiper-pagination"></div>
-            </div> -->
+            </div>
 
         </div>
     </section>
