@@ -90,7 +90,7 @@
           <span class="text-white font-bold hover:text-white cursor-pointer relative group">
             Giới thiệu
             <ul
-              class="bg-sky-500 p-2 text-left text-sm absolute w-44 top-7 left-0 invisible group-hover:visible opacity-0 group-hover:opacity-100 duration-500 transition-all ease-in-out">
+              class="bg-blue-400 p-2 text-left text-sm absolute w-44 top-7 left-0 invisible group-hover:visible opacity-0 group-hover:opacity-100 duration-500 transition-all ease-in-out">
               <li class="font-normal p-1 mb-2">Công nghệ</li>
               <li class="font-normal p-1 mb-1">Đội ngũ phát triền chính</li>
             </ul>
@@ -110,8 +110,12 @@
         <img src="../src/assets/images/logo.svg" class="h-12" alt="logo" />
       </div>
       <div class="flex items-center mr-12 lg:mr-0 pr-3 lg:pr-0 border-r lg:border-none border-white">
-        <div class="lg:mr-4 lg:border-r lg:pr-4">
+        <div class="lg:mr-4 lg:border-r lg:pr-4 relative group">
           <img src='/src/assets/svg/flag-vn.svg' alt="" class="w-10" />
+          <ul
+            class="bg-blue-400 text-white p-2 text-left text-sm absolute w-24 top-6 left-0 invisible group-hover:visible opacity-0 group-hover:opacity-100 duration-500 transition-all ease-in-out">
+            <li class="font-normal p-1">Tiếng anh</li>
+          </ul>
         </div>
         <div class="hidden lg:flex items-center gap-2">
           <a class="text-white inline-flex" href="https://www.facebook.com/ARI-Technology-103059672364812"
@@ -139,7 +143,7 @@
   </span>
   <!-- responesive menu -->
   <div id="bg-menu"
-    class='handle-menu fixed top-0 h-full bg-black transition-all duration-500 ease-in-out w-full z-30 opacity-0 -right-full'>
+    class='handle-menu fixed top-0 h-full bg-white transition-all duration-500 ease-in-out w-full z-30 opacity-0 -right-full'>
   </div>
   <div id="menu"
     class='w-80 bg-blue-500 h-screen z-40 fixed top-0 p-5 text-white transition-all duration-500 ease-in-out flex justify-between flex-col -right-80'>
@@ -471,22 +475,22 @@
       <p class="text-blue-500 uppercase font-bold text-center mb-4">HỘI ĐỒNG QUẢN TRỊ</p>
       <h2 class="text-3xl text-blue-900 text-center">“Chúng tôi yêu thích tích hợp công nghệ vào cuộc sống hằng
         ngày,giúp mọi thứ trở nên thoải mái và dễ dàng hơn.”</h2>
-      <div class="swiper mySwiper mt-14">
+      <div class="swiper mySwiper mt-14 pb-10">
         <div class="swiper-wrapper">
           <div
-            class="swiper-slide border border-gray-200 text-left p-5 sm:p-10 sm:pb-0 lg:pt-5 lg:pr-3 lg:pl-0 bg-gray-50 container">
-            <div class="lg:flex items-center">
-              <div class='gsap zoom lg:w-1/3'>
-                <img alt="Ari" class="lazy w-full lg:p-10 lg:pt-5 text-center mx-auto"
+            class="swiper-slide border border-gray-200 text-left p-5 lg:p-10 lg:pb-0 sm:pt-5 sm:pr-3 sm:pl-0 bg-gray-50 container">
+            <div class="sm:flex items-center">
+              <div class='gsap zoom sm:w-1/3'>
+                <img alt="Ari" class="lazy w-full sm:p-10 lg:pt-0 text-center mx-auto"
                   src="/src/assets/images/home/ceo.png" />
               </div>
-              <div class="lg:w-2/3 mt-5 lg:mt-0">
+              <div class="sm:w-2/3 mt-5 sm:mt-0">
                 <h3 class="font-bold text-3xl sm:text-4xl text-blue-900 mb-1 gsap top">Ung Tiến Dũng</h3>
                 <div class='gsap right'>
                   <p class="text-blue-500 text-lg mb-0 capitalize font-bold ">
                     Chủ Tịch & Giám Đốc Điều Hành
                   </p>
-                  <div class="w-52 h-0.5 bg-gray-300 mb-5 lg:mx-0"></div>
+                  <div class="w-52 h-0.5 bg-gray-300 mb-5 sm:mx-0"></div>
                 </div>
                 <div class='gsap bottom'>
                   <p class="hidden text-justify sm:block">
@@ -497,7 +501,7 @@
                     đổi
                     số.
                   </p>
-                  <button class='text-blue-500 hover:text-blue-600 hidden sm:inline-block mt-3' tabIndex={-1}>
+                  <button class='text-blue-500 hover:text-blue-600 sm:mt-3' tabIndex={-1}>
                     Xem thêm
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                       xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="384px" height="384px"
@@ -512,24 +516,24 @@
             </div>
           </div>
           <div
-            class="swiper-slide border border-gray-200 text-left p-5 sm:p-10 sm:pb-0 lg:pt-5 lg:pr-3 lg:pl-0 bg-gray-50 container">
-            <div class="lg:flex items-center">
-              <div class='gsap zoom lg:w-1/3'>
-                <img alt="Ari" class="lazy w-full lg:p-10 lg:pt-5 text-center mx-auto"
+            class="swiper-slide border border-gray-200 text-left p-5 lg:p-10 lg:pb-0 sm:pt-5 sm:pr-3 sm:pl-0 bg-gray-50 container">
+            <div class="sm:flex items-center">
+              <div class='gsap zoom sm:w-1/3'>
+                <img alt="Ari" class="lazy w-full sm:p-10 lg:pt-0 text-center mx-auto"
                   src="/src/assets/images/home/vicedirector.png" />
               </div>
-              <div class="lg:w-2/3 mt-5 lg:mt-0">
+              <div class="sm:w-2/3 mt-5 sm:mt-0">
                 <h3 class="font-bold text-3xl sm:text-4xl text-blue-900 mb-1 gsap top">Nguyễn Bá Trung</h3>
                 <div class='gsap right'>
                   <p class="text-blue-500 text-lg mb-0 capitalize font-bold ">Phó giám đốc</p>
-                  <div class="w-52 h-0.5 bg-gray-300 mb-5 lg:mx-0"></div>
+                  <div class="w-52 h-0.5 bg-gray-300 mb-5 sm:mx-0"></div>
                 </div>
                 <div class='gsap bottom'>
                   <p class="hidden text-justify sm:block">
                     Anh ấy có kinh nghiệm trong các dự án nghiên cứu và phát triển công nghệ cao, ứng dụng trên web, IoT
                     và DevOps. Có kinh nghiệm quản lý nhân sự và dự án.
                   </p>
-                  <button class='text-blue-500 hover:text-blue-600 hidden sm:inline-block mt-3' tabIndex={-1}>
+                  <button class='text-blue-500 hover:text-blue-600 sm:mt-3' tabIndex={-1}>
                     Xem thêm
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                       xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="384px" height="384px"
@@ -635,7 +639,7 @@
   <!--  -->
   <!-- footer  -->
   <footer
-    class="text-white font-medium bg-gray-900 bg-[url('/assets/images/footer-shape.png')] bg-cover bg-[center_top_9rem] bg-no-repeat">
+    class="text-white font-medium bg-gray-900 bg-[url('../src/assets/images/footer-shape.png')] bg-cover bg-[center_top_9rem] bg-no-repeat">
     <div class="container mx-auto px-6 py-28 leading-8">
       <div class="grid xl:grid-cols-4 md:grid-cols-2 gap-8">
         <div class='mb-4 xl:mb-0'>
