@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./index.html'],
-  safelist: ['!border', '!border-solid', '!border-teal-900', '!bg-white', '!text-teal-900', 'hover:!bg-none'],
+  safelist: ['!border', '!border-solid', '!border-teal-900', '!bg-white', '!text-teal-900', 'hover:!bg-none', 'right-0', 'opacity-70'],
   theme: {
     screens: {
       sm: '640px',
@@ -197,16 +197,16 @@ module.exports = {
         900: '#0c4a6e',
       },
       blue: {
-        50: '#eff6ff',
-        100: '#dbeafe',
-        200: '#bfdbfe',
-        300: '#93c5fd',
-        400: '#60a5fa',
-        500: '#3b82f6',
-        600: '#2563eb',
-        700: '#1d4ed8',
-        800: '#1e40af',
-        900: '#1e3a8a',
+        50: '#AAD8FF',
+        100: '#95CEFF',
+        200: '#6CBBFF',
+        300: '#44A9FF',
+        400: '#1B96FF',
+        500: '#0082F1',
+        600: '#0064B9',
+        700: '#004581',
+        800: '#002749',
+        900: '#000911',
       },
       indigo: {
         50: '#eef2ff',

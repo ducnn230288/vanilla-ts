@@ -19,7 +19,7 @@ new Swiper(".mySwiper", {
   },
   on: {
     init: (el: any) => animationSlide(el.slides[el.activeIndex], 0),
-    slideChangeTransitionEnd: (el: any) => animationSlide(el.slides[el.activeIndex], 0),
+    slideChangeTransitionStart: (el: any) => animationSlide(el.slides[el.activeIndex], 0),
   },
   autoplay: {
     delay: 5000,
@@ -81,95 +81,28 @@ new Swiper(".relatedSwiper", {
   },
 });
 /// menu
-document.querySelector('.hamburger')!.addEventListener('click', () => {
-  document.getElementById('menu')?.classList.toggle('right-0')
-  document.getElementById('bg-menu')?.classList.toggle('right-0')
-  // document.getElementById('list-menu')?.classList.toggle("top-0")
-  // document.getElementById('contact-menu')?.classList.toggle("-top-4")
-})
+
+Array.from(document.getElementsByClassName('handle-menu')).forEach((el) => {
+  el.addEventListener('click', () => {
+    toggleClassList(document.getElementById('hamburger'), ['body-menu-opened']);
+    toggleClassList(document.getElementById('bg-menu'), ['opacity-0', '-right-full', 'opacity-70', 'right-0']);
+    toggleClassList(document.getElementById('menu'), ['-right-80', 'right-0']);
+    toggleClassList(document.getElementById('list-menu'), ['top-0', 'opacity-100', 'top-10', 'opacity-0']);
+  })
+});
+
+const toggleClassList = (element: HTMLElement| null, classList: string[]) => element && classList.forEach((e) => element.classList.toggle(e))
 
 // glightbox 3
 GLightbox({});
 
-// echarts 5
-const myChart = echarts.init(document.getElementById('echarts'), null, {
-  renderer: 'svg',
-  useDirtyRect: false
-});
-myChart.setOption({
-  tooltip: {
-    trigger: 'axis',
-  },
-  grid: {
-    top: '40px',
-    left: '90px',
-    bottom: '30px',
-    right: '50px',
-  },
-  legend: { show: false },
-  xAxis: {
-    type: 'category',
-    boundaryGap: true,
-    axisLabel: {
-      show: true,
-    },
-    axisLine: {
-      show: true,
-      lineStyle: {
-        color: '#000000',
-      },
-    },
-    splitLine: {
-      show: false,
-    },
-    axisTick: {
-      show: true,
-      lineStyle: {
-        color: '#000000',
-      },
-    },
-    data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
-  },
-  yAxis: {
-    show: true,
-    type: 'value',
-    axisLine: {
-      show: true,
-      lineStyle: {
-        color: '#000000',
-      },
-    },
-    splitLine: {
-      show: true,
-      lineStyle: {
-        color: '#e5e7eb',
-      },
-    },
-  },
-  series: [
-    {
-      data: [120, 200, 150, 80, 70, 110, 130],
-      type: 'bar',
-      showBackground: true,
-      backgroundStyle: {
-        color: 'rgba(180, 180, 180, 0.2)'
-      }
-    }
-  ]
-});
-window.addEventListener('resize', myChart.resize);
-
-// inputmask 5
-Inputmask().mask(document.querySelectorAll("input"));
-
-
 // sweetalert2 11
-import { Message } from './message.ts'
-document.getElementById('success')!.addEventListener('click', () => Message.success({ text: 'Success' }))
-document.getElementById('warning')!.addEventListener('click', () => Message.warning({ text: 'Warning' }))
-document.getElementById('confirm')!.addEventListener('click', () => Message.confirm({ text: 'Confirm' }))
-document.getElementById('error')!.addEventListener('click', () => Message.error({ text: 'Error' }))
+// import { Message } from './message.ts'
+// document.getElementById('success')!.addEventListener('click', () => Message.success({ text: 'Success' }))
+// document.getElementById('warning')!.addEventListener('click', () => Message.warning({ text: 'Warning' }))
+// document.getElementById('confirm')!.addEventListener('click', () => Message.confirm({ text: 'Confirm' }))
+// document.getElementById('error')!.addEventListener('click', () => Message.error({ text: 'Error' }))
 
 
-import { setupCounter } from './counter.ts'
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+// import { setupCounter } from './counter.ts'
+// setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
