@@ -22,10 +22,8 @@ Array.from(document.getElementsByClassName('handle-dialog')).forEach((el) => el.
   const item = temp.content.querySelector("div");
   if (item) {
     const a = document.importNode(item, true);
-    a.textContent += 'tesst';
-    const tmp = document.createElement("div");
-    tmp.appendChild(a);
-    Message.html(tmp.innerHTML);
+    a.innerHTML = a.innerHTML.replace(/{{test}}/g, 'TEST')
+    Message.html(a.innerHTML);
   }
 }))
 

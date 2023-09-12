@@ -1,5 +1,5 @@
-export function setupMenuMobile(elements: HTMLCollectionOf<Element>) {
-  Array.from(elements).forEach((el) => el.addEventListener('click', () => {
+export function setupMenuMobile(collectionElementsByClass: HTMLCollectionOf<Element>) {
+  Array.from(collectionElementsByClass).forEach((el) => el.addEventListener('click', () => {
     toggleClassList(document.getElementById('hamburger'), ['body-menu-opened']);
     toggleClassList(document.getElementById('bg-menu'), ['opacity-0', '-right-full', 'opacity-50', 'right-0']);
     toggleClassList(document.getElementById('menu'), ['-right-80', 'right-0']);
