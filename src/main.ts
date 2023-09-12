@@ -18,10 +18,9 @@ import { Message } from './message.ts'
 // document.getElementById('error')!.addEventListener('click', () => Message.error({ text: 'Error' }))
 // handle-dialog
 Array.from(document.getElementsByClassName('handle-dialog')).forEach((el) => el.addEventListener('click', () =>  {
-  const temp = document.getElementsByTagName("template")[0];
-  const item = temp.content.querySelector("div");
-  if (item) {
-    const a = document.importNode(item, true);
+  const temp = document.getElementById("template-1");
+  if (temp) {
+    const a = document.importNode(temp, true);
     a.innerHTML = a.innerHTML.replace(/{{test}}/g, 'TEST')
     Message.html(a.innerHTML);
   }

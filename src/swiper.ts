@@ -1,6 +1,6 @@
 import {animationSlide} from "./gasp.ts";
 
-export function setupSwiper() {
+export const setupSwiper = () => {
   const defaultSetting = {
     loop: true,
     autoHeight: true,
