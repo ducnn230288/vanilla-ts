@@ -109,6 +109,8 @@ export const Message = {
         onDenied();
       }
     }),
+  html: (html: string) =>
+    Swal.fire({ html, showConfirmButton: false, padding: 0 }),
 };
 type Type = {
   text: string;
