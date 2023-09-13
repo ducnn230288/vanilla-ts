@@ -17,19 +17,427 @@ import { Message } from './message.ts'
 // document.getElementById('confirm')!.addEventListener('click', () => Message.confirm({ text: 'Confirm' }))
 // document.getElementById('error')!.addEventListener('click', () => Message.error({ text: 'Error' }))
 // handle-dialog
-Array.from(document.getElementsByClassName('handle-dialog')).forEach((el) => el.addEventListener('click', () =>  {
+Array.from(document.getElementsByClassName('handle-dialog')).forEach((el) => el.addEventListener('click', () => {
+  const data = [
+    {
+      "id": "6462b8ce-09b7-4bdd-b30c-88ae18cba76e",
+      "isDisabled": null,
+      "createdAt": "2023-07-30T21:10:20.086Z",
+      "updatedAt": "2023-07-30T21:23:16.616Z",
+      "type": "member",
+      "name": null,
+      "image": "http://api.v2.ari.com.vn/files/1690726982010-ung-tien-dung.webp",
+      "order": 1,
+      "translations": [
+        {
+          "id": "c78054dc-0351-4622-b75f-6984a93d3dfa",
+          "isDisabled": null,
+          "createdAt": "2023-07-30T21:10:20.086Z",
+          "updatedAt": "2023-07-30T21:10:20.086Z",
+          "language": "vn",
+          "name": "Ung Tiến Dũng",
+          "description": "Xuất thân là một kỹ sư Công nghệ thông tin, tốt nghiệp trường Đại học Bách Khoa Thành phố Hồ Chí Minh. Với hơn 10 năm kinh nghiệm trong ngành và các dự án lớn nhỏ, là chuyên gia trong lĩnh vực tư vấn chuyển đổi số.",
+          "position": "Chủ Tịch & Giám Đốc Điều Hành",
+          "content": {
+            "time": 1690726106709,
+            "blocks": [
+              {
+                "id": "CgRrnLJTf2",
+                "data": {
+                  "text": "Xuất thân là một kỹ sư CNTT, tốt nghiệp trường Đại học Bách Khoa Thành phố Hồ Chí Minh. Với hơn 10 năm kinh nghiệm trong ngành và các dự án lớn nhỏ, anh ấy là chuyên gia trong lĩnh vực tư vấn chuyển đổi số."
+                },
+                "type": "paragraph"
+              },
+              {
+                "id": "ulrsVCV_DW",
+                "data": {
+                  "text": "Kinh nghiệm làm việc:"
+                },
+                "type": "paragraph"
+              },
+              {
+                "id": "WuGTKYxx_U",
+                "data": {
+                  "text": "<b>CÔNG TY CỔ PHẦN CÔNG NGHỆ ARI<br></b><i><b>Chủ tịch &amp; Giám Đốc Điều Hành / 2018 - Hiện tại</b></i>"
+                },
+                "type": "paragraph"
+              },
+              {
+                "id": "06mq7FOaK4",
+                "data": {
+                  "text": "Định hướng chiến lược cơ cấu, tổ chức, phát triển công ty trong giai đoạn ngắn và dài hạn."
+                },
+                "type": "paragraph"
+              },
+              {
+                "id": "xZVROP3bla",
+                "data": {
+                  "text": "<b>CÔNG TY TNHH UHOUSE SOLUTION<br></b><i><b>Đồng Sáng Lập &amp; Giám Đốc Kỹ thuật/ 2022 - Hiện tại</b></i>"
+                },
+                "type": "paragraph"
+              },
+              {
+                "id": "o8_XnrLjg4",
+                "data": {
+                  "text": "Giám đốc kỹ thuật, phụ trách xây dựng và phát triển sản phẩm, quản lý và vận hành nhà trọ, chung cư."
+                },
+                "type": "paragraph"
+              },
+              {
+                "id": "PoETRQ3_Y5",
+                "data": {
+                  "text": "<b>CÔNG TY CỔ PHẦN TẬP ĐOÀN EEDC BALANCE<br></b><i><b>Đồng Sáng Lập &amp; Giám Đốc Kỹ thuật/ 2022 - Hiện tại</b></i>"
+                },
+                "type": "paragraph"
+              },
+              {
+                "id": "awDNQVS5_w",
+                "data": {
+                  "text": "Giám đốc kỹ thuật, phụ trách ở mảng công nghệ. Xây dựng sàn thương mại điện tử B2B, B2C mảng nông nghiệp. Tìm kiếm khách hàng tiềm năng và phát triển khách hàng mảng công nghệ và nông nghiệp."
+                },
+                "type": "paragraph"
+              },
+              {
+                "id": "hBrtC3PY6q",
+                "data": {
+                  "text": "<b>QUỸ KHỞI NGHIỆP VÀ SÁNG TẠO GMT SI-FUND<br></b><i><b>Đồng Sáng Lập &amp; Phó Giám Đốc/ 2022 - Hiện tại</b></i>"
+                },
+                "type": "paragraph"
+              },
+              {
+                "id": "ZQGiI6YJfo",
+                "data": {
+                  "text": "Phó giám đốc quỹ khởi nghiệp sáng tạo, phụ trách mảng công nghệ. Tìm kiếm các startup công nghệ tiềm năng, hướng dẫn quy trình xây dựng và phát triển doanh nghiệp. Kết nối các nhà đầu tư và các dòng tài chính đến với doanh nghiệp."
+                },
+                "type": "paragraph"
+              },
+              {
+                "id": "4xi5hD6Kp0",
+                "data": {
+                  "text": "<b>CÔNG TY TNHH BE HAPPY<br></b><i><b>Đồng Sáng Lập &amp; Giám Đốc Kỹ thuật/ 2021 - Hiện tại</b></i>"
+                },
+                "type": "paragraph"
+              },
+              {
+                "id": "MKq9e2_o1J",
+                "data": {
+                  "text": "Phụ trách xây dựng và phát triển sản phẩm hệ thống hóa đơn điện tử BE HAPPY."
+                },
+                "type": "paragraph"
+              }
+            ],
+            "version": "2.27.0"
+          },
+          "dataId": "6462b8ce-09b7-4bdd-b30c-88ae18cba76e"
+        }
+      ]
+    },
+    {
+      "id": "fe23535a-8a62-49bb-9db7-b0c9bf05ed6a",
+      "isDisabled": null,
+      "createdAt": "2023-07-30T21:13:19.657Z",
+      "updatedAt": "2023-07-30T21:53:54.338Z",
+      "type": "member",
+      "name": null,
+      "image": "http://api.v2.ari.com.vn/files/1690728822555-truong-thi-ny-ut-ny.webp",
+      "order": 2,
+      "translations": [
+        {
+          "id": "aac324ba-65c3-41d0-b077-cda9a6b35936",
+          "isDisabled": null,
+          "createdAt": "2023-07-30T21:13:19.657Z",
+          "updatedAt": "2023-07-30T21:13:19.657Z",
+          "language": "vn",
+          "name": "Trương Thị Ny (Út Ny)",
+          "description": "Hiện là Ủy viên Đặc biệt và Đại diện của Hội đồng Phát triển Kinh tế Châu Âu (EEDC) - Đại diện cho Người được giao danh dự điều phối Chủ tịch EEDC Vương quốc Thái Lan và Cao ủy Các nước Châu Á-Thái Bình Dương và Châu Á cho Hội đồng Phát triển Kinh tế Châu Âu (EEDC). Đồng thời là chuyên gia cố vấn cho hơn 10 tổ chức và công ty, trong đó có Công ty cổ phần Công nghệ ARI.",
+          "position": "Cố Vấn Chiến Lược Toàn Diện",
+          "content": {
+            "time": 1690726378967,
+            "blocks": [
+              {
+                "id": "r3zPCVxHT1",
+                "data": {
+                  "text": "Hiện là Ủy Viên Đặc biệt và Đại diện của Hội đồng Phát triển Kinh tế Châu Âu (EEDC)."
+                },
+                "type": "paragraph"
+              },
+              {
+                "id": "LIzTigHoKV",
+                "data": {
+                  "text": "Thành viên Hội đồng tư vấn của Viện Kinh tế - Luật và Quản lý."
+                },
+                "type": "paragraph"
+              },
+              {
+                "id": "rIz8rEkjhy",
+                "data": {
+                  "text": "Cố Vấn Ban Trung Tâm Tư Vấn Pháp Luật ASEAN."
+                },
+                "type": "paragraph"
+              },
+              {
+                "id": "8dnZoP3JsF",
+                "data": {
+                  "text": "Chuyên Gia Cố Vấn chiến lược Cộng Đồng cho Phó Chủ Tịch Liên Đoàn Yoga Châu Á."
+                },
+                "type": "paragraph"
+              },
+              {
+                "id": "goJqCDkHIV",
+                "data": {
+                  "text": "Chuyên gia cố vấn toàn diện trực tiếp cho Chủ Tịch Hội Thể thao giải trí thành phố Hà Nội."
+                },
+                "type": "paragraph"
+              },
+              {
+                "id": "vE2-YVZEjp",
+                "data": {
+                  "text": "Ủy viên ban chấp hành - Phó Trưởng Ban Truyền thông &amp; Đối ngoại Hội Thể thao giải trí thành phố Hà Nội nhiệm kỳ I (2020-2025)."
+                },
+                "type": "paragraph"
+              },
+              {
+                "id": "z03kaY7g2t",
+                "data": {
+                  "text": "Chuyên gia hỗ trợ giải pháp doanh nghiệp."
+                },
+                "type": "paragraph"
+              },
+              {
+                "id": "byHuIGn-lS",
+                "data": {
+                  "text": "Chuyên gia tư vấn đầu tư - hỗ trợ quỹ Dragon Capital &amp; VinaCapital tại Việt Nam."
+                },
+                "type": "paragraph"
+              },
+              {
+                "id": "20BoJuvWTS",
+                "data": {
+                  "text": "Cố vấn tại Công ty TNHH Chứng khoán NH Việt Nam."
+                },
+                "type": "paragraph"
+              },
+              {
+                "id": "wxXt6k4mZr",
+                "data": {
+                  "text": "Cố vấn chiến lược toàn diện cho liên minh Vườn ươm khu vực miền trung Tây Nguyên (ISHN)."
+                },
+                "type": "paragraph"
+              },
+              {
+                "id": "L7CYHVoMCn",
+                "data": {
+                  "text": "Cố vấn chiến lược toàn diện cho Câu lạc bộ Xúc tiến Thương mại thuộc Hội Doanh nhân trẻ Việt Nam (VINATIPC)."
+                },
+                "type": "paragraph"
+              },
+              {
+                "id": "eGfAHNRGiJ",
+                "data": {
+                  "text": "Thành viên hội đồng Ban cố vấn quỹ học bổng \"Kết Nối Chắp Cánh Tương Lai\"."
+                },
+                "type": "paragraph"
+              },
+              {
+                "id": "FnWEz6b0_5",
+                "data": {
+                  "text": "Cố vấn chiến lược toàn diện cho Công ty Cổ phần Tập đoàn Thương Mại Khoáng Sản Toàn Cầu (GMT)."
+                },
+                "type": "paragraph"
+              },
+              {
+                "id": "W_5CoHKKX9",
+                "data": {
+                  "text": "Cố vấn chiến lược toàn diện của Công ty Cổ phần Công nghệ ARI."
+                },
+                "type": "paragraph"
+              },
+              {
+                "id": "Uhv529Bpva",
+                "data": {
+                  "text": "Cố vấn chiến lược toàn diện cho Công ty Cổ phần EEDC BALANCE."
+                },
+                "type": "paragraph"
+              }
+            ],
+            "version": "2.27.0"
+          },
+          "dataId": "fe23535a-8a62-49bb-9db7-b0c9bf05ed6a"
+        },
+      ]
+    },
+    {
+      "id": "0f95646c-d15e-4a48-9cbe-30f0e9990adb",
+      "isDisabled": null,
+      "createdAt": "2023-07-30T21:15:16.285Z",
+      "updatedAt": "2023-07-30T21:54:07.126Z",
+      "type": "member",
+      "name": null,
+      "image": "http://api.v2.ari.com.vn/files/1690728842502-phung-duc-chinh.webp",
+      "order": 3,
+      "translations": [
+        {
+          "id": "28d9904c-991c-48a2-9f6c-d210384e14b1",
+          "isDisabled": null,
+          "createdAt": "2023-07-30T21:15:16.285Z",
+          "updatedAt": "2023-07-30T21:15:16.285Z",
+          "language": "vn",
+          "name": "Phùng Đức Chính",
+          "description": "Nhiều năm hoạt động trong lĩnh vực phát triển phần mềm và quản lý vận hành công ty, tư vấn triển khai các giải pháp phần mềm cho khách hàng.",
+          "position": "Giám Đốc Kinh Doanh",
+          "content": {
+            "time": 1690726450374,
+            "blocks": [
+              {
+                "id": "PkkyXFvxZn",
+                "data": {
+                  "text": "Hơn 3 năm Đồng sáng lập tại công ty EdTech, phụ trách chiến lược, hoạt động, truyền thông và phát triển sản phẩm. Hơn 5 năm kinh nghiệm Phát triển phần mềm trong lĩnh vực kinh doanh như Dịch vụ kết hợp doanh nghiệp, Tìm việc, Tạp chí, Thương mại điện tử,..."
+                },
+                "type": "paragraph"
+              },
+              {
+                "id": "ERYIm8QPdz",
+                "data": {
+                  "text": "Hơn 2 năm làm Trưởng nhóm dự án, Quản lý sản phẩm sản phẩm - đưa ra các giải pháp để kinh doanh tốt hơn."
+                },
+                "type": "paragraph"
+              }
+            ],
+            "version": "2.27.0"
+          },
+          "dataId": "0f95646c-d15e-4a48-9cbe-30f0e9990adb"
+        },
+      ]
+    },
+    {
+      "id": "d8e531d4-f527-4565-9276-c90d94997392",
+      "isDisabled": null,
+      "createdAt": "2023-07-30T21:16:44.436Z",
+      "updatedAt": "2023-07-30T21:54:18.917Z",
+      "type": "member",
+      "name": null,
+      "image": "http://api.v2.ari.com.vn/files/1690728857199-nguyen-ba-trung.webp",
+      "order": 4,
+      "translations": [
+        {
+          "id": "88506435-2711-4016-a6d2-958ec1ea256a",
+          "isDisabled": null,
+          "createdAt": "2023-07-30T21:16:44.436Z",
+          "updatedAt": "2023-07-30T21:16:44.436Z",
+          "language": "vn",
+          "name": "Nguyễn Bá Trung",
+          "description": "Anh ấy có kinh nghiệm trong các dự án nghiên cứu và phát triển công nghệ cao, ứng dụng trên web, IoT và DevOps. Có kinh nghiệm quản lý nhân sự và dự án.",
+          "position": "Phó Giám Đốc",
+          "content": {
+            "time": 1690726590517,
+            "blocks": [
+              {
+                "id": "EyUnTencCq",
+                "data": {
+                  "text": "Anh ấy có hơn 5 năm kinh nghiệm trong lĩnh vực phát triển phần mềm. Quản lý con người, quản lý project. Là một Full Stack developer, từng làm việc với các ngôn ngữ như : Java, C#, Nodejs, Golang, Postgres, Mongodb, devOps ...Là người thích đam mê, tìm hiểu những công nghệ mới (AI, IOT, Blockchain...) để ứng dụng vào phát triển các sản phẩm phần mềm."
+                },
+                "type": "paragraph"
+              }
+            ],
+            "version": "2.27.0"
+          },
+          "dataId": "d8e531d4-f527-4565-9276-c90d94997392"
+        }
+      ]
+    },
+    {
+      "id": "8c73ab1a-083e-41c2-bb7d-5cf5a90ee004",
+      "isDisabled": null,
+      "createdAt": "2023-07-30T21:21:31.165Z",
+      "updatedAt": "2023-07-30T21:54:31.813Z",
+      "type": "member",
+      "name": null,
+      "image": "http://api.v2.ari.com.vn/files/1690728870489-le-viet-quynh.webp",
+      "order": 6,
+      "translations": [
+        {
+          "id": "1dc64ba2-5019-4962-8f48-27073a5f065f",
+          "isDisabled": null,
+          "createdAt": "2023-07-30T21:21:31.165Z",
+          "updatedAt": "2023-07-30T21:21:31.165Z",
+          "language": "vn",
+          "name": "Lê Việt Quỳnh",
+          "description": "Cô ấy có hơn 11 năm kinh nghiệm trong lĩnh vực kiểm thử phần mềm tại Việt Nam cũng như các thị trường quốc tế. Cô ấy chịu trách nhiệm xác định tầm nhìn dự án, đặt ra các ưu tiên và đảm bảo các công việc được hoàn thành đúng thời hạn với chất lượng tốt nhất.",
+          "position": "Quản Lý",
+          "content": {
+            "time": 1690726864062,
+            "blocks": [
+              {
+                "id": "ujGolJqMvW",
+                "data": {
+                  "text": "Tốt nghiệp Đại học Bách Khoa là trường đại học hàng đầu Việt Nam, cô ấy có hơn 11 năm kinh nghiệm trong lĩnh vực kiểm thử phần mềm cho các sản phẩm tại thị trường nước ngoài như Anh, Mỹ, Úc, Châu âu, Singapore. Cô ấy có kinh nghiệm xây dựng/ quản lý / lãnh đạo đội ngũ, xây dựng quy trình tốt nhất cho công ty. Có nhiều kinh nghiệm trong lĩnh vực kinh doanh từ chăm sóc sức khoẻ, kinh doanh, bảo hiểm và tài chính. Các kỹ năng mạnh như lãnh đạo, hợp tác và thuyết trình cùng với kinh nghiệm quản lý các thành viên trong nhiều dự án khác nhau."
+                },
+                "type": "paragraph"
+              }
+            ],
+            "version": "2.27.0"
+          },
+          "dataId": "8c73ab1a-083e-41c2-bb7d-5cf5a90ee004"
+        },
+      ]
+    },
+    {
+      "id": "e811024f-7d7a-4364-8f43-5fefa4e9438e",
+      "isDisabled": null,
+      "createdAt": "2023-07-30T21:22:45.908Z",
+      "updatedAt": "2023-07-30T21:31:24.073Z",
+      "type": "member",
+      "name": null,
+      "image": "http://api.v2.ari.com.vn/files/1690727480658-nguyen-khac-sinh-nhat.webp",
+      "order": 7,
+      "translations": [
+        {
+          "id": "1953afd6-5d91-448c-a6a9-c4e1be70082a",
+          "isDisabled": null,
+          "createdAt": "2023-07-30T21:22:45.908Z",
+          "updatedAt": "2023-07-30T21:22:45.908Z",
+          "language": "vn",
+          "name": "Nguyễn Khắc Sinh Nhật",
+          "description": "Nhà phát triển phần mềm chuyên nghiệp với hơn mười năm kinh nghiệm triển khai và quản lý các dự án phần mềm cho các thị trường Việt Nam, Asian và Nhật Bản.",
+          "position": "Quản Lý",
+          "content": {
+            "time": 1690726907958,
+            "blocks": [
+              {
+                "id": "3Ks6rz1AeR",
+                "data": {
+                  "text": "Xuất thân là một Developer tốt nghiệp tại trường Đại Học Khoa Học Tự Nhiên TPHCM. Với kiến thức kỹ thuật (Software development, system architect, network, infra,...) và nghiệp vụ chuyên sâu (đặc biệt trong lĩnh vực bán lẻ), khả năng giao tiếp tiếng Anh và tiếng Nhật tốt cộng với thời gian dài làm việc tại các công ty Nhật Bản và các công ty outsourcing hàng đầu Việt Nam. Anh đã tham gia triển khai và vận hành thành công nhiều dự án phầm mềm cho các thị trường Việt Nam, Asian và Nhật Bản ở cả vai trò nhà phát triển lẫn nhà quản lý dự án chuyên nghiệp."
+                },
+                "type": "paragraph"
+              }
+            ],
+            "version": "2.27.0"
+          },
+          "dataId": "e811024f-7d7a-4364-8f43-5fefa4e9438e"
+        },
+      ]
+    }
+  ]
+
   const temp = document.getElementById("template-1");
   if (temp) {
-    const a = document.importNode(temp, true);
-    a.innerHTML = a.innerHTML.replace(/{{test}}/g, 'TEST')
-    Message.html(a.innerHTML);
+    const index = el.parentElement!.parentElement!.parentElement!.parentElement!.getAttribute('data-swiper-slide-index')
+    if (index) {
+      const a = document.importNode(temp, true);
+      const i = parseInt(index)
+      a.innerHTML = a.innerHTML.replace(/{{image}}/g, `${data[i].image}`)
+      a.innerHTML = a.innerHTML.replace(/{{name}}/g, `${data[i].translations[0].name}`)
+      a.innerHTML = a.innerHTML.replace(/{{position}}/g, `${data[i].translations[0].position}`)
+      data[i].translations[0].content.blocks.map((e) => e.data)
+      Message.html(a.innerHTML);
+    }
   }
 }))
 
 // import { setupCounter } from './counter.ts'
 // setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
-import {setupSwiper } from './swiper.ts';
+import { setupSwiper } from './swiper.ts';
 setupSwiper();
 
-import {setupMenuMobile } from './menu-mobile.ts';
+import { setupMenuMobile } from './menu-mobile.ts';
 setupMenuMobile(document.getElementsByClassName('handle-menu'));

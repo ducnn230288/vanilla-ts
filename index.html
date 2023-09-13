@@ -481,7 +481,7 @@
           <div
             class="swiper-slide border border-gray-200 text-left p-5 lg:p-10 lg:pb-0 sm:pt-5 sm:pr-3 sm:pl-0 bg-gray-50 container">
             <div class="sm:flex items-center">
-              <div class='gsap zoom sm:w-1/3'>
+              <div class='gsap sm:w-1/3'>
                 <img alt="Ari" class="lazy w-full sm:p-10 lg:pt-0 text-center mx-auto"
                   src="/src/assets/images/home/ceo.png" />
               </div>
@@ -496,13 +496,10 @@
                 <div class='gsap bottom'>
                   <p class="hidden text-justify sm:block">
                     Xuất thân là một kỹ sư Công nghệ thông tin, tốt nghiệp trường Đại học Bách Khoa Thành phố Hồ Chí
-                    Minh.
-                    Với
-                    hơn 10 năm kinh nghiệm trong ngành và các dự án lớn nhỏ, là chuyên gia trong lĩnh vực tư vấn chuyển
-                    đổi
-                    số.
+                    Minh. Với hơn 10 năm kinh nghiệm trong ngành và các dự án lớn nhỏ, là chuyên gia trong lĩnh vực tư
+                    vấn chuyển đổi số.
                   </p>
-                  <button class='handle-dialog text-blue-500 hover:text-blue-600 sm:mt-3' tabIndex={-1}>
+                  <button class='handle-dialog text-blue-500 hover:text-blue-600 sm:mt-3'>
                     Xem thêm
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                       xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="384px" height="384px"
@@ -519,7 +516,7 @@
           <div
             class="swiper-slide border border-gray-200 text-left p-5 lg:p-10 lg:pb-0 sm:pt-5 sm:pr-3 sm:pl-0 bg-gray-50 container">
             <div class="sm:flex items-center">
-              <div class='gsap zoom sm:w-1/3'>
+              <div class='gsap sm:w-1/3'>
                 <img alt="Ari" class="lazy w-full sm:p-10 lg:pt-0 text-center mx-auto"
                   src="/src/assets/images/home/vicedirector.png" />
               </div>
@@ -534,7 +531,7 @@
                     Anh ấy có kinh nghiệm trong các dự án nghiên cứu và phát triển công nghệ cao, ứng dụng trên web, IoT
                     và DevOps. Có kinh nghiệm quản lý nhân sự và dự án.
                   </p>
-                  <button class='handle-dialog text-blue-500 hover:text-blue-600 sm:mt-3' tabIndex={-1}>
+                  <button class='handle-dialog text-blue-500 hover:text-blue-600 sm:mt-3'>
                     Xem thêm
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                       xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="384px" height="384px"
@@ -553,7 +550,24 @@
       </div>
     </div>
     <template id="template-1">
-      <div class="myClass">I {{test}} like: {{test}} tes</div>
+      <div class="text-sm">
+        <div class="text-center pb-5">
+          <img alt="Ari" class="h-32 mx-auto" src="{{image}}">
+          <h3 class="text-xl text-blue-800 font-bold mb-1">{{name}}</h3>
+          <p class="text-blue-500 text mb-0 capitalize">{{position}}</p>
+        </div>
+        <div id="exp" class="text-justify">
+          <p>{{description}}</p>
+          <p>{{experince}}</p>
+          <p>
+            <b>{{company}}<br></b>
+            <i>
+              <b>{{exp-position}}</b>
+            </i>
+          </p>
+          <p>{{exp-description}}</p>
+        </div>
+      </div>
     </template>
   </section>
   <!-- contact  -->
