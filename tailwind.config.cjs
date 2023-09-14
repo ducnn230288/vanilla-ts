@@ -3,6 +3,13 @@ module.exports = {
   content: ['./*.html'],
   safelist: ['!border', '!border-solid', '!border-teal-900', '!bg-white', '!text-teal-900', 'hover:!bg-none'],
   theme: {
+    fontFamily: {
+      lato: "'Lato', serif",
+      quicksand: "'Quicksand', serif"
+    },
+    boxShadow: {
+      'xls': '0 6px 30px -8px rgb(0 0 0 / 0.1), 5px 0px 8px -6px rgb(0 0 0 / 0.1)'
+    },
     screens: {
       sm: '640px',
       md: '768px',
@@ -39,6 +46,9 @@ module.exports = {
         700: '#374151',
         800: '#1f2937',
         900: '#111827',
+        'ligsoc':'#D8F1E5',
+        'grey': '#808080',
+        'blck' : '#253D4E',
       },
       zinc: {
         50: '#fafafa',
@@ -99,6 +109,7 @@ module.exports = {
         700: '#c2410c',
         800: '#9a3412',
         900: '#7c2d12',
+        'orn':'#FDC040'
       },
       amber: {
         50: '#fffbeb',
@@ -123,6 +134,7 @@ module.exports = {
         700: '#a16207',
         800: '#854d0e',
         900: '#713f12',
+        'darkyellow': '#FFD55A',
       },
       lime: {
         50: '#f7fee7',
@@ -147,6 +159,10 @@ module.exports = {
         700: '#15803d',
         800: '#166534',
         900: '#14532d',
+        'grn': '#3BB77E',
+        'grntxt' : '#3BB7A3',
+        'ligrn':'#BCE3C9',
+        'darkgrn': '#81B13D',
       },
       emerald: {
         50: '#ecfdf5',
@@ -267,6 +283,7 @@ module.exports = {
         700: '#be185d',
         800: '#9d174d',
         900: '#831843',
+        'pnk': '#FD6E6E',
       },
       rose: {
         50: '#fff1f2',
@@ -305,7 +322,10 @@ module.exports = {
         'burger-hover-4': 'burgerHover 1s infinite ease-in-out alternate forwards 400ms',
         'burger-hover-6': 'burgerHover 1s infinite ease-in-out alternate forwards 600ms',
       },
-    }
+    },
+    variants: {
+      fill: ['hover', 'focus'], 
+    },
   },
   plugins: [],
 };
