@@ -133,6 +133,42 @@ Array.from(document.getElementsByClassName('handle-dialog')).forEach((el) => el.
       ]
     },
     {
+      "id": "d8e531d4-f527-4565-9276-c90d94997392",
+      "isDisabled": null,
+      "createdAt": "2023-07-30T21:16:44.436Z",
+      "updatedAt": "2023-07-30T21:54:18.917Z",
+      "type": "member",
+      "name": null,
+      "image": "http://api.v2.ari.com.vn/files/1690728857199-nguyen-ba-trung.webp",
+      "order": 4,
+      "translations": [
+        {
+          "id": "88506435-2711-4016-a6d2-958ec1ea256a",
+          "isDisabled": null,
+          "createdAt": "2023-07-30T21:16:44.436Z",
+          "updatedAt": "2023-07-30T21:16:44.436Z",
+          "language": "vn",
+          "name": "Nguyễn Bá Trung",
+          "description": "Anh ấy có kinh nghiệm trong các dự án nghiên cứu và phát triển công nghệ cao, ứng dụng trên web, IoT và DevOps. Có kinh nghiệm quản lý nhân sự và dự án.",
+          "position": "Phó Giám Đốc",
+          "content": {
+            "time": 1690726590517,
+            "blocks": [
+              {
+                "id": "EyUnTencCq",
+                "data": {
+                  "text": "Anh ấy có hơn 5 năm kinh nghiệm trong lĩnh vực phát triển phần mềm. Quản lý con người, quản lý project. Là một Full Stack developer, từng làm việc với các ngôn ngữ như : Java, C#, Nodejs, Golang, Postgres, Mongodb, devOps ...Là người thích đam mê, tìm hiểu những công nghệ mới (AI, IOT, Blockchain...) để ứng dụng vào phát triển các sản phẩm phần mềm."
+                },
+                "type": "paragraph"
+              }
+            ],
+            "version": "2.27.0"
+          },
+          "dataId": "d8e531d4-f527-4565-9276-c90d94997392"
+        }
+      ]
+    },
+    {
       "id": "fe23535a-8a62-49bb-9db7-b0c9bf05ed6a",
       "isDisabled": null,
       "createdAt": "2023-07-30T21:13:19.657Z",
@@ -310,42 +346,6 @@ Array.from(document.getElementsByClassName('handle-dialog')).forEach((el) => el.
       ]
     },
     {
-      "id": "d8e531d4-f527-4565-9276-c90d94997392",
-      "isDisabled": null,
-      "createdAt": "2023-07-30T21:16:44.436Z",
-      "updatedAt": "2023-07-30T21:54:18.917Z",
-      "type": "member",
-      "name": null,
-      "image": "http://api.v2.ari.com.vn/files/1690728857199-nguyen-ba-trung.webp",
-      "order": 4,
-      "translations": [
-        {
-          "id": "88506435-2711-4016-a6d2-958ec1ea256a",
-          "isDisabled": null,
-          "createdAt": "2023-07-30T21:16:44.436Z",
-          "updatedAt": "2023-07-30T21:16:44.436Z",
-          "language": "vn",
-          "name": "Nguyễn Bá Trung",
-          "description": "Anh ấy có kinh nghiệm trong các dự án nghiên cứu và phát triển công nghệ cao, ứng dụng trên web, IoT và DevOps. Có kinh nghiệm quản lý nhân sự và dự án.",
-          "position": "Phó Giám Đốc",
-          "content": {
-            "time": 1690726590517,
-            "blocks": [
-              {
-                "id": "EyUnTencCq",
-                "data": {
-                  "text": "Anh ấy có hơn 5 năm kinh nghiệm trong lĩnh vực phát triển phần mềm. Quản lý con người, quản lý project. Là một Full Stack developer, từng làm việc với các ngôn ngữ như : Java, C#, Nodejs, Golang, Postgres, Mongodb, devOps ...Là người thích đam mê, tìm hiểu những công nghệ mới (AI, IOT, Blockchain...) để ứng dụng vào phát triển các sản phẩm phần mềm."
-                },
-                "type": "paragraph"
-              }
-            ],
-            "version": "2.27.0"
-          },
-          "dataId": "d8e531d4-f527-4565-9276-c90d94997392"
-        }
-      ]
-    },
-    {
       "id": "8c73ab1a-083e-41c2-bb7d-5cf5a90ee004",
       "isDisabled": null,
       "createdAt": "2023-07-30T21:21:31.165Z",
@@ -428,7 +428,283 @@ Array.from(document.getElementsByClassName('handle-dialog')).forEach((el) => el.
       a.innerHTML = a.innerHTML.replace(/{{image}}/g, `${data[i].image}`)
       a.innerHTML = a.innerHTML.replace(/{{name}}/g, `${data[i].translations[0].name}`)
       a.innerHTML = a.innerHTML.replace(/{{position}}/g, `${data[i].translations[0].position}`)
-      data[i].translations[0].content.blocks.map((e) => e.data)
+      let para = ''
+      data[i].translations[0].content.blocks.forEach((e) => para = para + `<p>${e.data.text}</p>`)
+      a.innerHTML = a.innerHTML.replace(/{{block}}/g, para)
+      Message.html(a.innerHTML);
+    }
+  }
+}))
+//handle drop-shadow
+Array.from(document.getElementsByClassName('drop-shadow')).forEach((el) => el.addEventListener('click', () => {
+  console.log(el)
+  const data = [
+    {
+      "id": "8c73ab1a-083e-41c2-bb7d-5cf5a90ee004",
+      "isDisabled": null,
+      "createdAt": "2023-07-30T21:21:31.165Z",
+      "updatedAt": "2023-07-30T21:54:31.813Z",
+      "type": "member",
+      "name": null,
+      "image": "http://api.v2.ari.com.vn/files/1690728870489-le-viet-quynh.webp",
+      "order": 6,
+      "translations": [
+        {
+          "id": "1dc64ba2-5019-4962-8f48-27073a5f065f",
+          "isDisabled": null,
+          "createdAt": "2023-07-30T21:21:31.165Z",
+          "updatedAt": "2023-07-30T21:21:31.165Z",
+          "language": "vn",
+          "name": "Lê Việt Quỳnh",
+          "description": "Cô ấy có hơn 11 năm kinh nghiệm trong lĩnh vực kiểm thử phần mềm tại Việt Nam cũng như các thị trường quốc tế. Cô ấy chịu trách nhiệm xác định tầm nhìn dự án, đặt ra các ưu tiên và đảm bảo các công việc được hoàn thành đúng thời hạn với chất lượng tốt nhất.",
+          "position": "Quản Lý",
+          "content": {
+            "time": 1690726864062,
+            "blocks": [
+              {
+                "id": "ujGolJqMvW",
+                "data": {
+                  "text": "Tốt nghiệp Đại học Bách Khoa là trường đại học hàng đầu Việt Nam, cô ấy có hơn 11 năm kinh nghiệm trong lĩnh vực kiểm thử phần mềm cho các sản phẩm tại thị trường nước ngoài như Anh, Mỹ, Úc, Châu âu, Singapore. Cô ấy có kinh nghiệm xây dựng/ quản lý / lãnh đạo đội ngũ, xây dựng quy trình tốt nhất cho công ty. Có nhiều kinh nghiệm trong lĩnh vực kinh doanh từ chăm sóc sức khoẻ, kinh doanh, bảo hiểm và tài chính. Các kỹ năng mạnh như lãnh đạo, hợp tác và thuyết trình cùng với kinh nghiệm quản lý các thành viên trong nhiều dự án khác nhau."
+                },
+                "type": "paragraph"
+              }
+            ],
+            "version": "2.27.0"
+          },
+          "dataId": "8c73ab1a-083e-41c2-bb7d-5cf5a90ee004"
+        },
+      ]
+    },
+    {
+      "id": "e811024f-7d7a-4364-8f43-5fefa4e9438e",
+      "isDisabled": null,
+      "createdAt": "2023-07-30T21:22:45.908Z",
+      "updatedAt": "2023-07-30T21:31:24.073Z",
+      "type": "member",
+      "name": null,
+      "image": "http://api.v2.ari.com.vn/files/1690727480658-nguyen-khac-sinh-nhat.webp",
+      "order": 7,
+      "translations": [
+        {
+          "id": "1953afd6-5d91-448c-a6a9-c4e1be70082a",
+          "isDisabled": null,
+          "createdAt": "2023-07-30T21:22:45.908Z",
+          "updatedAt": "2023-07-30T21:22:45.908Z",
+          "language": "vn",
+          "name": "Nguyễn Khắc Sinh Nhật",
+          "description": "Nhà phát triển phần mềm chuyên nghiệp với hơn mười năm kinh nghiệm triển khai và quản lý các dự án phần mềm cho các thị trường Việt Nam, Asian và Nhật Bản.",
+          "position": "Quản Lý",
+          "content": {
+            "time": 1690726907958,
+            "blocks": [
+              {
+                "id": "3Ks6rz1AeR",
+                "data": {
+                  "text": "Xuất thân là một Developer tốt nghiệp tại trường Đại Học Khoa Học Tự Nhiên TPHCM. Với kiến thức kỹ thuật (Software development, system architect, network, infra,...) và nghiệp vụ chuyên sâu (đặc biệt trong lĩnh vực bán lẻ), khả năng giao tiếp tiếng Anh và tiếng Nhật tốt cộng với thời gian dài làm việc tại các công ty Nhật Bản và các công ty outsourcing hàng đầu Việt Nam. Anh đã tham gia triển khai và vận hành thành công nhiều dự án phầm mềm cho các thị trường Việt Nam, Asian và Nhật Bản ở cả vai trò nhà phát triển lẫn nhà quản lý dự án chuyên nghiệp."
+                },
+                "type": "paragraph"
+              }
+            ],
+            "version": "2.27.0"
+          },
+          "dataId": "e811024f-7d7a-4364-8f43-5fefa4e9438e"
+        },
+      ]
+    },
+    {
+      "id": "0ab1c6f7-d084-42aa-b3e3-5b6f09ab38cd",
+      "isDisabled": null,
+      "createdAt": "2023-07-30T21:40:51.183Z",
+      "updatedAt": "2023-08-03T21:01:40.203Z",
+      "type": "member",
+      "name": null,
+      "image": "http://api.v2.ari.com.vn/files/1690728044440-le-quang-thach.webp",
+      "order": null,
+      "translations": [
+        {
+          "id": "6c0e8ac9-ab41-4947-872d-7d09ee5a7200",
+          "isDisabled": null,
+          "createdAt": "2023-07-30T21:40:51.183Z",
+          "updatedAt": "2023-07-30T21:40:51.183Z",
+          "language": "vn",
+          "name": "Lê Quang Thạch",
+          "description": "Tốt nghiệp tại trường Đại Học Bách Khoa TPHCM. Với kiến thức kỹ thuật (Software development, system architect, network, infra,...) và nghiệp vụ chuyên sâu trong lĩnh vực thương mại điện tử, khả năng giao tiếp tiếng Anh khá.",
+          "position": "Kỹ sư phần mềm",
+          "content": {
+            "time": 1690728028810,
+            "blocks": [
+              {
+                "id": "sdAuaRqO38",
+                "data": {
+                  "text": "Tốt nghiệp tại trường Đại Học Bách Khoa TPHCM. Với kiến thức kỹ thuật (Software development, system architect, network, infra,...) và nghiệp vụ chuyên sâu trong lĩnh vực thương mại điện tử, khả năng giao tiếp tiếng Anh khá. Đã và đang tham gia triển khai và vận hành thành công dự án phần mềm cho các thị trường Asian ở cả vai trò nhà phát triển lẫn nhà quản lý dự án chuyên nghiệp."
+                },
+                "type": "paragraph"
+              }
+            ],
+            "version": "2.27.0"
+          },
+          "dataId": "0ab1c6f7-d084-42aa-b3e3-5b6f09ab38cd"
+        },
+      ]
+    },
+    {
+      "id": "d37ed43d-ec91-4356-bf3e-06b793327b00",
+      "isDisabled": null,
+      "createdAt": "2023-07-30T21:43:26.020Z",
+      "updatedAt": "2023-08-03T21:01:45.284Z",
+      "type": "member",
+      "name": null,
+      "image": "http://api.v2.ari.com.vn/files/1690728154306-tong-quoc-sang.webp",
+      "order": null,
+      "translations": [
+        {
+          "id": "8d37f86b-1cf2-4ebd-9ec7-5d04606fab2f",
+          "isDisabled": null,
+          "createdAt": "2023-07-30T21:43:26.020Z",
+          "updatedAt": "2023-07-30T21:43:26.020Z",
+          "language": "vn",
+          "name": "Tống Quốc Sang",
+          "description": "Tốt nghiệp tại trường Đại Học Bách Khoa TPHCM. Với kiến thức kỹ thuật (Software development, system architect, network, infra,...) và nghiệp vụ chuyên sâu trong lĩnh vực thương mại điện tử, khả năng giao tiếp tiếng Anh khá.",
+          "position": "Kỹ sư phần mềm",
+          "content": {
+            "time": 1690728172593,
+            "blocks": [
+              {
+                "id": "PBUMk3-Eg0",
+                "data": {
+                  "text": "Tốt nghiệp tại trường Đại Học Bách Khoa TPHCM. Với kiến thức kỹ thuật (Software development, system architect, network, infra,...) và nghiệp vụ chuyên sâu trong lĩnh vực thương mại điện tử, khả năng giao tiếp tiếng Anh khá. Có kinh nghiệm trong việc triển khai và vận hành thành công dự án phần mềm cho các thị trường Singapore , Malaysia."
+                },
+                "type": "paragraph"
+              }
+            ],
+            "version": "2.27.0"
+          },
+          "dataId": "d37ed43d-ec91-4356-bf3e-06b793327b00"
+        },
+      ]
+    },
+    {
+      "id": "b448527a-9ae3-4234-8b25-a2d8e4660264",
+      "isDisabled": null,
+      "createdAt": "2023-07-30T21:45:15.174Z",
+      "updatedAt": "2023-08-03T21:01:51.099Z",
+      "type": "member",
+      "name": null,
+      "image": "http://api.v2.ari.com.vn/files/1690728303585-le-tat-thien.webp",
+      "order": null,
+      "translations": [
+        {
+          "id": "99836822-a047-47e1-b5b3-2e24217ce049",
+          "isDisabled": null,
+          "createdAt": "2023-07-30T21:45:15.174Z",
+          "updatedAt": "2023-07-30T21:45:15.174Z",
+          "language": "vn",
+          "name": "Lê Tất Thiện",
+          "description": "Tốt nghiệp tại trường Đại Học Bách Khoa TPHCM. Với kiến thức kỹ thuật (Software development, system architect, Frontend,...) và nghiệp vụ chuyên sâu trong lĩnh vực thương mại điện tử, CMS, khả năng giao tiếp tiếng Anh.",
+          "position": "Kỹ sư phần mềm",
+          "content": {
+            "time": 1690728293920,
+            "blocks": [
+              {
+                "id": "7rUHtqiVXq",
+                "data": {
+                  "text": "Tốt nghiệp tại trường Đại Học Bách Khoa TPHCM. Với kiến thức kỹ thuật (Software development, system architect, Frontend,...) và nghiệp vụ chuyên sâu trong lĩnh vực thương mại điện tử, CMS, khả năng giao tiếp tiếng Anh. Đã và đang tham gia triển khai và vận hành thành công dự án phần mềm cho các thị trường Châu Á và Châu Âu ở cả vai trò nhà phát triển lẫn nhà quản lý dự án chuyên nghiệp."
+                },
+                "type": "paragraph"
+              }
+            ],
+            "version": "2.27.0"
+          },
+          "dataId": "b448527a-9ae3-4234-8b25-a2d8e4660264"
+        }
+      ]
+    },
+    {
+      "id": "dc45589e-1dae-4ef8-9f31-5f9f0f27f50d",
+      "isDisabled": null,
+      "createdAt": "2023-07-30T21:35:38.168Z",
+      "updatedAt": "2023-08-03T21:01:27.681Z",
+      "type": "member",
+      "name": null,
+      "image": "http://api.v2.ari.com.vn/files/1690727731818-dinh-lan.webp",
+      "order": null,
+      "translations": [
+        {
+          "id": "decdc02d-842d-46e3-b6bd-523c61e6a927",
+          "isDisabled": null,
+          "createdAt": "2023-07-30T21:35:38.168Z",
+          "updatedAt": "2023-07-30T21:35:38.168Z",
+          "language": "vn",
+          "name": "Định Lân",
+          "description": "Với vai trò là phân tích nghiệp vụ có nền tảng công nghệ, các lĩnh vực chính của tôi là CRM, tiếp thị kỹ thuật số, thương mại điện tử B2B.",
+          "position": "Phân tích nghiệp vụ",
+          "content": {
+            "time": 1690727719619,
+            "blocks": [
+              {
+                "id": "z_8jy4cCC5",
+                "data": {
+                  "text": "Với vai trò là phân tích nghiệp vụ có nền tảng công nghệ, các lĩnh vực chính của tôi là CRM, tiếp thị kỹ thuật số, thương mại điện tử B2B. Trong 4 năm kinh nghiệm làm việc của mình, hầu hết thời gian tôi làm với khách hàng Âu Mỹ. Nên tôi hiểu được khách hàng Âu Mỹ muốn gì ở một doanh nghiệp phần mềm ở Việt Nam. Mục tiêu của tôi là mang đến những giải pháp tốt, đưa sản phẩm ra thị trường đúng hạn."
+                },
+                "type": "paragraph"
+              }
+            ],
+            "version": "2.27.0"
+          },
+          "dataId": "dc45589e-1dae-4ef8-9f31-5f9f0f27f50d"
+        }
+      ]
+    },
+    {
+      "id": "88b323bc-8660-472e-9cf7-6630133d39dc",
+      "isDisabled": null,
+      "createdAt": "2023-07-30T21:37:50.627Z",
+      "updatedAt": "2023-08-03T21:01:35.050Z",
+      "type": "member",
+      "name": null,
+      "image": "http://api.v2.ari.com.vn/files/1690727800868-tran-nhan-vu.webp",
+      "order": null,
+      "translations": [
+        {
+          "id": "4db7c3be-ba9a-44f2-8333-f5382da889f9",
+          "isDisabled": null,
+          "createdAt": "2023-07-30T21:37:50.627Z",
+          "updatedAt": "2023-07-30T21:37:50.627Z",
+          "language": "vn",
+          "name": "Trần Nhân Vũ",
+          "description": "Tốt nghiệp khoa học máy tính tại Đại học Bách Khoa TP.HCM. Có hơn 3 năm kinh nghiệm làm việc, phát triển và quản lý các dự án về Web/APP, Robot, AI...",
+          "position": "Kỹ sư phần mềm",
+          "content": {
+            "time": 1690727846142,
+            "blocks": [
+              {
+                "id": "Sc5xgoQOrd",
+                "data": {
+                  "text": "Tốt nghiệp khoa học máy tính tại Đại học Bách Khoa TP.HCM. Có hơn 3 năm kinh nghiệm làm việc, phát triển và quản lý các dự án về Web/APP, Robot, AI... Là người có hiểu biết và kiến thức kỹ thuật về: Software Development, architech, network, infra.. và các ngôn ngữ lập trình chính (Java, Python, Javascript, SQL ...). Là người có tư duy mở, thích giải quyết và tìm hiểu những vấn đề khó khăn. Có khả năng đưa ra quyết định và làm việc nhóm tốt, khả năng giao tiếp tiếng anh khá, có thể giao tiếp và làm việc với người nước ngoài."
+                },
+                "type": "paragraph"
+              }
+            ],
+            "version": "2.27.0"
+          },
+          "dataId": "88b323bc-8660-472e-9cf7-6630133d39dc"
+        }
+      ]
+    }
+  ]
+
+  const temp = document.getElementById("template-1");
+  if (temp) {
+    const index = el.getAttribute('key')
+    if (index) {
+      const a = document.importNode(temp, true);
+      const i = parseInt(index)
+      a.innerHTML = a.innerHTML.replace(/{{image}}/g, `${data[i].image}`)
+      a.innerHTML = a.innerHTML.replace(/{{name}}/g, `${data[i].translations[0].name}`)
+      a.innerHTML = a.innerHTML.replace(/{{position}}/g, `${data[i].translations[0].position}`)
+      let para = ''
+      data[i].translations[0].content.blocks.forEach((e) => para = para + `<p>${e.data.text}</p>`)
+      a.innerHTML = a.innerHTML.replace(/{{block}}/g, para)
       Message.html(a.innerHTML);
     }
   }
