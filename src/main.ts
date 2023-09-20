@@ -9,10 +9,9 @@ GLightbox({});
 // sweetalert2 11
 import { Message } from './message.ts'
 import { API } from './api.ts'
-(<any>window)._METHOD_ = {
-  API: API,
-  Message: Message,
-};
+
+(<any>window).API = API;
+(<any>window).Message = Message;
 
 import { setupValidation } from './validation.ts'
 setupValidation();
