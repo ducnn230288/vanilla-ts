@@ -1,4 +1,4 @@
-export const setupValidation = () => {
+export const setupFormValid = () => {
   (<any>window)._FORM_ = {};
   (<any>window)._FORMSTATUS_ = {};
   (<any>window)._SELECT_ = {};
