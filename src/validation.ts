@@ -74,9 +74,9 @@ const showMessage = (el: HTMLInputElement, tag: string, event: string, nameForm:
 
 const getMessage = ({value, required, type, name, dataset}: HTMLInputElement, nameForm: string ,isSubmit: boolean) => {
   if (isSubmit || type === 'checkbox' && name.indexOf('[]') > -1) value = (<any>window)._FORM_[nameForm][name.replace('[]', '')];
-  if ((!value && required && name.indexOf('[]') === -1)) return 'Xin vui lòng nhập nội dung';
-  else if (value && type === 'email' && !regexEmail.test(value.trim())) return 'Xin vui lòng nhập địa chỉ email hợp lệ!'
-  if ((type === 'checkbox' && name.indexOf('[]') > -1) && dataset.hasOwnProperty('mincheck') && (!value || value.length < parseInt(dataset['mincheck']!))) return 'Xin vui lòng chọn ít nhất ' + dataset['mincheck'];
+  if ((!value && required && name.indexOf('[]') === -1)) return (<any>window)._MESSAGE_.required;
+  else if (value && type === 'email' && !regexEmail.test(value.trim())) return (<any>window)._MESSAGE_.email
+  if ((type === 'checkbox' && name.indexOf('[]') > -1) && dataset.hasOwnProperty('mincheck') && (!value || value.length < parseInt(dataset['mincheck']!))) return (<any>window)._MESSAGE_.mincheck + dataset['mincheck'];
   return '';
 }
 const regexEmail =
