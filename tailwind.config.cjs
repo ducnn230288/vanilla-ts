@@ -49,6 +49,8 @@ module.exports = {
         'ligsoc':'#D8F1E5',
         'grey': '#808080',
         'blck' : '#253D4E',
+        'bggray': '#ECECEC',
+        'bgli': '#F2F3F4',
       },
       zinc: {
         50: '#fafafa',
@@ -163,6 +165,7 @@ module.exports = {
         'grntxt' : '#3BB7A3',
         'ligrn':'#BCE3C9',
         'darkgrn': '#81B13D',
+        'bggrn': '#9DDBC9',
       },
       emerald: {
         50: '#ecfdf5',
@@ -327,5 +330,7 @@ module.exports = {
       fill: ['hover', 'focus'], 
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar'),
+  ],
 };

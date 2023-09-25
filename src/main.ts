@@ -37,5 +37,50 @@ document.getElementById('confirm')!.addEventListener('click', () => Message.conf
 document.getElementById('error')!.addEventListener('click', () => Message.error({text: 'Error'}))
 
 
-import { setupCounter } from './counter.ts'
+import { 
+  setupCounter,
+  toggleDropDown, 
+  toggleDropList, 
+  chooseItem, searchItem, 
+  showMore, 
+  dropHome, 
+  dropShop, 
+  dropProduct,
+  dropInv,
+  dropVen,
+  dropMega,
+  dropMen,
+  dropWomen,
+  dropTech,
+  dropBlog,
+  dropLayout,
+  dropLng,
+  dropPage,
+  closeMenu,
+  openMenu
+  } from './counter.ts'
 setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+toggleDropDown(document.querySelector<HTMLButtonElement>('#menubtn')!)
+toggleDropList(document.querySelector<HTMLButtonElement>('#btnlist')!)
+chooseItem(document.querySelector<HTMLButtonElement>('#btnlist')!)
+searchItem(document.querySelector<HTMLInputElement>('#search')!)
+showMore(document.querySelector<HTMLButtonElement>('#plusbtn')!)
+dropHome(document.querySelector<HTMLElement>('#homebtn')!)
+dropShop(document.querySelector<HTMLElement>('#shopbtn')!)
+dropProduct(document.querySelector<HTMLElement>('#productbtn')!)
+dropInv(document.querySelector<HTMLElement>('#invbtn')!)
+dropVen(document.querySelector<HTMLElement>('#venbtn')!)
+dropMega(document.querySelector<HTMLElement>('#megabtn')!)
+dropWomen(document.querySelector<HTMLElement>('#wmbtn')!)
+dropMen(document.querySelector<HTMLElement>('#mbtn')!)
+dropTech(document.querySelector<HTMLElement>('#techbtn')!)
+dropBlog(document.querySelector<HTMLElement>('#blogbtn')!)
+dropLayout(document.querySelector<HTMLElement>('#layoutbtn')!)
+dropLng(document.querySelector<HTMLElement>('#lngbtn')!)
+dropPage(document.querySelector<HTMLElement>('#pagebtn')!)
+closeMenu(document.querySelector<HTMLElement>('#closemenu')!)
+openMenu(document.querySelector<HTMLElement>('.openmenu')!)
+openMenu(document.querySelector<HTMLElement>('.openmenu2')!)
+
+import { slideOutAnimation } from './animation.ts'
+slideOutAnimation(document.querySelector<HTMLElement>('#navxl')!)
