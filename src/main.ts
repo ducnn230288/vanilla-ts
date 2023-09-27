@@ -5,6 +5,22 @@ new LazyLoad({callback_error: (el: any) => (el.src = 'https://via.placeholder.co
 // swiper 10
 import {setupSwiper } from './swiper.ts';
 setupSwiper();
+import { setupSwiper2 } from './swiper2.ts';
+setupSwiper2('cate', 2, false, false, { slidePer_xl: 10, slidePer_lg: 6, slidePer_md: 4, slidePer_sm: 3 }, true);
+setupSwiper2('banner', 1, true, 3000, false, true);
+setupSwiper2('sale', 1, false, 1000, { slidePer_xl: 3, slidePer_lg: 3, slidePer_md: 2, slidePer_sm: 1 }, true);
+
+
+//countdown
+import { setupCountdown } from './countdown.ts';
+const elDealCountdown: HTMLCollectionOf<Element> = document.getElementsByClassName('deals-countdown');
+setupCountdown(elDealCountdown);
+
+
+//hover cart
+import { setupHover } from './hover.ts';
+setupHover('card-product', ['hover-img', 'hover-product_action'], ['opacity-0', 'opacity-100',]);
+setupHover('product-action_heart', ['product-label_heart'], ['hidden', 'block']);
 
 import {setupMenuMobile } from './menu-mobile.ts';
 setupMenuMobile(document.getElementsByClassName('handle-menu'));
