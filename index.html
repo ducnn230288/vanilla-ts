@@ -8,11 +8,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!--  vanilla-lazyload 17 -->
     <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17/dist/lazyload.min.js"></script>
-
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <!--  line-awesome 1  -->
     <link href="https://cdn.jsdelivr.net/npm/line-awesome@1/dist/line-awesome/css/line-awesome.min.css" rel="stylesheet">
   </head>
@@ -73,7 +74,7 @@
               </li>
               <li class="px-3 relative group">
                   <a href="" class="py-3 hover:text-black">USD <i class="fas fa-angle-down ml-1"></i></a>
-                  <div class="absolute invisible bg-white min-w-[100px] h-fit border mt-2.5 group-hover:visible rounded-b-lg">
+                  <!-- <div class="absolute invisible bg-white min-w-[100px] h-fit border mt-2.5 group-hover:visible rounded-b-lg">
                       <ul class="space-y-2 py-2.5 px-[15px]">
                           <li>
                               <a href="" >
@@ -94,7 +95,7 @@
                               </a>
                           </li>
                       </ul>
-                  </div>
+                  </div> -->
               </li>
           </ul>
       </div>
@@ -265,7 +266,7 @@
       <span class="text-white font-lato text-sm">Grand opening, <strong>up to 15%</strong> off all items. Only <strong>3 days</strong> left</span>
     </div>
 
-<!-- navbar -->
+      <!-- navbar -->
     <nav class="hidden xl:block xl:sticky xl:top-0 xl:z-20 xl:bg-white">
     <div class="w-full border-b h-fit">
       <div class="flex justify-between px-3 py-4">
@@ -678,8 +679,18 @@
     </div>
     </nav>
 
+    <!-- page -->
+    <div class="w-full h-[67px] p-5 border-b border-gray-bggray flex items-center">
+      <a href="" class="font-quicksand text-sm font-semibold text-green-grn hover:text-orange-orn transition-colors duration-200 ">
+        <i class="fas fa-home"></i>
+        Home
+      </a>
+      <span class="px-3 pt-1 text-[6px] text-gray-grey">
+        <i class="fas fa-chevron-right"></i>
+      </span>
+    </div>
 
-    <!-- mobile nav -->
+      <!-- mobile nav -->
     <nav class="sticky top-0 bg-white z-10 w-full h-[70px] py-5 px-3 drop-shadow-md xl:hidden">
       <div class="flex items-center justify-between h-[28px]">
         <div class="block md:hidden">
@@ -710,7 +721,7 @@
       </div>
     </nav>
 
-    <!-- Slide menu mobile -->
+      <!-- Slide menu mobile -->
     <div id="slidemenu" class="fixed transform -translate-x-full transition duration-300 left-0 top-0 bottom-0 w-[380px] h-full bg-white z-20 overflow-y-scroll">
       <div class="flex h-[79px] px-[30px] py-[15px] border-b border-gray-ligsoc justify-between items-center">
         <a href="">
@@ -938,7 +949,7 @@
                         <a href="" class="font-quicksand text-sm text-gray-blck font-medium hover:text-green-grn">Laptop Accessories</a>
                       </li>
                       <li class="h-[24px] ml-4 py-[16px]">
-                        <a href="" class="font-quicksand text-sm text-gray-blck font-medium hover:text-green-grn">Tablet Accessories
+                        <a href="" class="font-quicksand text-sm text-gray-blck font-medium hover:text-green-grn">Tablet Accessories</a>
                       </li>
                     </ul>
                 </ul>
@@ -1126,6 +1137,31 @@
     </div>
       </div>
     </div>
+
+
+
+    <!-- details body -->
+    <div class="px-16 py-7 w-full h-fit grid grid-cols-12 gap-[26px]">
+      <div class="col-span-9">
+        <div class="w-[436px] px-3">
+          <div id="container">
+            <div class="relative w-[497px] h-[497px] border border-gray-bggray rounded-2xl">
+              <img src="/images/product-16-2.jpg" class="rounded-2xl" alt="">
+              <span>
+                <i class="fas fa-search absolute text-gray-grey top-3 right-3"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+      <div class="col-span-3"></div>
+    </div>
+
+
+
+
+
 
   <!-- <span id="hamburger" class='handle-menu hamburger lg:!hidden fixed z-50 right-6 top-7'>
     <span class="top-bun"></span>
@@ -1356,7 +1392,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3/dist/css/glightbox.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/glightbox@3/dist/js/glightbox.min.js"></script>
 
-  <ul class="grid grid-cols-3 gap-3 container mx-auto mt-3">
+  <!-- <ul class="grid grid-cols-3 gap-3 container mx-auto mt-3">
     <li class="relative group">
       <a href="https://biati-digital.github.io/glightbox/demo/img/large/gm1.jpg" class="glightbox w-full overflow-hidden block">
         <span class="absolute top-0 left-0 bg-black w-full h-full z-10 opacity-0 duration-500 transition-all ease-in-out group-hover:opacity-30"></span>
@@ -1405,32 +1441,35 @@
           src="https://biati-digital.github.io/glightbox/demo/img/small/gm6.jpg" alt="image" />
       </a>
     </li>
-  </ul>
+  </ul> -->
 
   <!--  echarts 5  -->
   <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
-  <div id="echarts" class="w-full h-52"></div>
+  <!-- <div id="echarts" class="w-full h-52"></div> -->
 
-  <!--  inputmask 5  -->
+   <!-- inputmask 5  -->
   <script src="https://cdn.jsdelivr.net/npm/inputmask@5/dist/inputmask.min.js"></script>
-  <div class="pl-5">
+  <!-- <div class="pl-5">
     <input data-inputmask="'mask': '99-9999999'" class="h-auto text-sm bg-white border border-solid border-gray-300 px-2 text-gray-600 rounded-md" />
-  </div>
+  </div> -->
 
   <!--  sweetalert2 11  -->
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
-  <div>
+  <!-- <div>
     <button class="bg-blue-600 text-white py-2 px-3 m-2 rounded-2xl" id="counter" type="button"></button>
     <button class="bg-green-600 text-white py-2 px-3 m-2 rounded-2xl" id="success" type="button">Success</button>
     <button class="bg-yellow-600 text-white py-2 px-3 m-2 rounded-2xl" id="warning" type="button">Warning</button>
     <button class="bg-yellow-600 text-white py-2 px-3 m-2 rounded-2xl" id="confirm" type="button">Confirm</button>
     <button class="bg-red-600 text-white py-2 px-3 m-2 rounded-2xl" id="error" type="button">Error</button>
-  </div>
-    <script type="module" src="/src/main.ts"></script>
+  </div> -->
+    
 
     <footer>
       <section class="w-full py-6">
+          <!-- <div class="px-3" style="background-image: url(/images/banner-9.png)">
+
+          </div> -->
           <div class="px-3">
               <div class="lg:grid lg:grid-cols-5 md:grid md:grid-cols-2 flex flex-wrap">
                   <div class="font-lato text-gray-blck">
@@ -1766,5 +1805,6 @@
           </div>
       </section>
   </footer>
+  <script type="module" src="/src/main.ts"></script>
 </body>
 </html>
