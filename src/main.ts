@@ -1,4 +1,4 @@
-import './less.less'
+import './index.less'
 
 // vanilla-lazyload 17
 new LazyLoad({callback_error: (el: any) => (el.src = 'https://via.placeholder.com/1x1/?text=') });
