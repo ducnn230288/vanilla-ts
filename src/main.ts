@@ -20,6 +20,28 @@ const swiperList: any = new Swiper('.mySwiper-list', {
 setupSwiper2('zoom', 1, false, false, false, true, swiperList);
 
 
+//hover zoom
+const swiperZoom = document.querySelector('.mySwiper-zoom')
+const swiperSlide = swiperZoom?.getElementsByClassName("swiper-slide")
+swiperSlide && [...swiperSlide].forEach((el) => {
+  el.addEventListener("mousemove", (e) => {
+    const containerWidth = (swiperZoom as HTMLElement).offsetWidth;
+    const containerHeight = (swiperZoom as HTMLElement).offsetHeight;
+
+    const mouseX: number = (e as MouseEvent).offsetX;
+    const mouseY: number = (e as MouseEvent).offsetY;
+
+    const scaleX: number = mouseX / containerWidth;
+    const scaleY: number = mouseY / containerHeight;
+
+    const img: HTMLImageElement | null = el.querySelector('img');
+    if (img) {
+      img.style.transformOrigin = `${scaleX * 100}% ${scaleY * 100}%`;
+    }
+  })
+})
+
+
 //countdown
 import { setupCountdown } from './countdown.ts';
 const elDealCountdown: HTMLCollectionOf<Element> = document.getElementsByClassName('deals-countdown');
@@ -46,8 +68,8 @@ setupMenuMobile(document.getElementsByClassName('handle-menu'));
 GLightbox({});
 
 // echarts 5
-// import { setupEchart } from './echart.ts'
-// setupEchart();
+import { setupEchart } from './echart.ts'
+setupEchart();
 
 // inputmask 5
 Inputmask().mask(document.querySelectorAll('input'));

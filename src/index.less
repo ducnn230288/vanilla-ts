@@ -63,3 +63,27 @@
     @apply bg-green-grn;
   }
 }
+.swiper-slide-thumb-active {
+  img {
+    @apply border-2 border-[#a2d2c9];
+  }
+}
+.swiper{
+  img {
+    @apply w-full h-full object-cover;
+  }
+}
+.mySwiper-zoom{
+  @apply w-full aspect-square rounded-3xl relative border-2;
+  img{
+    @apply transform hover:scale-[200%] cursor-zoom-in;
+  }
+}
+.mySwiper-list{
+  .swiper-slide{
+    @apply w-full aspect-square ;
+    img {
+      @apply w-full h-full object-cover rounded-2xl;
+    }
+  }
+}
