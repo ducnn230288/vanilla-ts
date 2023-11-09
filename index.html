@@ -16,38 +16,79 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
   </head>
   <body>
-  <header class="py-4">
-    <div class="flex justify-between items-center container mx-auto">
-      <div>
+  <header class="p-4">
+    <div class="flex justify-between items-center container mx-auto gap-10">
+      <div class="flex items-center gap-10">
         <img src="https://themes.envytheme.com/ecademy/wp-content/uploads/2020/06/eCademy.png" alt="Logo">
+        <div class="md:block hidden relative">
+          <input class="h-12 border-0 rounded bg-gray-100 pl-4 outline-0 pr-12 xl:w-96" placeholder="Search for anything">
+          <button class="absolute h-12 w-12 top-0 right-0">
+            <i class="flaticon-search text-red-500"></i>
+          </button>
+        </div>
       </div>
-      <div class="relative">
-        <input class="h-12 border-0 rounded bg-gray-100 pl-4 outline-0 pr-12 w-96" placeholder="Search for anything">
-        <button class="absolute h-12 w-12 top-0 right-0">
-          <i class="flaticon-search"></i>
-        </button>
-      </div>
-      <ul class="flex font-bold gap-5">
-        <li><a href="#" class="hover:text-red-600">Home</a></li>
-        <li><a href="#">Pages</a></li>
-        <li><a href="#">Courses</a></li>
-        <li><a href="#">Events</a></li>
-        <li><a href="#">Shop</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Contact</a></li>
+
+      <ul class="lg:flex hidden font-bold gap-5">
+        <li><a href="#" class="text-red-500 hover:text-red-500">Home</a></li>
+        <li><a href="#" class="hover:text-red-500">Pages</a></li>
+        <li><a href="#" class="hover:text-red-500">Courses</a></li>
+        <li><a href="#" class="hover:text-red-500">Events</a></li>
+        <li><a href="#" class="hover:text-red-500">Shop</a></li>
+        <li><a href="#" class="hover:text-red-500">Blog</a></li>
+        <li><a href="#" class="hover:text-red-500">Contact</a></li>
       </ul>
     </div>
 
   </header>
   <main>
-    <section class="bg-[url('/images/gray-bg.jpg')]  ">
-      <div class="flex items-center h-96 container mx-auto">
-        <div class="w-1/2 pr-20">
-          <h1 class="text-5xl font-extrabold leading-tight mb-2">The World’s Leading Distance Learning Provider</h1>
-          <p class="font-semibold text-slate-600">Flexible easy to access learning opportunities can bring a significant change in how individuals prefer to learn! The eCademy can offer you to enjoy the beauty of eLearning!</p>
+    <section class="border-b">
+      <div class="bg-[url('/images/gray-bg.jpg')] bg-no-repeat bg-cover bg-bottom mb-10 px-4">
+        <div class="flex flex-col lg:flex-row gap-10 items-center justify-between container mx-auto">
+          <div class="lg:w-5/12 xl:w-1/2 lg:max-w-[600px] pt-20 lg:pt-0 md:text-left text-center">
+            <h1 class="md:text-5xl text-2xl font-extrabold leading-tight mb-5">The World’s Leading Distance Learning Provider</h1>
+            <p class="font-semibold text-slate-600 mb-5">Flexible easy to access learning opportunities can bring a significant change in how individuals prefer to learn! The eCademy can offer you to enjoy the beauty of eLearning!</p>
+            <button class="bg-red-500 text-white py-2 px-8 font-bold rounded">
+              <i class="flaticon-user mr-2"></i>
+              Join For Free
+            </button>
+          </div>
+          <div class="lg:w-7/12 xl:w-1/2 lg:pt-20">
+            <div class="flex flex-col md:flex-row gap-7">
+              <div class="md:w-1/2 lg:mt-20 mt-10">
+                <div class="bg-white overflow-hidden rounded shadow-xl">
+                  <a href="#">
+                    <img class="w-full" src="https://themes.envytheme.com/ecademy/wp-content/uploads/2020/05/course-image1.jpg" alt="Test" />
+                  </a>
+                  <div class="p-5">
+                    <h3 class="md:text-2xl text-lg font-extrabold leading-tight mb-3"><a href="#">Node.js for Beginners: Go From Zero to Hero with Node.js | eCademy</a></h3>
+                    <p class="text-slate-600">Learning Node.js is always exciting and it pushes students to achieve a great career within a very short time! </p>
+                  </div>
+                </div>
+              </div>
+              <div class="md:w-1/2">
+                <div class="bg-white overflow-hidden rounded shadow-xl">
+                  <a href="#">
+                    <img class="w-full" src="https://themes.envytheme.com/ecademy/wp-content/uploads/2020/05/course-image2.jpg" alt="Test" />
+                  </a>
+                  <div class="p-5">
+                    <h3 class="md:text-2xl text-lg font-extrabold leading-tight mb-3"><a href="#">Machine Learning A-Z™: Hands-On Python & R In Data Science</a></h3>
+                    <p class="text-slate-600">Big Data Analytics including Machine Learning, Data Science, and Artificial Intelligence all are quite hot topics now!  </p>
+                  </div>
+                </div>
 
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="w-1/2"></div>
+      </div>
+
+      <div class="flex gap-12 justify-center py-20">
+        <a href="#"><img src="https://themes.envytheme.com/ecademy/wp-content/uploads/2020/05/logo-1.png" alt="Logo 1"></a>
+        <a href="#"><img src="https://themes.envytheme.com/ecademy/wp-content/uploads/2020/05/logo-2.png" alt="Logo 2"></a>
+        <a href="#"><img src="https://themes.envytheme.com/ecademy/wp-content/uploads/2020/05/logo-3.png" alt="Logo 3"></a>
+        <a href="#"><img src="https://themes.envytheme.com/ecademy/wp-content/uploads/2020/05/logo-4.png" alt="Logo 4"></a>
+        <a href="#"><img src="https://themes.envytheme.com/ecademy/wp-content/uploads/2020/05/logo-5.png" alt="Logo 5"></a>
+        <a href="#"><img src="https://themes.envytheme.com/ecademy/wp-content/uploads/2020/05/logo-6.png" alt="Logo 6"></a>
       </div>
     </section>
   </main>
