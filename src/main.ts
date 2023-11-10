@@ -1,8 +1,11 @@
-import './index.less'
-//
-// // vanilla-lazyload 17
-// new LazyLoad({callback_error: (el: any) => (el.src = 'https://via.placeholder.com/1x1/?text=') });
-//
+import './less.less'
+
+// vanilla-lazyload 17
+new LazyLoad({callback_error: (el: any) => (el.src = 'https://via.placeholder.com/1x1/?text=') });
+
+import { setupMenuMobile } from './menu-mobile.ts';
+setupMenuMobile(document.getElementsByClassName('handle-menu'));
+
 // // glightbox 3
 // GLightbox({});
 //
@@ -29,8 +32,7 @@ import './index.less'
 //
 //
 //
-// import { setupMenuMobile } from './menu-mobile.ts';
-// setupMenuMobile(document.getElementsByClassName('handle-menu'));
+
 // // swiper 10
 // import { setupSwiper } from './swiper.ts';
 // setupSwiper();

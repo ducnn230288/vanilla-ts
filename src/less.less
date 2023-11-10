@@ -97,14 +97,14 @@ form .group {
 
 
 .hamburger { @apply flex self-center flex-col justify-between w-9 h-7 pt-1 pb-1;
-  span { @apply self-end w-full bg-white transition-all duration-300 ease-in-out ~'h-0.5'; }
+  span { @apply self-end w-full bg-black transition-all duration-300 ease-in-out ~'h-0.5'; }
   .meat { @apply ~'w-10/12' transition-all duration-150 ease-in-out; }
   .bottom-bun { @apply ~'w-7/12'; }
   &:hover span { @apply w-full; }
   &.active {
-    .top-bun { @apply w-full -rotate-45 ~'translate-y-[0.6rem]'; }
-    .bottom-bun { @apply w-full rotate-45 ~'-translate-y-[0.5rem]'; }
-    .meat { @apply w-0; }
+    .top-bun { @apply w-full bg-white -rotate-45 ~'translate-y-[0.6rem]'; }
+    .bottom-bun { @apply w-full bg-white rotate-45 ~'-translate-y-[0.5rem]'; }
+    .meat { @apply bg-white w-0; }
     &:hover { @apply transition-transform duration-300 hover:rotate-90 ease-in-out; }
   }
   &:not(.active):hover {
@@ -194,4 +194,4 @@ form .group {
 body { @apply text-base font-normal leading-relaxed;
   font-family: 'Nunito', sans-serif;
 }
-p { @apply text-sm md:text-base; }
+p { @apply text-sm md:text-base text-gray-500; }

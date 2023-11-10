@@ -16,8 +16,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
   </head>
   <body>
-  <header class="p-4">
-    <div class="flex justify-between items-center container mx-auto gap-10">
+  <header class="p-4 gap-10 sticky top-0 left-0 z-30 bg-white">
+    <div class="flex justify-between items-center container mx-auto">
       <div class="flex items-center gap-10">
         <img src="https://themes.envytheme.com/ecademy/wp-content/uploads/2020/06/eCademy.png" alt="Logo">
         <div class="md:block hidden relative">
@@ -38,7 +38,85 @@
         <li><a href="#" class="hover:text-red-500">Contact</a></li>
       </ul>
     </div>
+    <button id="hamburger" class='handle-menu hamburger lg:!hidden !fixed z-50 right-6 md:top-7 top-5'>
+      <span class="top-bun"></span>
+      <span class="meat"></span>
+      <span class="bottom-bun"></span>
+    </button>
 
+    <div id="bg-menu"
+         class='handle-menu fixed top-0 h-full bg-black transition-all duration-200 ease-in-out w-full z-30 opacity-0 -right-full'>
+    </div>
+    <div id="menu"
+         class='w-80 bg-red-600 h-screen z-40 fixed top-0 p-5 text-white transition-all duration-500 ease-in-out flex justify-between flex-col -right-80'>
+      <div id="list-menu" class='transition-all duration-1000 ease-in-out relative top-10 opacity-0'>
+        <div class="font-medium flex flex-col text-white mt-10">
+          <button class="text-white border-white py-3 flex justify-between border-b ">
+            Lorem ipsum
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="w-4 h-4 relative fill-white">
+              <path
+                d="M 12.96875 4.28125 L 11.53125 5.71875 L 21.8125 16 L 11.53125 26.28125 L 12.96875 27.71875 L 23.96875 16.71875 L 24.65625 16 L 23.96875 15.28125 Z" />
+            </svg>
+          </button>
+          <button class="text-white border-white py-3 flex justify-between">
+            Lorem ipsum
+          </button>
+          <button class="text-white border-white py-3 flex justify-between pl-5 ">
+            Lorem ipsum
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="w-4 h-4 relative fill-white">
+              <path
+                d="M 12.96875 4.28125 L 11.53125 5.71875 L 21.8125 16 L 11.53125 26.28125 L 12.96875 27.71875 L 23.96875 16.71875 L 24.65625 16 L 23.96875 15.28125 Z" />
+            </svg>
+          </button>
+          <button class="text-white border-white py-3 flex justify-between pl-5 ">
+            Lorem ipsum
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="w-4 h-4 relative fill-white">
+              <path
+                d="M 12.96875 4.28125 L 11.53125 5.71875 L 21.8125 16 L 11.53125 26.28125 L 12.96875 27.71875 L 23.96875 16.71875 L 24.65625 16 L 23.96875 15.28125 Z" />
+            </svg>
+          </button>
+          <button class="text-white border-white py-3 flex justify-between border-b ">
+            Lorem ipsum
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="w-4 h-4 relative fill-white">
+              <path
+                d="M 12.96875 4.28125 L 11.53125 5.71875 L 21.8125 16 L 11.53125 26.28125 L 12.96875 27.71875 L 23.96875 16.71875 L 24.65625 16 L 23.96875 15.28125 Z" />
+            </svg>
+          </button>
+          <button class="text-white border-white py-3 flex justify-between border-b ">
+            Lorem ipsum
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="w-4 h-4 relative fill-white">
+              <path
+                d="M 12.96875 4.28125 L 11.53125 5.71875 L 21.8125 16 L 11.53125 26.28125 L 12.96875 27.71875 L 23.96875 16.71875 L 24.65625 16 L 23.96875 15.28125 Z" />
+            </svg>
+          </button>
+          <a class="text-white border-white py-3 flex justify-between">
+            Lorem ipsum
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="w-4 h-4 relative fill-white">
+              <path
+                d="M 12.96875 4.28125 L 11.53125 5.71875 L 21.8125 16 L 11.53125 26.28125 L 12.96875 27.71875 L 23.96875 16.71875 L 24.65625 16 L 23.96875 15.28125 Z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div id="contact-menu" class='transition-all duration-1000 ease-in-out relative  opacity-100'>
+        <div class="mt-4">
+          <a class="text-white inline-flex" href="https://www.facebook.com" target="_blank"
+             rel="noreferrer">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class='w-8 h-8 mr-1 inline fill-white'>
+              <path
+                d="M 16 4 C 9.3844276 4 4 9.3844276 4 16 C 4 22.615572 9.3844276 28 16 28 C 22.615572 28 28 22.615572 28 16 C 28 9.3844276 22.615572 4 16 4 z M 16 6 C 21.534692 6 26 10.465308 26 16 C 26 21.027386 22.311682 25.161277 17.488281 25.878906 L 17.488281 18.916016 L 20.335938 18.916016 L 20.783203 16.023438 L 17.488281 16.023438 L 17.488281 14.443359 C 17.488281 13.242359 17.882859 12.175781 19.005859 12.175781 L 20.810547 12.175781 L 20.810547 9.6523438 C 20.493547 9.6093438 19.822688 9.515625 18.554688 9.515625 C 15.906688 9.515625 14.355469 10.913609 14.355469 14.099609 L 14.355469 16.023438 L 11.632812 16.023438 L 11.632812 18.916016 L 14.355469 18.916016 L 14.355469 25.853516 C 9.6088556 25.070647 6 20.973047 6 16 C 6 10.465308 10.465308 6 16 6 z" />
+            </svg>
+          </a>
+          <a class="text-white inline-flex" href="https://www.linkedin.com" target="_blank"
+             rel="noreferrer">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class='w-8 h-8 inline fill-white'>
+              <path
+                d="M 7.5 5 C 6.132813 5 5 6.132813 5 7.5 L 5 24.5 C 5 25.867188 6.132813 27 7.5 27 L 24.5 27 C 25.867188 27 27 25.867188 27 24.5 L 27 7.5 C 27 6.132813 25.867188 5 24.5 5 Z M 7.5 7 L 24.5 7 C 24.785156 7 25 7.214844 25 7.5 L 25 24.5 C 25 24.785156 24.785156 25 24.5 25 L 7.5 25 C 7.214844 25 7 24.785156 7 24.5 L 7 7.5 C 7 7.214844 7.214844 7 7.5 7 Z M 10.4375 8.71875 C 9.488281 8.71875 8.71875 9.488281 8.71875 10.4375 C 8.71875 11.386719 9.488281 12.15625 10.4375 12.15625 C 11.386719 12.15625 12.15625 11.386719 12.15625 10.4375 C 12.15625 9.488281 11.386719 8.71875 10.4375 8.71875 Z M 19.46875 13.28125 C 18.035156 13.28125 17.082031 14.066406 16.6875 14.8125 L 16.625 14.8125 L 16.625 13.5 L 13.8125 13.5 L 13.8125 23 L 16.75 23 L 16.75 18.3125 C 16.75 17.074219 16.996094 15.875 18.53125 15.875 C 20.042969 15.875 20.0625 17.273438 20.0625 18.375 L 20.0625 23 L 23 23 L 23 17.78125 C 23 15.226563 22.457031 13.28125 19.46875 13.28125 Z M 9 13.5 L 9 23 L 11.96875 23 L 11.96875 13.5 Z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
   </header>
   <main>
     <section class="border-b">
@@ -61,7 +139,7 @@
                   </a>
                   <div class="p-5">
                     <h3 class="md:text-2xl text-lg font-extrabold leading-tight mb-3"><a href="#">Node.js for Beginners: Go From Zero to Hero with Node.js | eCademy</a></h3>
-                    <p class="text-slate-600">Learning Node.js is always exciting and it pushes students to achieve a great career within a very short time! </p>
+                    <p>Learning Node.js is always exciting and it pushes students to achieve a great career within a very short time! </p>
                   </div>
                 </div>
               </div>
@@ -72,7 +150,7 @@
                   </a>
                   <div class="p-5">
                     <h3 class="md:text-2xl text-lg font-extrabold leading-tight mb-3"><a href="#">Machine Learning A-Z™: Hands-On Python & R In Data Science</a></h3>
-                    <p class="text-slate-600">Big Data Analytics including Machine Learning, Data Science, and Artificial Intelligence all are quite hot topics now!  </p>
+                    <p>Big Data Analytics including Machine Learning, Data Science, and Artificial Intelligence all are quite hot topics now!  </p>
                   </div>
                 </div>
 
@@ -82,7 +160,7 @@
         </div>
       </div>
 
-      <div class="flex gap-12 justify-center py-20">
+      <div class="flex flex-wrap gap-12 justify-center py-20">
         <a href="#"><img src="https://themes.envytheme.com/ecademy/wp-content/uploads/2020/05/logo-1.png" alt="Logo 1"></a>
         <a href="#"><img src="https://themes.envytheme.com/ecademy/wp-content/uploads/2020/05/logo-2.png" alt="Logo 2"></a>
         <a href="#"><img src="https://themes.envytheme.com/ecademy/wp-content/uploads/2020/05/logo-3.png" alt="Logo 3"></a>
@@ -90,6 +168,46 @@
         <a href="#"><img src="https://themes.envytheme.com/ecademy/wp-content/uploads/2020/05/logo-5.png" alt="Logo 5"></a>
         <a href="#"><img src="https://themes.envytheme.com/ecademy/wp-content/uploads/2020/05/logo-6.png" alt="Logo 6"></a>
       </div>
+    </section>
+    <section class="py-24 px-4">
+      <div class="max-w-[600px] mx-auto text-center mb-14 flex flex-col gap-3">
+        <h6 class="text-sm text-red-600 font-semibold uppercase">Education for everyone</h6>
+        <h2 class="font-black md:text-4xl text-2xl">Affordable Online Courses and Learning Opportunities</h2>
+        <p>Finding your own space and utilize better learning options can result in faster than the traditional ways. Enjoy the beauty of eLearning!</p>
+      </div>
+      <div class="max-w-6xl mx-auto">
+        <div class="grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-7">
+          <div class="bg-gray-100 p-5 text-center flex flex-col gap-3">
+            <i class="flaticon-brain-process text-5xl"></i>
+            <h3 class="sm:text-2xl text-lg font-black">Learn the Latest Top Skills</h3>
+            <p>Learning top skills can bring an extra-ordinary outcome in a career.</p>
+            <a target="_self" href="https://themes.envytheme.com/ecademy/courses/" class="text-red-600 hover:text-black font-bold">Start Now!</a>
+          </div>
+
+          <div class="bg-gray-100 p-5 text-center flex flex-col gap-3">
+            <i class="flaticon-computer text-5xl"></i>
+            <h3 class="sm:text-2xl text-lg font-black">Learn in Your Own Pace</h3>
+            <p>Everyone prefers to enjoy learning at their own pace & that gives a great result.</p>
+            <a target="_self" href="https://themes.envytheme.com/ecademy/courses/" class="text-red-600 hover:text-black font-bold">Start Now!</a>
+          </div>
+
+          <div class="bg-gray-100 p-5 text-center flex flex-col gap-3">
+            <i class="flaticon-shield-1 text-5xl"></i>
+            <h3 class="sm:text-2xl text-lg font-black">Learn From Industry Experts</h3>
+            <p>Experienced teachers can assist in learning faster with their best approaches!</p>
+            <a target="_self" href="https://themes.envytheme.com/ecademy/courses/" class="text-red-600 hover:text-black font-bold">Start Now!</a>
+          </div>
+
+          <div class="bg-gray-100 p-5 text-center flex flex-col gap-3">
+            <i class="flaticon-world text-5xl"></i>
+            <h3 class="sm:text-2xl text-lg font-black">Enjoy Learning From Anywhere </h3>
+            <p>We are delighted to give you options to enjoy learning from anywhere in the world.</p>
+            <a target="_self" href="https://themes.envytheme.com/ecademy/courses/" class="text-red-600 hover:text-black font-bold">Start Now!</a>
+          </div>
+
+        </div>
+      </div>
+
     </section>
   </main>
 
