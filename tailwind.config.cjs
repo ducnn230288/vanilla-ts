@@ -1,7 +1,16 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./*.html'],
-  safelist: ['!border', '!border-solid', '!border-teal-900', '!bg-white', '!text-teal-900', 'hover:!bg-none', 'right-0', 'opacity-50'],
+  safelist: [
+    '!border',
+    '!border-solid',
+    '!border-teal-900',
+    '!bg-white',
+    '!text-teal-900',
+    'hover:!bg-none',
+    'right-0',
+    'opacity-50',
+  ],
   theme: {
     screens: {
       sm: '640px',
@@ -296,7 +305,7 @@ module.exports = {
             opacity: '1',
             transform: 'translateX(0px)',
           },
-        }
+        },
       },
       animation: {
         shine: 'shine 0.8s',
@@ -305,7 +314,7 @@ module.exports = {
         'burger-hover-4': 'burgerHover 1s infinite ease-in-out alternate forwards 400ms',
         'burger-hover-6': 'burgerHover 1s infinite ease-in-out alternate forwards 600ms',
       },
-    }
+    },
   },
   plugins: [],
 };
