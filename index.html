@@ -18,8 +18,27 @@
   <body class="overflow-x-hidden bg-slate-900">
     <script type="module" src="/src/main.ts"></script>
 
+    <!-- wowjs 1 -->
+    <script src="https://cdn.jsdelivr.net/npm/wowjs@1/dist/wow.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/wowjs@1/css/libs/animate.min.css" rel="stylesheet" />
+    <script>
+      new WOW({
+        boxClass: 'wow', // animated element css class (default is wow)
+        animateClass: 'animated', // animation css class (default is animated)
+        mobile: true, // trigger animations on mobile devices (default is true)
+        live: true, // act on asynchronously loaded content (default is true)
+      }).init();
+    </script>
+
     <!-- Service Section -->
-    <section class="my-10 lg:py-20 py-5">
+    <section class="mt-10 pb-20 relative group wow fadeInUp" data-wow-delay="300" data-wow-duration="2000">
+      <div>
+        <img
+          src="https://maraviyainfotech.com/projects/borox-tailwind/borox-tailwind/assets/img/shape/shape-6.png"
+          class="absolute w-12 h-12 top-48 right-36"
+        />
+      </div>
+
       <div class="text-center mx-auto mb-10">
         <h3 class="mb-2 text-gray-200 font-thin uppercase text-sm">best it service</h3>
 
@@ -103,22 +122,30 @@
       ></div>
     </section>
 
-    <div class="xl:max-w-7xl lg:max-w-5xl md:max-w-4xl sm:max-w-[540px]"></div>
-
     <!-- About Us -->
-    <section class="my-10 lg:py-20 py-5">
+    <section class="mt-10 pb-20 relative group wow fadeInUp" data-wow-delay="300" data-wow-duration="2000">
       <div
         class="flex flex-wrap justify-between items-center mx-auto px-6 xl:max-w-7xl lg:max-w-4xl md:max-w-2xl sm:max-w-lg max-80:px-3"
       >
         <div class="grid lg:grid-cols-2 grid-cols-1 gap-8">
-          <div>
+          <div class="transition-all relative">
+            <img
+              src="https://maraviyainfotech.com/projects/borox-tailwind/borox-tailwind/assets/img/shape/shape-6.png"
+              class="absolute w-12 top-2.5 left-2.5"
+            />
+
             <img
               src="https://images.pexels.com/photos/1595385/pexels-photo-1595385.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
               class="rounded-lg bg-cover"
             />
+
+            <img
+              src="https://maraviyainfotech.com/projects/borox-tailwind/borox-tailwind/assets/img/shape/shape-7.png"
+              class="absolute w-12 -bottom-10 right-2.5"
+            />
           </div>
 
-          <div class="mx-auto">
+          <div class="transition-all mx-auto">
             <h3 class="lg:text-xl md:text-lg sm:text-base mb-2 text-gray-200 font-thin uppercase text-sm">about us</h3>
 
             <p class="mt-2 font-bold text-gray-200 lg:text-3xl md:text-2xl sm:text-lg text-xl">
@@ -176,15 +203,16 @@
     </section>
 
     <!-- Qualification -->
-    <section class="bg-slate-800 lg:pb-20 pb-5">
-      <div class="bg-slate-800">
+    <section class="bg-slate-800 mt-10 pb-20 relative">
+      <div class="relative pt-[60px]">
         <img
           src="https://maraviyainfotech.com/projects/borox-tailwind/borox-tailwind/assets/img/shape/bg-shape-dark.png"
-          class=""
+          class="absolute top-0 left-0 right-0 w-full bg-center bg-cover"
         />
       </div>
-      <div>
-        <div class="text-center mb-10">
+
+      <div class="2xl:py-20 md:pt-16 pb-16 pt-5">
+        <div class="text-center mb-10 group wow fadeInUp" data-wow-delay="300" data-wow-duration="2000">
           <h3 class="lg:text-xl md:text-lg sm:text-base mb-2 text-gray-200 font-thin uppercase text-sm">
             qualification
           </h3>
@@ -195,15 +223,30 @@
         </div>
 
         <div
-          class="flex flex-wrap justify-between items-center mx-auto px-6 xl:max-w-7xl lg:max-w-4xl md:max-w-2xl sm:max-w-lg max-80:px-3"
+          class="flex flex-wrap justify-between items-center mx-auto px-6 xl:max-w-7xl lg:max-w-4xl md:max-w-2xl sm:max-w-lg max-80:px-3 relative"
         >
+          <img
+            src="https://maraviyainfotech.com/projects/borox-tailwind/borox-tailwind/assets/img/shape/shape-8.png"
+            class="absolute w-12 -top-10 right-10"
+          />
+
+          <div class="absolute -top-10 left-10 h-12 w-12 bg-amber-200 rounded-full"></div>
+
           <div class="grid lg:grid-cols-2 gap-8">
             <!-- Education -->
-            <div class="transition-all justify-start items-start">
+            <div
+              class="transition-all justify-start items-start group wow fadeInUp"
+              data-wow-delay="300"
+              data-wow-duration="2000"
+            >
               <h3 class="text-gray-200 font-bold leading-8 lg:text-2xl md:text-xl sm:text-lg text-xl">Education</h3>
 
               <div class="border-l border-indigo-500 pl-6">
-                <div class="bg-slate-900 py-8 px-5 rounded-lg mt-8 relative">
+                <div
+                  class="bg-slate-900 py-8 px-5 rounded-lg mt-8 relative group wow fadeInUp"
+                  data-wow-delay="400"
+                  data-wow-duration="2000"
+                >
                   <div class="absolute top-0 bottom-0 -left-6 w-6">
                     <span
                       class="absolute w-4 h-4 top-28 -left-2 border-2 border-indigo-600 bg-slate-900 rounded-lg"
@@ -224,7 +267,11 @@
                   </p>
                 </div>
 
-                <div class="bg-slate-900 py-8 px-5 rounded-lg mt-8 relative">
+                <div
+                  class="bg-slate-900 py-8 px-5 rounded-lg mt-8 relative group wow fadeInUp"
+                  data-wow-delay="600"
+                  data-wow-duration="2000"
+                >
                   <div class="absolute top-0 bottom-0 -left-6 w-6">
                     <span
                       class="absolute w-4 h-4 top-28 -left-2 border-2 border-indigo-600 bg-slate-900 rounded-lg"
@@ -245,7 +292,11 @@
                   </p>
                 </div>
 
-                <div class="bg-slate-900 py-8 px-5 rounded-lg mt-8 relative">
+                <div
+                  class="bg-slate-900 py-8 px-5 rounded-lg mt-8 relative group wow fadeInUp"
+                  data-wow-delay="800"
+                  data-wow-duration="2000"
+                >
                   <div class="absolute top-0 bottom-0 -left-6 w-6">
                     <span
                       class="absolute w-4 h-4 top-28 -left-2 border-2 border-indigo-600 bg-slate-900 rounded-lg"
@@ -269,11 +320,19 @@
             </div>
 
             <!-- Experience -->
-            <div class="transition-all justify-start items-start">
+            <div
+              class="transition-all justify-start items-start group wow fadeInUp"
+              data-wow-delay="300"
+              data-wow-duration="2000"
+            >
               <h3 class="text-gray-200 font-bold leading-8 lg:text-2xl md:text-xl sm:text-lg text-xl">Experience</h3>
 
               <div class="border-l border-indigo-500 pl-6">
-                <div class="bg-slate-900 py-8 px-5 rounded-lg mt-8 relative">
+                <div
+                  class="bg-slate-900 py-8 px-5 rounded-lg mt-8 relative group wow fadeInUp"
+                  data-wow-delay="400"
+                  data-wow-duration="2000"
+                >
                   <div class="absolute top-0 bottom-0 -left-6 w-6">
                     <span
                       class="absolute w-4 h-4 top-28 -left-2 border-2 border-indigo-600 bg-slate-900 rounded-lg"
@@ -294,7 +353,11 @@
                   </p>
                 </div>
 
-                <div class="bg-slate-900 py-8 px-5 rounded-lg mt-8 relative">
+                <div
+                  class="bg-slate-900 py-8 px-5 rounded-lg mt-8 relative group wow fadeInUp"
+                  data-wow-delay="600"
+                  data-wow-duration="2000"
+                >
                   <div class="absolute top-0 bottom-0 -left-6 w-6">
                     <span
                       class="absolute w-4 h-4 top-28 -left-2 border-2 border-indigo-600 bg-slate-900 rounded-lg"
@@ -315,7 +378,11 @@
                   </p>
                 </div>
 
-                <div class="bg-slate-900 py-8 px-5 rounded-lg mt-8 relative">
+                <div
+                  class="bg-slate-900 py-8 px-5 rounded-lg mt-8 relative group wow fadeInUp"
+                  data-wow-delay="800"
+                  data-wow-duration="2000"
+                >
                   <div class="absolute top-0 bottom-0 -left-6 w-6">
                     <span
                       class="absolute w-4 h-4 top-28 -left-2 border-2 border-indigo-600 bg-slate-900 rounded-lg"
@@ -343,8 +410,15 @@
     </section>
 
     <!-- Portfolio -->
-    <section class="my-10 lg:py-20 py-5">
-      <div class="text-center mx-auto mb-10">
+    <!-- handlebars 4 -->
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@4/dist/handlebars.js"></script>
+
+    <!--  Glightbox 3  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3/dist/css/glightbox.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/glightbox@3/dist/js/glightbox.min.js"></script>
+
+    <section class="mt-10 pb-20">
+      <div class="text-center mx-auto mb-10 group wow fadeInUp" data-wow-delay="400" data-wow-duration="2000">
         <h3 class="lg:text-xl md:text-lg sm:text-base mb-2 text-gray-200 font-thin uppercase text-sm">Portfolio</h3>
 
         <p class="mt-2 font-bold text-gray-200 lg:text-3xl md:text-2xl sm:text-lg text-xl">
@@ -356,306 +430,352 @@
       <div
         class="flex flex-wrap justify-between items-center mx-auto px-6 xl:max-w-7xl lg:max-w-4xl md:max-w-2xl sm:max-w-lg max-80:px-3"
       >
-        <div class="mb-5 w-full">
-          <ul class="md:flex sm:block text-center place-content-center">
-            <li
-              class="font-normal text-gray-300 text-sm 2xl:mx-2.5 sm:mx-0 px-2.5 leading-3 hover:text-indigo-500 inline-block cursor-pointer uppercase"
-            >
-              all
-            </li>
-            <li
-              class="font-normal text-gray-300 text-sm 2xl:mx-2.5 sm:mx-0 px-2.5 leading-3 hover:text-indigo-500 inline-block cursor-pointer uppercase"
-            >
-              design
-            </li>
-            <li
-              class="font-normal text-gray-300 text-sm 2xl:mx-2.5 sm:mx-0 px-2.5 leading-3 hover:text-indigo-500 inline-block cursor-pointer uppercase"
-            >
-              developer
-            </li>
-            <li
-              class="font-normal text-gray-300 text-sm 2xl:mx-2.5 sm:mx-0 px-2.5 leading-3 hover:text-indigo-500 inline-block cursor-pointer uppercase"
-            >
-              graphics
-            </li>
-            <li
-              class="font-normal text-gray-300 text-sm 2xl:mx-2.5 sm:mx-0 px-2.5 leading-3 hover:text-indigo-500 inline-block cursor-pointer"
-            >
-              Templates
-            </li>
-          </ul>
-        </div>
-
-        <div class="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-8">
-          <div class="relative truncate">
-            <img
-              src="https://images.pexels.com/photos/211856/pexels-photo-211856.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-              class="w-full rounded-2xl"
-            />
-
-            <h3 class="absolute top-3.5 right-3.5">
-              <span class="text-white bg-black rounded-full font-light text-xs lg:text-lg px-2 py-1">3D Graphics</span>
-              <span class="text-white bg-black rounded-full font-light text-xs lg:text-lg px-2 py-1">Templates</span>
-            </h3>
-
-            <div class="absolute bottom-3.5 left-3 right-3">
-              <div class="px-4 py-2 bg-black rounded-2xl grid grid-cols-2 gap-8 place-content-between bg-opacity-60">
-                <a href="#" class="text-white text-sm flex items-center">Nitro - Car Service</a>
-                <a
-                  href="https://images.pexels.com/photos/211856/pexels-photo-211856.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                  class="text-white text-sm grid justify-items-end"
+        <div class="w-full">
+          <div class="wow fadeInUp" data-wow-delay="600" data-wow-duration="2000">
+            <div class="mb-5 w-full">
+              <ul class="md:flex sm:block text-center place-content-center">
+                <li
+                  class="font-normal text-gray-300 text-sm 2xl:mx-2.5 sm:mx-0 px-2.5 leading-3 hover:text-indigo-500 active:text-indigo-500 inline-block cursor-pointer uppercase"
                 >
-                  <p class="hidden">.</p>
-
-                  <span class="bg-indigo-500 flex justify-center items-center rounded-md h-8 w-8">
-                    <svg
-                      aria-hidden="true"
-                      focusable="false"
-                      data-prefix="fab"
-                      data-icon="facebook-f"
-                      role="img"
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="w-5 h-full mx-auto"
-                      viewBox="0 0 512 512"
-                    >
-                      <path
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="48"
-                        d="M268 112l144 144-144 144M392 256H100"
-                      />
-                    </svg>
-                  </span>
-                </a>
-              </div>
+                  all
+                </li>
+                <li
+                  class="font-normal text-gray-300 text-sm 2xl:mx-2.5 sm:mx-0 px-2.5 leading-3 hover:text-indigo-500 active:text-indigo-500 inline-block cursor-pointer uppercase"
+                >
+                  design
+                </li>
+                <li
+                  class="font-normal text-gray-300 text-sm 2xl:mx-2.5 sm:mx-0 px-2.5 leading-3 hover:text-indigo-500 active:text-indigo-500 inline-block cursor-pointer uppercase"
+                >
+                  developer
+                </li>
+                <li
+                  class="font-normal text-gray-300 text-sm 2xl:mx-2.5 sm:mx-0 px-2.5 leading-3 hover:text-indigo-500 active:text-indigo-500 inline-block cursor-pointer uppercase"
+                >
+                  graphics
+                </li>
+                <li
+                  class="font-normal text-gray-300 text-sm 2xl:mx-2.5 sm:mx-0 px-2.5 leading-3 hover:text-indigo-500 active:text-indigo-500 inline-block cursor-pointer"
+                >
+                  Templates
+                </li>
+              </ul>
             </div>
-          </div>
 
-          <div class="relative truncate">
-            <img
-              src="https://images.pexels.com/photos/62689/pexels-photo-62689.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-              class="w-full rounded-2xl"
-            />
+            <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8">
+              <div class="relative truncate group overflow-hidden">
+                <img
+                  src="https://images.pexels.com/photos/211856/pexels-photo-211856.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                  class="w-full rounded-2xl transform transition duration-500 hover:-rotate-12 hover:scale-125"
+                />
 
-            <h3 class="absolute top-3.5 right-3.5">
-              <span class="text-white bg-black rounded-full font-light text-xs lg:text-lg px-2 py-1">Web Desigh</span>
-            </h3>
-
-            <div class="absolute bottom-3.5 left-3 right-3">
-              <div class="px-4 py-2 bg-black rounded-2xl grid grid-cols-2 gap-8 place-content-between bg-opacity-60">
-                <a href="#" class="text-white text-sm flex items-center">Boros - Artificial Intelligence</a>
-                <a
-                  href="https://images.pexels.com/photos/211856/pexels-photo-211856.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                  class="text-white text-sm grid justify-items-end"
+                <h3
+                  class="absolute top-3.5 right-3.5 transition-all duration-500 ease-in-out opacity-1 group-hover:opacity-0"
                 >
-                  <p class="hidden">.</p>
+                  <span class="text-white bg-black rounded-full font-light text-xs lg:text-lg px-2 py-1"
+                    >3D Graphics</span
+                  >
+                  <span class="text-white bg-black rounded-full font-light text-xs lg:text-lg px-2 py-1"
+                    >Templates</span
+                  >
+                </h3>
 
-                  <span class="bg-indigo-500 flex justify-center items-center rounded-md h-8 w-8">
-                    <svg
-                      aria-hidden="true"
-                      focusable="false"
-                      data-prefix="fab"
-                      data-icon="facebook-f"
-                      role="img"
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="w-5 h-full mx-auto"
-                      viewBox="0 0 512 512"
+                <div class="absolute bottom-3.5 left-3 right-3">
+                  <div
+                    class="container px-4 py-2 bg-black rounded-2xl grid grid-cols-2 gap-8 place-content-between bg-opacity-60 transition-all duration-500 ease-in-out relative opacity-0 group-hover:opacity-100"
+                  >
+                    <a href="#" class="text-white text-sm flex items-center">Nitro - Car Service</a>
+                    <a
+                      href="https://images.pexels.com/photos/211856/pexels-photo-211856.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                      class="text-white text-sm grid justify-items-end glightbox overflow-hidden block"
                     >
-                      <path
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="48"
-                        d="M268 112l144 144-144 144M392 256H100"
-                      />
-                    </svg>
-                  </span>
-                </a>
+                      <p class="hidden">.</p>
+
+                      <span class="bg-indigo-500 flex justify-center items-center rounded-md h-8 w-8">
+                        <svg
+                          aria-hidden="true"
+                          focusable="false"
+                          data-prefix="fab"
+                          data-icon="facebook-f"
+                          role="img"
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="w-5 h-full mx-auto"
+                          viewBox="0 0 512 512"
+                        >
+                          <path
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="48"
+                            d="M268 112l144 144-144 144M392 256H100"
+                          />
+                        </svg>
+                      </span>
+                    </a>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
 
-          <div class="relative truncate">
-            <img
-              src="https://images.pexels.com/photos/11982694/pexels-photo-11982694.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-              class="w-full rounded-2xl"
-            />
+              <div class="relative truncate group overflow-hidden">
+                <img
+                  src="https://images.pexels.com/photos/3568521/pexels-photo-3568521.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                  class="w-full rounded-2xl transform transition duration-500 hover:-rotate-12 hover:scale-125"
+                />
 
-            <h3 class="absolute top-3.5 right-3.5">
-              <span class="text-white bg-black rounded-full font-light text-xs lg:text-lg px-2 py-1">Web Design</span>
-            </h3>
-
-            <div class="absolute bottom-3.5 left-3 right-3">
-              <div class="px-4 py-2 bg-black rounded-2xl grid grid-cols-2 gap-8 place-content-between bg-opacity-60">
-                <a href="#" class="text-white text-sm flex items-center">Mila - Virtual Reality</a>
-                <a
-                  href="https://images.pexels.com/photos/211856/pexels-photo-211856.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                  class="text-white text-sm grid justify-items-end"
+                <h3
+                  class="absolute top-3.5 right-3.5 transition-all duration-500 ease-in-out opacity-1 group-hover:opacity-0"
                 >
-                  <p class="hidden">.</p>
+                  <span class="text-white bg-black rounded-full font-light text-xs lg:text-lg px-2 py-1"
+                    >Web Design</span
+                  >
+                </h3>
 
-                  <span class="bg-indigo-500 flex justify-center items-center rounded-md h-8 w-8">
-                    <svg
-                      aria-hidden="true"
-                      focusable="false"
-                      data-prefix="fab"
-                      data-icon="facebook-f"
-                      role="img"
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="w-5 h-full mx-auto"
-                      viewBox="0 0 512 512"
+                <div class="absolute bottom-3.5 left-3 right-3">
+                  <div
+                    class="container px-4 py-2 bg-black rounded-2xl grid grid-cols-2 gap-8 place-content-between bg-opacity-60 transition-all duration-500 ease-in-out relative opacity-0 group-hover:opacity-100"
+                  >
+                    <a href="#" class="text-white text-sm flex items-center">Boros - Artificial Intelligence</a>
+                    <a
+                      href="https://images.pexels.com/photos/3568521/pexels-photo-3568521.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                      class="text-white text-sm grid justify-items-end glightbox overflow-hidden block"
                     >
-                      <path
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="48"
-                        d="M268 112l144 144-144 144M392 256H100"
-                      />
-                    </svg>
-                  </span>
-                </a>
+                      <p class="hidden">.</p>
+
+                      <span class="bg-indigo-500 flex justify-center items-center rounded-md h-8 w-8">
+                        <svg
+                          aria-hidden="true"
+                          focusable="false"
+                          data-prefix="fab"
+                          data-icon="facebook-f"
+                          role="img"
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="w-5 h-full mx-auto"
+                          viewBox="0 0 512 512"
+                        >
+                          <path
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="48"
+                            d="M268 112l144 144-144 144M392 256H100"
+                          />
+                        </svg>
+                      </span>
+                    </a>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
 
-          <div class="relative truncate">
-            <img
-              src="https://images.pexels.com/photos/4533076/pexels-photo-4533076.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-              class="w-full rounded-2xl"
-            />
+              <div class="relative truncate group overflow-hidden">
+                <img
+                  src="https://images.pexels.com/photos/62689/pexels-photo-62689.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                  class="w-full rounded-2xl transform transition duration-500 hover:-rotate-12 hover:scale-125"
+                />
 
-            <h3 class="absolute top-3.5 right-3.5">
-              <span class="text-white bg-black rounded-full font-light text-xs lg:text-lg px-2 py-1">Development</span>
-            </h3>
-
-            <div class="absolute bottom-3.5 left-3 right-3">
-              <div class="px-4 py-2 bg-black rounded-2xl grid grid-cols-2 gap-8 place-content-between bg-opacity-60">
-                <a href="#" class="text-white text-sm flex items-center">Sen - Hotel Website</a>
-                <a
-                  href="https://images.pexels.com/photos/211856/pexels-photo-211856.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                  class="text-white text-sm grid justify-items-end"
+                <h3
+                  class="absolute top-3.5 right-3.5 transition-all duration-500 ease-in-out opacity-1 group-hover:opacity-0"
                 >
-                  <p class="hidden">.</p>
+                  <span class="text-white bg-black rounded-full font-light text-xs lg:text-lg px-2 py-1"
+                    >Web Design</span
+                  >
+                </h3>
 
-                  <span class="bg-indigo-500 flex justify-center items-center rounded-md h-8 w-8">
-                    <svg
-                      aria-hidden="true"
-                      focusable="false"
-                      data-prefix="fab"
-                      data-icon="facebook-f"
-                      role="img"
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="w-5 h-full mx-auto"
-                      viewBox="0 0 512 512"
+                <div class="absolute bottom-3.5 left-3 right-3">
+                  <div
+                    class="container px-4 py-2 bg-black rounded-2xl grid grid-cols-2 gap-8 place-content-between bg-opacity-60 transition-all duration-500 ease-in-out relative opacity-0 group-hover:opacity-100"
+                  >
+                    <a href="#" class="text-white text-sm flex items-center">Mila - Virtual Reality</a>
+                    <a
+                      href="https://images.pexels.com/photos/62689/pexels-photo-62689.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                      class="text-white text-sm grid justify-items-end glightbox overflow-hidden block"
                     >
-                      <path
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="48"
-                        d="M268 112l144 144-144 144M392 256H100"
-                      />
-                    </svg>
-                  </span>
-                </a>
+                      <p class="hidden">.</p>
+
+                      <span class="bg-indigo-500 flex justify-center items-center rounded-md h-8 w-8">
+                        <svg
+                          aria-hidden="true"
+                          focusable="false"
+                          data-prefix="fab"
+                          data-icon="facebook-f"
+                          role="img"
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="w-5 h-full mx-auto"
+                          viewBox="0 0 512 512"
+                        >
+                          <path
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="48"
+                            d="M268 112l144 144-144 144M392 256H100"
+                          />
+                        </svg>
+                      </span>
+                    </a>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
 
-          <div class="relative truncate">
-            <img
-              src="https://images.pexels.com/photos/12200696/pexels-photo-12200696.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-              class="w-full rounded-2xl"
-            />
+              <div class="relative truncate group overflow-hidden">
+                <img
+                  src="https://images.pexels.com/photos/4533076/pexels-photo-4533076.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                  class="w-full rounded-2xl transform transition duration-500 hover:-rotate-12 hover:scale-125"
+                />
 
-            <h3 class="absolute top-3.5 right-3.5">
-              <span class="text-white bg-black rounded-full font-light text-xs lg:text-lg px-2 py-1">Templates</span>
-              <span class="text-white bg-black rounded-full font-light text-xs lg:text-lg px-2 py-1">Web Design</span>
-            </h3>
-
-            <div class="absolute bottom-3.5 left-3 right-3">
-              <div class="px-4 py-2 bg-black rounded-2xl grid grid-cols-2 gap-8 place-content-between bg-opacity-60">
-                <a href="#" class="text-white text-sm flex items-center">Ekka - eCommerce template</a>
-                <a
-                  href="https://images.pexels.com/photos/211856/pexels-photo-211856.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                  class="text-white text-sm grid justify-items-end"
+                <h3
+                  class="absolute top-3.5 right-3.5 transition-all duration-500 ease-in-out opacity-1 group-hover:opacity-0"
                 >
-                  <p class="hidden">.</p>
+                  <span class="text-white bg-black rounded-full font-light text-xs lg:text-lg px-2 py-1"
+                    >Development</span
+                  >
+                </h3>
 
-                  <span class="bg-indigo-500 flex justify-center items-center rounded-md h-8 w-8">
-                    <svg
-                      aria-hidden="true"
-                      focusable="false"
-                      data-prefix="fab"
-                      data-icon="facebook-f"
-                      role="img"
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="w-5 h-full mx-auto"
-                      viewBox="0 0 512 512"
+                <div class="absolute bottom-3.5 left-3 right-3">
+                  <div
+                    class="container px-4 py-2 bg-black rounded-2xl grid grid-cols-2 gap-8 place-content-between bg-opacity-60 transition-all duration-500 ease-in-out relative opacity-0 group-hover:opacity-100"
+                  >
+                    <a href="#" class="text-white text-sm flex items-center">Sen - Hotel Website</a>
+                    <a
+                      href="https://images.pexels.com/photos/4533076/pexels-photo-4533076.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                      class="text-white text-sm grid justify-items-end glightbox overflow-hidden block"
                     >
-                      <path
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="48"
-                        d="M268 112l144 144-144 144M392 256H100"
-                      />
-                    </svg>
-                  </span>
-                </a>
+                      <p class="hidden">.</p>
+
+                      <span class="bg-indigo-500 flex justify-center items-center rounded-md h-8 w-8">
+                        <svg
+                          aria-hidden="true"
+                          focusable="false"
+                          data-prefix="fab"
+                          data-icon="facebook-f"
+                          role="img"
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="w-5 h-full mx-auto"
+                          viewBox="0 0 512 512"
+                        >
+                          <path
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="48"
+                            d="M268 112l144 144-144 144M392 256H100"
+                          />
+                        </svg>
+                      </span>
+                    </a>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
 
-          <div class="relative truncate">
-            <img
-              src="https://images.pexels.com/photos/4533076/pexels-photo-4533076.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-              class="w-full rounded-2xl"
-            />
+              <div class="relative truncate group overflow-hidden">
+                <img
+                  src="https://images.pexels.com/photos/18311089/pexels-photo-18311089/free-photo-of-iphone-may-tinh-xach-tay-internet-k-t-n-i.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                  class="w-full rounded-2xl transform transition duration-500 hover:-rotate-12 hover:scale-125"
+                />
 
-            <h3 class="absolute top-3.5 right-3.5">
-              <span class="text-white bg-black rounded-full font-light text-xs lg:text-lg px-2 py-1">Development</span>
-              <span class="text-white bg-black rounded-full font-light text-xs lg:text-lg px-2 py-1">3D Graphics</span>
-            </h3>
-
-            <div class="absolute bottom-3.5 left-3 right-3">
-              <div class="px-4 py-2 bg-black rounded-2xl grid grid-cols-2 gap-8 place-content-between bg-opacity-60">
-                <a href="#" class="text-white text-sm flex items-center">Bukki - Teck crafts</a>
-                <a
-                  href="https://images.pexels.com/photos/211856/pexels-photo-211856.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                  class="text-white text-sm grid justify-items-end"
+                <h3
+                  class="absolute top-3.5 right-3.5 transition-all duration-500 ease-in-out opacity-1 group-hover:opacity-0"
                 >
-                  <p class="hidden">.</p>
+                  <span class="text-white bg-black rounded-full font-light text-xs lg:text-lg px-2 py-1"
+                    >Templates</span
+                  >
+                  <span class="text-white bg-black rounded-full font-light text-xs lg:text-lg px-2 py-1"
+                    >Web Design</span
+                  >
+                </h3>
 
-                  <span class="bg-indigo-500 flex justify-center items-center rounded-md h-8 w-8">
-                    <svg
-                      aria-hidden="true"
-                      focusable="false"
-                      data-prefix="fab"
-                      data-icon="facebook-f"
-                      role="img"
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="w-5 h-full mx-auto"
-                      viewBox="0 0 512 512"
+                <div class="absolute bottom-3.5 left-3 right-3">
+                  <div
+                    class="container px-4 py-2 bg-black rounded-2xl grid grid-cols-2 gap-8 place-content-between bg-opacity-60 transition-all duration-500 ease-in-out relative opacity-0 group-hover:opacity-100"
+                  >
+                    <a href="#" class="text-white text-sm flex items-center">Ekka - eCommerce template</a>
+                    <a
+                      href="https://images.pexels.com/photos/18311089/pexels-photo-18311089/free-photo-of-iphone-may-tinh-xach-tay-internet-k-t-n-i.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                      class="text-white text-sm grid justify-items-end glightbox overflow-hidden block"
                     >
-                      <path
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="48"
-                        d="M268 112l144 144-144 144M392 256H100"
-                      />
-                    </svg>
-                  </span>
-                </a>
+                      <p class="hidden">.</p>
+
+                      <span class="bg-indigo-500 flex justify-center items-center rounded-md h-8 w-8">
+                        <svg
+                          aria-hidden="true"
+                          focusable="false"
+                          data-prefix="fab"
+                          data-icon="facebook-f"
+                          role="img"
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="w-5 h-full mx-auto"
+                          viewBox="0 0 512 512"
+                        >
+                          <path
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="48"
+                            d="M268 112l144 144-144 144M392 256H100"
+                          />
+                        </svg>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="relative truncate group overflow-hidden">
+                <img
+                  src="https://images.pexels.com/photos/3143813/pexels-photo-3143813.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                  class="w-full rounded-2xl transform transition duration-500 hover:-rotate-12 hover:scale-125"
+                />
+
+                <h3
+                  class="absolute top-3.5 right-3.5 transition-all duration-500 ease-in-out opacity-1 group-hover:opacity-0"
+                >
+                  <span class="text-white bg-black rounded-full font-light text-xs lg:text-lg px-2 py-1"
+                    >Development</span
+                  >
+                  <span class="text-white bg-black rounded-full font-light text-xs lg:text-lg px-2 py-1"
+                    >3D Graphics</span
+                  >
+                </h3>
+
+                <div class="absolute bottom-3.5 left-3 right-3">
+                  <div
+                    class="container px-4 py-2 bg-black rounded-2xl grid grid-cols-2 gap-8 place-content-between bg-opacity-60 transition-all duration-500 ease-in-out relative opacity-0 group-hover:opacity-100"
+                  >
+                    <a href="#" class="text-white text-sm flex items-center">Bukki - Teck crafts</a>
+                    <a
+                      href="https://images.pexels.com/photos/3143813/pexels-photo-3143813.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                      class="text-white text-sm grid justify-items-end glightbox overflow-hidden block"
+                    >
+                      <p class="hidden">.</p>
+
+                      <span class="bg-indigo-500 flex justify-center items-center rounded-md h-8 w-8">
+                        <svg
+                          aria-hidden="true"
+                          focusable="false"
+                          data-prefix="fab"
+                          data-icon="facebook-f"
+                          role="img"
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="w-5 h-full mx-auto"
+                          viewBox="0 0 512 512"
+                        >
+                          <path
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="48"
+                            d="M268 112l144 144-144 144M392 256H100"
+                          />
+                        </svg>
+                      </span>
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -664,14 +784,25 @@
     </section>
 
     <!-- Blogs -->
-    <section class="bg-slate-800 lg:pb-20 pb-5">
-      <div class="bg-slate-800">
+    <!--  swiper 10  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <!--  gsap 3  -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+
+    <!-- handlebars 4 -->
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@4/dist/handlebars.js"></script>
+
+    <section class="bg-slate-800 mt-10 pb-20 relative group wow fadeInUp" data-wow-delay="300" data-wow-duration="2000">
+      <div class="relative pt-[60px]">
         <img
           src="https://maraviyainfotech.com/projects/borox-tailwind/borox-tailwind/assets/img/shape/bg-shape-dark.png"
-          class=""
+          class="absolute top-0 left-0 right-0 w-full bg-center bg-cover"
         />
       </div>
-      <div>
+
+      <div class="2xl:py-20 md:pt-16 pb-16 pt-5">
         <div class="text-center mx-auto">
           <h3 class="lg:text-xl md:text-lg sm:text-base mb-2 text-gray-200 font-thin uppercase text-sm">blogs</h3>
 
@@ -744,7 +875,7 @@
                         </div>
 
                         <div
-                          class="relative flex flex-col lg:block md:block hidden bg-slate-900 bg-clip-border rounded-xl max-w-sm px-4 py-5"
+                          class="relative flex flex-col lg:block md:block bg-slate-900 bg-clip-border rounded-xl max-w-sm px-4 py-5"
                         >
                           <div class="relative max-h-56 overflow-hidden bg-clip-border rounded-xl">
                             <img
@@ -811,7 +942,7 @@
     </section>
 
     <!-- Contact -->
-    <section class="my-10 lg:py-20 py-5">
+    <section class="my-10 mt-10 pb-20 relative group wow fadeInUp" data-wow-delay="300" data-wow-duration="2000">
       <div class="text-center mx-auto mb-10">
         <h3 class="lg:text-xl md:text-lg sm:text-base mb-2 text-gray-200 font-thin uppercase text-sm">form</h3>
 
@@ -832,7 +963,7 @@
                   <input
                     type="text"
                     placeholder="Full Name"
-                    class="appearance-none focus:bg-slate-800 focus:outline-none w-full py-4 px-3 text-gray-300 leading-8 rounded-t-lg bg-slate-800"
+                    class="appearance-none focus:bg-slate-900 focus:outline-none w-full py-4 px-3 text-gray-300 leading-8 rounded-t-lg bg-slate-800"
                   />
                 </div>
 
