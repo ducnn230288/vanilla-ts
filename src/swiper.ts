@@ -54,4 +54,24 @@ export const setupSwiper = () => {
       },
     }
   });
+
+  new Swiper(".swiper-news", {
+    ...defaultSetting,
+    slidesPerView: 1,
+    breakpoints: {
+      1366: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      500: {
+        slidesPerView: 2,
+      },
+    },
+  });
+
 }

@@ -1,13 +1,9 @@
 module.exports = {
   plugins: ['@typescript-eslint/eslint-plugin', 'jsx-a11y'],
   parser: '@typescript-eslint/parser',
-  extends: [
-    'eslint:recommended',
-    'plugin:@typescript-eslint/recommended',
-  ],
+  extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended'],
   root: true,
-  settings: {
-  },
+  settings: {},
   env: {
     node: true,
     jest: true,
