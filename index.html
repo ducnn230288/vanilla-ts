@@ -17,12 +17,13 @@
 
   <body class="overflow-x-hidden bg-slate-900">
     <script type="module" src="/src/main.ts"></script>
+    <script src="/src/index.js"></script>
 
     <!-- Header -->
     <header class="top-0 left-0 w-full z-30 sticky transition ease-in-out duration-500">
-      <nav class="bg-slate-700 py-5 px-5">
+      <nav class="bg-slate-700 lg:py-2 py-5">
         <div
-          class="flex flex-wrap items-center justify-between px-6 mx-auto xl:max-w-7xl lg:max-w-4xl md:max-w-2xl sm:max-w-lg max-80:px-3"
+          class="flex flex-wrap items-center justify-between px-6 mx-auto xl:max-w-7xl lg:max-w-4xl md:max-w-2xl sm:max-w-lg max-80:px-4"
         >
           <a href="index.html" class="flex items-center">
             <img
@@ -31,7 +32,7 @@
             />
           </a>
 
-          <div class="flex items-center lg:order-2">
+          <div class="flex items-center justify-between lg:order-2">
             <button
               class="rounded-full bg-indigo-500 text-white font-medium text-sm px-8 py-2.5 mr-2 hover:bg-indigo-600 hidden xl:block lg:block"
             >
@@ -40,14 +41,14 @@
 
             <button
               id="hamburger"
-              class="inline-flex items-center border border-indigo-500 p-0.5 text-lg rounded-lg handle-menu hamburger lg:!hidden !fixed"
+              class="items-center border border-indigo-500 p-0.5 text-lg rounded-lg handle-menu lg:hidden block"
             >
               <svg
                 aria-hidden="true"
                 focusable="false"
                 role="img"
                 xmlns="http://www.w3.org/2000/svg"
-                class="w-7 h-full mx-auto"
+                class="w-6 h-7 mx-auto"
                 viewBox="0 0 512 512"
               >
                 <path
@@ -68,14 +69,26 @@
           >
             <ul
               id="list-menu"
-              class="flex flex-col lg:flex-row lg:space-x-8 border border-indigo-500 2xl:border-0 lg:border-0 lg:bg-slate-700 mt-4 mb-2 2xl:mb-0 lg:my-0 p-[15px] lg:p-0 text-gray-200 font-medium text-base lg:text-[15px] rounded-[30px] lg:rounded-none transition-all duration-1000 ease-in-out"
+              class="flex flex-col lg:flex-row lg:space-x-8 border border-indigo-500 2xl:border-0 lg:border-0 lg:bg-slate-700 mt-4 mb-2 2xl:mb-0 lg:my-0 p-3.5 lg:p-0 text-gray-200 font-medium text-base lg:text-sm rounded-3xl lg:rounded-none transition-all duration-1000 ease-in-out"
             >
-              <li class="ml-5"><a href="#home" class="block py-2 pr-4 pl-4 lg:p-0">Home</a></li>
-              <li class="ml-5"><a href="#about" class="block py-2 pr-4 pl-4 lg:p-0">About</a></li>
-              <li class="ml-5"><a href="#experience" class="block py-2 pr-4 pl-4 lg:p-0">Experience</a></li>
-              <li class="ml-5"><a href="#portfolio" class="block py-2 pr-4 pl-4 lg:p-0">Portfolio</a></li>
-              <li class="ml-5"><a href="#news" class="block py-2 pr-4 pl-4 lg:p-0">News</a></li>
-              <li class="ml-5"><a href="#contact" class="block py-2 pr-4 pl-4 lg:p-0">Contact Us</a></li>
+              <li class="">
+                <a href="javascript:void(0)" class="block py-2 pr-4 pl-4 lg:p-0" onclick="toHome()">Home</a>
+              </li>
+              <li class="">
+                <a href="javascript:void(0)" class="block py-2 pr-4 pl-4 lg:p-0" onclick="toAbout()">About</a>
+              </li>
+              <li class="">
+                <a href="javascript:void(0)" class="block py-2 pr-4 pl-4 lg:p-0" onclick="toExperience()">Experience</a>
+              </li>
+              <li class="">
+                <a href="javascript:void(0)" class="block py-2 pr-4 pl-4 lg:p-0" onclick="toPortfolio()">Portfolio</a>
+              </li>
+              <li class="">
+                <a href="javascript:void(0)" class="block py-2 pr-4 pl-4 lg:p-0" onclick="toNews()">News</a>
+              </li>
+              <li class="">
+                <a href="javascript:void(0)" class="block py-2 pr-4 pl-4 lg:p-0" onclick="toContact()">Contact Us</a>
+              </li>
             </ul>
           </div>
         </div>
@@ -550,23 +563,6 @@
     <!--  Glightbox 3  -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3/dist/css/glightbox.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/glightbox@3/dist/js/glightbox.min.js"></script>
-
-    <!-- Filter -->
-    <script>
-      function filterTags(tag) {
-        const tags = document.querySelectorAll('.tag');
-
-        // Show/hide tags based on the selected tag
-        tags.forEach((tagElement) => {
-          const tagClasses = tagElement.classList;
-          if (tag === 'all' || tagClasses.contains(tag)) {
-            tagElement.style.display = 'block';
-          } else {
-            tagElement.style.display = 'none';
-          }
-        });
-      }
-    </script>
 
     <section id="portfolio" class="mt-10 pb-20">
       <div class="text-center mx-auto mb-10 group wow fadeInUp" data-wow-delay="400" data-wow-duration="2000">
@@ -1300,5 +1296,40 @@
         </div>
       </form>
     </section>
+
+    <!-- Footer -->
+    <footer class="bg-black">
+      <div
+        class="flex xl:flex-row lg:flex-row flex-col items-center justify-between gap-8 px-6 py-8 mx-auto xl:max-w-7xl lg:max-w-4xl md:max-w-2xl sm:max-w-lg max-80:px-4"
+      >
+        <div class="text-white text-center font-thin text-sm lg:w-1/2 xl:text-left">
+          Copyright ©
+          <a href="index.html" class="hover:text-indigo-500 font-bold">Borox</a>
+          all rights reserved. Powered by Borox.
+        </div>
+
+        <div class="lg:w-1/2 text-white font-light text-sm flex justify-end">
+          <a href="javascript:void(0)" class="pr-10 hover:text-indigo-500">Privacy Policy</a>
+          <a href="javascript:void(0)" class="hover:text-indigo-500">Terms and Conditions</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll Top -->
+    <div
+      id="scroll-top"
+      class="fixed bg-indigo-500 text-white rounded-full flex justify-center items-center text-center bottom-6 right-6 h-10 w-10 z-20 cursor-pointer"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 512 512">
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="48"
+          d="M112 244l144-144 144 144M256 120v292"
+        />
+      </svg>
+    </div>
   </body>
 </html>
