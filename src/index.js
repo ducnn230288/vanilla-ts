@@ -91,5 +91,3 @@ function filterTags(tag) {
     }
   });
 }
-
-// Active Buttons
