@@ -17,11 +17,10 @@
 
   <body class="overflow-x-hidden bg-slate-900">
     <script type="module" src="/src/main.ts"></script>
-    <script src="/src/index.js"></script>
 
     <!-- Header -->
     <header class="top-0 left-0 w-full z-30 sticky transition ease-in-out duration-500">
-      <nav class="bg-slate-700 lg:py-2 py-5">
+      <nav id="navbar" class="bg-slate-700 lg:py-2 py-5">
         <div
           class="flex flex-wrap items-center justify-between px-6 mx-auto xl:max-w-7xl lg:max-w-4xl md:max-w-2xl sm:max-w-lg max-80:px-4"
         >
@@ -68,25 +67,25 @@
             class="lg:flex justify-between items-center w-full lg:w-auto lg:order-1 transition-all duration-1000 ease-in-out"
           >
             <ul
-              id="list-menu"
+              id="list-menu "
               class="flex flex-col lg:flex-row lg:space-x-8 border border-indigo-500 2xl:border-0 lg:border-0 lg:bg-slate-700 mt-4 mb-2 2xl:mb-0 lg:my-0 p-3.5 lg:p-0 text-gray-200 font-medium text-base lg:text-sm rounded-3xl lg:rounded-none transition-all duration-1000 ease-in-out"
             >
-              <li class="">
+              <li class="act-item">
                 <a href="javascript:void(0)" class="block py-2 pr-4 pl-4 lg:p-0" onclick="toHome()">Home</a>
               </li>
-              <li class="">
+              <li class="act-item">
                 <a href="javascript:void(0)" class="block py-2 pr-4 pl-4 lg:p-0" onclick="toAbout()">About</a>
               </li>
-              <li class="">
+              <li class="act-item">
                 <a href="javascript:void(0)" class="block py-2 pr-4 pl-4 lg:p-0" onclick="toExperience()">Experience</a>
               </li>
-              <li class="">
+              <li class="act-item">
                 <a href="javascript:void(0)" class="block py-2 pr-4 pl-4 lg:p-0" onclick="toPortfolio()">Portfolio</a>
               </li>
-              <li class="">
+              <li class="act-item">
                 <a href="javascript:void(0)" class="block py-2 pr-4 pl-4 lg:p-0" onclick="toNews()">News</a>
               </li>
-              <li class="">
+              <li class="act-item">
                 <a href="javascript:void(0)" class="block py-2 pr-4 pl-4 lg:p-0" onclick="toContact()">Contact Us</a>
               </li>
             </ul>
@@ -109,30 +108,32 @@
 
     <!-- Hero Section -->
     <section id="home" class="bg-slate-800 relative">
-      <img
-        src="https://maraviyainfotech.com/projects/borox-tailwind/borox-tailwind/assets/img/shape/shape-1.png"
-        class="absolute w-12 left-72 bottom-36 sm:block hidden"
-      />
+      <div id="parallax-wrap">
+        <img
+          src="https://maraviyainfotech.com/projects/borox-tailwind/borox-tailwind/assets/img/shape/shape-1.png"
+          class="absolute w-12 left-72 bottom-36 sm:block hidden"
+        />
 
-      <img
-        src="https://maraviyainfotech.com/projects/borox-tailwind/borox-tailwind/assets/img/shape/shape-2.png"
-        class="absolute w-12 top-28 right-48 sm:block hidden"
-      />
+        <img
+          src="https://maraviyainfotech.com/projects/borox-tailwind/borox-tailwind/assets/img/shape/shape-2.png"
+          class="absolute w-12 top-28 right-48 sm:block hidden"
+        />
 
-      <img
-        src="https://maraviyainfotech.com/projects/borox-tailwind/borox-tailwind/assets/img/shape/shape-3.png"
-        class="absolute w-12 top-11 left-48 left top sm:block hidden"
-      />
+        <img
+          src="https://maraviyainfotech.com/projects/borox-tailwind/borox-tailwind/assets/img/shape/shape-3.png"
+          class="absolute w-12 top-11 left-48 left top sm:block hidden"
+        />
 
-      <img
-        src="https://maraviyainfotech.com/projects/borox-tailwind/borox-tailwind/assets/img/shape/shape-4.png"
-        class="absolute w-6 bottom-96 left-16 left sm:block hidden"
-      />
+        <img
+          src="https://maraviyainfotech.com/projects/borox-tailwind/borox-tailwind/assets/img/shape/shape-4.png"
+          class="absolute w-6 bottom-96 left-16 left sm:block hidden"
+        />
 
-      <img
-        src="https://maraviyainfotech.com/projects/borox-tailwind/borox-tailwind/assets/img/shape/shape-5.png"
-        class="absolute w-12 bottom-52 right-28 bottom sm:block hidden"
-      />
+        <img
+          src="https://maraviyainfotech.com/projects/borox-tailwind/borox-tailwind/assets/img/shape/shape-5.png"
+          class="absolute w-12 bottom-52 right-28 bottom sm:block hidden"
+        />
+      </div>
 
       <div
         class="flex flex-wrap justify-between items-center mx-auto px-4 xl:max-w-7xl lg:max-w-4xl md:max-w-2xl sm:max-w-lg max-80:px-3 py-20"
@@ -154,7 +155,7 @@
             <a
               href="#contact"
               type="submit"
-              class="rounded-full bg-indigo-500 text-white font-medium text-xl px-8 py-1.5 mt-8 hover:bg-indigo-600"
+              class="rounded-full bg-blue-500 text-white font-medium text-xl px-8 py-1.5 mt-8 hover:bg-indigo-600"
             >
               Hire me
             </a>
@@ -581,35 +582,35 @@
           <div class="mb-5 w-full">
             <ul class="md:flex sm:block text-center place-content-center">
               <li
-                class="font-normal text-gray-300 text-sm 2xl:mx-2.5 sm:mx-0 px-2.5 leading-3 hover:text-indigo-500 inline-block cursor-pointer uppercase"
+                class="act-item font-normal text-gray-300 text-sm 2xl:mx-2.5 sm:mx-0 px-2.5 leading-3 hover:text-indigo-500 inline-block cursor-pointer uppercase"
                 onclick="filterTags('all')"
               >
                 all
               </li>
 
               <li
-                class="font-normal text-gray-300 text-sm 2xl:mx-2.5 sm:mx-0 px-2.5 leading-3 hover:text-indigo-500 inline-block cursor-pointer uppercase"
+                class="act-item font-normal text-gray-300 text-sm 2xl:mx-2.5 sm:mx-0 px-2.5 leading-3 hover:text-indigo-500 inline-block cursor-pointer uppercase"
                 onclick="filterTags('design')"
               >
                 design
               </li>
 
               <li
-                class="font-normal text-gray-300 text-sm 2xl:mx-2.5 sm:mx-0 px-2.5 leading-3 hover:text-indigo-500 inline-block cursor-pointer uppercase"
+                class="act-item font-normal text-gray-300 text-sm 2xl:mx-2.5 sm:mx-0 px-2.5 leading-3 hover:text-indigo-500 inline-block cursor-pointer uppercase"
                 onclick="filterTags('developer')"
               >
                 developer
               </li>
 
               <li
-                class="font-normal text-gray-300 text-sm 2xl:mx-2.5 sm:mx-0 px-2.5 leading-3 hover:text-indigo-500 inline-block cursor-pointer uppercase"
+                class="act-item font-normal text-gray-300 text-sm 2xl:mx-2.5 sm:mx-0 px-2.5 leading-3 hover:text-indigo-500 inline-block cursor-pointer uppercase"
                 onclick="filterTags('graphics')"
               >
                 graphics
               </li>
 
               <li
-                class="font-normal text-gray-300 text-sm 2xl:mx-2.5 sm:mx-0 px-2.5 leading-3 hover:text-indigo-500 inline-block cursor-pointer"
+                class="act-item font-normal text-gray-300 text-sm 2xl:mx-2.5 sm:mx-0 px-2.5 leading-3 hover:text-indigo-500 inline-block cursor-pointer"
                 onclick="filterTags('templates')"
               >
                 Templates
@@ -1318,9 +1319,10 @@
     <!-- Scroll Top -->
     <div
       id="scroll-top"
-      class="fixed bg-indigo-500 text-white rounded-full flex justify-center items-center text-center bottom-6 right-6 h-10 w-10 z-20 cursor-pointer"
+      class="fixed bg-indigo-500 text-white rounded-full flex justify-center items-center text-center bottom-6 right-6 p-2.5 h-10 w-10 z-20 cursor-pointer"
+      onclick="toTop()"
     >
-      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 512 512">
+      <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 512 512">
         <path
           fill="none"
           stroke="currentColor"
@@ -1331,5 +1333,7 @@
         />
       </svg>
     </div>
+
+    <script src="/src/index.js"></script>
   </body>
 </html>
