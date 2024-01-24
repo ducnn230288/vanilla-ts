@@ -6,7 +6,7 @@ export const setupMenuMobile = (collectionElementsByClass: HTMLCollectionOf<Elem
     }, !isShow ? 0 : 200)
     setTimeout(() => {
       toggleClassList(document.getElementById('hamburger'), ['active']);
-      toggleClassList(document.getElementById('menu'), ['-right-80', 'right-0', 'hidden']);
+      toggleClassList(document.getElementById('menu'), ['-top-80', 'top-0']);
       toggleClassList(document.getElementById('list-menu'), ['top-0', 'opacity-100', 'top-10', 'opacity-0']);
     },!isShow ? 200 : 0);
 
