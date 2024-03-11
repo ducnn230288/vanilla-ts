@@ -1,14 +1,23 @@
+const { transform } = require('typescript')
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./*.html'],
   safelist: ['!border', '!border-solid', '!border-teal-900', '!bg-white', '!text-teal-900', 'hover:!bg-none', 'right-0', 'opacity-50'],
   theme: {
+    fontFamily: {
+      'primary' : 'DM Sans',
+      'poppins' : 'Poppins'
+    },
     screens: {
+      'phone': '480px',
       sm: '640px',
       md: '768px',
       lg: '1024px',
       xl: '1280px',
-      '2xl': '1280px',
+      '2xl': '1320px',
+      '3xl' : '1712px',
+      'n-max': '1440px'
     },
     colors: () => ({
       inherit: 'inherit',
@@ -282,9 +291,116 @@ module.exports = {
       },
     }),
     extend: {
+      backgroundColor: {
+        'pink-red' : '#eb292c',
+        'light-red' : 'rgba(235,41,44,0.1)',
+        'white-smoke' : '#f6f6f6',
+        'very-dark' : '#212529',
+        'dark-alpha' : 'rgba(0,0,0,0.5)',
+        'smoke-gray' : 'rgba(255,255,255,0.2)'
+      },
+      textColor: {
+        'base-red' : '#eb292c',
+        'light-gray' : '#bcbdbe'
+      },
+      lineHeight: {
+        'xl' : '50px'
+      },
+      borderColor: {
+        'light-gray' : '#e5e5e5',
+        'light-pink' : '#fa998e'
+      },
+      boxShadow: {
+        'base-red': '0 15px 50px rgba(235,41,44,0.3)',
+        'base-black' : '0 15px 40px 10px rgba(0,0,0,0.05)',
+        'second-black' : '0 20px 60px 10px rgba(0,0,0,0.07)',
+        'second-darker-black' : '0 20px 60px 10px rgba(0,0,0,0.17)',
+        'third-black' : '0 10px 60px 0 rgba(0,0,0,0.1)',
+        'white-smoke' : '0 15px 40px 10px rgba(0,0,0,0.1)',
+        'header-sticky' : '0 0 10px rgba(0,0,0,0.1)'
+      },
+      transitionDuration: {
+        '400' : '400ms'
+      },
+      borderRadius: {
+        '1/2' : '50%',
+        '2.5xl' : '20px'
+      },
+      zIndex: {
+        '1' : '1',
+        '2' : '2',
+        '3' : '3',
+        '5' : '5'
+      },
+      maxWidth: {
+        'xl-6' : '600px'
+      },
+      minWidth: {
+        'xl' : '270px'
+      },
+      width: {
+        '1/20' : '5%',
+        '75' : '300px',
+        '93' : '372px',
+        'xl-6' : '600px'
+      },
+      height: {
+        '1/20' : '5%',
+        '93' : '372px'
+      },
+      inset: {
+        'x-3/20': '0 15% 0 15%',
+      },
+
       keyframes: {
         shine: {
           '100%': { left: '125%' },
+        },
+        circle: {
+          '100%': { right: '125%' }
+        },
+        sspin: {
+          'from': { transform: 'rotate(0deg)' },
+          'to': { transform: 'rotate(360deg)' },
+        },
+        upDown: {
+          '0%': { transform: 'translateY(0)'},
+          '50%': { transform: 'translateY(-10px)'},
+          '100%': { transform: 'translateY(0)'},
+        },
+        leftRight: {
+          '0%': { transform: 'translateX(0)'},
+          '50%': { transform: 'translateX(-15px)'},
+          '100%': { transform: 'translateX(0)'},
+        },
+        ripple: {
+          '0%': { 'box-shadow': '0 0 0 0 rgba(235,41,44,0)'},
+          '70%': { 'box-shadow': '0 0 0 40px rgba(235,41,44,0.4)'},
+          '100%': { 'box-shadow': '0 0 0 0 rgba(235,41,44,0)'}
+        },
+        scrollHeader: {
+          'from': {transform: 'translateY(-120%)'},
+          'to': {transform: 'translateY(0)'},
+        },
+        hideHeader: {
+          'from': {transform: 'translateY(0)'},
+          'to': {transform: 'translateY(-120%)'},
+        },
+        showOverlay: {
+          '0%': { left: '0', right: '100%'},
+          '100%': { left: '0', right: '0'}
+        },
+        hideOverlay: {
+          'from': { left: '0', right: '0' },
+          'to': { left: '0', right: '100%' }
+        },
+        showNavigation: {
+          'from': { opacity: '0', transform: 'translateX(-120%)' },
+          'to': { opacity: '100', transform: 'translateX(0)' }
+        },
+        hideNavigation: {
+          'from': { opacity: '100', transform: 'translateX(0)' },
+          'to': { opacity: '0', transform: 'translateX(-120%)' }
         },
         burgerHover: {
           '0%': { width: '100%' },
@@ -299,7 +415,19 @@ module.exports = {
         }
       },
       animation: {
-        shine: 'shine 0.8s',
+        shine: 'shine 2s',
+        circle: 'circle 1.5s',
+        ripple: 'ripple 3s infinite linear .6s',
+        'ripple-longer': 'ripple 3s infinite linear 1s',
+        'slow-spin': 'sspin 20s infinite linear',
+        'up-down': 'upDown 2s infinite linear',
+        'left-right': 'leftRight 2s infinite linear',
+        'scroll-header': 'scrollHeader 1s',
+        'hide-header': 'hideHeader 1s',
+        'show-overlay': 'showOverlay .8s',
+        'hide-overlay': 'hideOverlay 1s linear 1s',
+        'show-navigation': 'showNavigation .4s forwards linear .8s',
+        'hide-navigation': 'hideNavigation 1s forwards linear',
         'intro-x-animation': 'introXAnimation .4s ease-in-out forwards .33333s',
         'burger-hover-2': 'burgerHover 1s infinite ease-in-out alternate forwards 200ms',
         'burger-hover-4': 'burgerHover 1s infinite ease-in-out alternate forwards 400ms',
