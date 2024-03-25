@@ -4,13 +4,6 @@ module.exports = {
   content: ['./*.html'],
   safelist: ['!border', '!border-solid', '!border-teal-900', '!bg-white', '!text-teal-900', 'hover:!bg-none', 'right-0', 'opacity-50'],
   theme: {
-    extend: {
-
-      fontSize: {
-        xs: ['.6875rem', '.9375rem'],
-        sm: ['.8125rem', '1.1875rem'],
-      },
-    },
     fontFamily: {
       'sans': ['Plus Jakarta Sans', ...defaultTheme.fontFamily.sans],
       'serif': ['Playfair Display', ...defaultTheme.fontFamily.serif],
@@ -316,6 +309,10 @@ module.exports = {
       },
     }),
     extend: {
+      fontSize: {
+        xs: ['.6875rem', '.9375rem'],
+        sm: ['.8125rem', '1.1875rem'],
+      },
       keyframes: {
         shine: {
           '100%': { left: '125%' },
