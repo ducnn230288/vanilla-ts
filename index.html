@@ -19,6 +19,7 @@
 
   <!--  line-awesome 1  -->
   <link href="https://cdn.jsdelivr.net/npm/line-awesome@1/dist/line-awesome/css/line-awesome.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/flag-icons@7/css/flag-icons.min.css" rel="stylesheet">
 </head>
 <body>
 
@@ -26,16 +27,22 @@
   <section class="container mx-auto py-3 text-white">
     <div class="flex justify-between items-center relative">
       <div class="absolute w-[200%] h-full bg-blue-900 -z-10 -right-8 top-0 rounded-full opacity-50"></div>
-      <ul class="w-3/4 flex justify-between text-sm">
-        <li class="flex items-center"><i class="las la-clock text-2xl mr-2"></i>Mon - Fri 8:00 - 18:00 / Sunday 8:00 - 14:00</li>
-        <li class="flex items-center"><i class="las la-phone-volume text-2xl mr-3"></i>Email: <a href="tel:01989526503">0198-9526503</a></li>
+      <ul class="flex text-sm gap-16">
+        <li class="flex items-center"><i class="las la-phone-volume text-2xl mr-3"></i><a href="tel:01989526503">0198-9526503</a></li>
+        <li class="flex items-center"><i class="las la-envelope text-2xl mr-2"></i><a href="mailto:needhelp@company.com">needhelp@company.com</a></li>
         <li class="flex items-center"><i class="las la-map-marker text-2xl mr-1"></i> 47 Bakery Street, London, UK</li>
       </ul>
-      <ul class="w-1/4 flex gap-3 justify-end">
-        <li><a href="/"><i class="lab la-instagram text-2xl"></i></a></li>
-        <li><a href="/"><i class="lab la-twitter text-2xl"></i></a></li>
-        <li><a href="/"><i class="lab la-linkedin-in text-2xl"></i></a></li>
-        <li><a href="/"><i class="lab la-facebook-f text-2xl"></i></a></li>
+      <ul class="flex gap-3 justify-end text-2xl">
+        <li><a href="/"><i class="lab la-instagram"></i></a></li>
+        <li><a href="/"><i class="lab la-twitter"></i></a></li>
+        <li><a href="/"><i class="lab la-linkedin-in"></i></a></li>
+        <li><a href="/"><i class="lab la-facebook-f"></i></a></li>
+        <li class="group relative text-xl pt-0.5">
+          <span class="fi fi-us"></span>
+          <div class="absolute z-10 left-0 top-full hidden group-hover:block">
+            <span class="fi fi-vn"></span>
+          </div>
+        </li>
       </ul>
     </div>
   </section>
@@ -43,15 +50,14 @@
     <div class="absolute w-[200%] h-full bg-white -z-10 -left-16 rounded-full"></div>
     <div class="flex justify-between items-center py-5">
       <figure class="flex-none"><a href="/"><img src="https://cdn2.olivertraveltrailers.com/wp-content/uploads/2022/09/26110514/oliver-travel-trailers-logo-23.svg" height="50" width="250" alt=""></a></figure>
-      <ul class="flex justify-around text-xl gap-10 uppercase font-bold text-blue-900">
-        <li><a href="/">Home</a></li>
+      <ul class="flex justify-around text-lg gap-10 uppercase font-bold text-blue-900">
+        <li><a href="/">Travel Trailers</a></li>
+        <li><a href="/">Shopping Tools</a></li>
         <li><a href="/">About Us</a></li>
-        <li><a href="/">Services</a></li>
-        <li><a href="/">Team</a></li>
-        <li><a href="/">Pages</a></li>
-        <li><a href="/">Contact</a></li>
+        <li><a href="/">Blogs</a></li>
+        <li><a href="/">Contact Us</a></li>
       </ul>
-      <button class="flex-none bg-yellow-600 text-blue-900 px-8 py-4 rounded-full font-bold uppercase text-xl">
+      <button class="flex-none bg-yellow-600 text-blue-900 px-6 py-3 rounded-full font-bold uppercase text-lg">
         Rewards Login
       </button>
     </div>
@@ -66,7 +72,7 @@
           <h4 class="text-2xl mb-6">Highest level of service you can find</h4>
           <h1 class="text-6xl	font-bold mb-12">Take <span class="font-normal">Care of Your</span> Health Now.</h1>
           <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
-          <button class="mt-8 flex-none w-64 bg-yellow-600 text-blue-900 px-8 py-4 rounded-full font-bold uppercase text-xl">
+          <button class="mt-8 flex-none w-64 bg-yellow-600 text-blue-900 px-6 py-3 rounded-full font-bold uppercase text-lg">
             Rewards Login
           </button>
         </div>
