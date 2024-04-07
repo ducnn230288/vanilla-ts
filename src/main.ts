@@ -21,12 +21,10 @@ setupFormValid();
 import { setupMenuMobile } from './menu-mobile.ts';
 setupMenuMobile(document.getElementsByClassName('handle-menu'));
 // swiper 10
-import { setupSwiper } from './swiper.ts';
-setupSwiper();
+// setupSwiper();
 
 // echarts 5
-import { setupEchart } from './echart.ts'
-setupEchart();
+// setupEchart();
 
 window.onload = async () => {
   const test = await API.post('/authentication/jwt/login', {
