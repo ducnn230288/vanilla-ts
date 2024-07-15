@@ -1,12 +1,12 @@
-import './less.less'
+import './less.less';
 
 // sweetalert2 11
-import { Message } from './message.ts'
-import { API } from './api.ts'
+import { API } from './api';
+import { Message } from './message';
 (<any>window).API = API;
 (<any>window).Message = Message;
 
-import { setupFormValid } from './validation.ts'
+import { setupFormValid } from './validation';
 setupFormValid();
 (<any>window).SetupFormValid = setupFormValid;
 (<any>window)._MESSAGE_ = {
@@ -18,25 +18,27 @@ setupFormValid();
   compare: 'Xin vui lòng nhập không quá ',
 };
 
-import { setupMenuMobile } from './menu-mobile.ts';
+import { setupMenuMobile } from './menu-mobile';
 setupMenuMobile(document.getElementsByClassName('handle-menu'));
 // swiper 10
-import { setupSwiper } from './swiper.ts';
+import { setupSwiper } from './swiper';
 setupSwiper();
 
 // echarts 5
-import { setupEchart } from './echart.ts'
+import { setupEchart } from './echart';
 setupEchart();
 
 window.onload = async () => {
-  const test = await API.post('/authentication/jwt/login', {
-    deviceName:
-      "Chrome/116.0.0.0 desktop/mac-os-x-15 ccfeecc0-533f-8a96-f60d-8d6253b60420",
-    deviceNo: "Macintosh",
-    deviceType: "BROWSER",
-    password: "41234231",
-    remember: false,
-    username: "12342134",
+  const test = await API.post({
+    url: '/authentication/jwt/login',
+    values: {
+      deviceName: 'Chrome/116.0.0.0 desktop/mac-os-x-15 ccfeecc0-533f-8a96-f60d-8d6253b60420',
+      deviceNo: 'Macintosh',
+      deviceType: 'BROWSER',
+      password: '41234231',
+      remember: false,
+      username: '12342134',
+    },
   });
   console.log(test);
 };

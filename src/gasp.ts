@@ -6,7 +6,7 @@ export const animationSlide = (e: Element, delay: number) => {
     old.forEach((item: any) => item.kill());
     return true;
   }
-  eGsap.forEach((item) => {
+  eGsap.forEach(item => {
     if (item.classList.contains('left')) tl.from(item, { x: '-=10%', scale: '+=0.15', opacity: '-=1' }, '<0.25');
     if (item.classList.contains('right')) tl.from(item, { x: '+=10%', scale: '+=0.15', opacity: '-=1' }, '<0.5');
     if (item.classList.contains('top')) tl.from(item, { y: '-=50%', scale: '+=0.15', opacity: '-=1' }, '<0.25');

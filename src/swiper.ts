@@ -1,4 +1,4 @@
-import {animationSlide} from "./gasp.ts";
+import { animationSlide } from './gasp';
 
 export const setupSwiper = () => {
   const defaultSetting = {
@@ -8,7 +8,7 @@ export const setupSwiper = () => {
     pagination: {
       el: '.swiper-pagination',
       type: 'bullets',
-      clickable: true
+      clickable: true,
     },
     on: {
       init: (el: any) => animationSlide(el.slides[el.activeIndex], 0),
@@ -17,13 +17,13 @@ export const setupSwiper = () => {
     autoplay: {
       delay: 5000,
     },
-  }
-  new Swiper(".mySwiper", {
+  };
+  Swiper('.mySwiper', {
     ...defaultSetting,
     slidesPerView: 1,
   });
 
-  new Swiper(".swiper-section-contact", {
+  Swiper('.swiper-section-contact', {
     ...defaultSetting,
     slidesPerView: 2,
     breakpoints: {
@@ -42,7 +42,7 @@ export const setupSwiper = () => {
     },
   });
 
-  new Swiper(".related-swiper", {
+  Swiper('.related-swiper', {
     ...defaultSetting,
     slidesPerView: 1,
     breakpoints: {
@@ -52,6 +52,6 @@ export const setupSwiper = () => {
       640: {
         slidesPerView: 2,
       },
-    }
+    },
   });
-}
+};
