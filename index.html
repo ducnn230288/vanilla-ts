@@ -149,21 +149,33 @@
     <header class="w-full sticky top-0 left-0 z-30 mt-[995px]">
       <div class="max-w-screen-2xl mx-auto py-4 pl-5 pr-4 flex items-center justify-between bg-primary">
         <div class="text-center hidden lg:block">
-          <div class="flex gap-10 font-bold items-center">
-            <span class="text-base-100 font-bold hover:text-base-100 cursor-pointer"> Lorem ipsum </span>
-            <span class="text-base-100 font-bold hover:text-base-100 cursor-pointer relative group">
-              Lorem ipsum
-              <ul
-                class="bg-blue-400 p-2 text-left text-sm absolute w-44 top-7 left-0 invisible group-hover:visible opacity-0 group-hover:opacity-100 duration-500 transition-all ease-in-out"
-              >
-                <li class="font-normal p-1 mb-2">Lorem ipsum</li>
-                <li class="font-normal p-1 mb-1">Lorem ipsum</li>
+          <ul class="mega-menu">
+            <li><a href="#">Lorem ipsum</a></li>
+            <li>
+              <a href="#">Lorem ipsum</a>
+              <ul>
+                <li><a href="#">Lorem ipsum</a></li>
+                <li><a href="#">Lorem ipsum</a></li>
+                <li>
+                  <a href="#">Lorem ipsum</a>
+                  <ul>
+                    <li><a href="#">Lorem ipsum</a></li>
+                    <li><a href="#">Lorem ipsum</a></li>
+                    <li>
+                      <a href="#">Lorem ipsum</a>
+                      <ul>
+                        <li><a href="#">Lorem ipsum</a></li>
+                        <li><a href="#">Lorem ipsum</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
               </ul>
-            </span>
-            <span class="text-base-100 font-bold hover:text-base-100 cursor-pointer"> Lorem ipsum </span>
-            <span class="text-base-100 font-bold hover:text-base-100 cursor-pointer"> Lorem ipsum </span>
-            <span class="text-base-100 font-bold hover:text-base-100 cursor-pointer"> Lorem ipsum </span>
-          </div>
+            </li>
+            <li><a href="#">Lorem ipsum</a></li>
+            <li><a href="#">Lorem ipsum</a></li>
+            <li><a href="#">Lorem ipsum</a></li>
+          </ul>
         </div>
         <div class="flex items-center lg:hidden">
           <img data-src="https://via.placeholder.com/560x460/?text=Logo" class="h-12 lazy" alt="logo" />
@@ -172,7 +184,7 @@
           <div class="lg:mr-4 lg:border-r lg:pr-4 relative group">
             <img data-src="https://via.placeholder.com/560x560/?text=Language" alt="" class="w-10 lazy" />
             <ul
-              class="bg-blue-400 text-base-100 p-2 text-left text-sm absolute w-24 top-6 left-0 invisible group-hover:visible opacity-0 group-hover:opacity-100 duration-500 transition-all ease-in-out"
+              class="bg-primary/80 text-base-100 p-2 text-left text-sm absolute w-24 top-6 left-0 invisible group-hover:visible opacity-0 group-hover:opacity-100 duration-500 transition-all ease-in-out"
             >
               <li class="font-normal p-1">Lorem ipsum</li>
             </ul>
@@ -476,7 +488,7 @@
 
     <div class="group relative language">
       <button
-        class="flex items-center gap-2 bg-base-100 border border-base-content/50 hover:border-black rounded-md px-3.5 py-2"
+        class="flex items-center gap-2 bg-base-100 border border-base-content/50 hover:border-base-content rounded-md px-3.5 py-2"
       >
         <span class="flag-language fi rounded fi-vn"></span>
         <span class="text-language">Vietnamese</span>

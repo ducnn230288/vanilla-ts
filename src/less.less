@@ -1,7 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+body {
+  @apply bg-base-100 text-base-content leading-6;
+}
 .toastify {
   &.success {
     background: oklab(var(--su));
@@ -215,6 +217,51 @@ form .group {
     }
     &.bottom-bun {
       @apply w-4 bottom-6 -rotate-45 ~'-translate-x-[0.13rem] translate-y-[0.55rem]';
+    }
+  }
+}
+
+.mega-menu {
+  @apply flex gap-10 font-bold items-center;
+
+  li {
+    @apply relative;
+
+    > a {
+      @apply text-base-100 font-bold hover:text-primary-content py-2.5 block relative;
+      &:has(+ ul) {
+        @apply pr-5;
+        &::after {
+          @apply ~'size-3.5' absolute right-0 top-4 bg-cover rotate-90;
+          content: '';
+          background-image: url('/assets/images/arrow-white.svg');
+        }
+      }
+    }
+    > ul {
+      width: 150px;
+      @apply bg-black absolute top-full left-0 mt-2 invisible opacity-0 duration-300 transition-all ease-in-out rounded;
+      &::before {
+        content: '';
+        @apply bg-primary/80 absolute w-full h-full top-0 left-0 z-0 rounded;
+      }
+
+      a:has(+ ul) {
+        @apply pr-0;
+        &::after {
+          @apply right-1 rotate-0;
+        }
+      }
+      ul {
+        @apply top-0 ml-2 mt-0;
+        left: 101%;
+      }
+    }
+
+    &:hover {
+      > ul {
+        @apply mt-0 ml-0 visible opacity-100;
+      }
     }
   }
 }
