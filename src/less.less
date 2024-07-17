@@ -222,28 +222,68 @@ form .group {
 }
 
 .mega-menu {
-  @apply flex gap-10 font-bold items-center;
+  @apply flex gap-10 items-center;
+  > li > a {
+    @apply font-bold text-base-100 hover:text-primary-content;
+    &:has(+ ul):after {
+      background-image: url('/assets/images/arrow-white.svg') !important;
+    }
+  }
+  &.col {
+    @apply flex-col gap-2;
 
+    > li {
+      @apply w-full;
+
+      > a:has(+ ul):after {
+        @apply rotate-0;
+      }
+      > ul {
+        @apply top-auto left-auto ml-80 -mt-8;
+        &.mega {
+          @apply left-auto;
+        }
+      }
+      &:hover {
+        > ul {
+          @apply -mt-8 visible opacity-100;
+          margin-left: 19rem;
+        }
+      }
+    }
+  }
   li {
     @apply relative;
 
     > a {
-      @apply text-base-100 font-bold hover:text-primary-content py-2.5 block relative;
+      @apply block relative ~'py-2.5';
       &:has(+ ul) {
         @apply pr-5;
         &::after {
           @apply ~'size-3.5' absolute right-0 top-4 bg-cover rotate-90;
           content: '';
-          background-image: url('/assets/images/arrow-white.svg');
+          background-image: url('/assets/images/arrow.svg');
         }
       }
     }
     > ul {
       width: 150px;
-      @apply bg-black absolute top-full left-0 mt-2 invisible opacity-0 duration-300 transition-all ease-in-out rounded;
-      &::before {
-        content: '';
-        @apply bg-primary/80 absolute w-full h-full top-0 left-0 z-0 rounded;
+      @apply bg-base-100 fixed top-auto left-auto mt-2 invisible opacity-0 duration-300 transition-all ease-in-out rounded border-t-4 border-secondary;
+
+      &.mega {
+        @apply left-10 w-full max-w-6xl grid grid-cols-5;
+
+        > li {
+          @apply p-2;
+
+          > ul {
+            @apply static opacity-100 w-full m-0 bg-transparent rounded-none border-none;
+
+            > li:not(:has(a)) {
+              @apply text-base-content/50 font-bold py-3;
+            }
+          }
+        }
       }
 
       a:has(+ ul) {
@@ -253,14 +293,19 @@ form .group {
         }
       }
       ul {
-        @apply top-0 ml-2 mt-0;
+        @apply absolute top-0 ml-2 mt-0;
         left: 101%;
       }
+      > li {
+        @apply pl-3;
+      }
     }
-
     &:hover {
       > ul {
         @apply mt-0 ml-0 visible opacity-100;
+        &.mega ul {
+          @apply visible opacity-100;
+        }
       }
     }
   }

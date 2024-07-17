@@ -23,12 +23,6 @@ module.exports = {
         secondary: 'oklab(var(--s)/<alpha-value>)',
         'secondary-content': 'oklab(var(--sc)/<alpha-value>)',
 
-        accent: 'oklab(var(--a)/<alpha-value>)',
-        'accent-content': 'oklab(var(--ac)/<alpha-value>)',
-
-        neutral: 'oklab(var(--n)/<alpha-value>)',
-        'neutral-content': 'oklab(var(--nc)/<alpha-value>)',
-
         'base-100': 'oklab(var(--b1)/<alpha-value>)',
         'base-200': 'oklab(var(--b2)/<alpha-value>)',
         'base-300': 'oklab(var(--b3)/<alpha-value>)',
