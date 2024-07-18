@@ -1,7 +1,7 @@
 [data-theme='light'] {
   --p: from #1b84ff l a b;
   --pc: from #eff6ff l a b;
-  --s: from #ff6f1e l a b;
+  --s: from #f59d06 l a b;
   --sc: from #fff5ef l a b;
   --b1: from #f9f9f9 l a b;
   --b2: from #f1f1f4 l a b;
@@ -19,7 +19,7 @@
 [data-theme='dark'] {
   --p: from #006ae6 l a b;
   --pc: from #172331 l a b;
-  --s: from #d74e00 l a b;
+  --s: from #f56919 l a b;
   --sc: from #272320 l a b;
   --b1: from #1b1c22 l a b;
   --b2: from #26272f l a b;

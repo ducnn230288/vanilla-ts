@@ -226,7 +226,7 @@ form .group {
   > li > a {
     @apply font-bold text-base-100 hover:text-primary-content;
     &:has(+ ul):after {
-      background-image: url('/assets/images/arrow-white.svg') !important;
+      @apply !bg-base-100;
     }
   }
   &.col {
@@ -260,15 +260,18 @@ form .group {
       &:has(+ ul) {
         @apply pr-5;
         &::after {
-          @apply ~'size-3.5' absolute right-0 top-4 bg-cover rotate-90;
+          @apply ~'size-3.5' absolute right-0 top-4 bg-cover rotate-90 bg-base-content;
           content: '';
-          background-image: url('/assets/images/arrow.svg');
+          -webkit-mask: url('/assets/images/arrow.svg') no-repeat 100% 100%;
+          mask: url('/assets/images/arrow.svg') no-repeat 100% 100%;
+          -webkit-mask-size: cover;
+          mask-size: cover;
         }
       }
     }
     > ul {
       width: 150px;
-      @apply bg-base-100 fixed top-auto left-auto mt-2 invisible opacity-0 duration-300 transition-all ease-in-out rounded border-t-4 border-secondary;
+      @apply bg-base-100 fixed top-auto left-auto mt-2 invisible opacity-0 duration-300 transition-all ease-in-out rounded border-t-4 border-secondary shadow;
 
       &.mega {
         @apply left-10 w-full max-w-6xl grid grid-cols-5;
@@ -285,11 +288,13 @@ form .group {
           }
         }
       }
-
-      a:has(+ ul) {
-        @apply pr-0;
-        &::after {
-          @apply right-1 rotate-0;
+      a {
+        @apply text-base-content;
+        &:has(+ ul) {
+          @apply pr-0;
+          &::after {
+            @apply right-1 rotate-0;
+          }
         }
       }
       ul {
@@ -307,6 +312,62 @@ form .group {
           @apply visible opacity-100;
         }
       }
+    }
+  }
+}
+form {
+  @apply bg-base-100 shadow rounded-md p-5 md:p-10 grid gap-2 m-10;
+
+  > button {
+    @apply bg-primary text-primary-content ~'p-2.5' border rounded-lg;
+  }
+  .radio {
+    @apply mb-2;
+    &.pretty {
+      .state label {
+        &:after {
+          @apply scale-50 rounded-full;
+        }
+        &:before {
+          @apply rounded-full;
+        }
+      }
+      input:checked ~ .state label:after {
+        @apply bg-primary;
+      }
+    }
+  }
+  .checkbox {
+    @apply mb-2;
+    .state {
+      svg {
+        @apply absolute left-0 opacity-0;
+        z-index: 1;
+        width: calc(1em + 2px);
+        height: calc(1em + 2px);
+        top: calc((0% - (100% - 1em)) - 8%);
+      }
+      label:after,
+      label:before {
+        @apply rounded;
+      }
+    }
+    input:checked ~ .state svg {
+      opacity: 1;
+    }
+  }
+}
+.header {
+  @apply sticky top-0 left-0 z-30;
+
+  > div {
+    @apply container mx-auto py-4 pl-5 pr-4 flex items-center justify-between bg-primary;
+
+    .menu {
+      @apply hidden lg:block;
+    }
+    > div {
+      @apply flex items-center;
     }
   }
 }
