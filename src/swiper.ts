@@ -18,40 +18,40 @@ export const setupSwiper = () => {
       delay: 5000,
     },
   };
-  Swiper('.mySwiper', {
+  new Swiper('.mySwiper', {
     ...defaultSetting,
     slidesPerView: 1,
   });
 
-  Swiper('.swiper-section-contact', {
-    ...defaultSetting,
-    slidesPerView: 2,
-    breakpoints: {
-      1366: {
-        slidesPerView: 5,
-      },
-      1024: {
-        slidesPerView: 4,
-      },
-      768: {
-        slidesPerView: 3,
-      },
-      500: {
-        slidesPerView: 2,
-      },
-    },
-  });
+  // Swiper('.swiper-section-contact', {
+  //   ...defaultSetting,
+  //   slidesPerView: 2,
+  //   breakpoints: {
+  //     1366: {
+  //       slidesPerView: 5,
+  //     },
+  //     1024: {
+  //       slidesPerView: 4,
+  //     },
+  //     768: {
+  //       slidesPerView: 3,
+  //     },
+  //     500: {
+  //       slidesPerView: 2,
+  //     },
+  //   },
+  // });
 
-  Swiper('.related-swiper', {
-    ...defaultSetting,
-    slidesPerView: 1,
-    breakpoints: {
-      1024: {
-        slidesPerView: 3,
-      },
-      640: {
-        slidesPerView: 2,
-      },
-    },
-  });
+  // Swiper('.related-swiper', {
+  //   ...defaultSetting,
+  //   slidesPerView: 1,
+  //   breakpoints: {
+  //     1024: {
+  //       slidesPerView: 3,
+  //     },
+  //     640: {
+  //       slidesPerView: 2,
+  //     },
+  //   },
+  // });
 };
