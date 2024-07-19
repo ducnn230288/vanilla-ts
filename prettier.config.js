@@ -3,13 +3,11 @@
 /** @type {import('prettier').Config} */
 export default {
   // Maximum width per line, beyond line breaks
-  printWidth: 120,
+  printWidth: 100,
   // Number of spaces per indent level
   tabWidth: 2,
   // Use semicolon at the end of statements
   semi: true,
-  // Use single quotes instead of double quotes
-  singleQuote: true,
   // Trailing comma
   trailingComma: "all",
   // Spaces between brackets in object literals { foo: bar }
@@ -23,5 +21,9 @@ export default {
   // Indent lines with tabs instead of spaces
   useTabs: false,
   // Use single quotes instead of double quotes in JSX
-  jsxSingleQuote: true,
+  plugins: [
+    "prettier-plugin-tailwindcss",
+    "prettier-plugin-organize-attributes",
+    "prettier-plugin-organize-imports",
+  ],
 };
