@@ -1,36 +1,138 @@
-[data-theme='light'] {
-  --p: from #1b84ff l a b;
-  --pc: from #eff6ff l a b;
-  --s: from #f59d06 l a b;
-  --sc: from #fff5ef l a b;
-  --b1: from #f9f9f9 l a b;
-  --b2: from #f1f1f4 l a b;
-  --b3: from #dbdfe9 l a b;
-  --bc: from #1f2937 l a b;
-  --in: from #7239ea l a b;
-  --inc: from #f8f5ff l a b;
-  --su: from #17c653 l a b;
-  --suc: from #eafff1 l a b;
-  --wa: from #f6b100 l a b;
-  --wac: from #fff8dd l a b;
-  --er: from #f8285a l a b;
-  --erc: from #ffeef3 l a b;
+[data-theme="dark"] {
+  --p0: #150a2f;
+  --p1: #2b145e;
+  --p2: #401f8e;
+  --p3: #5629bd;
+  --p4: #6b33ec;
+  --p5: #895cf0;
+  --p6: #a685f4;
+  --p7: #c4adf7;
+  --p8: #e1d6fb;
+  --p9: #f0ebfd;
+
+  --b: #191c20;
+
+  --b0: #30373e;
+  --b1: #48515b;
+  --b2: #5f6c79;
+  --b3: #768697;
+  --b4: #919eac;
+  --b5: #adb6c1;
+  --b6: #c8cfd5;
+  --b7: #e4e7ea;
+  --b8: #f1f3f5;
+  --b9: #ffffff;
+
+  --i0: #0d142f;
+  --i1: #1a285e;
+  --i2: #283b8d;
+  --i3: #354fbc;
+  --i4: #4263eb;
+  --i5: #6882ef;
+  --i6: #8ea1f3;
+  --i7: #b3c1f7;
+  --i8: #d9e0fb;
+  --i9: #eceffd;
+
+  --s0: #022118;
+  --s1: #054230;
+  --s2: #076448;
+  --s3: #0a8560;
+  --s4: #0ca678;
+  --s5: #3db893;
+  --s6: #6dcaae;
+  --s7: #9edbc9;
+  --s8: #ceede4;
+  --s9: #e7f6f2;
+
+  --w0: #312000;
+  --w1: #624000;
+  --w2: #935f00;
+  --w3: #c47f00;
+  --w4: #f59f00;
+  --w5: #f7b233;
+  --w6: #f9c566;
+  --w7: #fbd999;
+  --w8: #fdeccc;
+  --w9: #fef5e6;
+
+  --e0: #2d0107;
+  --e1: #59030e;
+  --e2: #860415;
+  --e3: #b2061c;
+  --e4: #df0723;
+  --e5: #e5394f;
+  --e6: #ec6a7b;
+  --e7: #f29ca7;
+  --e8: #f9cdd3;
+  --e9: #fce6e9;
 }
-[data-theme='dark'] {
-  --p: from #006ae6 l a b;
-  --pc: from #172331 l a b;
-  --s: from #f56919 l a b;
-  --sc: from #272320 l a b;
-  --b1: from #1b1c22 l a b;
-  --b2: from #26272f l a b;
-  --b3: from #363843 l a b;
-  --bc: from #a6adbb l a b;
-  --in: from #883fff l a b;
-  --inc: from #272134 l a b;
-  --su: from #00a261 l a b;
-  --suc: from #1f2623 l a b;
-  --wa: from #c59a00 l a b;
-  --wac: from #242320 l a b;
-  --er: from #e42855 l a b;
-  --erc: from #302024 l a b;
+[data-theme="light"] {
+  --p0: #f0ebfd;
+  --p1: #e1d6fb;
+  --p2: #c4adf7;
+  --p3: #a685f4;
+  --p4: #895cf0;
+  --p5: #6b33ec;
+  --p6: #5629bd;
+  --p7: #401f8e;
+  --p8: #2b145e;
+  --p9: #150a2f;
+
+  --b: #ffffff;
+
+  --b0: #f1f3f5;
+  --b1: #e4e7ea;
+  --b2: #c8cfd5;
+  --b3: #adb6c1;
+  --b4: #919eac;
+  --b5: #768697;
+  --b6: #5f6c79;
+  --b7: #48515b;
+  --b8: #30373e;
+  --b9: #191c20;
+
+  --i0: #eceffd;
+  --i1: #d9e0fb;
+  --i2: #b3c1f7;
+  --i3: #8ea1f3;
+  --i4: #6882ef;
+  --i5: #4263eb;
+  --i6: #354fbc;
+  --i7: #283b8d;
+  --i8: #1a285e;
+  --i9: #0d142f;
+
+  --s0: #e7f6f2;
+  --s1: #ceede4;
+  --s2: #9edbc9;
+  --s3: #6dcaae;
+  --s4: #3db893;
+  --s5: #0ca678;
+  --s6: #0a8560;
+  --s7: #076448;
+  --s8: #054230;
+  --s9: #022118;
+
+  --w0: #fef5e6;
+  --w1: #fdeccc;
+  --w2: #fbd999;
+  --w3: #f9c566;
+  --w4: #f7b233;
+  --w5: #f59f00;
+  --w6: #c47f00;
+  --w7: #935f00;
+  --w8: #624000;
+  --w9: #312000;
+
+  --e0: #fce6e9;
+  --e1: #f9cdd3;
+  --e2: #f29ca7;
+  --e3: #ec6a7b;
+  --e4: #e5394f;
+  --e5: #df0723;
+  --e6: #b2061c;
+  --e7: #860415;
+  --e8: #59030e;
+  --e9: #2d0107;
 }
