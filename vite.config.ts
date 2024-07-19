@@ -1,11 +1,11 @@
-import { loadEnv, type ConfigEnv, type UserConfig } from 'vite';
+import { loadEnv, type ConfigEnv, type UserConfig } from "vite";
 
 // https://vitejs.dev/config/
 export default ({ command, mode }: ConfigEnv): UserConfig => {
   const root = process.cwd();
   const { VITE_PORT } = loadEnv(mode, root);
 
-  const isBuild = command === 'build';
+  const isBuild = command === "build";
   return {
     server: {
       host: true,
@@ -17,9 +17,9 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
     },
     plugins: [],
     build: {
-      target: 'es2015',
-      cssTarget: 'chrome86',
-      minify: 'terser',
+      target: "es2015",
+      cssTarget: "chrome86",
+      minify: "terser",
       terserOptions: {
         compress: {
           keep_infinity: true,
@@ -27,10 +27,10 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
         },
       },
       chunkSizeWarningLimit: 600,
-      outDir: './build',
+      outDir: "./build",
     },
     resolve: {
-      alias: [{ find: /^~/, replacement: '' }],
+      alias: [{ find: /^~/, replacement: "" }],
     },
   };
 };

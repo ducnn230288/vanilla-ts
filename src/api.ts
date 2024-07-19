@@ -1,5 +1,5 @@
-import queryString from 'query-string';
-import { Message } from './message';
+import queryString from "query-string";
+import { Message } from "./message";
 export class Responses<T> {
   constructor(
     public statusCode?: 200 | 201 | 500 | 404,
@@ -9,23 +9,25 @@ export class Responses<T> {
   ) {}
 }
 
-export const keyUser = 'm8nvn*&hKwcgb^D-D#Hz^5CXfKySpY';
-export const KEY_TOKEN = 'b7a2bdf4-ac40-4012-9635-ff4b7e55eae0';
-export const LINK_API = 'http://dev1.geneat.vn:7100/api/v1';
+export const keyUser = "m8nvn*&hKwcgb^D-D#Hz^5CXfKySpY";
+export const KEY_TOKEN = "b7a2bdf4-ac40-4012-9635-ff4b7e55eae0";
+export const LINK_API = "http://dev1.geneat.vn:7100/api/v1";
 export const API = {
   init: () =>
     ({
-      mode: 'cors',
-      cache: 'no-cache',
-      credentials: 'same-origin',
+      mode: "cors",
+      cache: "no-cache",
+      credentials: "same-origin",
       headers: {
-        Accept: 'application/json',
-        'Content-Type': 'application/json',
-        authorization: localStorage.getItem(KEY_TOKEN) ? 'Bearer ' + localStorage.getItem(KEY_TOKEN) : '',
-        'Accept-Language': localStorage.getItem('i18nextLng') ?? '',
+        Accept: "application/json",
+        "Content-Type": "application/json",
+        authorization: localStorage.getItem(KEY_TOKEN)
+          ? "Bearer " + localStorage.getItem(KEY_TOKEN)
+          : "",
+        "Accept-Language": localStorage.getItem("i18nextLng") ?? "",
       },
-      redirect: 'follow',
-      referrerPolicy: 'no-referrer',
+      redirect: "follow",
+      referrerPolicy: "no-referrer",
     }) as RequestInit,
   responsible: async <T>({
     url,
@@ -36,16 +38,18 @@ export const API = {
     showMessage = false,
   }: {
     url: string;
-    params?: any;
+    params?: Record<string, string>;
     config: RequestInit;
-    headers?: RequestInit['headers'];
+    headers?: RequestInit["headers"];
     throwError?: boolean;
     showMessage?: boolean;
   }) => {
     config.headers = { ...config.headers, ...headers };
-    const linkParam = queryString.stringify(params, { arrayFormat: 'index' });
+    const linkParam = queryString.stringify(params, { arrayFormat: "index" });
     const response = await fetch(
-      (url.includes('https://') || url.includes('http://') ? '' : LINK_API) + url + (linkParam && '?' + linkParam),
+      (url.includes("https://") || url.includes("http://") ? "" : LINK_API) +
+        url +
+        (linkParam && "?" + linkParam),
       config,
     );
     const res: Responses<T> = await response.json();
@@ -71,11 +75,19 @@ export const API = {
     showMessage = false,
   }: {
     url: string;
-    params?: any;
-    headers?: RequestInit['headers'];
+    params?: Record<string, string>;
+    headers?: RequestInit["headers"];
     throwError?: boolean;
     showMessage?: boolean;
-  }) => API.responsible<T>({ url, params, config: { ...API.init(), method: 'GET' }, headers, throwError, showMessage }),
+  }) =>
+    API.responsible<T>({
+      url,
+      params,
+      config: { ...API.init(), method: "GET" },
+      headers,
+      throwError,
+      showMessage,
+    }),
   post: <T>({
     url,
     values = {},
@@ -85,16 +97,16 @@ export const API = {
     showMessage = true,
   }: {
     url: string;
-    values: any;
-    params?: any;
-    headers?: RequestInit['headers'];
+    values: Record<string, string>;
+    params?: Record<string, string>;
+    headers?: RequestInit["headers"];
     throwError?: boolean;
     showMessage?: boolean;
   }) =>
     API.responsible<T>({
       url,
       params,
-      config: { ...API.init(), method: 'POST', body: JSON.stringify(values) },
+      config: { ...API.init(), method: "POST", body: JSON.stringify(values) },
       headers,
       throwError,
       showMessage,
@@ -108,16 +120,16 @@ export const API = {
     showMessage = true,
   }: {
     url: string;
-    values: any;
-    params?: any;
-    headers?: RequestInit['headers'];
+    values: Record<string, string>;
+    params?: Record<string, string>;
+    headers?: RequestInit["headers"];
     throwError?: boolean;
     showMessage?: boolean;
   }) =>
     API.responsible<T>({
       url,
       params,
-      config: { ...API.init(), method: 'PUT', body: JSON.stringify(values) },
+      config: { ...API.init(), method: "PUT", body: JSON.stringify(values) },
       headers,
       throwError,
       showMessage,
@@ -130,10 +142,17 @@ export const API = {
     showMessage = true,
   }: {
     url: string;
-    params?: any;
-    headers?: RequestInit['headers'];
+    params?: Record<string, string>;
+    headers?: RequestInit["headers"];
     throwError?: boolean;
     showMessage?: boolean;
   }) =>
-    API.responsible<T>({ url, params, config: { ...API.init(), method: 'DELETE' }, headers, throwError, showMessage }),
+    API.responsible<T>({
+      url,
+      params,
+      config: { ...API.init(), method: "DELETE" },
+      headers,
+      throwError,
+      showMessage,
+    }),
 };

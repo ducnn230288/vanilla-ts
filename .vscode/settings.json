@@ -1,0 +1,6 @@
+{
+  "workbench.editorAssociations": {
+    "*.svg": "default"
+  },
+  "tailwindCSS.experimental.configFile": "src/tailwind.less"
+}
