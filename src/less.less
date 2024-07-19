@@ -4,6 +4,13 @@
 body {
   @apply bg-base-100 text-base-content leading-6;
 }
+.preloader {
+  @apply fixed z-50 bottom-0 left-0 right-0 top-0 h-screen w-screen flex items-center justify-center bg-base-100;
+
+  img {
+    @apply object-contain w-20 h-20;
+  }
+}
 .toastify {
   &.success {
     background: oklab(var(--su));
@@ -262,9 +269,7 @@ form .group {
         &::after {
           @apply ~'size-3.5' absolute right-0 top-4 bg-cover rotate-90 bg-base-content;
           content: '';
-          -webkit-mask: url('/assets/images/arrow.svg') no-repeat 100% 100%;
           mask: url('/assets/images/arrow.svg') no-repeat 100% 100%;
-          -webkit-mask-size: cover;
           mask-size: cover;
         }
       }
@@ -318,7 +323,7 @@ form .group {
 form {
   @apply bg-base-100 shadow rounded-md p-5 md:p-10 grid gap-2 m-10;
 
-  > button {
+  > button[type='submit'] {
     @apply bg-primary text-primary-content ~'p-2.5' border rounded-lg;
   }
   .radio {
