@@ -18,10 +18,7 @@ module.exports = {
     extend: {
       colors: {
         primary: 'oklab(var(--p)/<alpha-value>)',
-        'primary-content': 'oklab(var(--pc)/<alpha-value>)',
-
         secondary: 'oklab(var(--s)/<alpha-value>)',
-        'secondary-content': 'oklab(var(--sc)/<alpha-value>)',
 
         'base-100': 'oklab(var(--b1)/<alpha-value>)',
         'base-200': 'oklab(var(--b2)/<alpha-value>)',
@@ -29,16 +26,9 @@ module.exports = {
         'base-content': 'oklab(var(--bc)/<alpha-value>)',
 
         info: 'oklab(var(--in)/<alpha-value>)',
-        'info-content': 'oklab(var(--inc)/<alpha-value>)',
-
         success: 'oklab(var(--su)/<alpha-value>)',
-        'success-content': 'oklab(var(--suc)/<alpha-value>)',
-
         warning: 'oklab(var(--wa)/<alpha-value>)',
-        'warning-content': 'oklab(var(--wac)/<alpha-value>)',
-
         error: 'oklab(var(--er)/<alpha-value>)',
-        'error-content': 'oklab(var(--erc)/<alpha-value>)',
       },
       fontSize: {
         xs: ['.6875rem', '.9375rem'],
