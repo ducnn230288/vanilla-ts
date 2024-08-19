@@ -1,476 +1,778 @@
 <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vite + TS</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <title>React System Admin</title>
+    <meta name="description" content="Uberental System Admin" />
+    <meta name="robots" content="noarchive,index,follow" />
+    <link id="canonical" rel="canonical" href="https://geneat.vn" />
 
-  <!--  vanilla-lazyload 17 -->
-  <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17/dist/lazyload.min.js"></script>
-  <script>
-    setTimeout(() => {
-      new LazyLoad({ callback_error: (el) => (el.src = 'https://via.placeholder.com/1x1/?text=') });
-    }, 1000);
-  </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Afacad:wght@400..600&family=Cormorant+Infant:wght@600&display=swap"
+      rel="stylesheet"
+    />
 
-  <!--  line-awesome 1  -->
-  <link href="https://cdn.jsdelivr.net/npm/line-awesome@1/dist/line-awesome/css/line-awesome.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/flag-icons@7/css/flag-icons.min.css" rel="stylesheet">
-</head>
-<body>
+    <meta
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5, user-scalable=1"
+      name="viewport"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=100" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
 
-<header class="overflow-hidden">
-  <section class="container px-3 md:px-0 mx-auto py-3 text-white">
-    <div class="flex justify-between items-center relative">
-      <div class="absolute w-[200%] h-full bg-blue-900 -z-10 -right-8 top-0 rounded-full opacity-50"></div>
-      <ul class="flex text-sm gap-16">
-        <li class="flex items-center"><i class="las la-phone-volume text-2xl mr-3"></i><a href="tel:01989526503">0198-9526503</a></li>
-        <li class="flex items-center"><i class="las la-envelope text-2xl mr-2"></i><a href="mailto:needhelp@company.com">needhelp@company.com</a></li>
-        <li class="flex items-center"><i class="las la-map-marker text-2xl mr-1"></i> 47 Bakery Street, London, UK</li>
-      </ul>
-      <ul class="flex gap-3 justify-end text-2xl">
-        <li><a href="/"><i class="lab la-instagram"></i></a></li>
-        <li><a href="/"><i class="lab la-twitter"></i></a></li>
-        <li><a href="/"><i class="lab la-linkedin-in"></i></a></li>
-        <li><a href="/"><i class="lab la-facebook-f"></i></a></li>
-        <li class="group relative text-xl pt-0.5">
-          <span class="fi fi-us"></span>
-          <div class="absolute z-10 left-0 top-full hidden group-hover:block">
-            <span class="fi fi-vn"></span>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </section>
-  <section class="container px-3 md:px-0 mx-auto relative">
-    <div class="absolute w-[200%] h-full bg-white -z-10 -left-16 rounded-full"></div>
-    <div class="flex justify-between items-center py-5">
-      <figure class="flex-none"><a href="/"><img src="https://cdn2.olivertraveltrailers.com/wp-content/uploads/2022/09/26110514/oliver-travel-trailers-logo-23.svg" height="50" width="250" alt=""></a></figure>
-      <ul class="flex justify-around text-lg gap-10 uppercase font-bold text-blue-900">
-        <li><a href="/">Travel Trailers</a></li>
-        <li><a href="/">Shopping Tools</a></li>
-        <li><a href="/">About Us</a></li>
-        <li><a href="/">Blogs</a></li>
-        <li><a href="/">Contact Us</a></li>
-      </ul>
-      <button class="flex-none bg-yellow-600 text-blue-900 px-6 py-3 rounded-full font-bold uppercase text-lg">
-        Rewards Login
-      </button>
-    </div>
-  </section>
-</header>
-<main>
-  <section>
-    <figure class="absolute left-0 -top-[7%] w-full -z-20"><img class="w-full object-left-bottom" src="/image/shape-1.png" alt=""></figure>
-    <div class="container px-3 md:px-0 mx-auto h-[calc(47vw-150px)] relative">
-      <div class="absolute bottom-1/4 w-full left-0">
-        <div class="w-1/2 text-white">
-          <h4 class="text-2xl mb-6">Highest level of service you can find</h4>
-          <h1 class="text-6xl	font-bold mb-12">Take <span class="font-normal">Care of Your</span> Health Now.</h1>
-          <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
-          <button class="mt-8 flex-none w-64 bg-yellow-600 text-blue-900 px-6 py-3 rounded-full font-bold uppercase text-lg">
-            Rewards Login
-          </button>
+    <!-- META FOR FACEBOOK -->
+    <meta property="fb:app_id" content="110837687935741" />
+    <meta property="og:locale" content="vi_VN" />
+    <meta property="og:site_name" content="geneat.vn" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://inmergers.com/assets/images/inmerger_default.jpg" />
+    <meta property="og:image:width" content="596" />
+    <meta property="og:image:height" content="596" />
+    <meta property="og:url" itemprop="url" content="https://geneat.vn" />
+    <meta property="og:title" itemprop="headline" content="Angular" />
+    <meta
+      property="og:description"
+      content="Angular is a platform for building mobile and desktop web applications. Join the community of millions of developers who build compelling user interfaces with Angular."
+    />
+    <!-- END META FOR FACEBOOK -->
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@aAngular" />
+    <meta name="twitter:creator" content="@aAngular" />
+    <meta name="twitter:url" content="https://geneat.vn" />
+    <meta name="twitter:image" content="https://geneat.vn/assets/images/banner-img-1.jpg" />
+    <meta name="twitter:title" content="Angular" />
+    <meta
+      name="twitter:description"
+      content="Angular is a platform for building mobile and desktop web applications. Join the community of millions of developers who build compelling user interfaces with Angular."
+    />
+    <!-- End Twitter Card -->
+    <base href="/" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <meta
+      name="google-signin-client_id"
+      content="458714151950-fv7bp4u656lk3bel41agq6jh2j4b27pb.apps.googleusercontent.com"
+    />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L3TLVBTM19"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+
+      gtag('js', new Date());
+
+      gtag('config', 'G-L3TLVBTM19');
+    </script>
+    <link href="/assets/styles/theme.css" rel="stylesheet" />
+
+    <!--  vanilla-lazyload 17 -->
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17/dist/lazyload.min.js"></script>
+    <script>
+      setTimeout(() => {
+        new LazyLoad({
+          callback_error: el => (el.src = 'https://via.placeholder.com/1x1/?text='),
+        });
+      }, 1000);
+    </script>
+
+    <!--  line-awesome 1  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/line-awesome@1/dist/line-awesome/css/line-awesome.min.css"
+      rel="stylesheet"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/flag-icons@7/css/flag-icons.min.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <section class="container px-3 md:px-0 mx-auto py-3 text-base-100">
+        <div class="flex justify-between items-center relative">
+          <div class="absolute w-[200%] h-full bg-primary -z-10 -right-8 top-0 rounded-full opacity-50"></div>
+          <ul class="flex text-sm gap-16">
+            <li class="flex items-center">
+              <i class="las la-phone-volume text-2xl mr-3"></i><a href="tel:0974891188">0974 891-188</a>
+            </li>
+            <li class="flex items-center">
+              <i class="las la-envelope text-2xl mr-2"></i
+              ><a href="mailto:cskh@hotro.wesports.vn">cskh@hotro.wesports.vn</a>
+            </li>
+            <li class="flex items-center">
+              <i class="las la-map-marker text-2xl mr-1"></i> Liền Kề 226 No-04 khu A Khu đất dịch vụ yên Nghĩa, Quận Hà
+              Đông, Hà Nội.
+            </li>
+          </ul>
+          <ul class="flex gap-3 justify-end text-2xl">
+            <li>
+              <a href="/"><i class="lab la-facebook-f"></i></a>
+            </li>
+            <li class="group relative text-xl pt-0.5">
+              <span class="fi fi-us"></span>
+              <div class="absolute z-10 left-0 top-full hidden group-hover:block">
+                <span class="fi fi-vn"></span>
+              </div>
+            </li>
+          </ul>
         </div>
-      </div>
-    </div>
-  </section>
-  <section class="">
-    <div class="container px-3 md:px-0 mx-auto pb-20 pt-16 relative">
-      <h2 class="absolute -top-14 text-5xl font-semibold text-blue-900 [text-shadow:_0_0_5px_var(--tw-shadow-color)] shadow-white"><span class="font-bold">Spring Fever</span> - Go where you feel</h2>
-      <figure class="absolute -left-[10%] -top-[5%] w-full -z-20"><img class="h-[12vw] object-left-bottom" src="/image/wrench.png" alt=""></figure>
-      <div class="grid grid-cols-4 gap-10">
-        <article class="rounded-2xl shadow bg-white p-5">
-          <picture class="rounded-full bg-yellow-100 inline-block p-5">
-            <img src="/svg/five-star-service.svg" width="70" alt="img">
-          </picture>
-          <h3 class="font-semibold text-2xl text-blue-900 py-2">Five Star Service</h3>
-          <p>Lorem ipsum dolor sit amet ctetur adipiscing</p>
-        </article>
-
-        <article class="rounded-2xl shadow bg-white p-5">
-          <picture class="rounded-full bg-yellow-100 inline-block p-5">
-            <img src="/svg/art-production-facilities.svg" width="70" alt="img">
-          </picture>
-          <h3 class="font-semibold text-2xl text-blue-900 py-2">Art Production Facilities</h3>
-          <p>Lorem ipsum dolor sit amet ctetur adipiscing</p>
-        </article>
-
-        <article class="rounded-2xl shadow bg-white p-5">
-          <picture class="rounded-full bg-yellow-100 inline-block p-5">
-            <img src="/svg/triple-warranty-protection.svg" width="70" alt="img">
-          </picture>
-          <h3 class="font-semibold text-2xl text-blue-900 py-2">Triple Warranty Protection</h3>
-          <p>Lorem ipsum dolor sit amet ctetur adipiscing</p>
-        </article>
-
-        <article class="rounded-2xl shadow bg-white p-5">
-          <picture class="rounded-full bg-yellow-100 inline-block p-5">
-            <img src="/svg/pre-delivery-testing.svg" width="70" alt="img">
-          </picture>
-          <h3 class="font-semibold text-2xl text-blue-900 py-2">Pre-Delivery Testing</h3>
-          <p>Lorem ipsum dolor sit amet ctetur adipiscing</p>
-        </article>
-      </div>
-    </div>
-  </section>
-  <section class="relative bg-blue-900 text-white py-32 overflow-hidden">
-    <picture class="absolute left-0 bottom-0 opacity-10">
-      <img src="/image/map-outline.png" alt="">
-    </picture>
-
-    <div class="container px-3 md:px-0 mx-auto text-center z-10">
-      <p>The promise of adventure drives every RV Journey and we’re ready to take you exploring – to collect experiences, create memories, chase down dreams. To take in all this great land has to offer. It’s time to get on board, hit the road, and enjoy life’s great adventures with RV travel. We’ve got you covered with luxury recreational vehicles built by RV lovers for people who love RVs. Your journey awaits.</p>
-      <h2 class="text-5xl font-semibold mt-12">Find your family’s perfect recreational vehicle model</h2>
-
-      <form class="flex gap-5 text-blue-900 mt-12">
-        <div class="grow text-sm rounded bg-white p-4 text-left"> <strong>RV TYPE</strong> | Any Type</div>
-        <div class="grow text-sm rounded bg-white p-4 text-left"> <strong>LENGTH</strong> | Any Length</div>
-        <div class="grow text-sm rounded bg-white p-4 text-left"> <strong>LENGTH</strong> | Any Capacity</div>
-        <div class="grow text-sm rounded bg-white p-4 text-left"> <strong>WEIGHT</strong> | Any Weight</div>
-        <button class="flex-none font-bold uppercase text-lg rounded px-4 bg-yellow-600 text-blue-900"> Search</button>
-      </form>
-    </div>
-  </section>
-  <section class="py-20">
-    <div class="container px-3 md:px-0 mx-auto">
-      <div class="grid grid-cols-4 gap-10">
-        <article class="rounded shadow bg-white p-5 relative">
-          <h3 class="font-bold text-3xl text-blue-900 py-2">Husky Towing</h3>
-          <ul class="mt-3 relative z-10">
-            <li class="mb-2"><a href="/shop-s/1180.htm?Search=husky+towing+weight+distribution+hitches" title="">Weight Distribution Hitches</a></li>
-            <li class="mb-2"><a href="/shop-s/1180.htm?Search=husky+towing+fifth+wheel+hitch">Fifth Wheel Hitches</a></li>
-            <li class="mb-2"><a href="/shop-s/1180.htm?Search=husky+towing+ball+mounts">Ball Mounts</a></li>
-            <li class="mb-2"><a href="/shop-s/1180.htm?Search=husky+towing+accessories" title="">Accessories</a></li>
+      </section>
+      <section class="container px-3 md:px-0 mx-auto relative">
+        <div class="absolute w-[200%] h-full bg-base-100 -z-10 -left-16 rounded-full"></div>
+        <div class="flex justify-between items-center py-3">
+          <figure class="flex-none">
+            <a href="/"><img src="/assets/images/logo.png" width="172" alt="" /></a>
+          </figure>
+          <ul class="flex justify-around text-lg gap-10 text-base-content">
+            <li><a href="/">Rơ moóc cắm trại</a></li>
+            <li><a href="/">Rơ moóc du lịch</a></li>
+            <li><a href="/">Dụng cụ</a></li>
+            <li><a href="/">Về chúng tôi</a></li>
+            <li><a href="/">Tin tức</a></li>
           </ul>
-          <picture class="absolute right-5 bottom-5 w-1/2">
-            <img src="https://www.rvupgradestore.com/v/vspfiles/photos/08-1024-2T.jpg" alt="img">
-          </picture>
-          <p class="mt-5"><a class="text-red-500 font-light" href="#">See more <i class="las la-angle-right"></i></a></p>
-        </article>
-
-        <article class="rounded shadow bg-white p-5 relative">
-          <h3 class="font-bold text-3xl text-blue-900 py-2">Husky Towing</h3>
-          <ul class="mt-3 relative z-10">
-            <li class="mb-2"><a href="/shop-s/1180.htm?Search=husky+towing+weight+distribution+hitches" title="">Weight Distribution Hitches</a></li>
-            <li class="mb-2"><a href="/shop-s/1180.htm?Search=husky+towing+fifth+wheel+hitch">Fifth Wheel Hitches</a></li>
-            <li class="mb-2"><a href="/shop-s/1180.htm?Search=husky+towing+ball+mounts">Ball Mounts</a></li>
-            <li class="mb-2"><a href="/shop-s/1180.htm?Search=husky+towing+accessories" title="">Accessories</a></li>
-          </ul>
-          <picture class="absolute right-5 bottom-5 w-1/2">
-            <img src="https://www.rvupgradestore.com/v/vspfiles/photos/08-1024-2T.jpg" alt="img">
-          </picture>
-          <p class="mt-5"><a class="text-red-500 font-light" href="#">See more <i class="las la-angle-right"></i></a></p>
-        </article>
-
-        <article class="rounded shadow bg-white p-5 relative">
-          <h3 class="font-bold text-3xl text-blue-900 py-2">Husky Towing</h3>
-          <ul class="mt-3 relative z-10">
-            <li class="mb-2"><a href="/shop-s/1180.htm?Search=husky+towing+weight+distribution+hitches" title="">Weight Distribution Hitches</a></li>
-            <li class="mb-2"><a href="/shop-s/1180.htm?Search=husky+towing+fifth+wheel+hitch">Fifth Wheel Hitches</a></li>
-            <li class="mb-2"><a href="/shop-s/1180.htm?Search=husky+towing+ball+mounts">Ball Mounts</a></li>
-            <li class="mb-2"><a href="/shop-s/1180.htm?Search=husky+towing+accessories" title="">Accessories</a></li>
-          </ul>
-          <picture class="absolute right-5 bottom-5 w-1/2">
-            <img src="https://www.rvupgradestore.com/v/vspfiles/photos/08-1024-2T.jpg" alt="img">
-          </picture>
-          <p class="mt-5"><a class="text-red-500 font-light" href="#">See more <i class="las la-angle-right"></i></a></p>
-        </article>
-
-        <article class="rounded shadow bg-white p-5 relative">
-          <h3 class="font-bold text-3xl text-blue-900 py-2">Husky Towing</h3>
-          <ul class="mt-3 relative z-10">
-            <li class="mb-2"><a href="/shop-s/1180.htm?Search=husky+towing+weight+distribution+hitches" title="">Weight Distribution Hitches</a></li>
-            <li class="mb-2"><a href="/shop-s/1180.htm?Search=husky+towing+fifth+wheel+hitch">Fifth Wheel Hitches</a></li>
-            <li class="mb-2"><a href="/shop-s/1180.htm?Search=husky+towing+ball+mounts">Ball Mounts</a></li>
-            <li class="mb-2"><a href="/shop-s/1180.htm?Search=husky+towing+accessories" title="">Accessories</a></li>
-          </ul>
-          <picture class="absolute right-5 bottom-5 w-1/2">
-            <img src="https://www.rvupgradestore.com/v/vspfiles/photos/08-1024-2T.jpg" alt="img">
-          </picture>
-          <p class="mt-5"><a class="text-red-500 font-light" href="#">See more <i class="las la-angle-right"></i></a></p>
-        </article>
-
-        <article class="rounded shadow bg-white p-5 relative">
-          <h3 class="font-bold text-3xl text-blue-900 py-2">Husky Towing</h3>
-          <ul class="mt-3 relative z-10">
-            <li class="mb-2"><a href="/shop-s/1180.htm?Search=husky+towing+weight+distribution+hitches" title="">Weight Distribution Hitches</a></li>
-            <li class="mb-2"><a href="/shop-s/1180.htm?Search=husky+towing+fifth+wheel+hitch">Fifth Wheel Hitches</a></li>
-            <li class="mb-2"><a href="/shop-s/1180.htm?Search=husky+towing+ball+mounts">Ball Mounts</a></li>
-            <li class="mb-2"><a href="/shop-s/1180.htm?Search=husky+towing+accessories" title="">Accessories</a></li>
-          </ul>
-          <picture class="absolute right-5 bottom-5 w-1/2">
-            <img src="https://www.rvupgradestore.com/v/vspfiles/photos/08-1024-2T.jpg" alt="img">
-          </picture>
-          <p class="mt-5"><a class="text-red-500 font-light" href="#">See more <i class="las la-angle-right"></i></a></p>
-        </article>
-
-        <article class="rounded shadow bg-white p-5 relative">
-          <h3 class="font-bold text-3xl text-blue-900 py-2">Husky Towing</h3>
-          <ul class="mt-3 relative z-10">
-            <li class="mb-2"><a href="/shop-s/1180.htm?Search=husky+towing+weight+distribution+hitches" title="">Weight Distribution Hitches</a></li>
-            <li class="mb-2"><a href="/shop-s/1180.htm?Search=husky+towing+fifth+wheel+hitch">Fifth Wheel Hitches</a></li>
-            <li class="mb-2"><a href="/shop-s/1180.htm?Search=husky+towing+ball+mounts">Ball Mounts</a></li>
-            <li class="mb-2"><a href="/shop-s/1180.htm?Search=husky+towing+accessories" title="">Accessories</a></li>
-          </ul>
-          <picture class="absolute right-5 bottom-5 w-1/2">
-            <img src="https://www.rvupgradestore.com/v/vspfiles/photos/08-1024-2T.jpg" alt="img">
-          </picture>
-          <p class="mt-5"><a class="text-red-500 font-light" href="#">See more <i class="las la-angle-right"></i></a></p>
-        </article>
-
-        <article class="rounded shadow bg-white p-5 relative">
-          <h3 class="font-bold text-3xl text-blue-900 py-2">Husky Towing</h3>
-          <ul class="mt-3 relative z-10">
-            <li class="mb-2"><a href="/shop-s/1180.htm?Search=husky+towing+weight+distribution+hitches" title="">Weight Distribution Hitches</a></li>
-            <li class="mb-2"><a href="/shop-s/1180.htm?Search=husky+towing+fifth+wheel+hitch">Fifth Wheel Hitches</a></li>
-            <li class="mb-2"><a href="/shop-s/1180.htm?Search=husky+towing+ball+mounts">Ball Mounts</a></li>
-            <li class="mb-2"><a href="/shop-s/1180.htm?Search=husky+towing+accessories" title="">Accessories</a></li>
-          </ul>
-          <picture class="absolute right-5 bottom-5 w-1/2">
-            <img src="https://www.rvupgradestore.com/v/vspfiles/photos/08-1024-2T.jpg" alt="img">
-          </picture>
-          <p class="mt-5"><a class="text-red-500 font-light" href="#">See more <i class="las la-angle-right"></i></a></p>
-        </article>
-
-        <article class="rounded shadow bg-white p-5 relative">
-          <h3 class="font-bold text-3xl text-blue-900 py-2">Husky Towing</h3>
-          <ul class="mt-3 relative z-10">
-            <li class="mb-2"><a href="/shop-s/1180.htm?Search=husky+towing+weight+distribution+hitches" title="">Weight Distribution Hitches</a></li>
-            <li class="mb-2"><a href="/shop-s/1180.htm?Search=husky+towing+fifth+wheel+hitch">Fifth Wheel Hitches</a></li>
-            <li class="mb-2"><a href="/shop-s/1180.htm?Search=husky+towing+ball+mounts">Ball Mounts</a></li>
-            <li class="mb-2"><a href="/shop-s/1180.htm?Search=husky+towing+accessories" title="">Accessories</a></li>
-          </ul>
-          <picture class="absolute right-5 bottom-5 w-1/2">
-            <img src="https://www.rvupgradestore.com/v/vspfiles/photos/08-1024-2T.jpg" alt="img">
-          </picture>
-          <p class="mt-5"><a class="text-red-500 font-light" href="#">See more <i class="las la-angle-right"></i></a></p>
-        </article>
-      </div>
-    </div>
-
-  </section>
-
-  <section class="relative bg-blue-900 py-32 overflow-hidden">
-    <picture class="absolute left-0 bottom-0 opacity-10">
-      <img src="/image/map-outline.png" alt="">
-    </picture>
-
-    <div class="container px-3 md:px-0 mx-auto text-center z-10">
-      <h2 class="text-5xl font-semibold text-white">RV brand options for every journey</h2>
-      <ul class="flex flex-wrap justify-center gap-5 mt-5">
-        <li class="font-semibold text-white relative">
-          All Brands
-          <span class="absolute w-full h-1 -bottom-2 left-0 bg-yellow-600"></span>
-        </li>
-        <li class="text-gray-400">Fifth Wheels</li>
-        <li class="text-gray-400">Toy Haulers</li>
-        <li class="text-gray-400">Travel Trailers</li>
-      </ul>
-    </div>
-    <ul class="text-white uppercase mt-10 flex gap-10 ml-[40%]">
-      <li class="w-1/3 text-center">
-        <figure class="mb-2"><a href="/"><img class="w-full" src="https://img.imageboss.me/heartland-rv/width/960/format:auto/wp-content/uploads/2024/03/2024-EB-Stick-and-Tin-Brand-RV-Preview-Template.png" alt=""></a></figure>
-        <h3 class="font-bold text-2xl mt-3">Eddie Bauer</h3>
-        <p class="text-sm font-light mt-3">Aluminum Travel Trailers</p>
-      </li>
-      <li class="w-1/3 text-center">
-        <figure class="mb-2"><a href="/"><img class="w-full" src="https://img.imageboss.me/heartland-rv/width/960/format:auto/wp-content/uploads/2024/03/2024-EB-Stick-and-Tin-Brand-RV-Preview-Template.png" alt=""></a></figure>
-        <h3 class="font-bold text-2xl mt-3">Eddie Bauer</h3>
-        <p class="text-sm font-light mt-3">Aluminum Travel Trailers</p>
-      </li>
-      <li class="w-1/3 text-center">
-        <figure class="mb-2"><a href="/"><img class="w-full" src="https://img.imageboss.me/heartland-rv/width/960/format:auto/wp-content/uploads/2024/03/2024-EB-Stick-and-Tin-Brand-RV-Preview-Template.png" alt=""></a></figure>
-        <h3 class="font-bold text-2xl mt-3">Eddie Bauer</h3>
-        <p class="text-sm font-light mt-3">Aluminum Travel Trailers</p>
-      </li>
-    </ul>
-  </section>
-  <section class="">
-    <div class="container px-3 md:px-0 mx-auto py-20 relative">
-      <h2 class="text-5xl font-semibold text-blue-900 mb-5">Top Brands</h2>
-      <p>We proudly carry products from the most popular brands</p>
-      <div class="grid grid-cols-5 gap-5 mt-5">
-        <figure class="bg-white rounded p-5 hover:shadow"><a href="/"><img class="w-full" src="https://www.rvupgradestore.com//v/vspfiles/assets/images/brand-04.jpg" alt=""></a></figure>
-        <figure class="bg-white rounded p-5 hover:shadow"><a href="/"><img class="w-full" src="https://www.rvupgradestore.com//v/vspfiles/assets/images/brand-04.jpg" alt=""></a></figure>
-        <figure class="bg-white rounded p-5 hover:shadow"><a href="/"><img class="w-full" src="https://www.rvupgradestore.com//v/vspfiles/assets/images/brand-04.jpg" alt=""></a></figure>
-        <figure class="bg-white rounded p-5 hover:shadow"><a href="/"><img class="w-full" src="https://www.rvupgradestore.com//v/vspfiles/assets/images/brand-04.jpg" alt=""></a></figure>
-        <figure class="bg-white rounded p-5 hover:shadow"><a href="/"><img class="w-full" src="https://www.rvupgradestore.com//v/vspfiles/assets/images/brand-04.jpg" alt=""></a></figure>
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<footer class="relative bg-blue-900 overflow-hidden">
-  <!-- shape -->
-  <picture class="absolute left-0 bottom-0 opacity-5">
-    <img src="/image/map-outline.png" class="h-[35vw] w-screen object-cover" alt="">
-  </picture>
-
-  <!-- footer content -->
-  <section class="relative z-10 container px-3 md:px-0 mx-auto pt-28 pb-16 text-white">
-    <!-- flex row -->
-    <div class="flex flex-wrap gap-4 justify-between">
-      <!-- single -->
-      <div class="lg:w-1/4">
-        <!-- footer logo -->
-        <figure>
-          <a href="#" class="cursor-pointer">
-            <img src="https://cdn2.olivertraveltrailers.com/wp-content/uploads/2023/08/28192145/oliver-travel-trailers-logo-white-42.svg" alt="">
-          </a>
+          <button class="flex-none bg-warning text-base-100 px-5 font-medium py-2 rounded-md">Liên hệ</button>
+        </div>
+      </section>
+    </header>
+    <main>
+      <section>
+        <figure class="absolute left-0 -top-[7%] w-full -z-20">
+          <img class="w-full object-left-bottom" src="/image/shape-1.png" alt="" />
         </figure>
-        <p class="font-medium leading-8 tracking-wide">
-          Tortor neque sed tellus est eget dui id ante tristique tristique dolor.
-        </p>
+        <div class="container px-3 md:px-0 mx-auto h-[calc(47vw-150px)] relative">
+          <div class="absolute bottom-1/4 w-full left-0">
+            <div class="w-1/2 text-base-100">
+              <h4 class="text-2xl mb-6">Highest level of service you can find</h4>
+              <h1 class="text-6xl font-bold mb-12">Take <span class="font-normal">Care of Your</span> Health Now.</h1>
+              <p>
+                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis
+                enim velit mollit.
+              </p>
+              <button
+                class="mt-8 flex-none w-64 bg-warning text-primary px-6 py-3 rounded-full font-bold uppercase text-lg"
+              >
+                Rewards Login
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="">
+        <div class="container px-3 md:px-0 mx-auto pb-20 pt-16 relative">
+          <h2
+            class="absolute -top-14 text-5xl font-semibold text-primary [text-shadow:_0_0_5px_var(--tw-shadow-color)] shadow-base-100"
+          >
+            <span class="font-bold">Spring Fever</span> - Go where you feel
+          </h2>
+          <figure class="absolute -left-[10%] -top-[5%] w-full -z-20">
+            <img class="h-[12vw] object-left-bottom" src="/image/wrench.png" alt="" />
+          </figure>
+          <div class="grid grid-cols-4 gap-10">
+            <article class="rounded-2xl shadow bg-base-100 p-5">
+              <picture class="rounded-full bg-warning-content inline-block p-5">
+                <img src="/svg/five-star-service.svg" width="70" alt="img" />
+              </picture>
+              <h3 class="font-semibold text-2xl text-primary py-2">Five Star Service</h3>
+              <p>Lorem ipsum dolor sit amet ctetur adipiscing</p>
+            </article>
 
-        <ul class="pt-7 grid grid-cols-1 gap-3">
+            <article class="rounded-2xl shadow bg-base-100 p-5">
+              <picture class="rounded-full bg-warning-content inline-block p-5">
+                <img src="/svg/art-production-facilities.svg" width="70" alt="img" />
+              </picture>
+              <h3 class="font-semibold text-2xl text-primary py-2">Art Production Facilities</h3>
+              <p>Lorem ipsum dolor sit amet ctetur adipiscing</p>
+            </article>
 
+            <article class="rounded-2xl shadow bg-base-100 p-5">
+              <picture class="rounded-full bg-warning-content inline-block p-5">
+                <img src="/svg/triple-warranty-protection.svg" width="70" alt="img" />
+              </picture>
+              <h3 class="font-semibold text-2xl text-primary py-2">Triple Warranty Protection</h3>
+              <p>Lorem ipsum dolor sit amet ctetur adipiscing</p>
+            </article>
 
-          <li class="relative flex items-center">
-            <i class="las la-phone text-2xl w-8 text-yellow-600"></i>
-            <a href="tel:3336660000" class="font-medium text-base leading-7 text-white m-0">0198-9526503</a>
+            <article class="rounded-2xl shadow bg-base-100 p-5">
+              <picture class="rounded-full bg-warning-content inline-block p-5">
+                <img src="/svg/pre-delivery-testing.svg" width="70" alt="img" />
+              </picture>
+              <h3 class="font-semibold text-2xl text-primary py-2">Pre-Delivery Testing</h3>
+              <p>Lorem ipsum dolor sit amet ctetur adipiscing</p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="relative bg-primary py-32 overflow-hidden">
+        <picture class="absolute left-0 bottom-0 opacity-10">
+          <img src="/image/map-outline.png" alt="" />
+        </picture>
+
+        <div class="container px-3 md:px-0 mx-auto text-center z-10">
+          <h2 class="text-5xl font-semibold text-base-100">RV brand options for every journey</h2>
+          <p class="text-base-100 my-5">
+            We offer a wide variety of lightweight and ultra-lightweight travel trailers and fifth wheels to suit every
+            family’s needs. Check out our comprehensive selection of floorplans, visit your local dealer, and start
+            planning your family’s next Venture! Thanks for stopping, and we look forward to welcoming you to our
+            worldwide family of satisfied customers.
+          </p>
+          <ul class="flex flex-wrap justify-center gap-5 mt-5">
+            <li class="font-semibold text-base-100 relative">
+              All Brands
+              <span class="absolute w-full h-1 -bottom-2 left-0 bg-warning"></span>
+            </li>
+            <li class="text-base-100/50">Fifth Wheels</li>
+            <li class="text-base-100/50">Toy Haulers</li>
+            <li class="text-base-100/50">Travel Trailers</li>
+          </ul>
+        </div>
+        <ul class="text-base-100 uppercase mt-10 flex gap-10 ml-[40%]">
+          <li class="w-1/3 text-center">
+            <figure class="mb-2">
+              <a href="/"
+                ><img
+                  class="w-full"
+                  src="https://img.imageboss.me/heartland-rv/width/960/format:auto/wp-content/uploads/2024/03/2024-EB-Stick-and-Tin-Brand-RV-Preview-Template.png"
+                  alt=""
+              /></a>
+            </figure>
+            <h3 class="font-bold text-2xl mt-3">Eddie Bauer</h3>
+            <p class="text-sm font-light mt-3">Aluminum Travel Trailers</p>
           </li>
-          <li class="relative flex items-center">
-            <i class="las la-envelope text-2xl w-8 text-yellow-600"></i>
-            <a href="mailto:yourmail@email.com" class="font-medium text-base leading-7 text-white m-0">needhelp@company.com</a>
+          <li class="w-1/3 text-center">
+            <figure class="mb-2">
+              <a href="/"
+                ><img
+                  class="w-full"
+                  src="https://img.imageboss.me/heartland-rv/width/960/format:auto/wp-content/uploads/2024/03/2024-EB-Stick-and-Tin-Brand-RV-Preview-Template.png"
+                  alt=""
+              /></a>
+            </figure>
+            <h3 class="font-bold text-2xl mt-3">Eddie Bauer</h3>
+            <p class="text-sm font-light mt-3">Aluminum Travel Trailers</p>
           </li>
-          <li class="relative flex items-center">
-            <i class="las la-map-marker text-2xl w-8 text-yellow-600"></i>
-            <a class="font-medium text-base leading-7 text-white m-0">47 Bakery Street, London, UK</a>
+          <li class="w-1/3 text-center">
+            <figure class="mb-2">
+              <a href="/"
+                ><img
+                  class="w-full"
+                  src="https://img.imageboss.me/heartland-rv/width/960/format:auto/wp-content/uploads/2024/03/2024-EB-Stick-and-Tin-Brand-RV-Preview-Template.png"
+                  alt=""
+              /></a>
+            </figure>
+            <h3 class="font-bold text-2xl mt-3">Eddie Bauer</h3>
+            <p class="text-sm font-light mt-3">Aluminum Travel Trailers</p>
           </li>
         </ul>
-        <!-- social link -->
-        <ul class="flex flex-wrap gap-4 mt-10">
-          <li class="relative group">
-            <a href="#" class="relative pt-2.5 rounded-full inline-block w-12 h-12 rounded-1/2 bg-blue-800 text-center overflow-hidden text-gray-500">
-              <span class="absolute -z-1 left-0 bottom-full w-full h-full bg-yellow-600 group-hover:bottom-0 transition-all duration-500 ease-in-out"></span>
-              <span class="lab la-facebook-f text-lg text-white relative z-10"></span>
-            </a>
-          </li>
-          <li class="relative group">
-            <a href="#" class="relative pt-2.5 rounded-full inline-block w-12 h-12 rounded-1/2 bg-blue-800 text-center overflow-hidden text-gray-500">
-              <span class="absolute -z-1 left-0 bottom-full w-full h-full bg-yellow-600 group-hover:bottom-0 transition-all duration-500 ease-in-out"></span>
-              <span class="lab la-twitter text-lg text-white relative z-10"></span>
-            </a>
-          </li>
-          <li class="relative group">
-            <a href="#" class="relative pt-2.5 rounded-full inline-block w-12 h-12 rounded-1/2 bg-blue-800 text-center overflow-hidden text-gray-500">
-              <span class="absolute -z-1 left-0 bottom-full w-full h-full bg-yellow-600 group-hover:bottom-0 transition-all duration-500 ease-in-out"></span>
-              <span class="lab la-instagram text-lg text-white relative z-10"></span>
-            </a>
-          </li>
-        </ul>
-      </div>
+      </section>
 
-      <!-- single -->
-      <div>
-        <!-- title -->
-        <h3 class="text-white font-bold text-xl leading-7 capitalize font-poppins -mt-2">OUR RVS</h3>
-        <!-- widget links -->
-        <ul class="pt-9 grid grid-cols-1 gap-4">
-          <li class="">
-            <a href="#" class="text-white font-medium leading-7 transition-all duration-200 ease-linear delay-100 hover:text-base-red">Help Me Find My RV</a>
-          </li>
-          <li class="">
-            <a href="#" class="text-white font-medium leading-7 transition-all duration-200 ease-linear delay-100 hover:text-base-red">Travel Trailers</a>
-          </li>
-          <li class="">
-            <a href="#" class="text-white font-medium leading-7 transition-all duration-200 ease-linear delay-100 hover:text-base-red">Fifth Wheels</a>
-          </li>
-          <li class="">
-            <a href="#" class="text-white font-medium leading-7 transition-all duration-200 ease-linear delay-100 hover:text-base-red">Toy Haulers</a>
-          </li>
-          <li class="">
-            <a href="#" class="text-white font-medium leading-7 transition-all duration-200 ease-linear delay-100 hover:text-base-red">Brands</a>
-          </li>
-        </ul>
-      </div>
+      <section class="py-20">
+        <div class="container px-3 md:px-0 mx-auto">
+          <h2 class="text-5xl font-semibold text-primary">Designed for Campers, by Campers.</h2>
+          <p class="my-10">
+            We’re camping fanatics. Venture recreational vehicles are designed and built by people who actually use the
+            products we offer our customers. And because of that, we’re hyper critical of the camping experiences we
+            have in our own RVs, and design function and economy into every vehicle we produce.
+          </p>
+          <div class="grid grid-cols-4 gap-10">
+            <article class="rounded shadow bg-base-100 p-5 relative">
+              <h3 class="font-bold text-3xl text-primary py-2">Husky Towing</h3>
+              <ul class="mt-3 relative z-10">
+                <li class="mb-2">
+                  <a href="/shop-s/1180.htm?Search=husky+towing+weight+distribution+hitches" title=""
+                    >Weight Distribution Hitches</a
+                  >
+                </li>
+                <li class="mb-2">
+                  <a href="/shop-s/1180.htm?Search=husky+towing+fifth+wheel+hitch">Fifth Wheel Hitches</a>
+                </li>
+                <li class="mb-2"><a href="/shop-s/1180.htm?Search=husky+towing+ball+mounts">Ball Mounts</a></li>
+                <li class="mb-2">
+                  <a href="/shop-s/1180.htm?Search=husky+towing+accessories" title="">Accessories</a>
+                </li>
+              </ul>
+              <picture class="absolute right-5 bottom-5 w-1/2">
+                <img src="https://www.rvupgradestore.com/v/vspfiles/photos/08-1024-2T.jpg" alt="img" />
+              </picture>
+              <p class="mt-5">
+                <a class="text-warning" href="#">See more <i class="las la-angle-right"></i></a>
+              </p>
+            </article>
 
+            <article class="rounded shadow bg-base-100 p-5 relative">
+              <h3 class="font-bold text-3xl text-primary py-2">Husky Towing</h3>
+              <ul class="mt-3 relative z-10">
+                <li class="mb-2">
+                  <a href="/shop-s/1180.htm?Search=husky+towing+weight+distribution+hitches" title=""
+                    >Weight Distribution Hitches</a
+                  >
+                </li>
+                <li class="mb-2">
+                  <a href="/shop-s/1180.htm?Search=husky+towing+fifth+wheel+hitch">Fifth Wheel Hitches</a>
+                </li>
+                <li class="mb-2"><a href="/shop-s/1180.htm?Search=husky+towing+ball+mounts">Ball Mounts</a></li>
+                <li class="mb-2">
+                  <a href="/shop-s/1180.htm?Search=husky+towing+accessories" title="">Accessories</a>
+                </li>
+              </ul>
+              <picture class="absolute right-5 bottom-5 w-1/2">
+                <img src="https://www.rvupgradestore.com/v/vspfiles/photos/08-1024-2T.jpg" alt="img" />
+              </picture>
+              <p class="mt-5">
+                <a class="text-warning" href="#">See more <i class="las la-angle-right"></i></a>
+              </p>
+            </article>
 
-      <div>
-        <!-- title -->
-        <h3 class="text-white font-bold text-xl leading-7 capitalize font-poppins -mt-2">COMPANY</h3>
-        <!-- widget links -->
-        <ul class="pt-9 grid grid-cols-1 gap-4">
-          <li class="">
-            <a href="#" class="text-white font-medium leading-7 transition-all duration-200 ease-linear delay-100 hover:text-base-red">About Us </a>
-          </li>
-          <li class="">
-            <a href="#" class="text-white font-medium leading-7 transition-all duration-200 ease-linear delay-100 hover:text-base-red text-wrap">Heartland Difference
-              <br> & Innovations </a>
-          </li>
-          <li class="">
-            <a href="#" class="text-white font-medium leading-7 transition-all duration-200 ease-linear delay-100 hover:text-base-red">Factory Tours</a>
-          </li>
-          <li class="">
-            <a href="#" class="text-white font-medium leading-7 transition-all duration-200 ease-linear delay-100 hover:text-base-red">News</a>
-          </li>
-        </ul>
-      </div>
+            <article class="rounded shadow bg-base-100 p-5 relative">
+              <h3 class="font-bold text-3xl text-primary py-2">Husky Towing</h3>
+              <ul class="mt-3 relative z-10">
+                <li class="mb-2">
+                  <a href="/shop-s/1180.htm?Search=husky+towing+weight+distribution+hitches" title=""
+                    >Weight Distribution Hitches</a
+                  >
+                </li>
+                <li class="mb-2">
+                  <a href="/shop-s/1180.htm?Search=husky+towing+fifth+wheel+hitch">Fifth Wheel Hitches</a>
+                </li>
+                <li class="mb-2"><a href="/shop-s/1180.htm?Search=husky+towing+ball+mounts">Ball Mounts</a></li>
+                <li class="mb-2">
+                  <a href="/shop-s/1180.htm?Search=husky+towing+accessories" title="">Accessories</a>
+                </li>
+              </ul>
+              <picture class="absolute right-5 bottom-5 w-1/2">
+                <img src="https://www.rvupgradestore.com/v/vspfiles/photos/08-1024-2T.jpg" alt="img" />
+              </picture>
+              <p class="mt-5">
+                <a class="text-warning" href="#">See more <i class="las la-angle-right"></i></a>
+              </p>
+            </article>
 
-      <!-- single -->
-      <div>
-        <!-- title -->
-        <h3 class="text-white font-bold text-xl leading-7 capitalize font-poppins -mt-2">OWNERS</h3>
-        <!-- widget links -->
-        <ul class="pt-9 grid grid-cols-1 gap-4">
-          <li class="">
-            <a href="#" class="text-white font-medium leading-7 transition-all duration-200 ease-linear delay-100 hover:text-base-red">Owner's Manual</a>
-          </li>
-          <li class="">
-            <a href="#" class="text-white font-medium leading-7 transition-all duration-200 ease-linear delay-100 hover:text-base-red">Warranty </a>
-          </li>
-          <li class="">
-            <a href="#" class="text-white font-medium leading-7 transition-all duration-200 ease-linear delay-100 hover:text-base-red">Owners Club & Forum</a>
-          </li>
-          <li class="">
-            <a href="#" class="text-white font-medium leading-7 transition-all duration-200 ease-linear delay-100 hover:text-base-red">Heartland Apparel Store</a>
-          </li>
-        </ul>
-      </div>
+            <article class="rounded shadow bg-base-100 p-5 relative">
+              <h3 class="font-bold text-3xl text-primary py-2">Husky Towing</h3>
+              <ul class="mt-3 relative z-10">
+                <li class="mb-2">
+                  <a href="/shop-s/1180.htm?Search=husky+towing+weight+distribution+hitches" title=""
+                    >Weight Distribution Hitches</a
+                  >
+                </li>
+                <li class="mb-2">
+                  <a href="/shop-s/1180.htm?Search=husky+towing+fifth+wheel+hitch">Fifth Wheel Hitches</a>
+                </li>
+                <li class="mb-2"><a href="/shop-s/1180.htm?Search=husky+towing+ball+mounts">Ball Mounts</a></li>
+                <li class="mb-2">
+                  <a href="/shop-s/1180.htm?Search=husky+towing+accessories" title="">Accessories</a>
+                </li>
+              </ul>
+              <picture class="absolute right-5 bottom-5 w-1/2">
+                <img src="https://www.rvupgradestore.com/v/vspfiles/photos/08-1024-2T.jpg" alt="img" />
+              </picture>
+              <p class="mt-5">
+                <a class="text-warning" href="#">See more <i class="las la-angle-right"></i></a>
+              </p>
+            </article>
 
+            <article class="rounded shadow bg-base-100 p-5 relative">
+              <h3 class="font-bold text-3xl text-primary py-2">Husky Towing</h3>
+              <ul class="mt-3 relative z-10">
+                <li class="mb-2">
+                  <a href="/shop-s/1180.htm?Search=husky+towing+weight+distribution+hitches" title=""
+                    >Weight Distribution Hitches</a
+                  >
+                </li>
+                <li class="mb-2">
+                  <a href="/shop-s/1180.htm?Search=husky+towing+fifth+wheel+hitch">Fifth Wheel Hitches</a>
+                </li>
+                <li class="mb-2"><a href="/shop-s/1180.htm?Search=husky+towing+ball+mounts">Ball Mounts</a></li>
+                <li class="mb-2">
+                  <a href="/shop-s/1180.htm?Search=husky+towing+accessories" title="">Accessories</a>
+                </li>
+              </ul>
+              <picture class="absolute right-5 bottom-5 w-1/2">
+                <img src="https://www.rvupgradestore.com/v/vspfiles/photos/08-1024-2T.jpg" alt="img" />
+              </picture>
+              <p class="mt-5">
+                <a class="text-warning" href="#">See more <i class="las la-angle-right"></i></a>
+              </p>
+            </article>
 
-      <div>
-        <!-- title -->
-        <h3 class="text-white font-bold text-xl leading-7 capitalize font-poppins -mt-2">RV Lifestyle</h3>
-        <!-- widget links -->
-        <ul class="pt-9 grid grid-cols-1 gap-4">
-          <li class="">
-            <a href="#" class="text-white font-medium leading-7 transition-all duration-200 ease-linear delay-100 hover:text-base-red">Campfire Stories</a>
-          </li>
-          <li class="">
-            <a href="#" class="text-white font-medium leading-7 transition-all duration-200 ease-linear delay-100 hover:text-base-red">Real Owners </a>
-          </li>
-          <li class="">
-            <a href="#" class="text-white font-medium leading-7 transition-all duration-200 ease-linear delay-100 hover:text-base-red">How To Videos</a>
-          </li>
-          <li class="">
-            <a href="#" class="text-white font-medium leading-7 transition-all duration-200 ease-linear delay-100 hover:text-base-red">FAQ's </a>
-          </li>
-          <li class="">
-            <a href="#" class="text-white font-medium leading-7 transition-all duration-200 ease-linear delay-100 hover:text-base-red">MyHeartlandRV app</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </section>
+            <article class="rounded shadow bg-base-100 p-5 relative">
+              <h3 class="font-bold text-3xl text-primary py-2">Husky Towing</h3>
+              <ul class="mt-3 relative z-10">
+                <li class="mb-2">
+                  <a href="/shop-s/1180.htm?Search=husky+towing+weight+distribution+hitches" title=""
+                    >Weight Distribution Hitches</a
+                  >
+                </li>
+                <li class="mb-2">
+                  <a href="/shop-s/1180.htm?Search=husky+towing+fifth+wheel+hitch">Fifth Wheel Hitches</a>
+                </li>
+                <li class="mb-2"><a href="/shop-s/1180.htm?Search=husky+towing+ball+mounts">Ball Mounts</a></li>
+                <li class="mb-2">
+                  <a href="/shop-s/1180.htm?Search=husky+towing+accessories" title="">Accessories</a>
+                </li>
+              </ul>
+              <picture class="absolute right-5 bottom-5 w-1/2">
+                <img src="https://www.rvupgradestore.com/v/vspfiles/photos/08-1024-2T.jpg" alt="img" />
+              </picture>
+              <p class="mt-5">
+                <a class="text-warning" href="#">See more <i class="las la-angle-right"></i></a>
+              </p>
+            </article>
 
-  <!-- footer bottom -->
-  <section class="relative border-t border-solid border-t-white/10">
-    <div class="container px-3 md:px-0 mx-auto py-8">
-      <p class="text-white font-medium text-center">
-        Copyright 2023 by
-        <a href="#" class="transition-all duration-500 delay-0 ease-linear hover:text-base-red">govarnex</a>
-        All Right Reserved.
-      </p>
-    </div>
-  </section>
-</footer>
-<script type="module" src="/src/main.ts"></script>
-</body>
+            <article class="rounded shadow bg-base-100 p-5 relative">
+              <h3 class="font-bold text-3xl text-primary py-2">Husky Towing</h3>
+              <ul class="mt-3 relative z-10">
+                <li class="mb-2">
+                  <a href="/shop-s/1180.htm?Search=husky+towing+weight+distribution+hitches" title=""
+                    >Weight Distribution Hitches</a
+                  >
+                </li>
+                <li class="mb-2">
+                  <a href="/shop-s/1180.htm?Search=husky+towing+fifth+wheel+hitch">Fifth Wheel Hitches</a>
+                </li>
+                <li class="mb-2"><a href="/shop-s/1180.htm?Search=husky+towing+ball+mounts">Ball Mounts</a></li>
+                <li class="mb-2">
+                  <a href="/shop-s/1180.htm?Search=husky+towing+accessories" title="">Accessories</a>
+                </li>
+              </ul>
+              <picture class="absolute right-5 bottom-5 w-1/2">
+                <img src="https://www.rvupgradestore.com/v/vspfiles/photos/08-1024-2T.jpg" alt="img" />
+              </picture>
+              <p class="mt-5">
+                <a class="text-warning" href="#">See more <i class="las la-angle-right"></i></a>
+              </p>
+            </article>
+
+            <article class="rounded shadow bg-base-100 p-5 relative">
+              <h3 class="font-bold text-3xl text-primary py-2">Husky Towing</h3>
+              <ul class="mt-3 relative z-10">
+                <li class="mb-2">
+                  <a href="/shop-s/1180.htm?Search=husky+towing+weight+distribution+hitches" title=""
+                    >Weight Distribution Hitches</a
+                  >
+                </li>
+                <li class="mb-2">
+                  <a href="/shop-s/1180.htm?Search=husky+towing+fifth+wheel+hitch">Fifth Wheel Hitches</a>
+                </li>
+                <li class="mb-2"><a href="/shop-s/1180.htm?Search=husky+towing+ball+mounts">Ball Mounts</a></li>
+                <li class="mb-2">
+                  <a href="/shop-s/1180.htm?Search=husky+towing+accessories" title="">Accessories</a>
+                </li>
+              </ul>
+              <picture class="absolute right-5 bottom-5 w-1/2">
+                <img src="https://www.rvupgradestore.com/v/vspfiles/photos/08-1024-2T.jpg" alt="img" />
+              </picture>
+              <p class="mt-5">
+                <a class="text-warning" href="#">See more <i class="las la-angle-right"></i></a>
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="relative bg-primary text-base-100 py-32 overflow-hidden">
+        <picture class="absolute left-0 bottom-0 opacity-10">
+          <img src="/image/map-outline.png" alt="" />
+        </picture>
+
+        <div class="container px-3 md:px-0 mx-auto text-center z-10">
+          <p>
+            The promise of adventure drives every RV Journey and we’re ready to take you exploring – to collect
+            experiences, create memories, chase down dreams. To take in all this great land has to offer. It’s time to
+            get on board, hit the road, and enjoy life’s great adventures with RV travel. We’ve got you covered with
+            luxury recreational vehicles built by RV lovers for people who love RVs. Your journey awaits.
+          </p>
+          <h2 class="text-5xl font-semibold mt-12">Begin the Venture of a Lifetime!</h2>
+        </div>
+      </section>
+
+      <section class="">
+        <div class="container px-3 md:px-0 mx-auto py-20 relative">
+          <h2 class="text-5xl font-semibold text-primary mb-5">Top Brands</h2>
+          <p>We proudly carry products from the most popular brands</p>
+          <div class="grid grid-cols-5 gap-5 mt-5">
+            <figure class="bg-base-100 rounded p-5 hover:shadow">
+              <a href="/"
+                ><img class="w-full" src="https://www.rvupgradestore.com//v/vspfiles/assets/images/brand-04.jpg" alt=""
+              /></a>
+            </figure>
+            <figure class="bg-base-100 rounded p-5 hover:shadow">
+              <a href="/"
+                ><img class="w-full" src="https://www.rvupgradestore.com//v/vspfiles/assets/images/brand-04.jpg" alt=""
+              /></a>
+            </figure>
+            <figure class="bg-base-100 rounded p-5 hover:shadow">
+              <a href="/"
+                ><img class="w-full" src="https://www.rvupgradestore.com//v/vspfiles/assets/images/brand-04.jpg" alt=""
+              /></a>
+            </figure>
+            <figure class="bg-base-100 rounded p-5 hover:shadow">
+              <a href="/"
+                ><img class="w-full" src="https://www.rvupgradestore.com//v/vspfiles/assets/images/brand-04.jpg" alt=""
+              /></a>
+            </figure>
+            <figure class="bg-base-100 rounded p-5 hover:shadow">
+              <a href="/"
+                ><img class="w-full" src="https://www.rvupgradestore.com//v/vspfiles/assets/images/brand-04.jpg" alt=""
+              /></a>
+            </figure>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="relative bg-primary overflow-hidden">
+      <!-- shape -->
+      <picture class="absolute left-0 bottom-0 opacity-5">
+        <img src="/image/map-outline.png" class="h-[35vw] w-screen object-cover" alt="" />
+      </picture>
+
+      <!-- footer content -->
+      <section class="relative z-10 container px-3 md:px-0 mx-auto pt-28 pb-16 text-base-100">
+        <!-- flex row -->
+        <div class="flex flex-wrap gap-4 justify-between">
+          <!-- single -->
+          <div class="lg:w-1/4">
+            <!-- footer logo -->
+            <figure>
+              <a href="#" class="cursor-pointer">
+                <img
+                  src="https://cdn2.olivertraveltrailers.com/wp-content/uploads/2023/08/28192145/oliver-travel-trailers-logo-base-100-42.svg"
+                  alt=""
+                />
+              </a>
+            </figure>
+            <p class="font-medium leading-8 tracking-wide">
+              Tortor neque sed tellus est eget dui id ante tristique tristique dolor.
+            </p>
+
+            <ul class="pt-7 grid grid-cols-1 gap-3">
+              <li class="relative flex items-center">
+                <i class="las la-phone text-2xl w-8 text-warning"></i>
+                <a href="tel:3336660000" class="font-medium text-base leading-7 text-base-100 m-0">0198-9526503</a>
+              </li>
+              <li class="relative flex items-center">
+                <i class="las la-envelope text-2xl w-8 text-warning"></i>
+                <a href="mailto:yourmail@email.com" class="font-medium text-base leading-7 text-base-100 m-0"
+                  >needhelp@company.com</a
+                >
+              </li>
+              <li class="relative flex items-center">
+                <i class="las la-map-marker text-2xl w-8 text-warning"></i>
+                <a class="font-medium text-base leading-7 text-base-100 m-0">47 Bakery Street, London, UK</a>
+              </li>
+            </ul>
+            <!-- social link -->
+            <ul class="flex flex-wrap gap-4 mt-10">
+              <li class="relative group">
+                <a
+                  href="#"
+                  class="relative pt-2 rounded-full inline-block w-12 h-12 rounded-1/2 border border-base-100 text-center overflow-hidden text-base-100/60"
+                >
+                  <span
+                    class="absolute -z-1 left-0 bottom-full w-full h-full bg-warning group-hover:bottom-0 transition-all duration-500 ease-in-out"
+                  ></span>
+                  <span class="lab la-facebook-f text-2xl text-base-100 relative z-10"></span>
+                </a>
+              </li>
+              <li class="relative group">
+                <a
+                  href="#"
+                  class="relative pt-2 rounded-full inline-block w-12 h-12 rounded-1/2 border border-base-100 text-center overflow-hidden text-base-100/60"
+                >
+                  <span
+                    class="absolute -z-1 left-0 bottom-full w-full h-full bg-warning group-hover:bottom-0 transition-all duration-500 ease-in-out"
+                  ></span>
+                  <span class="lab la-twitter text-2xl text-base-100 relative z-10"></span>
+                </a>
+              </li>
+              <li class="relative group">
+                <a
+                  href="#"
+                  class="relative pt-1.5 rounded-full inline-block w-12 h-12 rounded-1/2 border border-base-100 text-center overflow-hidden text-base-100/60"
+                >
+                  <span
+                    class="absolute -z-1 left-0 bottom-full w-full h-full bg-warning group-hover:bottom-0 transition-all duration-500 ease-in-out"
+                  ></span>
+                  <span class="lab la-instagram text-3xl text-base-100 relative z-10"></span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- single -->
+          <div>
+            <!-- title -->
+            <h3 class="text-base-100 font-bold text-xl leading-7 capitalize font-poppins -mt-2">OUR RVS</h3>
+            <!-- widget links -->
+            <ul class="pt-9 grid grid-cols-1 gap-4">
+              <li class="">
+                <a
+                  href="#"
+                  class="text-base-100 font-medium leading-7 transition-all duration-200 ease-linear delay-100 hover:text-base-red"
+                  >Help Me Find My RV</a
+                >
+              </li>
+              <li class="">
+                <a
+                  href="#"
+                  class="text-base-100 font-medium leading-7 transition-all duration-200 ease-linear delay-100 hover:text-base-red"
+                  >Travel Trailers</a
+                >
+              </li>
+              <li class="">
+                <a
+                  href="#"
+                  class="text-base-100 font-medium leading-7 transition-all duration-200 ease-linear delay-100 hover:text-base-red"
+                  >Fifth Wheels</a
+                >
+              </li>
+              <li class="">
+                <a
+                  href="#"
+                  class="text-base-100 font-medium leading-7 transition-all duration-200 ease-linear delay-100 hover:text-base-red"
+                  >Toy Haulers</a
+                >
+              </li>
+              <li class="">
+                <a
+                  href="#"
+                  class="text-base-100 font-medium leading-7 transition-all duration-200 ease-linear delay-100 hover:text-base-red"
+                  >Brands</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <!-- title -->
+            <h3 class="text-base-100 font-bold text-xl leading-7 capitalize font-poppins -mt-2">COMPANY</h3>
+            <!-- widget links -->
+            <ul class="pt-9 grid grid-cols-1 gap-4">
+              <li class="">
+                <a
+                  href="#"
+                  class="text-base-100 font-medium leading-7 transition-all duration-200 ease-linear delay-100 hover:text-base-red"
+                  >About Us
+                </a>
+              </li>
+              <li class="">
+                <a
+                  href="#"
+                  class="text-base-100 font-medium leading-7 transition-all duration-200 ease-linear delay-100 hover:text-base-red text-wrap"
+                  >Heartland Difference <br />
+                  & Innovations
+                </a>
+              </li>
+              <li class="">
+                <a
+                  href="#"
+                  class="text-base-100 font-medium leading-7 transition-all duration-200 ease-linear delay-100 hover:text-base-red"
+                  >Factory Tours</a
+                >
+              </li>
+              <li class="">
+                <a
+                  href="#"
+                  class="text-base-100 font-medium leading-7 transition-all duration-200 ease-linear delay-100 hover:text-base-red"
+                  >News</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- single -->
+          <div>
+            <!-- title -->
+            <h3 class="text-base-100 font-bold text-xl leading-7 capitalize font-poppins -mt-2">OWNERS</h3>
+            <!-- widget links -->
+            <ul class="pt-9 grid grid-cols-1 gap-4">
+              <li class="">
+                <a
+                  href="#"
+                  class="text-base-100 font-medium leading-7 transition-all duration-200 ease-linear delay-100 hover:text-base-red"
+                  >Owner's Manual</a
+                >
+              </li>
+              <li class="">
+                <a
+                  href="#"
+                  class="text-base-100 font-medium leading-7 transition-all duration-200 ease-linear delay-100 hover:text-base-red"
+                  >Warranty
+                </a>
+              </li>
+              <li class="">
+                <a
+                  href="#"
+                  class="text-base-100 font-medium leading-7 transition-all duration-200 ease-linear delay-100 hover:text-base-red"
+                  >Owners Club & Forum</a
+                >
+              </li>
+              <li class="">
+                <a
+                  href="#"
+                  class="text-base-100 font-medium leading-7 transition-all duration-200 ease-linear delay-100 hover:text-base-red"
+                  >Heartland Apparel Store</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <!-- title -->
+            <h3 class="text-base-100 font-bold text-xl leading-7 capitalize font-poppins -mt-2">RV Lifestyle</h3>
+            <!-- widget links -->
+            <ul class="pt-9 grid grid-cols-1 gap-4">
+              <li class="">
+                <a
+                  href="#"
+                  class="text-base-100 font-medium leading-7 transition-all duration-200 ease-linear delay-100 hover:text-base-red"
+                  >Campfire Stories</a
+                >
+              </li>
+              <li class="">
+                <a
+                  href="#"
+                  class="text-base-100 font-medium leading-7 transition-all duration-200 ease-linear delay-100 hover:text-base-red"
+                  >Real Owners
+                </a>
+              </li>
+              <li class="">
+                <a
+                  href="#"
+                  class="text-base-100 font-medium leading-7 transition-all duration-200 ease-linear delay-100 hover:text-base-red"
+                  >How To Videos</a
+                >
+              </li>
+              <li class="">
+                <a
+                  href="#"
+                  class="text-base-100 font-medium leading-7 transition-all duration-200 ease-linear delay-100 hover:text-base-red"
+                  >FAQ's
+                </a>
+              </li>
+              <li class="">
+                <a
+                  href="#"
+                  class="text-base-100 font-medium leading-7 transition-all duration-200 ease-linear delay-100 hover:text-base-red"
+                  >MyHeartlandRV app</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- footer bottom -->
+      <section class="relative border-t border-solid border-t-base-100/10">
+        <div class="container px-3 md:px-0 mx-auto py-8">
+          <p class="text-base-100 font-medium text-center">
+            Copyright 2023 by
+            <a href="#" class="transition-all duration-500 delay-0 ease-linear hover:text-base-red">govarnex</a>
+            All Right Reserved.
+          </p>
+        </div>
+      </section>
+    </footer>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
 </html>
