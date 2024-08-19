@@ -1,7 +1,7 @@
 export const setupEchart = () => {
   const myChart = echarts.init(document.getElementById('echarts'), null, {
     renderer: 'svg',
-    useDirtyRect: false
+    useDirtyRect: false,
   });
   myChart.setOption({
     tooltip: {
@@ -35,7 +35,7 @@ export const setupEchart = () => {
           color: '#000000',
         },
       },
-      data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+      data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
     },
     yAxis: {
       show: true,
@@ -59,10 +59,10 @@ export const setupEchart = () => {
         type: 'bar',
         showBackground: true,
         backgroundStyle: {
-          color: 'rgba(180, 180, 180, 0.2)'
-        }
-      }
-    ]
+          color: 'rgba(180, 180, 180, 0.2)',
+        },
+      },
+    ],
   });
   window.addEventListener('resize', myChart.resize);
 };
