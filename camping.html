@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <title>Home page</title>
+    <meta name="description" content="Uberental System Admin" />
+    <meta name="robots" content="noarchive,index,follow" />
+    <link id="canonical" rel="canonical" href="https://geneat.vn" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Afacad:wght@400..600&family=Cormorant+Infant:wght@600&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5, user-scalable=1"
+      name="viewport"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=100" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <!-- META FOR FACEBOOK -->
+    <meta property="fb:app_id" content="110837687935741" />
+    <meta property="og:locale" content="vi_VN" />
+    <meta property="og:site_name" content="geneat.vn" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://inmergers.com/assets/images/inmerger_default.jpg" />
+    <meta property="og:image:width" content="596" />
+    <meta property="og:image:height" content="596" />
+    <meta property="og:url" itemprop="url" content="https://geneat.vn" />
+    <meta property="og:title" itemprop="headline" content="Angular" />
+    <meta
+      property="og:description"
+      content="Angular is a platform for building mobile and desktop web applications. Join the community of millions of developers who build compelling user interfaces with Angular."
+    />
+    <!-- END META FOR FACEBOOK -->
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@aAngular" />
+    <meta name="twitter:creator" content="@aAngular" />
+    <meta name="twitter:url" content="https://geneat.vn" />
+    <meta name="twitter:image" content="https://geneat.vn/assets/images/banner-img-1.jpg" />
+    <meta name="twitter:title" content="Angular" />
+    <meta
+      name="twitter:description"
+      content="Angular is a platform for building mobile and desktop web applications. Join the community of millions of developers who build compelling user interfaces with Angular."
+    />
+    <!-- End Twitter Card -->
+    <base href="/" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <meta
+      name="google-signin-client_id"
+      content="458714151950-fv7bp4u656lk3bel41agq6jh2j4b27pb.apps.googleusercontent.com"
+    />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L3TLVBTM19"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+
+      gtag('js', new Date());
+
+      gtag('config', 'G-L3TLVBTM19');
+    </script>
+    <link href="/assets/styles/theme.css" rel="stylesheet" />
+
+    <!--  vanilla-lazyload 17 -->
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17/dist/lazyload.min.js"></script>
+    <script>
+      setTimeout(() => {
+        new LazyLoad({
+          callback_error: el => (el.src = 'https://via.placeholder.com/1x1/?text='),
+        });
+      }, 1000);
+    </script>
+
+    <!--  line-awesome 1  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/line-awesome@1/dist/line-awesome/css/line-awesome.min.css"
+      rel="stylesheet"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/flag-icons@7/css/flag-icons.min.css" rel="stylesheet" />
+    
+    <!-- Add Handlebars -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"></script>
+  </head>
+  <body class="overflow-x-hidden min-h-screen">
+    <header id="header">
+      <section class="container px-3 md:px-0 mx-auto py-1 text-base-100">
+        <div class="flex justify-between h-[25px] items-center relative">
+          <div class="absolute w-[200%] h-full bg-primary -z-10 -right-8 top-0 rounded-full opacity-50"></div>
+          <ul class="flex text-sm gap-16">
+            <li class="flex items-center">
+              <i class="las la-phone-volume text-[14px] leading-[18.67px] mr-3"></i><a href="tel:0974891188">0974 891-188</a>
+            </li>
+            <li class="flex items-center">
+              <i class="las la-envelope text-[14px] leading-[18.67px] mr-2"></i
+              ><a href="mailto:cskh@hotro.wesports.vn">cskh@hotro.wesports.vn</a>
+            </li>
+            <li class="flex items-center">
+              <i class="las la-map-marker text-[14px] leading-[18.67px] mr-1"></i> Liền Kề 226 No-04 khu A Khu đất dịch vụ yên Nghĩa, Quận Hà
+              Đông, Hà Nội.
+            </li>
+          </ul>
+          <ul class="flex gap-3 justify-end text-[14px] leading-[18.67px]">
+            <li>
+              <a href="/"><i class="lab la-facebook-f text-[14px] leading-[18.67px]"></i></a>
+            </li>
+            <li class="group relative">
+              <span class="fi fi-us"></span>
+              <div class="absolute z-10 left-0 top-full hidden group-hover:block">
+                <span class="fi fi-vn"></span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="container px-3 md:px-0 mx-auto relative">
+        <div class="absolute w-[200%] h-full bg-base-100 -z-10 -left-16 rounded-full"></div>
+        <div class="flex justify-between items-center py-[10.5px]">
+          <figure class="flex-none">
+            <a href="/"><img src="/assets/images/logo.svg" width="172" alt="" /></a>
+          </figure>
+          <ul class="flex justify-around text-lg gap-10 text-base-content">
+            <li><a href="/camping.html">Rơ moóc cắm trại</a></li>
+            <li><a href="/touring.html">Rơ moóc du lịch</a></li>
+            <li><a href="/tool.html">Dụng cụ</a></li>
+            <li><a href="/about.html">Về chúng tôi</a></li>
+            <li><a href="/new.html">Tin tức</a></li>
+          </ul>
+          <button class="contact-button flex-none bg-warning text-base-100 px-5 font-medium py-2 rounded-md">Liên hệ</button>
+        </div>
+      </section>
+    </header>
+
+    <main id="main">
+      <div class="home ">
+        <div class="home__bg"></div>
+      </div>
+      <section id="camping-banner" class="camping__banner">
+        <!-- javascript innerHTML -->
+        <div id="banner">
+          <figure class="">
+            <img class="w-full h-[478px] object-left-bottom" src="{{this.imageUrl}}" alt="" />
+          </figure>
+          <div class="banner-contents h-[calc(478px-100px)] relative overflow-hidden">
+            <div class="con-container absolute top-[105px] w-full left-0 bg-gradient-to-r from-base-content/80 py-5">
+              <div class="container-div container px-3 md:px-0 mx-auto text-base-100">
+                <p>{{this.subtitle}}</p>
+                <h1 class="my-2">{{this.title}}</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script type="module">
+          import { loadHandlebarsTemplate } from '/src/main.ts';
+          
+          const bannerData = {
+            imageUrl: '/assets/images/banner/camping.png',
+            title: 'Rơ moóc cắm trại',
+            subtitle: 'Trải nghiệm du lịch thoải mái'
+          };
+    
+          loadHandlebarsTemplate({
+            templateId: 'camping-banner',
+            urlOrData: bannerData,
+            targetId: 'camping-banner',
+            keyData: 'banner'
+          });
+    
+        </script>
+      </section>
+
+      <section class="camping__section">
+        <div class="camping__container">
+          <div class="camping__category" id="cate-container">
+            <!-- javascript innerHTML -->
+            <div class="search">
+              <div class="search__indicator"></div>
+              <h5 class="search__title">Tìm kiếm</h5>
+            </div>
+            <div class="search__spacer"></div>
+            <form action="" class="search__form">
+              <button type="button" class="search__button">
+                <img src="svg/magnifying-glass.svg" alt="magnifying-glass">
+              </button>
+              <input type="text" class="search__input" placeholder="Tìm kiếm ...">
+            </form>
+            <div class="search__spacer"></div>
+            <div class="price">
+              <div class="price__indicator"></div>
+              <h5 class="price__title">Giá tiền</h5>
+            </div>
+            <div class="price__spacer"></div>
+            <div class="price__range">
+              <div class="price__range-bar ">
+                <div class="price__range-track "></div>
+                <div class="price__range-fill"></div>
+                <div class="price__range-handle price__range-handle--left"></div>
+                <div class="price__range-handle price__range-handle--right"></div>
+              </div>
+              <div class="price__spacer"></div>
+              <div class="price__values">
+                <div class="price__value price__value--from"><span>Từ:</span><span class="text-warning">$5</span></div>
+                <div class="price__value price__value--to"><span>Đến:</span><span class="text-warning">$50</span></div>
+              </div>
+            </div>
+            <div class="price__spacer"></div>
+            <div class="category">
+              <div class="category__indicator"></div>
+              <h5 class="category__title">DANH MỤC</h5>
+            </div>
+            <div class="category__spacer"></div>
+            <div class="category__list" id="cate-list">
+              <!-- Danh mục sẽ được thêm vào đây bằng JavaScript -->
+              {{#each cateLists}}
+                <div class="cate-item flex cursor-pointer items-center justify-between p-1 border-b border-base-300">
+                  <div class="cate-item__content flex items-center gap-x-3">
+                    <img src="/assets/images/tool/image.png" alt="">
+                    <span class="cate-item__name font-bold">{{this.name}}</span>
+                  </div>
+                  <img src="svg/arrow.svg" alt="" class="cate-item__arrow">
+                </div>
+              {{/each}}
+            </div>
+
+            <script type="module">
+              import { loadHandlebarsTemplate } from '/src/main.ts';
+              
+              const data = {
+                cateLists: Array.from({ length: 20 }, (v, i) => ({
+                  name: `Clearance Deals ${i + 1}`,
+                  image: `/assets/images/tool/image.png`,
+                }))
+              }
+
+              loadHandlebarsTemplate({
+                keyData: 'data',
+                templateId: 'cate-container',
+                urlOrData: data,
+                targetId: 'cate-container'
+              });
+            </script>
+          </div>
+        
+          <div class="camping__products" id="product-container">
+            <div class="product-list__header">
+              <span>Hiển thị 1–5 trong số 50 sản phẩm</span>
+              <div class="product-list__sort ">
+                Mới nhất
+                <img src="svg/chevron-down.svg" alt="">
+              </div>
+            </div>
+            
+            <div id="product-list" class="product-list__container ">
+              {{#each products}}
+                <div class="product-item" data-id="{{this.uuid}}">
+                  <figure class="">
+                    <img src="{{this.image}}" alt="{{this.name}}" class="">
+                  </figure>
+                  <div class="">
+                    <p class="">{{this.name}}</p>
+                    <span class="">{{this.price}}</span>
+                  </div>
+                </div>
+              {{/each}}
+            </div>
+            
+            <!-- pagination -->
+            <div class="product-list__pagination ">
+              <div class="product-list__pagination-item"><img src="svg/line-arrow-r.svg" alt=""></div>
+              <div class="product-list__pagination-item product-list__pagination-item--active"> 1 </div>
+              <div class="product-list__pagination-item"> 2 </div>
+              <div class="product-list__pagination-item"> 3 </div>
+              <div class="product-list__pagination-item product-list__pagination-item--prev"><img src="svg/line-arrow-r.svg" alt=""></div>
+            </div>
+
+            <script type="module">
+              import { loadHandlebarsTemplate } from '/src/main.ts';
+
+              loadHandlebarsTemplate({
+                keyData: 'data',
+                templateId: 'product-container',
+                urlOrData: 'src/data/product-tool.json',
+                targetId: 'product-container'
+              });
+            </script>
+          </div>
+        </div>
+        
+      </section>
+    </main>
+
+    <footer id="footer">
+      <div class="relative bg-base-content overflow-hidden">
+        <!-- shape -->
+        
+      
+        <!-- footer content -->
+        <section class="relative z-10 container px-3 md:px-0 mx-auto py-12 text-base-100">
+          <!-- flex row -->
+          <div class="flex gap-4 justify-between">
+            <!-- single -->
+            <div class="max-w-[210px]">
+              <!-- footer logo -->
+              <figure>
+                <a href="#" class="cursor-pointer">
+                  <img
+                    src="/assets/images/logo.svg"
+                    alt=""
+                  />
+                </a>
+              </figure>
+              <p class="mt-6 text-[14px]">Được thiết kế với vật liệu bền bỉ và tính năng tiện nghi, mang đến trải nghiệm du lịch thoải mái và an toàn. Với không gian nội thất tối ưu và các tiện ích hiện đại, nó là lựa chọn lý tưởng cho những chuyến phiêu lưu trên đường.</p>
+      
+              
+              
+            </div>
+      
+            <!-- single -->
+            <div class="grid grid-cols-4 w-[cala(100%-210px)] gap-4 justify-between">
+              <div id="footer-category-list-1">
+                <!-- title -->
+                <div id="category-template-1">
+                  <a class="text-base-100 font-semibold capitalize -mt-2">DANH MỤC</a>
+                  <ul class="pt-5 flex flex-col gap-3">
+                    {{#each categories1}}
+                      <li>
+                        <a href="{{this.link}}" class="text-base-100 font-medium leading-7 transition-all duration-200 ease-linear delay-100 hover:text-base-red">
+                          {{this.name}}
+                        </a>
+                      </li>
+                    {{/each}}
+                  </ul>
+                </div>
+                <script type="module">
+                  import { loadHandlebarsTemplate } from '/src/main.ts';
+                  
+                  const categories = [
+                    { name: 'Rơ moóc cắm trại', link: '#' } ,
+                    { name: 'Rơ moóc du lịch', link: '#' } ,
+                    { name: 'Dụng cụ', link: '#' } ,
+                    { name: 'Về chúng tôi', link: '#' } ,
+                    { name: 'Tin tức', link: '#' } ,
+                  ];
+
+                  loadHandlebarsTemplate({
+                    keyData: 'categories1',
+                    templateId: 'category-template-1',
+                    urlOrData: categories,
+                    targetId: 'footer-category-list-1'
+                  });
+                </script>
+              </div>
+              
+              <div>
+                <!-- title -->
+                <div id="footer-category-list-2">
+                  <div id="category-template-2">
+                    <a class="text-base-100 font-semibold capitalize -mt-2">RƠ MOÓC CẮM TRẠI</a>
+                    <ul class="pt-5 flex flex-col gap-3">
+                      {{#each categories2}}
+                        <li>
+                          <a href="{{this.link}}" class="text-base-100 font-medium leading-7 transition-all duration-200 ease-linear delay-100 hover:text-base-red">
+                            {{this.name}}
+                          </a>
+                        </li>
+                      {{/each}}
+                    </ul>
+                  </div>
+                  <script type="module">
+                    import { loadHandlebarsTemplate } from '/src/main.ts';
+                    
+                    const campingTrailers = Array.from({ length: 6 }, (_, i) => ({
+                      name: `Husky Towing ${i + 1}`, 
+                      link: '#' 
+                    }));
+
+                    loadHandlebarsTemplate({
+                      keyData: 'categories2',
+                      templateId: 'category-template-2',
+                      urlOrData: campingTrailers,
+                      targetId: 'footer-category-list-2'
+                    });
+                  </script>
+                </div>
+              </div>
+              
+              <!-- single -->
+              <div>
+                <!-- title -->
+                <div id="footer-category-list-3">
+                  <div id="category-template-3">
+                    <a class="text-base-100 font-semibold capitalize -mt-2">RƠ MOÓC DU LỊCH</a>
+                    <ul class="pt-5 flex flex-col gap-3">
+                      {{#each categories3}}
+                        <li>
+                          <a href="{{this.link}}" class="text-base-100 font-medium leading-7 transition-all duration-200 ease-linear delay-100 hover:text-base-red">
+                            {{this.name}}
+                          </a>
+                        </li>
+                      {{/each}}
+                    </ul>
+                  </div>
+                  <script type="module">
+                    import { loadHandlebarsTemplate } from '/src/main.ts';
+                    
+                    const touringTrailers = Array.from({ length: 5 }, (_, i) => ({
+                      name: `Sonic Lite ${i + 1}`, 
+                      link: '#' 
+                    }));
+
+                    loadHandlebarsTemplate({
+                      keyData: 'categories3',
+                      templateId: 'category-template-3',
+                      urlOrData: touringTrailers,
+                      targetId: 'footer-category-list-3'
+                    });
+                  </script>
+                </div>
+              </div>
+              
+              <div>
+                <!-- title -->
+                <a class="text-base-100 font-semibold capitalize">Contact</a>
+                  <!-- widget links -->
+                  <div class="pt-5 flex flex-col gap-3">
+                    <p>88 Broklyn Golden Road Street, New York. USA</p>
+                    <ul class="grid grid-cols-1 gap-3">
+                      <li class="relative flex items-center">
+                        <i class="las la-phone text-2xl w-8 text-warning"></i>
+                        <a href="tel:3336660000" class="font-medium text-base leading-7 text-warning m-0">0198-9526503</a>
+                      </li>
+                      <li class="relative flex items-center">
+                        <i class="las la-envelope text-2xl w-8 text-warning"></i>
+                        <a href="mailto:yourmail@email.com"
+                          class="font-medium text-base leading-7 text-warning m-0">needhelp@company.com</a>
+                      </li>
+                    </ul>
+                    <!-- social link -->
+                    <ul class="flex flex-wrap gap-3">
+                      <li class="relative group">
+                        <a href="#"
+                          class="relative pt-2 rounded-full inline-block w-12 h-12 rounded-1/2 bg-warning text-center overflow-hidden text-base-100/60">
+                          <span
+                            class="absolute -z-1 left-0 bottom-full w-full h-full bg-warning group-hover:bottom-0 transition-all duration-500 ease-in-out"></span>
+                          <span class="lab la-facebook-f text-2xl text-base-content relative z-10"></span>
+                        </a>
+                      </li>
+                      <li class="relative group">
+                        <a href="#"
+                          class="relative pt-2 rounded-full inline-block w-12 h-12 rounded-1/2 bg-warning text-center overflow-hidden text-base-100/60">
+                          <span
+                            class="absolute -z-1 left-0 bottom-full w-full h-full bg-warning group-hover:bottom-0 transition-all duration-500 ease-in-out"></span>
+                          <span class="lab la-twitter text-2xl text-base-content relative z-10"></span>
+                        </a>
+                      </li>
+                      <li class="relative group">
+                        <a href="#"
+                          class="relative pt-1.5 rounded-full inline-block w-12 h-12 rounded-1/2 text-center overflow-hidden text-base-100/60 bg-warning">
+                          <span
+                            class="absolute -z-1 left-0 bottom-full w-full h-full bg-warning group-hover:bottom-0 transition-all duration-500 ease-in-out"></span>
+                          <span class="lab la-instagram text-3xl text-base-content relative z-10"></span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      
+        <section class="container mx-auto pb-12 text-base-100 text-[10px]">
+          2024, Name. All rights reserved. Design by langphongmtb
+        </section>
+      </div>
+      
+    </footer>
+
+    <script type="module" src="/src/main.ts"></script>
+
+    
+
+  </body>
+</html>

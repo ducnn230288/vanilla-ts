@@ -1,4 +1,10 @@
 import './less.less';
+import './style/home.less';
+import './style/layout.less';
+import './style/camping.less';
+import './style/new.less';
+import './style/touring.less';
+import './style/tool.less';
 
 // sweetalert2 11
 import { API } from './api';
@@ -39,4 +45,60 @@ window.onload = async () => {
     },
   });
   console.log(test);
+};
+
+export const loadHandlebarsTemplate = async ({
+  urlTemplate,
+  template,
+  urlOrData,
+  targetId,
+  templateId,
+  keyData,
+}: {
+  urlTemplate?: string;
+  template?: string;
+  urlOrData: string | any[] | Record<string, any>;
+  targetId: string;
+  templateId?: string;
+  keyData?: string;
+}) => {
+  let data: any[] | Record<string, any>;
+
+  if (typeof urlOrData === 'string') {
+    const response = await fetch(urlOrData);
+    data = await response.json();
+  } else {
+    data = urlOrData;
+  }
+
+  let templateText: string;
+
+  if (templateId) {
+    const templateElement = document.getElementById(templateId);
+    if (!templateElement) {
+      console.error(`Template with id ${templateId} not found`);
+      return;
+    }
+    templateText = templateElement.innerHTML;
+  } else if (template) {
+    templateText = template;
+  } else if (urlTemplate) {
+    const templateSource = await fetch(urlTemplate);
+    templateText = await templateSource.text();
+  } else {
+    console.error('No template source provided');
+    return;
+  }
+
+  const templateHbs = Handlebars.compile(templateText);
+
+  const html = Array.isArray(data) ? templateHbs({ [keyData || 'data']: data }) : templateHbs(data);
+
+  const list = document.getElementById(targetId);
+
+  if (list) {
+    list.innerHTML = html;
+  } else {
+    console.error(`Element with id ${targetId} not found.`);
+  }
 };

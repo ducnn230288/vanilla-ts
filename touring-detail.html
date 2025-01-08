@@ -1,0 +1,744 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <title>Home page</title>
+    <meta name="description" content="Uberental System Admin" />
+    <meta name="robots" content="noarchive,index,follow" />
+    <link id="canonical" rel="canonical" href="https://geneat.vn" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Afacad:wght@400..600&family=Cormorant+Infant:wght@600&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5, user-scalable=1"
+      name="viewport"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=100" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <!-- META FOR FACEBOOK -->
+    <meta property="fb:app_id" content="110837687935741" />
+    <meta property="og:locale" content="vi_VN" />
+    <meta property="og:site_name" content="geneat.vn" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://inmergers.com/assets/images/inmerger_default.jpg" />
+    <meta property="og:image:width" content="596" />
+    <meta property="og:image:height" content="596" />
+    <meta property="og:url" itemprop="url" content="https://geneat.vn" />
+    <meta property="og:title" itemprop="headline" content="Angular" />
+    <meta
+      property="og:description"
+      content="Angular is a platform for building mobile and desktop web applications. Join the community of millions of developers who build compelling user interfaces with Angular."
+    />
+    <!-- END META FOR FACEBOOK -->
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@aAngular" />
+    <meta name="twitter:creator" content="@aAngular" />
+    <meta name="twitter:url" content="https://geneat.vn" />
+    <meta name="twitter:image" content="https://geneat.vn/assets/images/banner-img-1.jpg" />
+    <meta name="twitter:title" content="Angular" />
+    <meta
+      name="twitter:description"
+      content="Angular is a platform for building mobile and desktop web applications. Join the community of millions of developers who build compelling user interfaces with Angular."
+    />
+    <!-- End Twitter Card -->
+    <base href="/" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <meta
+      name="google-signin-client_id"
+      content="458714151950-fv7bp4u656lk3bel41agq6jh2j4b27pb.apps.googleusercontent.com"
+    />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L3TLVBTM19"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+
+      gtag('js', new Date());
+
+      gtag('config', 'G-L3TLVBTM19');
+    </script>
+    <link href="/assets/styles/theme.css" rel="stylesheet" />
+
+    <!--  vanilla-lazyload 17 -->
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17/dist/lazyload.min.js"></script>
+    <script>
+      setTimeout(() => {
+        new LazyLoad({
+          callback_error: el => (el.src = 'https://via.placeholder.com/1x1/?text='),
+        });
+      }, 1000);
+    </script>
+
+    <!--  line-awesome 1  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/line-awesome@1/dist/line-awesome/css/line-awesome.min.css"
+      rel="stylesheet"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/flag-icons@7/css/flag-icons.min.css" rel="stylesheet" />
+    
+    <!-- Add Handlebars -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"></script>
+  </head>
+  <body class="overflow-x-hidden min-h-screen">
+    <header id="header">
+      <section class="container px-3 md:px-0 mx-auto py-1 text-base-100">
+        <div class="flex justify-between h-[25px] items-center relative">
+          <div class="absolute w-[200%] h-full bg-primary -z-10 -right-8 top-0 rounded-full opacity-50"></div>
+          <ul class="flex text-sm gap-16">
+            <li class="flex items-center">
+              <i class="las la-phone-volume text-[14px] leading-[18.67px] mr-3"></i><a href="tel:0974891188">0974 891-188</a>
+            </li>
+            <li class="flex items-center">
+              <i class="las la-envelope text-[14px] leading-[18.67px] mr-2"></i
+              ><a href="mailto:cskh@hotro.wesports.vn">cskh@hotro.wesports.vn</a>
+            </li>
+            <li class="flex items-center">
+              <i class="las la-map-marker text-[14px] leading-[18.67px] mr-1"></i> Liền Kề 226 No-04 khu A Khu đất dịch vụ yên Nghĩa, Quận Hà
+              Đông, Hà Nội.
+            </li>
+          </ul>
+          <ul class="flex gap-3 justify-end text-[14px] leading-[18.67px]">
+            <li>
+              <a href="/"><i class="lab la-facebook-f text-[14px] leading-[18.67px]"></i></a>
+            </li>
+            <li class="group relative">
+              <span class="fi fi-us"></span>
+              <div class="absolute z-10 left-0 top-full hidden group-hover:block">
+                <span class="fi fi-vn"></span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="container px-3 md:px-0 mx-auto relative">
+        <div class="absolute w-[200%] h-full bg-base-100 -z-10 -left-16 rounded-full"></div>
+        <div class="flex justify-between items-center py-[10.5px]">
+          <figure class="flex-none">
+            <a href="/"><img src="/assets/images/logo.svg" width="172" alt="" /></a>
+          </figure>
+          <ul class="flex justify-around text-lg gap-10 text-base-content">
+            <li><a href="/camping.html">Rơ moóc cắm trại</a></li>
+            <li><a href="/touring.html">Rơ moóc du lịch</a></li>
+            <li><a href="/tool.html">Dụng cụ</a></li>
+            <li><a href="/about.html">Về chúng tôi</a></li>
+            <li><a href="/new.html">Tin tức</a></li>
+          </ul>
+          <button class="contact-button flex-none bg-warning text-base-100 px-5 font-medium py-2 rounded-md">Liên hệ</button>
+        </div>
+      </section>
+    </header>
+
+    <main id="main">
+      <div class="home ">
+        <div class="home__bg"></div>
+      </div>
+      <section id="camping-banner" class="camping__banner">
+        <!-- javascript innerHTML -->
+        <div id="banner">
+          <figure class="">
+            <img class="w-full h-[478px] object-left-bottom" src="{{this.imageUrl}}" alt="" />
+          </figure>
+          <div class="banner-contents h-[calc(478px-100px)] relative overflow-hidden">
+            <div class="con-container absolute top-[105px] w-full left-0 bg-gradient-to-r from-base-content/80 py-5">
+              <div class="container-div container px-3 md:px-0 mx-auto text-base-100">
+                <p>{{this.subtitle}}</p>
+                <h1 class="my-2">{{this.title}}</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script type="module">
+          import { loadHandlebarsTemplate } from '/src/main.ts';
+          
+          const bannerData = {
+            imageUrl: '/assets/images/banner/touring.png',
+            title: 'Trail/Box 240',
+            subtitle: 'ONE AND A HALF & DOUBLE CABIN PICK-UPS'
+          };
+    
+          loadHandlebarsTemplate({
+            templateId: 'camping-banner',
+            urlOrData: bannerData,
+            targetId: 'camping-banner',
+            keyData: 'banner'
+          });
+    
+        </script>
+      </section>
+
+      <div class="touring-detail">
+        <section class="touring-detail__header">
+          <div class="touring-detail__divider"></div>
+          <div class="touring-detail__buttons">
+            <button data-tabKey='1' class="touring-detail__button touring-detail__button--active">MÔ TẢ</button>
+            <button data-tabKey='2' class="touring-detail__button touring-detail__button--inactive">TÍNH NĂNG</button>
+            <button data-tabKey='3' class="touring-detail__button touring-detail__button--inactive">KỸ THUẬT</button>
+          </div>
+        </section>
+
+        <div id="tab-content">
+          <!-- handlebars render -->
+        </div>
+
+        <script id="tab-content-template" type="text/x-handlebars-template">
+          {{#if (eq activeTab '1')}}
+            <section id="touring-description" class="touring-description ">
+              <h6 class="container mx-auto border-l-4 border-warning pl-3 text-base-content/60 my-8">Spacious, comfortable, variable - our Trail/Box 240 model impresses with these and other features Further advantages</h6>
+            </section>
+            
+            <section id="touring-info" class="touring-info ">
+              <div class="info-container">
+                <p class="info-container__description">Chiếc máy tính để bàn đa năng, nhỏ gọn nay sở hữu sức mạnh của M4 và M4 Pro, đánh dấu một cột mốc quan trọng về môi trường với vai trò là máy Mac trung hòa carbon đầu tiên</p>
+                <figure class="info-container__image">
+                  <img loading="lazy"
+                    src="/assets/images/tool/rectangle5.png"
+                    alt="Product image"
+                    class="info-container__image--cover" />
+                </figure>
+                <p class="info-container__text">Các phiên bản 14 inch và 16 inch với M4 Pro và M4 Max trang bị Thunderbolt 5 cho tốc độ truyền nhanh hơn và khả năng kết nối tiên tiến. Tất cả các phiên bản đều trang bị màn hình Liquid Retina XDR thậm chí còn tuyệt vời hơn với tùy chọn màn hình nano-texture hoàn toàn mới và độ sáng lên đến 1000 nit cho nội dung SDR, camera 12MP Center Stage tiên tiến và thời lượng pin lên đến 24 giờ, lâu nhất từng có ở máy Mac.
+                </p>
+                <h6 class="info-container__title">Siêu Mạnh Mẽ Với Dòng Chip M4</h6>
+                <p class="info-container__text">Được xây dựng trên công nghệ 3 nanômét thế hệ thứ hai, M4 là dòng chip tiên tiến nhất dành cho máy tính cá nhân. Dòng chip M4 mang đến hiệu năng CPU đơn luồng phi thường với lõi CPU nhanh nhất thế giới, cùng với hiệu năng CPU đa luồng vượt trội để xử lý các luồng công việc đòi hỏi khắt khe nhất. Kết hợp với bộ tăng tốc học máy trong CPU, GPU tiên tiến, Neural Engine nhanh và tiết kiệm điện hơn, Apple silicon được thiết kế từ đầu để mang lại hiệu năng đáng kinh ngạc cho AI.</p>
+                <p class="info-container__text">Cùng với bộ nhớ thống nhất nhanh hơn, mỗi chip cũng được tăng băng thông bộ nhớ, vậy nên các mô hình ngôn ngữ lớn và các dự án khủng khác đều chạy trên thiết bị một cách trơn tru. Ngoài ra, dòng M4 sở hữu hiệu năng trên mỗi watt hàng đầu ngành, cung cấp cho người dùng thời lượng pin lên đến 24 giờ, nâng cao tiêu chuẩn về những điều họ có thể làm được trong một lần sạc.</p>
+              </div>
+            </section>
+          {{else if (eq activeTab '2')}}
+            <section id="touring-feature" class="touring-feature ">
+              <div class="feature__section mt-6"></div>
+              <div class="feature__grid feature__grid--reverse">
+                <div class="feature__content">
+                  <h4 class="feature__title">CABIN STRUCTURE</h4>
+                  <span class="feature__subtitle">Trail/Box 240</span>
+                  <ul class="feature__list">
+                    <li>Modern sandwich construction with walk-on roof</li>
+                    <li>Stove-enamelled, smooth aluminum outer skin with various color design options</li>
+                    <li>30 mm rigid foam insulation</li>
+                    <li>3 mm poplar plywood interior cladding</li>
+                    <li>SEITZ" double windows without thermal bridges incl. Mosquito net and blackout blind</li>
+                    <li>Entrance door with security lock, window incl. Mosquito roller blind</li>
+                    <li>Double-skin roof hoods incl. Mosquito net and blackout</li>
+                    <li>Crank supports with plastic washers</li>
+                  </ul>
+                </div>
+                <figure class="feature__image"><img src="/assets/images/touring/rec1.png" alt="" class="feature__img"></figure>
+              </div>
+
+              <div class="feature__grid">
+                <figure class="feature__image">
+                  <img src="/assets/images/touring/rec1.png" alt="" class="feature__img">
+                </figure>
+
+                <div class="feature__content">
+                  <h4 class="feature__title">LIVING AREA</h4>
+                  <span class="feature__subtitle">spacious and comfortable</span>
+                  <ul class="feature__list">
+                    <li>Decorative coating of the interior walls and PVC flooring</li>
+                    <li>Furniture made from lightweight poplar plywood with a modern, easy-care coating</li>
+                    <li>Kitchen furniture and table with hard-wearing surface</li>
+                    <li>Center seat group made of 8 cm high, high-quality foam upholstery, can be converted into a lying surface</li>
+                    <li>Upholstery covers in a modern design can be removed using zippers</li>
+                    <li>Curtains on the living room windows (various designs possible)</li>
+                    <li>Ventilated backrests</li>
+                    <li>Forced ventilation on all storage cupboards</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="feature__grid feature__grid--reverse">
+                <div class="feature__content">
+                  <h4 class="feature__title">KITCHEN</h4>
+                  <span class="feature__subtitle">Practically equipped</span>
+                  <ul class="feature__list">
+                    <li>Ignition-safe 2-burner gas hob with electr. "Nirosta" ignition and sink with split glass cover plate</li>
+                    <li>"Dometic RM 8405" absorption refrigerator, 90L (12V / 230 V gas operation) with AES system and removable freezer compartment</li>
+                    <li>Storage space</li>
+                    <li>Basin up</li>
+                  </ul>
+                </div>
+                <figure class="feature__image"><img src="/assets/images/touring/rec1.png" alt="" class="feature__img"></figure>
+              </div>
+
+              <div class="feature__grid">
+                <figure class="feature__image">
+                  <img src="/assets/images/touring/rec1.png" alt="" class="feature__img">
+                </figure>
+
+                <div class="feature__content">
+                  <h4 class="feature__title">BATHROOM</h4>
+                  <span class="feature__subtitle">cleverly designed</span>
+                  <ul class="feature__list">
+                    <li>Swivel toilet C-223-S from market leader Thetford offers a raised seat and waste-holding tank with wheels for easy disposal</li>
+                    <li>Folding washbasin creates free space for showering</li>
+                    <li>Wall units offer sufficient storage space</li>
+                    <li>Sliding door made of high-quality plastic is water-resistant and allows free passage in the cabin</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="feature__grid feature__grid--reverse">
+                <div class="feature__content">
+                  <h4 class="feature__title">Gas-, Water-, Heating system</h4>
+                  <span class="feature__subtitle">Safe & functional</span>
+                  <ul class="feature__list">
+                    <li>Storage space for two 5 kg gas cylinders, accessible from the outside</li>
+                    <li>Gas heating "TRUMA Combi 4E" with hot water preparation (boiler 10 liters)</li>
+                    <li>Stopcocks for each individual consumer</li>
+                    <li>Fresh water supply with 96 liter tank and pressure pump</li>
+                    <li>45 liter waste water tank as underfloor tank
+                      12-V / 230-V-system</li>
+                    <li>Energy-saving 12 volt LED lighting in the living area</li>
+                    <li>12 and 230 volt socket</li>
+                    <li>CEE input socket with 10 A automatic circuit breaker</li>
+                    <li>AGM battery, 12 V 92 Ah with cut-off relay, with automatic charger and additional battery charge booster</li>
+                    <li>Cut-off relay for 12 volt refrigerator function</li>
+                  </ul>
+                </div>
+                <figure class="feature__image"><img src="/assets/images/touring/rec1.png" alt="" class="feature__img"></figure>
+              </div>
+
+              <div class="feature__grid">
+                <figure class="feature__image">
+                  <img src="/assets/images/touring/rec1.png" alt="" class="feature__img">
+                </figure>
+
+                <div class="feature__content">
+                  <h4 class="feature__title">FABRICS</h4>
+                  <span class="feature__subtitle">modern & classically attractive</span>
+                  <p class="feature__text">With contemporary fabrics, the latest trendy colors and lots of extras for the individual interior design of your set-down cabin, we ensure that you feel comfortable. Our upholstery and curtain fabrics are available in five different variations.</p>
+                  <span class="feature__highlight">Set personal accents</span>
+                  <p class="feature__text">For even more individuality and personality, we offer our curtains in the classic sewing style with pleated tape as timeless blinds and over-curtains or in a modern form as panel curtains and Roman blinds.</p>
+                  <p class="feature__text">With our Carino, Alsoma, Delio, Lindo and Savaro fabric designs, there is something for everyone. Whether it's a striking color scheme or a discreet ambience:</p>
+                  <span class="feature__highlight">You choose according to your taste!</span>
+                </div>
+              </div>
+
+              <div class="feature__grid">
+                <div class="feature__content">
+                  <h4 class="feature__title">Optional accessories</h4>
+                  <span class="feature__subtitle">flexible & extensive</span>
+                  
+                  <p class="feature__text">There are numerous reasons for choosing the most flexible way to travel: Whether it's a modern interior for more self-fulfilment, high-horsepower base vehicles or the option of having a boat, horse or motorcycle with you when you travel.</p>
+
+                  <p class="feature__text">We will show you what a TISCHER cabin can do. In addition, you will find useful information on all suitable base vehicles, how flexible trailer transport is and how easy it is to mount and dismount the cab in the form of our product film.</p>
+
+                  <p class="feature__text">Be inspired by the variety of interior design options in our living worlds. Our current fabric collections and trend colors bring a new zest to travel.</p>
+                </div>
+
+                <figure class="feature__image">
+                  <img src="/assets/images/touring/rec1.png" alt="" class="feature__img">
+                </figure>
+              </div>
+            </section>
+          {{else}}
+            <section id="touring-description" class="touring-description">
+              <h6 class="container mx-auto border-l-4 border-warning pl-3 text-base-content/60 my-8">Spacious, comfortable, variable - our Trail/Box 240 model impresses with these and other features Further advantages</h6>
+            </section>
+            <section id="touring-tech" class="touring-tech">
+              <table class="text-base-content">
+                <thead>
+                  <tr>
+                    <th>Thông tin</th>
+                    <th>8-11EXSEDB</th>
+                    <th>8-11EXSEWB</th>
+                    <th>9-6SEWB</th>
+                    <th>10-2EXSEDB</th>
+                    <th>10-2EXSEWB</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Overall Width (in)</td>
+                    <td>98</td>
+                    <td>98</td>
+                    <td>98</td>
+                    <td>98</td>
+                    <td>98</td>
+                  </tr>
+              
+                  <tr>
+                    <td>Overall Length (in)</td>
+                    <td>195</td>
+                    <td>195</td>
+                    <td>198</td>
+                    <td>218</td>
+                    <td>218</td>
+                  </tr>
+              
+                  <tr>
+                    <td>Overall Floor Length (in)</td>
+                    <td>108</td>
+                    <td>108</td>
+                    <td>110</td>
+                    <td>131</td>
+                    <td>131</td>
+                  </tr>
+              
+                  <tr>
+                    <td>Overall Height (in)</td>
+                    <td>100</td>
+                    <td>100</td>
+                    <td>100</td>
+                    <td>106</td>
+                    <td>106</td>
+                  </tr>
+              
+                  <tr>
+                    <td>Dinette Bed (in)</td>
+                    <td>37×67</td>
+                    <td>37×67</td>
+                    <td>37×67</td>
+                    <td>42X72</td>
+                    <td>42X72</td>
+                  </tr>
+              
+                  <tr>
+                    <td>U Shape Table Size (in)</td>
+                    <td>24×26</td>
+                    <td>24×26</td>
+                    <td>24×29</td>
+                    <td>24×29</td>
+                    <td>24×29</td>
+                  </tr>
+              
+                  <tr>
+                    <td>Face2Face Table Size (in)</td>
+                    <td>26×36</td>
+                    <td>26×36</td>
+                    <td>29×36</td>
+                    <td>30×38</td>
+                    <td>30×38</td>
+                  </tr>
+              
+                  <tr>
+                    <td>3X200 Watt Solar Panels</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+              
+                  <tr>
+                    <td>2-12v/USB Charging Station</td>
+                    <td><img src="svg/check.svg" class="mx-auto" alt=""></td>
+                    <td><img src="svg/check.svg" class="mx-auto" alt=""></td>
+                    <td><img src="svg/check.svg" class="mx-auto" alt=""></td>
+                    <td><img src="svg/check.svg" class="mx-auto" alt=""></td>
+                    <td><img src="svg/check.svg" class="mx-auto" alt=""></td>
+                  </tr>
+              
+                  <tr>
+                    <td>LCD TV Screen 12v</td>
+                    <td><img src="svg/check.svg" class="mx-auto" alt=""></td>
+                    <td><img src="svg/check.svg" class="mx-auto" alt=""></td>
+                    <td><img src="svg/check.svg" class="mx-auto" alt=""></td>
+                    <td><img src="svg/check.svg" class="mx-auto" alt=""></td>
+                    <td><img src="svg/check.svg" class="mx-auto" alt=""></td>
+                  </tr>
+              
+                  <tr>
+                    <td>60"x80" High End Queen Mattress</td>
+                    <td><img src="svg/check.svg" class="mx-auto" alt=""></td>
+                    <td><img src="svg/check.svg" class="mx-auto" alt=""></td>
+                    <td><img src="svg/check.svg" class="mx-auto" alt=""></td>
+                    <td><img src="svg/check.svg" class="mx-auto" alt=""></td>
+                    <td><img src="svg/check.svg" class="mx-auto" alt=""></td>
+                  </tr>
+              
+                  <tr>
+                    <td>6-Year Structural Warranty</td>
+                    <td><img src="svg/check.svg" class="mx-auto" alt=""></td>
+                    <td><img src="svg/check.svg" class="mx-auto" alt=""></td>
+                    <td><img src="svg/check.svg" class="mx-auto" alt=""></td>
+                    <td><img src="svg/check.svg" class="mx-auto" alt=""></td>
+                    <td><img src="svg/check.svg" class="mx-auto" alt=""></td>
+                  </tr>
+              
+                  <tr>
+                    <td>Air Conditioner</td>
+                    <td><img src="svg/check.svg" class="mx-auto" alt=""></td>
+                    <td><img src="svg/check.svg" class="mx-auto" alt=""></td>
+                    <td><img src="svg/check.svg" class="mx-auto" alt=""></td>
+                    <td><img src="svg/check.svg" class="mx-auto" alt=""></td>
+                    <td><img src="svg/check.svg" class="mx-auto" alt=""></td>
+                  </tr>
+              
+                  <tr>
+                    <td>Awning 10' Side</td>
+                    <td><div class="mx-auto size-[18px] rounded border border-base-content/50"></div></td>
+                    <td><div class="mx-auto size-[18px] rounded border border-base-content/50"></div></td>
+                    <td><div class="mx-auto size-[18px] rounded border border-base-content/50"></div></td>
+                    <td><img src="svg/check.svg" alt="" class="mx-auto"></td>
+                    <td><img src="svg/check.svg" alt="" class="mx-auto"></td>
+                  </tr>
+              
+                  <tr>
+                    <td>Tổng giá</td>
+                    <td>10,000,000đ</td>
+                    <td>11,000,000đ</td>
+                    <td>12,000,000đ</td>
+                    <td>13,000,000đ</td>
+                    <td>14,000,000đ</td>
+                  </tr>
+              
+                  <tr>
+                    <td></td>
+                    <td class="bg-warning text-base-100 text-center">Báo giá</td>
+                    <td class="bg-warning text-base-100 text-center">Báo giá</td>
+                    <td class="bg-warning text-base-100 text-center">Báo giá</td>
+                    <td class="bg-warning text-base-100 text-center">Báo giá</td>
+                    <td class="bg-warning text-base-100 text-center">Báo giá</td>
+                  </tr>
+                </tbody>
+              </table>
+            </section>
+          {{/if}}
+        </script>
+
+        <script type="module">
+          import { loadHandlebarsTemplate } from '/src/main.ts';
+
+          Handlebars.registerHelper('eq', function(a, b) {
+            return a === b;
+          });
+
+          let state = {
+            activeTab: '1'
+          };
+
+          function renderContent() {
+            loadHandlebarsTemplate({
+              templateId: 'tab-content-template',
+              urlOrData: state,
+              targetId: 'tab-content',
+              keyData: 'activeTab'
+            });
+
+            document.querySelectorAll('.touring-detail__button').forEach(button => {
+              const tabKey = button.getAttribute('data-tabKey');
+              if (tabKey === state.activeTab) {
+                button.classList.remove('touring-detail__button--inactive');
+                button.classList.add('touring-detail__button--active');
+              } else {
+                button.classList.remove('touring-detail__button--active');
+                button.classList.add('touring-detail__button--inactive');
+              }
+            });
+          }
+
+          document.querySelectorAll('.touring-detail__button').forEach(button => {
+            button.addEventListener('click', () => {
+              state.activeTab = button.getAttribute('data-tabKey');
+              renderContent();
+            });
+          });
+
+          renderContent();
+        </script>
+
+      </div>
+    </main>
+
+    <footer id="footer">
+      <div class="relative bg-base-content overflow-hidden">
+        <!-- shape -->
+        
+      
+        <!-- footer content -->
+        <section class="relative z-10 container px-3 md:px-0 mx-auto py-12 text-base-100">
+          <!-- flex row -->
+          <div class="flex gap-4 justify-between">
+            <!-- single -->
+            <div class="max-w-[210px]">
+              <!-- footer logo -->
+              <figure>
+                <a href="#" class="cursor-pointer">
+                  <img
+                    src="/assets/images/logo.svg"
+                    alt=""
+                  />
+                </a>
+              </figure>
+              <p class="mt-6 text-[14px]">Được thiết kế với vật liệu bền bỉ và tính năng tiện nghi, mang đến trải nghiệm du lịch thoải mái và an toàn. Với không gian nội thất tối ưu và các tiện ích hiện đại, nó là lựa chọn lý tưởng cho những chuyến phiêu lưu trên đường.</p>
+      
+              
+              
+            </div>
+      
+            <!-- single -->
+            <div class="grid grid-cols-4 w-[cala(100%-210px)] gap-4 justify-between">
+              <div id="footer-category-list-1">
+                <!-- title -->
+                <div id="category-template-1">
+                  <a class="text-base-100 font-semibold capitalize -mt-2">DANH MỤC</a>
+                  <ul class="pt-5 flex flex-col gap-3">
+                    {{#each categories1}}
+                      <li>
+                        <a href="{{this.link}}" class="text-base-100 font-medium leading-7 transition-all duration-200 ease-linear delay-100 hover:text-base-red">
+                          {{this.name}}
+                        </a>
+                      </li>
+                    {{/each}}
+                  </ul>
+                </div>
+                <script type="module">
+                  import { loadHandlebarsTemplate } from '/src/main.ts';
+                  
+                  const categories = [
+                    { name: 'Rơ moóc cắm trại', link: '#' } ,
+                    { name: 'Rơ moóc du lịch', link: '/touring.html' } ,
+                    { name: 'Dụng cụ', link: '#' } ,
+                    { name: 'Về chúng tôi', link: '#' } ,
+                    { name: 'Tin tức', link: '#' } ,
+                  ];
+
+                  loadHandlebarsTemplate({
+                    keyData: 'categories1',
+                    templateId: 'category-template-1',
+                    urlOrData: categories,
+                    targetId: 'footer-category-list-1'
+                  });
+                </script>
+              </div>
+              
+              <div>
+                <!-- title -->
+                <div id="footer-category-list-2">
+                  <div id="category-template-2">
+                    <a class="text-base-100 font-semibold capitalize -mt-2">RƠ MOÓC CẮM TRẠI</a>
+                    <ul class="pt-5 flex flex-col gap-3">
+                      {{#each categories2}}
+                        <li>
+                          <a href="{{this.link}}" class="text-base-100 font-medium leading-7 transition-all duration-200 ease-linear delay-100 hover:text-base-red">
+                            {{this.name}}
+                          </a>
+                        </li>
+                      {{/each}}
+                    </ul>
+                  </div>
+                  <script type="module">
+                    import { loadHandlebarsTemplate } from '/src/main.ts';
+                    
+                    const campingTrailers = Array.from({ length: 6 }, (_, i) => ({
+                      name: `Husky Towing ${i + 1}`, 
+                      link: '#' 
+                    }));
+
+                    loadHandlebarsTemplate({
+                      keyData: 'categories2',
+                      templateId: 'category-template-2',
+                      urlOrData: campingTrailers,
+                      targetId: 'footer-category-list-2'
+                    });
+                  </script>
+                </div>
+              </div>
+              
+              <!-- single -->
+              <div>
+                <!-- title -->
+                <div id="footer-category-list-3">
+                  <div id="category-template-3">
+                    <a class="text-base-100 font-semibold capitalize -mt-2">RƠ MOÓC DU LỊCH</a>
+                    <ul class="pt-5 flex flex-col gap-3">
+                      {{#each categories3}}
+                        <li>
+                          <a href="{{this.link}}" class="text-base-100 font-medium leading-7 transition-all duration-200 ease-linear delay-100 hover:text-base-red">
+                            {{this.name}}
+                          </a>
+                        </li>
+                      {{/each}}
+                    </ul>
+                  </div>
+                  <script type="module">
+                    import { loadHandlebarsTemplate } from '/src/main.ts';
+                    
+                    const touringTrailers = Array.from({ length: 5 }, (_, i) => ({
+                      name: `Sonic Lite ${i + 1}`, 
+                      link: '#' 
+                    }));
+
+                    loadHandlebarsTemplate({
+                      keyData: 'categories3',
+                      templateId: 'category-template-3',
+                      urlOrData: touringTrailers,
+                      targetId: 'footer-category-list-3'
+                    });
+                  </script>
+                </div>
+              </div>
+              
+              <div>
+                <!-- title -->
+                <a class="text-base-100 font-semibold capitalize">Contact</a>
+                  <!-- widget links -->
+                  <div class="pt-5 flex flex-col gap-3">
+                    <p>88 Broklyn Golden Road Street, New York. USA</p>
+                    <ul class="grid grid-cols-1 gap-3">
+                      <li class="relative flex items-center">
+                        <i class="las la-phone text-2xl w-8 text-warning"></i>
+                        <a href="tel:3336660000" class="font-medium text-base leading-7 text-warning m-0">0198-9526503</a>
+                      </li>
+                      <li class="relative flex items-center">
+                        <i class="las la-envelope text-2xl w-8 text-warning"></i>
+                        <a href="mailto:yourmail@email.com"
+                          class="font-medium text-base leading-7 text-warning m-0">needhelp@company.com</a>
+                      </li>
+                    </ul>
+                    <!-- social link -->
+                    <ul class="flex flex-wrap gap-3">
+                      <li class="relative group">
+                        <a href="#"
+                          class="relative pt-2 rounded-full inline-block w-12 h-12 rounded-1/2 bg-warning text-center overflow-hidden text-base-100/60">
+                          <span
+                            class="absolute -z-1 left-0 bottom-full w-full h-full bg-warning group-hover:bottom-0 transition-all duration-500 ease-in-out"></span>
+                          <span class="lab la-facebook-f text-2xl text-base-content relative z-10"></span>
+                        </a>
+                      </li>
+                      <li class="relative group">
+                        <a href="#"
+                          class="relative pt-2 rounded-full inline-block w-12 h-12 rounded-1/2 bg-warning text-center overflow-hidden text-base-100/60">
+                          <span
+                            class="absolute -z-1 left-0 bottom-full w-full h-full bg-warning group-hover:bottom-0 transition-all duration-500 ease-in-out"></span>
+                          <span class="lab la-twitter text-2xl text-base-content relative z-10"></span>
+                        </a>
+                      </li>
+                      <li class="relative group">
+                        <a href="#"
+                          class="relative pt-1.5 rounded-full inline-block w-12 h-12 rounded-1/2 text-center overflow-hidden text-base-100/60 bg-warning">
+                          <span
+                            class="absolute -z-1 left-0 bottom-full w-full h-full bg-warning group-hover:bottom-0 transition-all duration-500 ease-in-out"></span>
+                          <span class="lab la-instagram text-3xl text-base-content relative z-10"></span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      
+        <section class="container mx-auto pb-12 text-base-100 text-[10px]">
+          2024, Name. All rights reserved. Design by langphongmtb
+        </section>
+      </div>
+      
+    </footer>
+
+    <script type="module" src="/src/main.ts"></script>
+
+    
+
+  </body>
+</html>

@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Cras accumsan nulla nec lacus ultricies placerat. 1",
+    "details": ["Chi tiết 1", "Chi tiết 2", "Chi tiết 3", "Chi tiết 4"],
+    "image": "assets/images/home/frame4.png",
+    "id": "1"
+  },
+  {
+    "name": "Cras accumsan nulla nec lacus ultricies placerat. 2",
+    "details": ["Chi tiết 1", "Chi tiết 2", "Chi tiết 3", "Chi tiết 4"],
+    "image": "assets/images/home/frame4.png",
+    "id": "1"
+  },
+  {
+    "name": "Cras accumsan nulla nec lacus ultricies placerat. 3",
+    "details": ["Chi tiết 1", "Chi tiết 2", "Chi tiết 3", "Chi tiết 4"],
+    "image": "assets/images/home/frame4.png",
+    "id": "1"
+  }
+]

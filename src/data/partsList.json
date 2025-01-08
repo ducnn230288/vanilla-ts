@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Husky Towing 1",
+    "details": ["Chi tiết 1", "Chi tiết 2", "Chi tiết 3", "Chi tiết 4"],
+    "image": "assets/images/home/tool.png"
+  },
+  {
+    "name": "Husky Towing 2",
+    "details": ["Chi tiết 1", "Chi tiết 2", "Chi tiết 3", "Chi tiết 4"],
+    "image": "assets/images/home/tool.png"
+  },
+  {
+    "name": "Husky Towing 3",
+    "details": ["Chi tiết 1", "Chi tiết 2", "Chi tiết 3", "Chi tiết 4"],
+    "image": "assets/images/home/tool.png"
+  },
+  {
+    "name": "Husky Towing 4",
+    "details": ["Chi tiết 1", "Chi tiết 2", "Chi tiết 3", "Chi tiết 4"],
+    "image": "assets/images/home/tool.png"
+  },
+  {
+    "name": "Husky Towing 5",
+    "details": ["Chi tiết 1", "Chi tiết 2", "Chi tiết 3", "Chi tiết 4"],
+    "image": "assets/images/home/tool.png"
+  },
+  {
+    "name": "Husky Towing 6",
+    "details": ["Chi tiết 1", "Chi tiết 2", "Chi tiết 3", "Chi tiết 4"],
+    "image": "assets/images/home/tool.png"
+  }
+]

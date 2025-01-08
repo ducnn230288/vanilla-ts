@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "image": "/assets/images/tool/frame1.png",
+    "alt": "Product thumbnail 1"
+  },
+  {
+    "id": 2,
+    "image": "/assets/images/tool/frame2.png",
+    "alt": "Product thumbnail 2"
+  },
+  {
+    "id": 3,
+    "image": "/assets/images/tool/frame3.png",
+    "alt": "Product thumbnail 3"
+  },
+  {
+    "id": 4,
+    "image": "/assets/images/tool/frame4.png",
+    "alt": "Product thumbnail 4"
+  },
+  {
+    "id": 5,
+    "image": "/assets/images/tool/frame5.png",
+    "alt": "Product thumbnail 5"
+  },
+  {
+    "id": 6,
+    "image": "/assets/images/tool/frame6.png",
+    "alt": "Product thumbnail 6"
+  },
+  {
+    "id": 7,
+    "image": "/assets/images/tool/frame7.png",
+    "alt": "Product thumbnail 7"
+  }
+]

@@ -1,0 +1,109 @@
+.tool-banner {
+  // Add styles if needed
+}
+
+.tool-section {
+  @apply bg-base-200;
+  &__container {
+    @apply container mx-auto py-12 flex gap-6;
+  }
+  &__category {
+    @apply ~'w-[300px]';
+  }
+  &__products {
+    @apply ~'w-[calc(100%-300px)]' text-base-content;
+  }
+}
+
+.tool-detail {
+  @apply bg-base-100;
+  &__container {
+    @apply flex flex-wrap gap-8 py-12 items-start w-full max-md:max-w-full container mx-auto;
+  }
+  &__image-container {
+    @apply flex flex-col ~'min-w-[240px]' w-1/2 max-md:max-w-full;
+  }
+  &__image {
+    @apply ~'w-[585px] h-[545px]';
+  }
+  &__main-image {
+    @apply w-full h-full object-contain;
+  }
+  &__thumbnails {
+    @apply flex flex-wrap gap-3 items-center mt-1 w-fit;
+  }
+  &__info {
+    @apply flex overflow-hidden flex-col flex-1 shrink gap-6 p-6;
+  }
+  &__title {
+    @apply text-warning;
+  }
+  &__description {
+    // Add styles if needed
+  }
+  &__price {
+    @apply flex items-end gap-1;
+  }
+  &__price-label {
+    @apply leading-6 text-base-content;
+  }
+  &__price-value {
+    @apply text-warning;
+  }
+  &__form {
+    @apply flex gap-3 items-start w-full max-md:max-w-full border-none shadow-none bg-transparent m-0 p-0;
+  }
+  &__button {
+    @apply object-contain shrink-0 aspect-square ~'w-[39px]' bg-base-300 rounded-full flex items-center justify-center;
+    &--decrease {
+      // Add styles if needed
+    }
+    &--increase {
+      // Add styles if needed
+    }
+  }
+  &__icon {
+    // Add styles if needed
+  }
+  &__quantity {
+    @apply flex flex-col text-lg text-center ~'w-[39px]' px-1 bg-base-100 ~'h-[39px]' ~'rounded-[30px]' shadow;
+  }
+  &__add-to-cart {
+    @apply w-fit font-bold bg-warning text-base-100 rounded-md py-3 px-7 relative overflow-hidden;
+  }
+  &__separator {
+    @apply max-w-full border border-solid ~'min-h-[1px] w-[481px]';
+  }
+  &__additional-info {
+    @apply flex flex-col w-full text-gray-800 max-md:max-w-full;
+  }
+  &__product-code {
+    @apply max-md:max-w-full;
+  }
+  &__category {
+    @apply mt-1 max-md:max-w-full;
+  }
+  &__share {
+    @apply flex gap-2 py-px pr-20 mt-1 max-w-full ~'w-[480px]' max-md:pr-5;
+  }
+  &__share-icon {
+    @apply object-contain shrink-0 self-start w-6 aspect-square text-base-content;
+  }
+}
+
+.tool-info {
+  @apply bg-base-100 py-12;
+}
+
+.tool-related {
+  // Add styles if needed
+  &__container {
+    @apply container py-12 text-center mx-auto flex flex-col gap-y-6;
+  }
+  &__title {
+    @apply text-warning;
+  }
+  &__list {
+    @apply grid grid-cols-3 gap-6 w-full;
+  }
+}

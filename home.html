@@ -1,0 +1,532 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <title>Home page</title>
+    <meta name="description" content="Uberental System Admin" />
+    <meta name="robots" content="noarchive,index,follow" />
+    <link id="canonical" rel="canonical" href="https://geneat.vn" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Afacad:wght@400..600&family=Cormorant+Infant:wght@600&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5, user-scalable=1"
+      name="viewport"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=100" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <!-- META FOR FACEBOOK -->
+    <meta property="fb:app_id" content="110837687935741" />
+    <meta property="og:locale" content="vi_VN" />
+    <meta property="og:site_name" content="geneat.vn" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://inmergers.com/assets/images/inmerger_default.jpg" />
+    <meta property="og:image:width" content="596" />
+    <meta property="og:image:height" content="596" />
+    <meta property="og:url" itemprop="url" content="https://geneat.vn" />
+    <meta property="og:title" itemprop="headline" content="Angular" />
+    <meta
+      property="og:description"
+      content="Angular is a platform for building mobile and desktop web applications. Join the community of millions of developers who build compelling user interfaces with Angular."
+    />
+    <!-- END META FOR FACEBOOK -->
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@aAngular" />
+    <meta name="twitter:creator" content="@aAngular" />
+    <meta name="twitter:url" content="https://geneat.vn" />
+    <meta name="twitter:image" content="https://geneat.vn/assets/images/banner-img-1.jpg" />
+    <meta name="twitter:title" content="Angular" />
+    <meta
+      name="twitter:description"
+      content="Angular is a platform for building mobile and desktop web applications. Join the community of millions of developers who build compelling user interfaces with Angular."
+    />
+    <!-- End Twitter Card -->
+    <base href="/" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <meta
+      name="google-signin-client_id"
+      content="458714151950-fv7bp4u656lk3bel41agq6jh2j4b27pb.apps.googleusercontent.com"
+    />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L3TLVBTM19"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+
+      gtag('js', new Date());
+
+      gtag('config', 'G-L3TLVBTM19');
+    </script>
+    <link href="/assets/styles/theme.css" rel="stylesheet" />
+
+    <!--  vanilla-lazyload 17 -->
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17/dist/lazyload.min.js"></script>
+    <script>
+      setTimeout(() => {
+        new LazyLoad({
+          callback_error: el => (el.src = 'https://via.placeholder.com/1x1/?text='),
+        });
+      }, 1000);
+    </script>
+
+    <!--  line-awesome 1  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/line-awesome@1/dist/line-awesome/css/line-awesome.min.css"
+      rel="stylesheet"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/flag-icons@7/css/flag-icons.min.css" rel="stylesheet" />
+    
+    <!-- Add Handlebars -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"></script>
+  </head>
+  <body class="overflow-x-hidden min-h-screen">
+    <header id="header">
+      <section class="container px-3 md:px-0 mx-auto py-1 text-base-100">
+        <div class="flex justify-between h-[25px] items-center relative">
+          <div class="absolute w-[200%] h-full bg-primary -z-10 -right-8 top-0 rounded-full opacity-50"></div>
+          <ul class="flex text-sm gap-16">
+            <li class="flex items-center">
+              <i class="las la-phone-volume text-[14px] leading-[18.67px] mr-3"></i><a href="tel:0974891188">0974 891-188</a>
+            </li>
+            <li class="flex items-center">
+              <i class="las la-envelope text-[14px] leading-[18.67px] mr-2"></i
+              ><a href="mailto:cskh@hotro.wesports.vn">cskh@hotro.wesports.vn</a>
+            </li>
+            <li class="flex items-center">
+              <i class="las la-map-marker text-[14px] leading-[18.67px] mr-1"></i> Liền Kề 226 No-04 khu A Khu đất dịch vụ yên Nghĩa, Quận Hà
+              Đông, Hà Nội.
+            </li>
+          </ul>
+          <ul class="flex gap-3 justify-end text-[14px] leading-[18.67px]">
+            <li>
+              <a href="/"><i class="lab la-facebook-f text-[14px] leading-[18.67px]"></i></a>
+            </li>
+            <li class="group relative">
+              <span class="fi fi-us"></span>
+              <div class="absolute z-10 left-0 top-full hidden group-hover:block">
+                <span class="fi fi-vn"></span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="container px-3 md:px-0 mx-auto relative">
+        <div class="absolute w-[200%] h-full bg-base-100 -z-10 -left-16 rounded-full"></div>
+        <div class="flex justify-between items-center py-[10.5px]">
+          <figure class="flex-none">
+            <a href="/"><img src="/assets/images/logo.svg" width="172" alt="" /></a>
+          </figure>
+          <ul class="flex justify-around text-lg gap-10 text-base-content">
+            <li><a href="/camping.html">Rơ moóc cắm trại</a></li>
+            <li><a href="/touring.html">Rơ moóc du lịch</a></li>
+            <li><a href="/tool.html">Dụng cụ</a></li>
+            <li><a href="/about.html">Về chúng tôi</a></li>
+            <li><a href="/new.html">Tin tức</a></li>
+          </ul>
+          <button class="contact-button flex-none bg-warning text-base-100 px-5 font-medium py-2 rounded-md">Liên hệ</button>
+        </div>
+      </section>
+    </header>
+
+    <main id="main">
+      <div class="home ">
+        <div class="home__bg"></div>
+        <section class="home__section home__hero">
+          <figure class="home__figure">
+            <img class="home__image" src="/image/shape-1.png" alt="" />
+          </figure>
+          <div class="home__content">
+            <div class="home__overlay">
+              <div class="home__container">
+                <p class="home__description">Mức độ dịch vụ cao nhất bạn có thể tìm thấy</p>
+                <h1 class="home__title">Chăm sóc</h1>
+                <h4 class="home__subtitle">TINH THẦN của bạn.</h4>
+                <button class="home__button contact-button">Liên hệ</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="home__section home__services">
+          <div class="home__container">
+            <div class=" home__services-top">
+              <div class=" top-height"></div>
+              <div class="top-absolute">
+                <h6 class="home__heading">Hãy đến nơi bạn thoải mái</h6>
+                <h3 class="home__main-title">Cơn sốt mùa xuân</h3>
+              </div>
+            </div>
+            <div class="home__grid" id="service-list">
+              <!-- each hbs src/components/services.hbs -->
+              <div id="service-template">
+                {{#each services}}
+                  <article class="home__service-article rounded-2xl shadow bg-base-100 p-5 text-center">
+                    <picture class="home__service-picture rounded-full bg-warning-content inline-block p-5">
+                      <img src="{{this.imgSrc}}" width="70" alt="img" />
+                    </picture>
+                    <h3 class="home__service-title font-semibold text-2xl text-primary py-2">{{this.title}}</h3>
+                    <p class="home__service-description text-justify">{{this.description}}</p>
+                  </article>
+                {{/each}}
+              </div>
+              <script type="module">
+                import { loadHandlebarsTemplate } from '/src/main.ts';
+
+                loadHandlebarsTemplate({
+                  keyData: 'services',
+                  templateId: 'service-template',
+                  urlOrData: 'src/data/services.json',
+                  targetId: 'service-list'
+                });
+              </script>
+            </div>
+          </div>
+        </section>
+
+        <section class="home__section home__journey">
+          <div class="home__bg-container">
+            <div class="home__inner-container">
+              <h3 class="home__journey-title ">Bắt đầu hành trình</h3>
+              <p class="home__journey-description">Chúng tôi cung cấp nhiều loại rơ moóc du lịch nhẹ và siêu nhẹ cùng bánh xe thứ năm để phù hợp với nhu cầu của mọi gia đình. Hãy xem qua bộ sưu tập toàn diện về các sản phẩm của chúng tôi, ghé thăm đại lý tại nơi ở của bạn và bắt đầu lên kế hoạch cho dã ngoại tiếp theo của gia đình bạn! Cảm ơn bạn đã ghé thăm, và chúng tôi mong muốn được chào đón bạn đến với gia đình những khách hàng đã hài lòng trên toàn thế giới của chúng tôi.</p>
+              <ul class="home__list">
+                <li class="home__list-item-active home__list-item">Tất cả</li>
+                <li class="home__list-item">Mẫu mới</li>
+                <li class="home__list-item">Siêu nhẹ</li>
+                <li class="home__list-item">Sang trọng</li>
+              </ul>
+              <div class="home__grid" id="home-product-list">
+                <!-- each hbs src/components/products.hbs -->
+                <div id="product-template">
+                  {{#each products}}
+                    <div class="home__product-item flex flex-col gap-6 w-full">
+                      <figure class="home__product-figure w-full h-[209px]">
+                        <img src="{{this.image}}" alt="{{this.name}}" />
+                      </figure>
+                      <div class="home__product-details">
+                        <h5 class="home__product-name text-base-content">{{this.name}}</h5>
+                        <span class="home__product-start">Bắt đầu từ</span>
+                        <div class="home__product-info text-base-100">
+                          <div class="flex items-center justify-between"><span>MSRP</span><span>{{this.price}}</span></div>
+                          <div class="flex items-center justify-between"><span>Sleeps</span><span>{{this.sleeps}}</span></div>
+                          <div class="flex items-center justify-between"><span>Weight</span><span>{{this.weight}}</span></div>
+                          <div class="flex items-center justify-between"><span>Length</span><span>{{this.length}}</span></div>
+                        </div>
+                      </div>
+                      <button class="home__product-button font-bold border bg-transparent border-white text-transparent rounded-md py-3 relative group overflow-hidden" onclick="location.href='/touring-trailer?id=1'">
+                        <span class="absolute -z-1 left-0 bottom-full w-full h-full bg-white group-hover:bottom-0 transition-all duration-500 ease-in-out"></span>
+                        <span class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-base-100 group-hover:text-warning">Xem thêm</span>
+                        Xem thêm
+                      </button>
+                    </div>
+                  {{/each}}
+                </div>
+                <script type="module">
+                  import { loadHandlebarsTemplate } from '/src/main.ts';
+
+                  loadHandlebarsTemplate({
+                    keyData: 'products',
+                    templateId: 'product-template',
+                    urlOrData: 'src/data/products.json',
+                    targetId: 'home-product-list',
+                  });
+                </script>
+              </div>
+              <div class="home__button-container">
+                <button onclick="location.href='/touring.html'" class="home__button">Xem thêm xe kéo</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="home__section home__parts">
+          <div class="home__container">
+            <h3 class="home__parts-title">phụ tùng hiện đại</h3>
+            <p class="home__parts-description">Sử dụng phụ tùng hiện đại và chất lượng không chỉ nâng cao hiệu suất hoạt động mà còn bảo vệ an toàn cho người sử dụng, đồng thời đóng góp vào sự bền vững của môi trường.</p>
+            <div class="home__grid" id="parts-list">
+              <!-- each hbs src/components/parts.hbs -->
+              <div id="part-template">
+                {{#each parts}}
+                  <div class="home__part-item">
+                    <h5 class="home__part-name">{{this.name}}</h5>
+                    <div class="home__part-details">
+                      <div class="home__part-text ">
+                        <p>Weight Distribution Hitches</p>
+                        <p>Fifth Wheel Hitches</p>
+                        <p>Ball Mounts</p>
+                        <p>Accessories</p>
+                      </div>
+                      <div class="home__part-con"></div>
+                      <figure class="">
+                        <img class="" src="{{this.image}}" alt="" />
+                      </figure>
+                    </div>
+                    <button onclick="location.href='/tool-detail.html'" class="home__part-button ">Xem thêm</button>
+                  </div>
+                {{/each}}
+              </div>
+              <script type="module">
+                import { loadHandlebarsTemplate } from '/src/main.ts';
+
+                loadHandlebarsTemplate({
+                  keyData: 'parts',
+                  templateId: 'part-template',
+                  urlOrData: 'src/data/partsList.json',
+                  targetId: 'parts-list'
+                });
+              </script>
+            </div>
+            <button onclick="location.href='/tool.html'" class="home__button">Xem thêm phụ tùng</button>
+          </div>
+        </section>
+
+        <section class="home__section home__guide ">
+          <div class="home__container ">
+            <div class="home__guide ">
+              <h4 class="home__guide-title ">Hướng dẫn chuyên nghiệp để sở hữu một chiếc RV</h4>
+              <p class="home__guide-description">Bạn đang muốn mua chiếc RV đầu tiên của mình? Chúng tôi đã biên soạn một hướng dẫn toàn diện để giúp bạn tránh một số sai lầm thường gặp của những người mới sở hữu RV lần đầu.</p>
+              <button class="home__button">
+                <span class=""></span>
+                <span class="">Điện thoại tự vấn 090909090</span>
+                Điện thoại tự vấn 090909090
+              </button>
+            </div>
+            <div class="home__image-container w-1/2 bg-[url(assets/images/home/frame5.png)] bg-no-repeat bg-cover"></div>
+          </div>
+        </section>
+
+        <section class="home__section home__news">
+          <div class="home__container">
+            <p class="home__news-warning">Nhưng thông tin mới liên quan tới RƠ MOÓC CẮM TRẠI VÀ DU LỊCH</p>
+            <h3 class="home__news-title">Tin tức</h3>
+            <div class="home__grid" id="news-list">
+              <!-- each hbs src/components/news.hbs -->
+              <div id="news-template">
+                {{#each news}}
+                  <div class="home__news-item w-full p-3 flex flex-col gap-y-6 bg-white rounded-[10px]">
+                    <figure class="home__news-figure h-60 overflow-hidden">
+                      <img class="w-full object-cover h-full" src="{{this.image}}" alt="" />
+                    </figure>
+                    <h6 class="home__news-title text-base-content">{{this.name}}</h6>
+                    <button class="home__news-button w-full font-bold border border-base-content text-base-content rounded-md py-3" onclick="location.href='/news?id={{this.id}}'" >Chi tiết</button>
+                  </div>
+                {{/each}}
+              </div>
+              <script type="module">
+                import { loadHandlebarsTemplate } from '/src/main.ts';
+
+                loadHandlebarsTemplate({
+                  keyData: 'news',
+                  templateId: 'news-template',
+                  urlOrData: 'src/data/news.json',
+                  targetId: 'news-list'
+                });
+              </script>
+            </div>
+            <button onclick="location.href='/new.html'" class="home__button">Xem thêm</button>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer id="footer">
+      <div class="relative bg-base-content overflow-hidden">
+        <!-- shape -->
+        
+      
+        <!-- footer content -->
+        <section class="relative z-10 container px-3 md:px-0 mx-auto py-12 text-base-100">
+          <!-- flex row -->
+          <div class="flex gap-4 justify-between">
+            <!-- single -->
+            <div class="max-w-[210px]">
+              <!-- footer logo -->
+              <figure>
+                <a href="#" class="cursor-pointer">
+                  <img
+                    src="/assets/images/logo.svg"
+                    alt=""
+                  />
+                </a>
+              </figure>
+              <p class="mt-6 text-[14px]">Được thiết kế với vật liệu bền bỉ và tính năng tiện nghi, mang đến trải nghiệm du lịch thoải mái và an toàn. Với không gian nội thất tối ưu và các tiện ích hiện đại, nó là lựa chọn lý tưởng cho những chuyến phiêu lưu trên đường.</p>
+      
+              
+              
+            </div>
+      
+            <!-- single -->
+            <div class="grid grid-cols-4 w-[cala(100%-210px)] gap-4 justify-between">
+              <div id="footer-category-list-1">
+                <!-- title -->
+                <div id="category-template-1">
+                  <a class="text-base-100 font-semibold capitalize -mt-2">DANH MỤC</a>
+                  <ul class="pt-5 flex flex-col gap-3">
+                    {{#each categories1}}
+                      <li>
+                        <a href="{{this.link}}" class="text-base-100 font-medium leading-7 transition-all duration-200 ease-linear delay-100 hover:text-base-red">
+                          {{this.name}}
+                        </a>
+                      </li>
+                    {{/each}}
+                  </ul>
+                </div>
+                <script type="module">
+                  import { loadHandlebarsTemplate } from '/src/main.ts';
+                  
+                  const categories = [
+                    { name: 'Rơ moóc cắm trại', link: '#' } ,
+                    { name: 'Rơ moóc du lịch', link: '#' } ,
+                    { name: 'Dụng cụ', link: '#' } ,
+                    { name: 'Về chúng tôi', link: '#' } ,
+                    { name: 'Tin tức', link: '#' } ,
+                  ];
+
+                  loadHandlebarsTemplate({
+                    keyData: 'categories1',
+                    templateId: 'category-template-1',
+                    urlOrData: categories,
+                    targetId: 'footer-category-list-1'
+                  });
+                </script>
+              </div>
+              
+              <div>
+                <!-- title -->
+                <div id="footer-category-list-2">
+                  <div id="category-template-2">
+                    <a class="text-base-100 font-semibold capitalize -mt-2">RƠ MOÓC CẮM TRẠI</a>
+                    <ul class="pt-5 flex flex-col gap-3">
+                      {{#each categories2}}
+                        <li>
+                          <a href="{{this.link}}" class="text-base-100 font-medium leading-7 transition-all duration-200 ease-linear delay-100 hover:text-base-red">
+                            {{this.name}}
+                          </a>
+                        </li>
+                      {{/each}}
+                    </ul>
+                  </div>
+                  <script type="module">
+                    import { loadHandlebarsTemplate } from '/src/main.ts';
+                    
+                    const campingTrailers = Array.from({ length: 6 }, (_, i) => ({
+                      name: `Husky Towing ${i + 1}`, 
+                      link: '#' 
+                    }));
+
+                    loadHandlebarsTemplate({
+                      keyData: 'categories2',
+                      templateId: 'category-template-2',
+                      urlOrData: campingTrailers,
+                      targetId: 'footer-category-list-2'
+                    });
+                  </script>
+                </div>
+              </div>
+              
+              <!-- single -->
+              <div>
+                <!-- title -->
+                <div id="footer-category-list-3">
+                  <div id="category-template-3">
+                    <a class="text-base-100 font-semibold capitalize -mt-2">RƠ MOÓC DU LỊCH</a>
+                    <ul class="pt-5 flex flex-col gap-3">
+                      {{#each categories3}}
+                        <li>
+                          <a href="{{this.link}}" class="text-base-100 font-medium leading-7 transition-all duration-200 ease-linear delay-100 hover:text-base-red">
+                            {{this.name}}
+                          </a>
+                        </li>
+                      {{/each}}
+                    </ul>
+                  </div>
+                  <script type="module">
+                    import { loadHandlebarsTemplate } from '/src/main.ts';
+                    
+                    const touringTrailers = Array.from({ length: 5 }, (_, i) => ({
+                      name: `Sonic Lite ${i + 1}`, 
+                      link: '#' 
+                    }));
+
+                    loadHandlebarsTemplate({
+                      keyData: 'categories3',
+                      templateId: 'category-template-3',
+                      urlOrData: touringTrailers,
+                      targetId: 'footer-category-list-3'
+                    });
+                  </script>
+                </div>
+              </div>
+              
+              <div>
+                <!-- title -->
+                <a class="text-base-100 font-semibold capitalize">Contact</a>
+                  <!-- widget links -->
+                  <div class="pt-5 flex flex-col gap-3">
+                    <p>88 Broklyn Golden Road Street, New York. USA</p>
+                    <ul class="grid grid-cols-1 gap-3">
+                      <li class="relative flex items-center">
+                        <i class="las la-phone text-2xl w-8 text-warning"></i>
+                        <a href="tel:3336660000" class="font-medium text-base leading-7 text-warning m-0">0198-9526503</a>
+                      </li>
+                      <li class="relative flex items-center">
+                        <i class="las la-envelope text-2xl w-8 text-warning"></i>
+                        <a href="mailto:yourmail@email.com"
+                          class="font-medium text-base leading-7 text-warning m-0">needhelp@company.com</a>
+                      </li>
+                    </ul>
+                    <!-- social link -->
+                    <ul class="flex flex-wrap gap-3">
+                      <li class="relative group">
+                        <a href="#"
+                          class="relative pt-2 rounded-full inline-block w-12 h-12 rounded-1/2 bg-warning text-center overflow-hidden text-base-100/60">
+                          <span
+                            class="absolute -z-1 left-0 bottom-full w-full h-full bg-warning group-hover:bottom-0 transition-all duration-500 ease-in-out"></span>
+                          <span class="lab la-facebook-f text-2xl text-base-content relative z-10"></span>
+                        </a>
+                      </li>
+                      <li class="relative group">
+                        <a href="#"
+                          class="relative pt-2 rounded-full inline-block w-12 h-12 rounded-1/2 bg-warning text-center overflow-hidden text-base-100/60">
+                          <span
+                            class="absolute -z-1 left-0 bottom-full w-full h-full bg-warning group-hover:bottom-0 transition-all duration-500 ease-in-out"></span>
+                          <span class="lab la-twitter text-2xl text-base-content relative z-10"></span>
+                        </a>
+                      </li>
+                      <li class="relative group">
+                        <a href="#"
+                          class="relative pt-1.5 rounded-full inline-block w-12 h-12 rounded-1/2 text-center overflow-hidden text-base-100/60 bg-warning">
+                          <span
+                            class="absolute -z-1 left-0 bottom-full w-full h-full bg-warning group-hover:bottom-0 transition-all duration-500 ease-in-out"></span>
+                          <span class="lab la-instagram text-3xl text-base-content relative z-10"></span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      
+        <section class="container mx-auto pb-12 text-base-100 text-[10px]">
+          2024, Name. All rights reserved. Design by langphongmtb
+        </section>
+      </div>
+      
+    </footer>
+
+    <script type="module" src="/src/main.ts"></script>
+
+
+  </body>
+</html>

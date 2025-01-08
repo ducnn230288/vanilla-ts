@@ -1,0 +1,77 @@
+{
+  "products": [
+    {
+      "uuid": "1a2b3c4d-5e6f-7g8h-9i0j-k1l2m3n4o5p6",
+      "image": "/assets/images/tool/rectangle5.png",
+      "name": "GasStop GasGear 90-Degree Propane Braided Stainless Pigtail Hose, 1/4\" Inverted 1",
+      "price": 4.56
+    },
+    {
+      "uuid": "2b3c4d5e-6f7g-8h9i-0j1k-l2m3n4o5p6q7",
+      "image": "/assets/images/tool/rectangle5.png",
+      "name": "GasStop GasGear 90-Degree Propane Braided Stainless Pigtail Hose, 1/4\" Inverted 2",
+      "price": 4.56
+    },
+    {
+      "uuid": "3c4d5e6f-7g8h-9i0j-k1l2-m3n4o5p6q7r8",
+      "image": "/assets/images/tool/rectangle5.png",
+      "name": "GasStop GasGear 90-Degree Propane Braided Stainless Pigtail Hose, 1/4\" Inverted 3",
+      "price": 4.56
+    },
+    {
+      "uuid": "4d5e6f7g-8h9i-0j1k-l2m3-n4o5p6q7r8s9",
+      "image": "/assets/images/tool/rectangle5.png",
+      "name": "GasStop GasGear 90-Degree Propane Braided Stainless Pigtail Hose, 1/4\" Inverted 4",
+      "price": 4.56
+    },
+    {
+      "uuid": "5e6f7g8h-9i0j-k1l2-m3n4-n5o6p7q8r9t0",
+      "image": "/assets/images/tool/rectangle5.png",
+      "name": "GasStop GasGear 90-Degree Propane Braided Stainless Pigtail Hose, 1/4\" Inverted 5",
+      "price": 4.56
+    },
+    {
+      "uuid": "6f7g8h9i-0j1k-l2m3-n4o5-p6q7r8s9t0u1",
+      "image": "/assets/images/tool/rectangle5.png",
+      "name": "GasStop GasGear 90-Degree Propane Braided Stainless Pigtail Hose, 1/4\" Inverted 6",
+      "price": 4.56
+    },
+    {
+      "uuid": "7g8h9i0j-1k2l-m3n4-o5p6-q7r8s9t0u1v2",
+      "image": "/assets/images/tool/rectangle5.png",
+      "name": "GasStop GasGear 90-Degree Propane Braided Stainless Pigtail Hose, 1/4\" Inverted 7",
+      "price": 4.56
+    },
+    {
+      "uuid": "8h9i0j1k-2l3m-n4o5-p6q7-r8s9t0u1v2w3",
+      "image": "/assets/images/tool/rectangle5.png",
+      "name": "GasStop GasGear 90-Degree Propane Braided Stainless Pigtail Hose, 1/4\" Inverted 8",
+      "price": 4.56
+    },
+    {
+      "uuid": "9i0j1k2l-3m4n-o5p6-q7r8-s9t0u1v2w3x4",
+      "image": "/assets/images/tool/rectangle5.png",
+      "name": "GasStop GasGear 90-Degree Propane Braided Stainless Pigtail Hose, 1/4\" Inverted 9",
+      "price": 4.56
+    },
+    {
+      "uuid": "0j1k2l3m-4n5o-p6q7-r8s9-t0u1v2w3x4y5",
+      "image": "/assets/images/tool/rectangle5.png",
+      "name": "GasStop GasGear 90-Degree Propane Braided Stainless Pigtail Hose, 1/4\" Inverted 10",
+      "price": 4.56
+    },
+    {
+      "uuid": "1k2l3m4n-5o6p-q7r8-s9t0-u1v2w3x4y5z6",
+      "image": "/assets/images/tool/rectangle5.png",
+      "name": "GasStop GasGear 90-Degree Propane Braided Stainless Pigtail Hose, 1/4\" Inverted 11",
+      "price": 4.56
+    },
+    {
+      "uuid": "2l3m4n5o-6p7q-8r9s-t0u1-v2w3x4y5z6a7",
+      "image": "/assets/images/tool/rectangle5.png",
+      "name": "GasStop GasGear 90-Degree Propane Braided Stainless Pigtail Hose, 1/4\" Inverted 12",
+      "price": 4.56
+    }
+  ]
+  
+}
