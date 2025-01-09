@@ -102,3 +102,5 @@ export const loadHandlebarsTemplate = async ({
     console.error(`Element with id ${targetId} not found.`);
   }
 };
+
+(window as any).loadHandlebarsTemplate = loadHandlebarsTemplate;

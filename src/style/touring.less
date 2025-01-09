@@ -1,4 +1,13 @@
 #touring-tech {
+  .mxauto{
+    @apply mx-auto;
+  }
+  .checkbox-tbl{
+    @apply mx-auto ~'size-[18px]' rounded border border-base-content/50;
+  }
+  .price-tbl{
+    @apply bg-warning text-base-100 text-center;
+  }
   table {
     @apply border-separate border-spacing-0 overflow-hidden w-full;
   }
@@ -85,7 +94,9 @@
 }
 
 .touring-description {
-  // Add styles if needed
+  h6{
+    @apply container mx-auto border-l-4 border-warning pl-3 text-base-content/60 my-8;
+  }
 }
 
 .touring-info {
