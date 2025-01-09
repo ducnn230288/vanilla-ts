@@ -90,7 +90,7 @@
     <!-- Add Handlebars -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"></script>
   </head>
-  <body class="overflow-x-hidden min-h-screen">
+  <body>
     <header id="header" class="header">
       <section class="header__top ">
         <div class="header__top-wrapper ">
@@ -113,9 +113,9 @@
             <li class="header__social-item">
               <a class="header__social-link" href="/"><i class="header__social-icon lab la-facebook-f"></i></a>
             </li>
-            <li class="header__social-item group">
+            <li class="header__social-item ">
               <span class="header__social-flag fi fi-us"></span>
-              <div class="header__social-dropdown  group-hover:block">
+              <div class="header__social-dropdown  ">
                 <span class="header__social-flag fi fi-vn"></span>
               </div>
             </li>
@@ -148,34 +148,34 @@
         <!-- javascript innerHTML -->
         <div id="banner">
           <figure class="">
-            <img class="" src="{{this.imageUrl}}" alt="" />
+            <img class="" src="{{imageUrl}}" alt="" />
           </figure>
           <div class="banner-contents">
             <div class="con-container ">
               <div class="container-div">
                 <p>{{this.subtitle}}</p>
-                <h1 class="my-2">{{this.title}}</h1>
+                <h1>{{this.title}}</h1>
               </div>
             </div>
           </div>
         </div>
         
       </section>
-      <script type="module">
-        import { loadHandlebarsTemplate } from '/src/main.ts';
-        
+      <script>
         const bannerData = {
           imageUrl: '/assets/images/banner/touring.png',
           title: 'Trail/Box 240',
           subtitle: 'ONE AND A HALF & DOUBLE CABIN PICK-UPS'
         };
   
-        loadHandlebarsTemplate({
-          templateId: 'camping-banner',
-          urlOrData: bannerData,
-          targetId: 'camping-banner',
-          keyData: 'banner'
-        });
+        window.addEventListener('DOMContentLoaded', () => {
+          loadHandlebarsTemplate({
+            templateId: 'camping-banner',
+            urlOrData: bannerData,
+            targetId: 'camping-banner',
+            keyData: 'banner'
+          });
+        })
   
       </script>
 
@@ -248,7 +248,7 @@
                     <li>Decorative coating of the interior walls and PVC flooring</li>
                     <li>Furniture made from lightweight poplar plywood with a modern, easy-care coating</li>
                     <li>Kitchen furniture and table with hard-wearing surface</li>
-                    <li>Center seat group made of 8 cm high, high-quality foam upholstery, can be converted into a lying surface</li>
+                    <li>Center seat  made of 8 cm high, high-quality foam upholstery, can be converted into a lying surface</li>
                     <li>Upholstery covers in a modern design can be removed using zippers</li>
                     <li>Curtains on the living room windows (various designs possible)</li>
                     <li>Ventilated backrests</li>
@@ -508,9 +508,7 @@
           {{/if}}
         </script>
 
-        <script type="module">
-          import { loadHandlebarsTemplate } from '/src/main.ts';
-
+        <script>
           Handlebars.registerHelper('eq', function(a, b) {
             return a === b;
           });
@@ -546,7 +544,10 @@
             });
           });
 
-          renderContent();
+          window.addEventListener('DOMContentLoaded', () => {
+
+            renderContent();
+          })
         </script>
 
       </div>
@@ -585,16 +586,14 @@
                   <ul class="footer__nav-list ">
                     {{#each categories1}}
                       <li class="footer__nav-item">
-                        <a href="{{this.link}}" class="footer__nav-link hover:text-base-red">
+                        <a href="{{this.link}}" class="footer__nav-link">
                           {{this.name}}
                         </a>
                       </li>
                     {{/each}}
                   </ul>
                 </div>
-                <script type="module">
-                  import { loadHandlebarsTemplate } from '/src/main.ts';
-                  
+                <script>
                   const categories = [
                     { name: 'Rơ moóc cắm trại', link: '/camping.html' } ,
                     { name: 'Rơ moóc du lịch', link: '/touring.html' } ,
@@ -603,12 +602,14 @@
                     { name: 'Tin tức', link: '/new.html' } ,
                   ];
 
-                  loadHandlebarsTemplate({
-                    keyData: 'categories1',
-                    templateId: 'category-template-1',
-                    urlOrData: categories,
-                    targetId: 'footer-category-list-1'
-                  });
+                  window.addEventListener('DOMContentLoaded', () => {
+                    loadHandlebarsTemplate({
+                      keyData: 'categories1',
+                      templateId: 'category-template-1',
+                      urlOrData: categories,
+                      targetId: 'footer-category-list-1'
+                    });
+                  })
                 </script>
               </div>
               
@@ -618,27 +619,27 @@
                   <ul class="footer__nav-list">
                     {{#each categories2}}
                       <li class="footer__nav-item">
-                        <a href="{{this.link}}" class="footer__nav-link hover:text-base-red">
+                        <a href="{{this.link}}" class="footer__nav-link">
                           {{this.name}}
                         </a>
                       </li>
                     {{/each}}
                   </ul>
                 </div>
-                <script type="module">
-                  import { loadHandlebarsTemplate } from '/src/main.ts';
-                  
+                <script >
                   const campingTrailers = Array.from({ length: 6 }, (_, i) => ({
                     name: `Husky Towing ${i + 1}`, 
                     link: '#' 
                   }));
 
-                  loadHandlebarsTemplate({
-                    keyData: 'categories2',
-                    templateId: 'category-template-2',
-                    urlOrData: campingTrailers,
-                    targetId: 'footer-category-list-2'
-                  });
+                  window.addEventListener('DOMContentLoaded', () => {
+                    loadHandlebarsTemplate({
+                      keyData: 'categories2',
+                      templateId: 'category-template-2',
+                      urlOrData: campingTrailers,
+                      targetId: 'footer-category-list-2'
+                    });
+                  })
                 </script>
               </div>
               
@@ -649,27 +650,27 @@
                   <ul class="footer__nav-list ">
                     {{#each categories3}}
                       <li class="footer__nav-item">
-                        <a href="{{this.link}}" class="footer__nav-link hover:text-base-red">
+                        <a href="{{this.link}}" class="footer__nav-link">
                           {{this.name}}
                         </a>
                       </li>
                     {{/each}}
                   </ul>
                 </div>
-                <script type="module">
-                  import { loadHandlebarsTemplate } from '/src/main.ts';
-                  
+                <script>
                   const touringTrailers = Array.from({ length: 5 }, (_, i) => ({
                     name: `Sonic Lite ${i + 1}`, 
                     link: '#' 
                   }));
 
-                  loadHandlebarsTemplate({
-                    keyData: 'categories3',
-                    templateId: 'category-template-3',
-                    urlOrData: touringTrailers,
-                    targetId: 'footer-category-list-3'
-                  });
+                  window.addEventListener('DOMContentLoaded', () => {
+                    loadHandlebarsTemplate({
+                      keyData: 'categories3',
+                      templateId: 'category-template-3',
+                      urlOrData: touringTrailers,
+                      targetId: 'footer-category-list-3'
+                    });
+                  })
                 </script>
               </div>
               
@@ -692,27 +693,27 @@
                   </ul>
                   <!-- social link -->
                   <ul class="footer__social ">
-                    <li class="footer__social-item  group">
+                    <li class="footer__social-item  ">
                       <a href="#"
                         class="footer__social-link ">
                         <span
-                          class="footer__social-hover group-hover:bottom-0 "></span>
+                          class="footer__social-hover  "></span>
                         <span class="footer__social-icon lab la-facebook-f "></span>
                       </a>
                     </li>
-                    <li class="footer__social-item group">
+                    <li class="footer__social-item ">
                       <a href="#"
                         class="footer__social-link ">
                         <span
-                          class="footer__social-hover group-hover:bottom-0 "></span>
+                          class="footer__social-hover  "></span>
                         <span class="footer__social-icon lab la-twitter "></span>
                       </a>
                     </li>
-                    <li class="footer__social-item  group">
+                    <li class="footer__social-item  ">
                       <a href="#"
                         class="footer__social-link ">
                         <span
-                          class="footer__social-hover group-hover:bottom-0 "></span>
+                          class="footer__social-hover  "></span>
                         <span class="footer__social-icon lab la-instagram "></span>
                       </a>
                     </li>

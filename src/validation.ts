@@ -35,7 +35,7 @@ export const setupFormValid = () => {
 };
 const submitForm = (el: HTMLFormElement) => {
   Array.from(['input', 'textarea']).forEach(tag =>
-    el.querySelectorAll('.group > ' + tag).forEach(element => {
+    el.querySelectorAll('. > ' + tag).forEach(element => {
       showMessage(element as HTMLInputElement, tag, 'blur', el.name);
     }),
   );
@@ -44,11 +44,11 @@ const submitForm = (el: HTMLFormElement) => {
       showMessage(element as HTMLInputElement, tag, 'change', el.name, true);
     }),
   );
-  (<any>window)._FORMSTATUS_[el.name] = el.querySelectorAll('.group.error').length === 0;
+  (<any>window)._FORMSTATUS_[el.name] = el.querySelectorAll('..error').length === 0;
   return true;
 };
 const showMessage = (el: HTMLInputElement, tag: string, event: string, nameForm: string, isSubmit = false) => {
-  const parentElement = el.closest('.group');
+  const parentElement = el.closest('.');
 
   if (parentElement) {
     if (!isSubmit) {

@@ -105,6 +105,9 @@
     }
     .price__values {
       @apply flex items-center justify-between px-1;
+      .textwarning{
+        @apply text-warning;
+      }
       .price__value {
         @apply flex gap-x-1;
         &--from {
@@ -366,6 +369,9 @@
                 .footer__nav-link{
                   @apply text-base-100 font-medium leading-7 transition-all duration-200 ease-linear delay-100 ;
                 }
+                .footer__nav-link:hover{
+                  @apply text-base-100;
+                }
               }
             }
           }
@@ -469,5 +475,9 @@
 }
 
 #about-main{
+  @apply bg-base-100 py-12;
+}
+
+.main-content{
   @apply bg-base-100 py-12;
 }

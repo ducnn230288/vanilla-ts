@@ -90,7 +90,7 @@
     <!-- Add Handlebars -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"></script>
   </head>
-  <body class="overflow-x-hidden min-h-screen">
+  <body>
     <header id="header" class="header">
       <section class="header__top ">
         <div class="header__top-wrapper ">
@@ -113,9 +113,9 @@
             <li class="header__social-item">
               <a class="header__social-link" href="/"><i class="header__social-icon lab la-facebook-f"></i></a>
             </li>
-            <li class="header__social-item group">
+            <li class="header__social-item ">
               <span class="header__social-flag fi fi-us"></span>
-              <div class="header__social-dropdown group-hover:block">
+              <div class="header__social-dropdown ">
                 <span class="header__social-flag fi fi-vn"></span>
               </div>
             </li>
@@ -154,28 +154,28 @@
             <div class="con-container ">
               <div class="container-div">
                 <p>{{this.subtitle}}</p>
-                <h1 class="my-2">{{this.title}}</h1>
+                <h1>{{this.title}}</h1>
               </div>
             </div>
           </div>
         </div>
         
       </section>
-      <script type="module">
-        import { loadHandlebarsTemplate } from '/src/main.ts';
-        
+      <script>
         const bannerData = {
           imageUrl: '/assets/images/banner/camping.png',
           title: 'Dụng cụ',
           subtitle: 'Bắt đầu hành trình của cuộc đời!'
         };
-  
-        loadHandlebarsTemplate({
-          templateId: 'camping-banner',
-          urlOrData: bannerData,
-          targetId: 'camping-banner',
-          keyData: 'banner'
-        });
+
+        window.addEventListener('DOMContentLoaded', () => {
+          loadHandlebarsTemplate({
+            templateId: 'camping-banner',
+            urlOrData: bannerData,
+            targetId: 'camping-banner',
+            keyData: 'banner'
+          });
+        })
   
       </script>
 
@@ -197,21 +197,21 @@
               {{/each}}
               
             </div>
-            <script type="module">
-              import { loadHandlebarsTemplate } from '/src/main.ts';
+            <script>
+              const thumbnailData = Array.from({ length: 7 }, (_, i) => ({
+                image: `/assets/images/tool/frame${i + 1}.png`, 
+                alt: `Thumbnail${i + 1}`,
+                index: i
+              }));
 
-              const thumbnailData = Array.from({ length: 6 }, (_, i) => ({
-                    image: `/assets/images/tool/frame${i + 1}.png`, 
-                    alt: `Thumbnail${i + 1}`,
-                    index: i
-                  }));
-
-              loadHandlebarsTemplate({
-                keyData: 'data',
-                templateId: 'thumbnail-container',
-                urlOrData: thumbnailData,
-                targetId: 'thumbnail-container'
-              });
+              window.addEventListener('DOMContentLoaded', () => {
+                loadHandlebarsTemplate({
+                  keyData: 'data',
+                  templateId: 'thumbnail-container',
+                  urlOrData: thumbnailData,
+                  targetId: 'thumbnail-container'
+                });
+              })
             </script>
           </div>
       
@@ -275,7 +275,7 @@
         </div>
       </section>
       
-      <section class="bg-base-100 py-12" id="tool-info">
+      <section class="main-content" id="tool-info">
         <div class="info-container">
           <p class="info-container__description">Chiếc máy tính để bàn đa năng, nhỏ gọn nay sở hữu sức mạnh của M4 và M4 Pro, đánh dấu một cột mốc quan trọng về môi trường với vai trò là máy Mac trung hòa carbon đầu tiên</p>
           <figure class="info-container__image">
@@ -292,30 +292,30 @@
         </div>
       </section>
       
-      <section class="bg-base-200">
-        <div class="container py-12 text-center mx-auto flex flex-col gap-y-6">
-          <h5 class="text-warning">Sản phẩm liên quan</h5>
-          <div id="news-list" class="grid grid-cols-3 gap-6 w-full">
+      <section id="tool-new">
+        <div class="tool-new-container ">
+          <h5 class="">Sản phẩm liên quan</h5>
+          <div id="news-list" class="">
             <!-- hbs -->
             {{#each data}}
-              <div class="home__news-item w-full p-3 flex flex-col gap-y-6 bg-white rounded-[10px]">
-                <figure class="home__news-figure h-60 overflow-hidden">
-                  <img class="w-full object-cover h-full" src="{{this.image}}" alt="" />
+              <div class="home__news-item ">
+                <figure class="home__news-figure ">
+                  <img class="" src="{{this.image}}" alt="" />
                 </figure>
-                <h6 class="home__news-title text-base-content">{{this.name}}</h6>
-                <button class="home__news-button w-full font-bold border border-base-content text-base-content rounded-md py-3" onclick="location.href='/news?id={{this.id}}'" >Chi tiết</button>
+                <h6 class="home__news-title ">{{this.name}}</h6>
+                <button class="home__news-button " onclick="location.href='/news?id={{this.id}}'" >Chi tiết</button>
               </div>
             {{/each}}
             
           </div>
-          <script type="module">
-            import { loadHandlebarsTemplate } from '/src/main.ts';
-
-            loadHandlebarsTemplate({
-              templateId: 'news-list',
-              urlOrData: 'src/data/news.json',
-              targetId: 'news-list',
-            });
+          <script>
+            window.addEventListener('DOMContentLoaded', () => {
+              loadHandlebarsTemplate({
+                templateId: 'news-list',
+                urlOrData: 'src/data/news.json',
+                targetId: 'news-list',
+              });
+            })
           </script>
         </div>
       </section>
@@ -354,16 +354,14 @@
                   <ul class="footer__nav-list ">
                     {{#each categories1}}
                       <li class="footer__nav-item">
-                        <a href="{{this.link}}" class="footer__nav-link hover:text-base-red">
+                        <a href="{{this.link}}" class="footer__nav-link">
                           {{this.name}}
                         </a>
                       </li>
                     {{/each}}
                   </ul>
                 </div>
-                <script type="module">
-                  import { loadHandlebarsTemplate } from '/src/main.ts';
-                  
+                <script>
                   const categories = [
                     { name: 'Rơ moóc cắm trại', link: '/camping.html' } ,
                     { name: 'Rơ moóc du lịch', link: '/touring.html' } ,
@@ -372,12 +370,14 @@
                     { name: 'Tin tức', link: '/new.html' } ,
                   ];
 
-                  loadHandlebarsTemplate({
-                    keyData: 'categories1',
-                    templateId: 'category-template-1',
-                    urlOrData: categories,
-                    targetId: 'footer-category-list-1'
-                  });
+                  window.addEventListener('DOMContentLoaded', () => {
+                    loadHandlebarsTemplate({
+                      keyData: 'categories1',
+                      templateId: 'category-template-1',
+                      urlOrData: categories,
+                      targetId: 'footer-category-list-1'
+                    });
+                  })
                 </script>
               </div>
               
@@ -387,27 +387,27 @@
                   <ul class="footer__nav-list">
                     {{#each categories2}}
                       <li class="footer__nav-item">
-                        <a href="{{this.link}}" class="footer__nav-link hover:text-base-red">
+                        <a href="{{this.link}}" class="footer__nav-link">
                           {{this.name}}
                         </a>
                       </li>
                     {{/each}}
                   </ul>
                 </div>
-                <script type="module">
-                  import { loadHandlebarsTemplate } from '/src/main.ts';
-                  
+                <script>
                   const campingTrailers = Array.from({ length: 6 }, (_, i) => ({
                     name: `Husky Towing ${i + 1}`, 
                     link: '#' 
                   }));
 
-                  loadHandlebarsTemplate({
-                    keyData: 'categories2',
-                    templateId: 'category-template-2',
-                    urlOrData: campingTrailers,
-                    targetId: 'footer-category-list-2'
-                  });
+                  window.addEventListener('DOMContentLoaded', () => {
+                    loadHandlebarsTemplate({
+                      keyData: 'categories2',
+                      templateId: 'category-template-2',
+                      urlOrData: campingTrailers,
+                      targetId: 'footer-category-list-2'
+                    });
+                  })
                 </script>
               </div>
               
@@ -418,27 +418,27 @@
                   <ul class="footer__nav-list ">
                     {{#each categories3}}
                       <li class="footer__nav-item">
-                        <a href="{{this.link}}" class="footer__nav-link hover:text-base-red">
+                        <a href="{{this.link}}" class="footer__nav-link">
                           {{this.name}}
                         </a>
                       </li>
                     {{/each}}
                   </ul>
                 </div>
-                <script type="module">
-                  import { loadHandlebarsTemplate } from '/src/main.ts';
-                  
+                <script>
                   const touringTrailers = Array.from({ length: 5 }, (_, i) => ({
                     name: `Sonic Lite ${i + 1}`, 
                     link: '#' 
                   }));
 
-                  loadHandlebarsTemplate({
-                    keyData: 'categories3',
-                    templateId: 'category-template-3',
-                    urlOrData: touringTrailers,
-                    targetId: 'footer-category-list-3'
-                  });
+                  window.addEventListener('DOMContentLoaded', () => {
+                    loadHandlebarsTemplate({
+                      keyData: 'categories3',
+                      templateId: 'category-template-3',
+                      urlOrData: touringTrailers,
+                      targetId: 'footer-category-list-3'
+                    });
+                  })
                 </script>
               </div>
               
@@ -461,27 +461,27 @@
                   </ul>
                   <!-- social link -->
                   <ul class="footer__social ">
-                    <li class="footer__social-item  group">
+                    <li class="footer__social-item  ">
                       <a href="#"
                         class="footer__social-link ">
                         <span
-                          class="footer__social-hover group-hover:bottom-0 "></span>
+                          class="footer__social-hover  "></span>
                         <span class="footer__social-icon lab la-facebook-f "></span>
                       </a>
                     </li>
-                    <li class="footer__social-item group">
+                    <li class="footer__social-item ">
                       <a href="#"
                         class="footer__social-link ">
                         <span
-                          class="footer__social-hover group-hover:bottom-0 "></span>
+                          class="footer__social-hover  "></span>
                         <span class="footer__social-icon lab la-twitter "></span>
                       </a>
                     </li>
-                    <li class="footer__social-item  group">
+                    <li class="footer__social-item  ">
                       <a href="#"
                         class="footer__social-link ">
                         <span
-                          class="footer__social-hover group-hover:bottom-0 "></span>
+                          class="footer__social-hover  "></span>
                         <span class="footer__social-icon lab la-instagram "></span>
                       </a>
                     </li>
