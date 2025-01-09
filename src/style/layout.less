@@ -336,3 +336,131 @@
   appearance: textfield;
 }
 
+#footer{
+  .footer__container{
+    @apply relative bg-base-content overflow-hidden;
+    .footer__content{
+      @apply relative z-10 container px-3 md:px-0 mx-auto py-12 text-base-100;
+      .footer__row{
+        @apply flex gap-4 justify-between;
+        .footer__info{
+          @apply ~'max-w-[210px]';
+          .footer__logo{
+            .footer__logo-link{
+              @apply cursor-pointer;
+            }
+          }
+          .footer__description{
+            @apply mt-6 ~'text-[14px]';
+          }
+        }
+        .footer__nav{
+          @apply grid grid-cols-4 ~'w-[cala(100%-210px)]' gap-4 justify-between;
+          .footer-category-list{
+            .footer__nav-title{
+              @apply text-base-100 font-semibold capitalize -mt-2;
+            }
+            .footer__nav-list{
+              @apply pt-5 flex flex-col gap-3;
+              .footer__nav-item{
+                .footer__nav-link{
+                  @apply text-base-100 font-medium leading-7 transition-all duration-200 ease-linear delay-100 ;
+                }
+              }
+            }
+          }
+          .footer__contact{
+            .footer__contact-title{
+              @apply text-base-100 font-semibold capitalize;
+              
+            }
+            .footer__contact-content{
+              @apply pt-5 flex flex-col gap-3 ;
+              .footer__contact-address{}
+              .footer__contact-list{
+                @apply grid grid-cols-1 gap-3 text-warning;
+                .footer__contact-item{
+                  @apply relative flex items-center !text-warning;
+                  .footer__contact-icon{
+                    @apply text-2xl w-8 text-warning;
+                  }
+                  .footer__contact-link{
+                    @apply font-medium text-base !text-warning leading-7 m-0;
+                  }
+                }
+              }
+              .footer__social{
+                @apply flex flex-wrap gap-3;
+                .footer__social-item{
+                  @apply relative;
+                  .footer__social-link{
+                    @apply relative pt-2 inline-block w-12 h-12 rounded-full bg-warning text-center overflow-hidden text-base-100/60;
+                    .footer__social-hover{
+                      @apply absolute -z-10 left-0 bottom-full w-full h-full bg-warning transition-all duration-500 ease-in-out;
+                    }
+                    .footer__social-icon{
+                      @apply text-2xl text-base-content relative z-10;
+                    }
+                  }
+                  
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .footer__copyright{
+      @apply container mx-auto pb-12 text-base-100 ~'text-[10px]';
+    }
+  }
+}
+
+#header{
+  .header__top{
+    @apply container px-3 md:px-0 mx-auto py-1 text-base-100 ;
+    .header__top-wrapper{
+      @apply flex justify-between ~'h-[25px]' items-center relative;
+      .header__top-bg{
+        @apply absolute ~'w-[200%]' h-full bg-primary -z-10 -right-8 top-0 rounded-full opacity-50;
+      }
+      .header__contact{
+        @apply flex text-sm gap-16;
+        .header__contact-item{
+          @apply flex items-center;
+          .header__contact-icon{
+            @apply ~'text-[14px] leading-[18.67px]' mr-3;
+          }
+          .header__contact-link{}
+        }
+      }
+      .header__social{
+        @apply flex gap-3 justify-end ~'text-[14px] leading-[18.67px]';
+        .header__social-item{
+          @apply relative;
+          .header__social-icon{
+            @apply ~'text-[14px] leading-[18.67px]';
+          }
+        }
+      }
+    }
+  }
+  .header__main{
+    @apply container px-3 md:px-0 mx-auto relative ;
+    .header__main-bg{
+      @apply absolute ~'w-[200%]' h-full bg-base-100 -z-10 -left-16 rounded-full;
+    }
+    .header__main-wrapper{
+      @apply flex justify-between items-center ~'py-[10.5px]';
+      .header__logo{
+        @apply flex-none;
+      }
+      .header__nav{
+        @apply flex justify-around text-lg gap-10 text-base-content;
+      }
+      .header__contact-btn{
+        @apply flex-none bg-warning text-base-100 px-5 font-medium py-2 rounded-md;
+      }
+    }
+  }
+}

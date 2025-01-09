@@ -91,50 +91,51 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"></script>
   </head>
   <body class="overflow-x-hidden min-h-screen">
-    <header id="header">
-      <section class="container px-3 md:px-0 mx-auto py-1 text-base-100">
-        <div class="flex justify-between h-[25px] items-center relative">
-          <div class="absolute w-[200%] h-full bg-primary -z-10 -right-8 top-0 rounded-full opacity-50"></div>
-          <ul class="flex text-sm gap-16">
-            <li class="flex items-center">
-              <i class="las la-phone-volume text-[14px] leading-[18.67px] mr-3"></i><a href="tel:0974891188">0974 891-188</a>
+    <header id="header" class="header">
+      <section class="header__top ">
+        <div class="header__top-wrapper ">
+          <div class="header__top-bg "></div>
+          <ul class="header__contact ">
+            <li class="header__contact-item ">
+              <i class="header__contact-icon las la-phone-volume "></i>
+              <a class="header__contact-link" href="tel:0974891188">0974 891-188</a>
             </li>
-            <li class="flex items-center">
-              <i class="las la-envelope text-[14px] leading-[18.67px] mr-2"></i
-              ><a href="mailto:cskh@hotro.wesports.vn">cskh@hotro.wesports.vn</a>
+            <li class="header__contact-item">
+              <i class="header__contact-icon las la-envelope"></i>
+              <a class="header__contact-link" href="mailto:cskh@hotro.wesports.vn">cskh@hotro.wesports.vn</a>
             </li>
-            <li class="flex items-center">
-              <i class="las la-map-marker text-[14px] leading-[18.67px] mr-1"></i> Liền Kề 226 No-04 khu A Khu đất dịch vụ yên Nghĩa, Quận Hà
-              Đông, Hà Nội.
+            <li class="header__contact-item">
+              <i class="header__contact-icon las la-map-marker "></i>
+              <span class="header__contact-text">Liền Kề 226 No-04 khu A Khu đất dịch vụ yên Nghĩa, Quận Hà Đông, Hà Nội.</span>
             </li>
           </ul>
-          <ul class="flex gap-3 justify-end text-[14px] leading-[18.67px]">
-            <li>
-              <a href="/"><i class="lab la-facebook-f text-[14px] leading-[18.67px]"></i></a>
+          <ul class="header__social ">
+            <li class="header__social-item">
+              <a class="header__social-link" href="/"><i class="header__social-icon lab la-facebook-f"></i></a>
             </li>
-            <li class="group relative">
-              <span class="fi fi-us"></span>
-              <div class="absolute z-10 left-0 top-full hidden group-hover:block">
-                <span class="fi fi-vn"></span>
+            <li class="header__social-item group">
+              <span class="header__social-flag fi fi-us"></span>
+              <div class="header__social-dropdown absolute z-10 left-0 top-full hidden group-hover:block">
+                <span class="header__social-flag fi fi-vn"></span>
               </div>
             </li>
           </ul>
         </div>
       </section>
-      <section class="container px-3 md:px-0 mx-auto relative">
-        <div class="absolute w-[200%] h-full bg-base-100 -z-10 -left-16 rounded-full"></div>
-        <div class="flex justify-between items-center py-[10.5px]">
-          <figure class="flex-none">
-            <a href="/"><img src="/assets/images/logo.svg" width="172" alt="" /></a>
+      <section class="header__main ">
+        <div class="header__main-bg "></div>
+        <div class="header__main-wrapper ">
+          <figure class="header__logo ">
+            <a class="header__logo-link" href="/"><img class="header__logo-image" src="/assets/images/logo.svg" width="172" alt="" /></a>
           </figure>
-          <ul class="flex justify-around text-lg gap-10 text-base-content">
-            <li><a href="/camping.html">Rơ moóc cắm trại</a></li>
-            <li><a href="/touring.html">Rơ moóc du lịch</a></li>
-            <li><a href="/tool.html">Dụng cụ</a></li>
-            <li><a href="/about.html">Về chúng tôi</a></li>
-            <li><a href="/new.html">Tin tức</a></li>
+          <ul class="header__nav ">
+            <li class="header__nav-item"><a class="header__nav-link" href="/camping.html">Rơ moóc cắm trại</a></li>
+            <li class="header__nav-item"><a class="header__nav-link" href="/touring.html">Rơ moóc du lịch</a></li>
+            <li class="header__nav-item"><a class="header__nav-link" href="/tool.html">Dụng cụ</a></li>
+            <li class="header__nav-item"><a class="header__nav-link" href="/about.html">Về chúng tôi</a></li>
+            <li class="header__nav-item"><a class="header__nav-link" href="/new.html">Tin tức</a></li>
           </ul>
-          <button class="contact-button flex-none bg-warning text-base-100 px-5 font-medium py-2 rounded-md">Liên hệ</button>
+          <button class="header__contact-btn ">Liên hệ</button>
         </div>
       </section>
     </header>
@@ -158,32 +159,33 @@
             </div>
           </div>
         </div>
-        <script type="module">
-          import { loadHandlebarsTemplate } from '/src/main.ts';
-          
-          const bannerData = {
-            imageUrl: '/assets/images/banner/camping.png',
-            title: 'Dụng cụ',
-            subtitle: 'Bắt đầu hành trình của cuộc đời!'
-          };
-    
-          loadHandlebarsTemplate({
-            templateId: 'camping-banner',
-            urlOrData: bannerData,
-            targetId: 'camping-banner',
-            keyData: 'banner'
-          });
-    
-        </script>
+        
       </section>
+      <script type="module">
+        import { loadHandlebarsTemplate } from '/src/main.ts';
+        
+        const bannerData = {
+          imageUrl: '/assets/images/banner/camping.png',
+          title: 'Dụng cụ',
+          subtitle: 'Bắt đầu hành trình của cuộc đời!'
+        };
+  
+        loadHandlebarsTemplate({
+          templateId: 'camping-banner',
+          urlOrData: bannerData,
+          targetId: 'camping-banner',
+          keyData: 'banner'
+        });
+  
+      </script>
 
-      <section class="tool-detail bg-base-100">
-        <div class="tool-detail__container flex flex-wrap gap-8 py-12 items-start w-full max-md:max-w-full container mx-auto">
-          <div class="tool-detail__image-container flex flex-col min-w-[240px] w-1/2 max-md:max-w-full">
-            <div id="imageZoom" class="tool-detail__image w-[585px] h-[545px]" style="--url: url(/assets/images/tool/frame1.png); --zoom-x: 0%; --zoom-y: 0%; --display: none;">
-              <img id="main-image" src="/assets/images/tool/frame1.png" alt="Main product image" class="tool-detail__main-image w-full h-full object-contain" />
+      <section class="tool-detail ">
+        <div class="tool-detail__container ">
+          <div class="tool-detail__image-container ">
+            <div id="imageZoom" class="tool-detail__image " style="--url: url(/assets/images/tool/frame1.png); --zoom-x: 0%; --zoom-y: 0%; --display: none;">
+              <img id="main-image" src="/assets/images/tool/frame1.png" alt="Main product image" class="tool-detail__main-image" />
             </div>
-            <div id="thumbnail-container" class="tool-detail__thumbnails flex flex-wrap gap-3 items-center mt-1 w-fit">
+            <div id="thumbnail-container" class="tool-detail__thumbnails">
               {{#each data}}
                 <img loading="lazy" 
                   src="{{this.image}}" 
@@ -193,27 +195,28 @@
                   onclick="handleThumbnailClick('{{image}}', '{{alt}}', this)"
                 >
               {{/each}}
-              <script type="module">
-                import { loadHandlebarsTemplate } from '/src/main.ts';
-
-                const thumbnailData = Array.from({ length: 6 }, (_, i) => ({
-                      image: `/assets/images/tool/frame${i + 1}.png`, 
-                      alt: `Thumbnail${i + 1}`,
-                      index: i
-                    }));
-
-                loadHandlebarsTemplate({
-                  keyData: 'data',
-                  templateId: 'thumbnail-container',
-                  urlOrData: thumbnailData,
-                  targetId: 'thumbnail-container'
-                });
-              </script>
+              
             </div>
+            <script type="module">
+              import { loadHandlebarsTemplate } from '/src/main.ts';
+
+              const thumbnailData = Array.from({ length: 6 }, (_, i) => ({
+                    image: `/assets/images/tool/frame${i + 1}.png`, 
+                    alt: `Thumbnail${i + 1}`,
+                    index: i
+                  }));
+
+              loadHandlebarsTemplate({
+                keyData: 'data',
+                templateId: 'thumbnail-container',
+                urlOrData: thumbnailData,
+                targetId: 'thumbnail-container'
+              });
+            </script>
           </div>
       
-          <div class="tool-detail__info flex overflow-hidden flex-col flex-1 shrink gap-6 p-6">
-            <h5 class="tool-detail__title text-warning">
+          <div class="tool-detail__info ">
+            <h5 class="tool-detail__title">
               GasStop GasGear 90-Degree Propane Braided Stainless Pigtail Hose, 1/4" Inverted
             </h5>
             <p class="tool-detail__description">
@@ -221,22 +224,22 @@
               5 cho tốc độ truyền nhanh hơn và khả năng kết nối tiên tiến. Tất cả các
               phiên bản đều trang bị màn hình Liquid Retina
             </p>
-            <div class="tool-detail__price flex items-end gap-1">
-              <span class="tool-detail__price-label leading-6 text-base-content">Giá tiền:</span>
-              <h6 class="tool-detail__price-value text-warning">$4.56</h6>
+            <div class="tool-detail__price ">
+              <span class="tool-detail__price-label ">Giá tiền:</span>
+              <h6 class="tool-detail__price-value">$4.56</h6>
             </div>
-            <form class="tool-detail__form flex gap-3 items-start w-full max-md:max-w-full border-none shadow-none bg-transparent m-0 p-0 ">
+            <form class="tool-detail__form">
               <label for="quantity"><h6>Số lượng:</h6></label>
-              <button type="button" aria-label="Decrease quantity" class="tool-detail__button tool-detail__button--decrease object-contain shrink-0 aspect-square w-[39px] bg-base-300 rounded-full flex items-center justify-center" id="decrease-button">
+              <button type="button" aria-label="Decrease quantity" class="tool-detail__button tool-detail__button--decrease" id="decrease-button">
                 <img loading="lazy"
                   src="svg/decrease.svg"
                   alt="" class="tool-detail__icon" />
               </button>
               <input type="number" id="quantity" value="1" min="1"
-                class="tool-detail__quantity no-spinner flex flex-col text-lg text-center w-[39px] px-1 bg-base-100 h-[39px] rounded-[30px] shadow"
+                class="tool-detail__quantity no-spinner "
                 aria-label="Product quantity" 
               />
-              <button type="button" aria-label="Increase quantity" class="tool-detail__button tool-detail__button--increase object-contain shrink-0 aspect-square w-[39px] bg-base-300 rounded-full flex items-center justify-center" id="increase-button">
+              <button type="button" aria-label="Increase quantity" class="tool-detail__button tool-detail__button--increase " id="increase-button">
                 <img loading="lazy"
                   src="svg/increase.svg"
                   alt="" class="tool-detail__icon" />
@@ -244,25 +247,25 @@
             </form>
             <button
               aria-label="Add to cart"
-              class="tool-detail__add-to-cart home__product-button w-fit font-bold bg-warning text-base-100 rounded-md py-3 px-7 relative group overflow-hidden">
+              class="tool-detail__add-to-cart home__product-button ">
               Cho vào giỏ
             </button>
-            <div class="tool-detail__separator max-w-full border border-solid  min-h-[1px] w-[481px]" role="separator"></div>
-            <div class="tool-detail__additional-info flex flex-col w-full  text-gray-800 max-md:max-w-full">
-              <div class="tool-detail__product-code max-md:max-w-full">
+            <div class="tool-detail__separator " role="separator"></div>
+            <div class="tool-detail__additional-info ">
+              <div class="tool-detail__product-code ">
                 <span class="font-bold">Mã sản phẩm</span>
                 : PRT584E63A
               </div>
-              <div class="tool-detail__category mt-1 max-md:max-w-full">
+              <div class="tool-detail__category">
                 <span class="font-bold">Danh mục:</span>
                 Danh mục 1
               </div>
-              <div class="tool-detail__share flex gap-2 py-px pr-20 mt-1 max-w-full w-[480px] max-md:pr-5">
+              <div class="tool-detail__share ">
                 <div><span class="font-bold">Chia sẻ:</span></div>
                 <button aria-label="Share on social media">
                   <img loading="lazy"
                     src="svg/facebook.svg"
-                    alt="" class="tool-detail__share-icon object-contain shrink-0 self-start w-6 aspect-square text-base-content" 
+                    alt="" class="tool-detail__share-icon " 
                     style="filter: invert(100%) sepia(0%) saturate(7470%) hue-rotate(116deg) brightness(109%) contrast(109%);"
                   />
                 </button>
@@ -303,56 +306,55 @@
                 <button class="home__news-button w-full font-bold border border-base-content text-base-content rounded-md py-3" onclick="location.href='/news?id={{this.id}}'" >Chi tiết</button>
               </div>
             {{/each}}
-            <script type="module">
-              import { loadHandlebarsTemplate } from '/src/main.ts';
-
-              loadHandlebarsTemplate({
-                templateId: 'news-list',
-                urlOrData: 'src/data/news.json',
-                targetId: 'news-list',
-              });
-            </script>
+            
           </div>
+          <script type="module">
+            import { loadHandlebarsTemplate } from '/src/main.ts';
+
+            loadHandlebarsTemplate({
+              templateId: 'news-list',
+              urlOrData: 'src/data/news.json',
+              targetId: 'news-list',
+            });
+          </script>
         </div>
       </section>
     </main>
 
-    <footer id="footer">
-      <div class="relative bg-base-content overflow-hidden">
+    <footer id="footer" class="footer">
+      <div class="footer__container ">
         <!-- shape -->
         
       
         <!-- footer content -->
-        <section class="relative z-10 container px-3 md:px-0 mx-auto py-12 text-base-100">
+        <section class="footer__content ">
           <!-- flex row -->
-          <div class="flex gap-4 justify-between">
+          <div class="footer__row ">
             <!-- single -->
-            <div class="max-w-[210px]">
+            <div class="footer__info ">
               <!-- footer logo -->
-              <figure>
-                <a href="#" class="cursor-pointer">
+              <figure class="footer__logo">
+                <a href="#" class="footer__logo-link ">
                   <img
                     src="/assets/images/logo.svg"
                     alt=""
+                    class="footer__logo-image"
                   />
                 </a>
               </figure>
-              <p class="mt-6 text-[14px]">Được thiết kế với vật liệu bền bỉ và tính năng tiện nghi, mang đến trải nghiệm du lịch thoải mái và an toàn. Với không gian nội thất tối ưu và các tiện ích hiện đại, nó là lựa chọn lý tưởng cho những chuyến phiêu lưu trên đường.</p>
-      
-              
-              
+              <p class="footer__description ">Được thiết kế với vật liệu bền bỉ và tính năng tiện nghi, mang đến trải nghiệm du lịch thoải mái và an toàn. Với không gian nội thất tối ưu và các tiện ích hiện đại, nó là lựa chọn lý tưởng cho những chuyến phiêu lưu trên đường.</p>
             </div>
       
             <!-- single -->
-            <div class="grid grid-cols-4 w-[cala(100%-210px)] gap-4 justify-between">
-              <div id="footer-category-list-1">
+            <div class="footer__nav ">
+              <div id="footer-category-list-1" class="footer-category-list">
                 <!-- title -->
                 <div id="category-template-1">
-                  <a class="text-base-100 font-semibold capitalize -mt-2">DANH MỤC</a>
-                  <ul class="pt-5 flex flex-col gap-3">
+                  <a class="footer__nav-title ">DANH MỤC</a>
+                  <ul class="footer__nav-list ">
                     {{#each categories1}}
-                      <li>
-                        <a href="{{this.link}}" class="text-base-100 font-medium leading-7 transition-all duration-200 ease-linear delay-100 hover:text-base-red">
+                      <li class="footer__nav-item">
+                        <a href="{{this.link}}" class="footer__nav-link hover:text-base-red">
                           {{this.name}}
                         </a>
                       </li>
@@ -363,11 +365,11 @@
                   import { loadHandlebarsTemplate } from '/src/main.ts';
                   
                   const categories = [
-                    { name: 'Rơ moóc cắm trại', link: '#' } ,
+                    { name: 'Rơ moóc cắm trại', link: '/camping.html' } ,
                     { name: 'Rơ moóc du lịch', link: '/touring.html' } ,
-                    { name: 'Dụng cụ', link: '#' } ,
-                    { name: 'Về chúng tôi', link: '#' } ,
-                    { name: 'Tin tức', link: '#' } ,
+                    { name: 'Dụng cụ', link: '/tool.html' } ,
+                    { name: 'Về chúng tôi', link: '/about.html' } ,
+                    { name: 'Tin tức', link: '/new.html' } ,
                   ];
 
                   loadHandlebarsTemplate({
@@ -379,124 +381,118 @@
                 </script>
               </div>
               
-              <div>
-                <!-- title -->
-                <div id="footer-category-list-2">
-                  <div id="category-template-2">
-                    <a class="text-base-100 font-semibold capitalize -mt-2">RƠ MOÓC CẮM TRẠI</a>
-                    <ul class="pt-5 flex flex-col gap-3">
-                      {{#each categories2}}
-                        <li>
-                          <a href="{{this.link}}" class="text-base-100 font-medium leading-7 transition-all duration-200 ease-linear delay-100 hover:text-base-red">
-                            {{this.name}}
-                          </a>
-                        </li>
-                      {{/each}}
-                    </ul>
-                  </div>
-                  <script type="module">
-                    import { loadHandlebarsTemplate } from '/src/main.ts';
-                    
-                    const campingTrailers = Array.from({ length: 6 }, (_, i) => ({
-                      name: `Husky Towing ${i + 1}`, 
-                      link: '#' 
-                    }));
-
-                    loadHandlebarsTemplate({
-                      keyData: 'categories2',
-                      templateId: 'category-template-2',
-                      urlOrData: campingTrailers,
-                      targetId: 'footer-category-list-2'
-                    });
-                  </script>
+              <div id="footer-category-list-2" class="footer-category-list">
+                <div id="category-template-2">
+                  <a class="footer__nav-title ">RƠ MOÓC CẮM TRẠI</a>
+                  <ul class="footer__nav-list">
+                    {{#each categories2}}
+                      <li class="footer__nav-item">
+                        <a href="{{this.link}}" class="footer__nav-link hover:text-base-red">
+                          {{this.name}}
+                        </a>
+                      </li>
+                    {{/each}}
+                  </ul>
                 </div>
+                <script type="module">
+                  import { loadHandlebarsTemplate } from '/src/main.ts';
+                  
+                  const campingTrailers = Array.from({ length: 6 }, (_, i) => ({
+                    name: `Husky Towing ${i + 1}`, 
+                    link: '#' 
+                  }));
+
+                  loadHandlebarsTemplate({
+                    keyData: 'categories2',
+                    templateId: 'category-template-2',
+                    urlOrData: campingTrailers,
+                    targetId: 'footer-category-list-2'
+                  });
+                </script>
               </div>
               
               <!-- single -->
-              <div>
-                <!-- title -->
-                <div id="footer-category-list-3">
-                  <div id="category-template-3">
-                    <a class="text-base-100 font-semibold capitalize -mt-2">RƠ MOÓC DU LỊCH</a>
-                    <ul class="pt-5 flex flex-col gap-3">
-                      {{#each categories3}}
-                        <li>
-                          <a href="{{this.link}}" class="text-base-100 font-medium leading-7 transition-all duration-200 ease-linear delay-100 hover:text-base-red">
-                            {{this.name}}
-                          </a>
-                        </li>
-                      {{/each}}
-                    </ul>
-                  </div>
-                  <script type="module">
-                    import { loadHandlebarsTemplate } from '/src/main.ts';
-                    
-                    const touringTrailers = Array.from({ length: 5 }, (_, i) => ({
-                      name: `Sonic Lite ${i + 1}`, 
-                      link: '#' 
-                    }));
-
-                    loadHandlebarsTemplate({
-                      keyData: 'categories3',
-                      templateId: 'category-template-3',
-                      urlOrData: touringTrailers,
-                      targetId: 'footer-category-list-3'
-                    });
-                  </script>
+              <div id="footer-category-list-3" class="footer-category-list">
+                <div id="category-template-3">
+                  <a class="footer__nav-title ">RƠ MOÓC DU LỊCH</a>
+                  <ul class="footer__nav-list ">
+                    {{#each categories3}}
+                      <li class="footer__nav-item">
+                        <a href="{{this.link}}" class="footer__nav-link hover:text-base-red">
+                          {{this.name}}
+                        </a>
+                      </li>
+                    {{/each}}
+                  </ul>
                 </div>
+                <script type="module">
+                  import { loadHandlebarsTemplate } from '/src/main.ts';
+                  
+                  const touringTrailers = Array.from({ length: 5 }, (_, i) => ({
+                    name: `Sonic Lite ${i + 1}`, 
+                    link: '#' 
+                  }));
+
+                  loadHandlebarsTemplate({
+                    keyData: 'categories3',
+                    templateId: 'category-template-3',
+                    urlOrData: touringTrailers,
+                    targetId: 'footer-category-list-3'
+                  });
+                </script>
               </div>
               
-              <div>
+              <div class="footer__contact">
                 <!-- title -->
-                <a class="text-base-100 font-semibold capitalize">Contact</a>
+                <a class="footer__contact-title ">Contact</a>
                   <!-- widget links -->
-                  <div class="pt-5 flex flex-col gap-3">
-                    <p>88 Broklyn Golden Road Street, New York. USA</p>
-                    <ul class="grid grid-cols-1 gap-3">
-                      <li class="relative flex items-center">
-                        <i class="las la-phone text-2xl w-8 text-warning"></i>
-                        <a href="tel:3336660000" class="font-medium text-base leading-7 text-warning m-0">0198-9526503</a>
-                      </li>
-                      <li class="relative flex items-center">
-                        <i class="las la-envelope text-2xl w-8 text-warning"></i>
-                        <a href="mailto:yourmail@email.com"
-                          class="font-medium text-base leading-7 text-warning m-0">needhelp@company.com</a>
-                      </li>
-                    </ul>
-                    <!-- social link -->
-                    <ul class="flex flex-wrap gap-3">
-                      <li class="relative group">
-                        <a href="#"
-                          class="relative pt-2 rounded-full inline-block w-12 h-12 rounded-1/2 bg-warning text-center overflow-hidden text-base-100/60">
-                          <span
-                            class="absolute -z-1 left-0 bottom-full w-full h-full bg-warning group-hover:bottom-0 transition-all duration-500 ease-in-out"></span>
-                          <span class="lab la-facebook-f text-2xl text-base-content relative z-10"></span>
-                        </a>
-                      </li>
-                      <li class="relative group">
-                        <a href="#"
-                          class="relative pt-2 rounded-full inline-block w-12 h-12 rounded-1/2 bg-warning text-center overflow-hidden text-base-100/60">
-                          <span
-                            class="absolute -z-1 left-0 bottom-full w-full h-full bg-warning group-hover:bottom-0 transition-all duration-500 ease-in-out"></span>
-                          <span class="lab la-twitter text-2xl text-base-content relative z-10"></span>
-                        </a>
-                      </li>
-                      <li class="relative group">
-                        <a href="#"
-                          class="relative pt-1.5 rounded-full inline-block w-12 h-12 rounded-1/2 text-center overflow-hidden text-base-100/60 bg-warning">
-                          <span
-                            class="absolute -z-1 left-0 bottom-full w-full h-full bg-warning group-hover:bottom-0 transition-all duration-500 ease-in-out"></span>
-                          <span class="lab la-instagram text-3xl text-base-content relative z-10"></span>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
+                <div class="footer__contact-content">
+                  <p class="footer__contact-address">88 Broklyn Golden Road Street, New York. USA</p>
+                  <ul class="footer__contact-list ">
+                    <li class="footer__contact-item">
+                      <i class="footer__contact-icon las la-phone"></i>
+                      <a href="tel:3336660000" class="footer__contact-link ">0198-9526503</a>
+                    </li>
+                    <li class="footer__contact-item ">
+                      <i class="footer__contact-icon las la-envelope "></i>
+                      <a href="mailto:yourmail@email.com"
+                        class="footer__contact-link ">needhelp@company.com</a>
+                    </li>
+                  </ul>
+                  <!-- social link -->
+                  <ul class="footer__social ">
+                    <li class="footer__social-item  group">
+                      <a href="#"
+                        class="footer__social-link ">
+                        <span
+                          class="footer__social-hover group-hover:bottom-0 "></span>
+                        <span class="footer__social-icon lab la-facebook-f "></span>
+                      </a>
+                    </li>
+                    <li class="footer__social-item group">
+                      <a href="#"
+                        class="footer__social-link ">
+                        <span
+                          class="footer__social-hover group-hover:bottom-0 "></span>
+                        <span class="footer__social-icon lab la-twitter "></span>
+                      </a>
+                    </li>
+                    <li class="footer__social-item  group">
+                      <a href="#"
+                        class="footer__social-link ">
+                        <span
+                          class="footer__social-hover group-hover:bottom-0 "></span>
+                        <span class="footer__social-icon lab la-instagram "></span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
         </section>
       
-        <section class="container mx-auto pb-12 text-base-100 text-[10px]">
+        <section class="footer__copyright ">
           2024, Name. All rights reserved. Design by langphongmtb
         </section>
       </div>
