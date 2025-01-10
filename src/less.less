@@ -1,13 +1,15 @@
+@import './variables.less';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 html {
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: @media-lg) {
     font-size: 18px;
   }
 }
 body {
-  @apply bg-base-100 text-base-content overflow-x-hidden min-h-screen;
+  @apply bg-base-100 text-base-content overflow-x-hidden min-h-screen leading-5;
 }
 h1,
 h2,
@@ -17,38 +19,38 @@ h5 {
   @apply font-serif uppercase;
 }
 h1 {
-  @apply text-6xl;
-  @media only screen and (min-width: 768px) {
+  @apply text-6xl font-semibold;
+  @media only screen and (min-width: @media-lg) {
     @apply text-7xl;
   }
 }
 h2 {
-  @apply text-5xl;
-  @media only screen and (min-width: 768px) {
+  @apply text-5xl font-semibold;
+  @media only screen and (min-width: @media-lg) {
     @apply text-6xl;
   }
 }
 h3 {
-  @apply text-4xl;
-  @media only screen and (min-width: 768px) {
+  @apply text-4xl font-semibold;
+  @media only screen and (min-width: @media-lg) {
     @apply text-5xl;
   }
 }
 h4 {
-  @apply text-3xl;
-  @media only screen and (min-width: 768px) {
+  @apply text-3xl font-semibold;
+  @media only screen and (min-width: @media-lg) {
     @apply text-4xl;
   }
 }
 h5 {
-  @apply text-2xl;
-  @media only screen and (min-width: 768px) {
+  @apply text-2xl font-semibold;
+  @media only screen and (min-width: @media-lg) {
     @apply text-3xl;
   }
 }
 h6 {
-  @apply text-xl;
-  @media only screen and (min-width: 768px) {
+  @apply text-xl font-medium;
+  @media only screen and (min-width: @media-lg) {
     @apply text-2xl;
   }
 }
@@ -206,9 +208,13 @@ form .group {
 }
 
 .hamburger {
-  @apply flex self-center flex-col justify-between w-9 h-7 pt-1 pb-1;
+  @apply self-center flex-col justify-between w-9 h-7 pt-1 pb-1 hidden;
+
+  @media (max-width: @media-md) {
+    @apply flex;
+  }
   span {
-    @apply self-end w-full bg-base-100 transition-all duration-300 ease-in-out ~'h-0.5';
+    @apply self-end w-full bg-base-content transition-all duration-300 ease-in-out ~'h-0.5';
   }
   .meat {
     @apply ~'w-10/12' transition-all duration-150 ease-in-out;
@@ -405,7 +411,7 @@ form {
   }
 }
 .header {
-  @apply sticky top-0 left-0 z-30;
+  @apply fixed top-0 left-0 z-30 w-full;
 
   > div {
     @apply container mx-auto py-4 pl-5 pr-4 flex items-center justify-between bg-primary;

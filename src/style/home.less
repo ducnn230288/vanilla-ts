@@ -1,4 +1,6 @@
-.home{
+@import '../variables.less';
+
+.home {
   @apply relative;
   .home__bg {
     @apply w-full h-full absolute top-0 left-0 -z-30 bg-base-200;
@@ -6,16 +8,25 @@
 }
 .home__hero {
   .home__figure {
-    @apply absolute left-0 ~'-top-[100px] h-[635px]' w-full  -z-20 overflow-hidden;
+    @apply absolute left-0 w-full -z-20 overflow-hidden;
+    height: 56vw;
+    max-height: 950px;
+    min-height: 570px;
+
     .home__image {
-      @apply w-full object-left-bottom ~'h-[635px]';
+      @apply w-full object-left-bottom object-cover;
+      max-height: 950px;
+      min-height: 570px;
     }
   }
   .home__content {
-    @apply ~'h-[calc(47vw-150px)]' relative;
+    @apply relative;
+    height: calc(54vw - 2rem);
+    max-height: 930px;
+    min-height: 550px;
 
     .home__overlay {
-      @apply absolute top-1/2 -translate-y-1/2 w-full left-0 bg-gradient-to-r from-base-content/80 py-5;
+      @apply absolute top-1/2 -translate-y-1/2 w-full left-0 bg-gradient-to-r from-base-content/70 via-transparent via-80% py-5;
     }
 
     .home__container {
@@ -43,12 +54,12 @@
 .home__services {
   .home__container {
     @apply container px-3 md:px-0 mx-auto pb-11 relative;
-    .home__services-top{
+    .home__services-top {
       @apply relative;
-      .top-height{
+      .top-height {
         @apply ~'h-[99px]';
       }
-      .top-absolute{
+      .top-absolute {
         @apply absolute -top-4 left-0;
       }
     }
@@ -59,11 +70,17 @@
       @apply my-2 text-base-content ~'leading-[72px]' mt-0 ~'mb-[19px]';
     }
     .home__grid {
-      @apply grid grid-cols-4 gap-10;
+      @apply grid grid-cols-4 gap-6;
+      @media (max-width: @media-lg) {
+        @apply grid-cols-2;
+      }
+
+      @media (max-width: @media-md) {
+        @apply grid-cols-1;
+      }
     }
   }
 }
-
 
 .home__journey {
   @apply w-full h-fit;
@@ -86,12 +103,9 @@
           @apply text-base-content;
         }
       }
-      .home__grid{
-        @apply grid grid-cols-3 gap-6 mt-6;
-      }
       .home__button-container {
         @apply w-full flex items-center justify-center mt-6;
-        .home__button{
+        .home__button {
           @apply py-4 px-4 font-medium bg-white rounded-md mx-auto text-warning;
         }
       }
@@ -99,38 +113,38 @@
   }
 }
 
-.home__parts{
+.home__parts {
   @apply bg-white;
-  .home__container{
-    @apply container py-6 w-full flex flex-col items-center justify-center gap-y-6 mx-auto;
-    .home__parts-title{
-      @apply  text-base-content;
+  .home__container {
+    @apply container py-12 w-full flex flex-col items-center justify-center gap-y-6 mx-auto;
+    .home__parts-title {
+      @apply text-base-content;
     }
-    .home__parts-description{
+    .home__parts-description {
       @apply text-center;
     }
-    .home__grid{
-      @apply  grid grid-cols-3 gap-6 w-full;
+    .home__grid {
+      @apply grid grid-cols-3 gap-6 w-full;
     }
-    .home__button{
-      @apply  py-4 px-4 bg-white rounded-md mx-auto text-warning border border-warning;
+    .home__button {
+      @apply py-4 px-4 bg-white rounded-md mx-auto text-warning border border-warning;
     }
   }
 }
 
-.home__section.home__guide{
+.home__section.home__guide {
   @apply bg-base-100 ~'bg-[url(assets/images/home/bg-2.png)]';
-  .home__container{
+  .home__container {
     @apply container w-full ~'h-[410px]' mx-auto flex;
-    .home__guide{
+    .home__guide {
       @apply ~'w-1/2' pr-14 py-12 flex flex-col gap-y-3;
-      .home__guide-title{
+      .home__guide-title {
         @apply text-base-content;
       }
-      .home__guide-description{
+      .home__guide-description {
         @apply text-base-100;
       }
-      .home__button{
+      .home__button {
         @apply font-bold border border-white text-transparent overflow-hidden rounded-md py-3 relative;
         &:hover {
           span:first-child {
@@ -140,15 +154,15 @@
             @apply text-warning;
           }
         }
-        span:first-child{
+        span:first-child {
           @apply absolute left-0 bottom-full w-full h-full bg-white  transition-all duration-500 rounded-sm ease-in-out;
         }
-        span:last-child{
-          @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-base-100 ;
+        span:last-child {
+          @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-base-100;
         }
       }
     }
-    .home__image-container{
+    .home__image-container {
       @apply ~'w-1/2 bg-[url(assets/images/home/frame5.png)]' bg-no-repeat bg-cover;
     }
   }
@@ -161,7 +175,7 @@
       @apply text-warning mt-8 uppercase;
     }
     .home__news-title {
-      @apply uppercase text-base-content mb-6;
+      @apply text-base-content mb-6 font-medium;
     }
     .home__grid {
       @apply grid grid-cols-3 gap-6 w-full;

@@ -86,62 +86,157 @@
       rel="stylesheet"
     />
     <link href="https://cdn.jsdelivr.net/npm/flag-icons@7/css/flag-icons.min.css" rel="stylesheet" />
-    
+
     <!-- Add Handlebars -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"></script>
   </head>
   <body>
     <header id="header" class="header">
-      <section class="header__top ">
-        <div class="header__top-wrapper ">
-          <div class="header__top-bg "></div>
-          <ul class="header__contact ">
-            <li class="header__contact-item ">
-              <i class="header__contact-icon las la-phone-volume "></i>
+      <section class="header__top">
+        <div class="header__top-wrapper">
+          <div class="header__top-bg"></div>
+          <ul class="header__contact">
+            <li class="header__contact-item">
+              <svg height="17" width="17" aria-hidden="true" class="header__contact-icon">
+                <use href="/icons/sprite.svg#icon-phone" />
+              </svg>
               <a class="header__contact-link" href="tel:0974891188">0974 891-188</a>
             </li>
             <li class="header__contact-item">
-              <i class="header__contact-icon las la-envelope"></i>
+              <svg height="17" width="17" aria-hidden="true" class="header__contact-icon">
+                <use href="/icons/sprite.svg#icon-mail" />
+              </svg>
               <a class="header__contact-link" href="mailto:cskh@hotro.wesports.vn">cskh@hotro.wesports.vn</a>
             </li>
             <li class="header__contact-item">
-              <i class="header__contact-icon las la-map-marker "></i>
-              <span class="header__contact-text">Liền Kề 226 No-04 khu A Khu đất dịch vụ yên Nghĩa, Quận Hà Đông, Hà Nội.</span>
+              <svg height="17" width="17" aria-hidden="true" class="header__contact-icon">
+                <use href="/icons/sprite.svg#icon-map" />
+              </svg>
+              <span class="header__contact-text"
+                >Liền Kề 226 No-04 khu A Khu đất dịch vụ yên Nghĩa, Quận Hà Đông, Hà Nội.</span
+              >
             </li>
           </ul>
-          <ul class="header__social ">
+          <ul class="header__social">
             <li class="header__social-item">
-              <a class="header__social-link" href="/"><i class="header__social-icon lab la-facebook-f"></i></a>
+              <a class="header__social-link" href="/">
+                <svg height="17" width="17" aria-hidden="true" class="header__social-icon">
+                  <use href="/icons/sprite.svg#icon-facebook" />
+                </svg>
+              </a>
             </li>
-            <li class="header__social-item ">
+            <li class="header__social-item">
               <span class="header__social-flag fi fi-us"></span>
-              <div class="header__social-dropdown  ">
+              <div class="header__social-dropdown">
                 <span class="header__social-flag fi fi-vn"></span>
               </div>
             </li>
           </ul>
         </div>
       </section>
-      <section class="header__main ">
-        <div class="header__main-bg "></div>
-        <div class="header__main-wrapper ">
-          <figure class="header__logo ">
-            <a class="header__logo-link" href="/"><img class="header__logo-image" src="/assets/images/logo.svg" width="172" alt="" /></a>
+      <section class="header__main">
+        <div class="header__main-bg"></div>
+        <div class="header__main-wrapper">
+          <figure class="header__logo">
+            <a class="header__logo-link" href="/home.html"
+              ><img class="header__logo-image" src="/assets/images/logo.svg" width="172" alt=""
+            /></a>
           </figure>
-          <ul class="header__nav ">
+          <ul class="header__nav">
             <li class="header__nav-item"><a class="header__nav-link" href="/camping.html">Rơ moóc cắm trại</a></li>
             <li class="header__nav-item"><a class="header__nav-link" href="/touring.html">Rơ moóc du lịch</a></li>
             <li class="header__nav-item"><a class="header__nav-link" href="/tool.html">Dụng cụ</a></li>
             <li class="header__nav-item"><a class="header__nav-link" href="/about.html">Về chúng tôi</a></li>
             <li class="header__nav-item"><a class="header__nav-link" href="/new.html">Tin tức</a></li>
           </ul>
-          <button class="header__contact-btn ">Liên hệ</button>
+          <button class="header__contact-btn">Liên hệ</button>
+          <button id="hamburger" class="handle-menu hamburger">
+            <span class="top-bun"></span>
+            <span class="meat"></span>
+            <span class="bottom-bun"></span>
+          </button>
         </div>
       </section>
     </header>
 
+    <div
+      id="bg-menu"
+      class="handle-menu fixed top-0 h-full bg-base-content/50 transition-all duration-500 ease-in-out w-full z-30 opacity-0 -right-full"
+    ></div>
+    <div
+      id="menu"
+      class="w-80 bg-warning h-screen z-40 fixed top-0 p-5 text-base-100 transition-all duration-500 ease-in-out flex justify-between flex-col -right-80"
+    >
+      <div id="list-menu" class="transition-all duration-1000 ease-in-out relative top-10 opacity-0">
+        <div class="font-medium flex flex-col text-base-100">
+          <button class="text-base-100 border-base-100 py-3 flex justify-between border-b">
+            Rơ moóc cắm trại
+            <svg aria-hidden="true" class="w-4 h-4 relative fill-base-100">
+              <use href="/icons/sprite.svg#icon-arrow" />
+            </svg>
+          </button>
+          <button class="text-base-100 border-base-100 py-3 flex justify-between border-b">
+            Rơ moóc du lịch
+            <svg aria-hidden="true" class="w-4 h-4 relative fill-base-100">
+              <use href="/icons/sprite.svg#icon-arrow" />
+            </svg>
+          </button>
+          <button class="text-base-100 border-base-100 py-3 flex justify-between border-b">
+            Dụng cụ
+            <svg aria-hidden="true" class="w-4 h-4 relative fill-base-100">
+              <use href="/icons/sprite.svg#icon-arrow" />
+            </svg>
+          </button>
+          <button class="text-base-100 border-base-100 py-3 flex justify-between border-b">
+            Về chúng tôi
+            <svg aria-hidden="true" class="w-4 h-4 relative fill-base-100">
+              <use href="/icons/sprite.svg#icon-arrow" />
+            </svg>
+          </button>
+          <button class="text-base-100 py-3 flex justify-between">
+            Tin tức
+            <svg aria-hidden="true" class="w-4 h-4 relative fill-base-100">
+              <use href="/icons/sprite.svg#icon-arrow" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div id="contact-menu" class="transition-all duration-1000 ease-in-out relative opacity-100">
+        <div class="mt-4">
+          <a class="text-base-100 inline-flex" href="https://www.facebook.com" target="_blank" rel="noreferrer">
+            <svg height="25" width="25" aria-hidden="true" class="fill-base-100">
+              <use href="/icons/sprite.svg#icon-facebook" />
+            </svg>
+          </a>
+        </div>
+        <div class="flex items-center mt-5 gap-2">
+          <svg height="17" width="17" aria-hidden="true" class="fill-base-100">
+            <use href="/icons/sprite.svg#icon-phone" />
+          </svg>
+          <div class="leading-5">
+            <a href="tel:0974891188">0974 891-188</a>
+          </div>
+        </div>
+        <div class="flex items-center mt-5 gap-2">
+          <svg height="17" width="17" aria-hidden="true" class="fill-base-100">
+            <use href="/icons/sprite.svg#icon-mail" />
+          </svg>
+          <div class="leading-5">
+            <a href="mailto:cskh@hotro.wesports.vn">cskh@hotro.wesports.vn</a>
+          </div>
+        </div>
+        <div class="flex items-center mt-3 border-t border-base-100 pt-3 gap-2">
+          <svg height="25" width="32" aria-hidden="true" class="fill-base-100">
+            <use href="/icons/sprite.svg#icon-map" />
+          </svg>
+          <div class="leading-5">Liền Kề 226 No-04 khu A Khu đất dịch vụ yên Nghĩa, Quận Hà Đông, Hà Nội.</div>
+        </div>
+      </div>
+    </div>
+
     <main id="main">
-      <div class="home ">
+      <div class="home">
         <div class="home__bg"></div>
       </div>
       <section id="camping-banner" class="camping__banner">
@@ -151,7 +246,7 @@
             <img class="" src="{{imageUrl}}" alt="" />
           </figure>
           <div class="banner-contents">
-            <div class="con-container ">
+            <div class="con-container">
               <div class="container-div">
                 <p>{{this.subtitle}}</p>
                 <h1>{{this.title}}</h1>
@@ -159,33 +254,31 @@
             </div>
           </div>
         </div>
-        
       </section>
       <script>
         const bannerData = {
           imageUrl: '/assets/images/banner/touring.png',
           title: 'Trail/Box 240',
-          subtitle: 'ONE AND A HALF & DOUBLE CABIN PICK-UPS'
+          subtitle: 'ONE AND A HALF & DOUBLE CABIN PICK-UPS',
         };
-  
+
         window.addEventListener('DOMContentLoaded', () => {
           loadHandlebarsTemplate({
             templateId: 'camping-banner',
             urlOrData: bannerData,
             targetId: 'camping-banner',
-            keyData: 'banner'
+            keyData: 'banner',
           });
-        })
-  
+        });
       </script>
 
       <div class="touring-detail">
         <section class="touring-detail__header">
           <div class="touring-detail__divider"></div>
           <div class="touring-detail__buttons">
-            <button data-tabKey='1' class="touring-detail__button touring-detail__button--active">MÔ TẢ</button>
-            <button data-tabKey='2' class="touring-detail__button touring-detail__button--inactive">TÍNH NĂNG</button>
-            <button data-tabKey='3' class="touring-detail__button touring-detail__button--inactive">KỸ THUẬT</button>
+            <button data-tabKey="1" class="touring-detail__button touring-detail__button--active">MÔ TẢ</button>
+            <button data-tabKey="2" class="touring-detail__button touring-detail__button--inactive">TÍNH NĂNG</button>
+            <button data-tabKey="3" class="touring-detail__button touring-detail__button--inactive">KỸ THUẬT</button>
           </div>
         </section>
 
@@ -195,34 +288,50 @@
 
         <script id="tab-content-template" type="text/x-handlebars-template">
           {{#if (eq activeTab '1')}}
-            <section id="touring-description" class="touring-description ">
-              <h6 class="container mx-auto border-l-4 border-warning pl-3 text-base-content/60 my-8">Spacious, comfortable, variable - our Trail/Box 240 model impresses with these and other features Further advantages</h6>
+            <section id='touring-description' class='touring-description'>
+              <h6>Spacious, comfortable, variable - our Trail/Box 240 model impresses with these and other features
+                Further advantages</h6>
             </section>
-            
-            <section id="touring-info" class="touring-info ">
-              <div class="info-container">
-                <p class="info-container__description">Chiếc máy tính để bàn đa năng, nhỏ gọn nay sở hữu sức mạnh của M4 và M4 Pro, đánh dấu một cột mốc quan trọng về môi trường với vai trò là máy Mac trung hòa carbon đầu tiên</p>
-                <figure class="info-container__image">
-                  <img loading="lazy"
-                    src="/assets/images/tool/rectangle5.png"
-                    alt="Product image"
-                    class="info-container__image--cover" />
+
+            <section id='touring-info' class='touring-info'>
+              <div class='info-container'>
+                <p class='info-container__description'>Chiếc máy tính để bàn đa năng, nhỏ gọn nay sở hữu sức mạnh của M4
+                  và M4 Pro, đánh dấu một cột mốc quan trọng về môi trường với vai trò là máy Mac trung hòa carbon đầu
+                  tiên</p>
+                <figure class='info-container__image'>
+                  <img
+                    loading='lazy'
+                    src='/assets/images/tool/rectangle5.png'
+                    alt='Product image'
+                    class='info-container__image--cover'
+                  />
                 </figure>
-                <p class="info-container__text">Các phiên bản 14 inch và 16 inch với M4 Pro và M4 Max trang bị Thunderbolt 5 cho tốc độ truyền nhanh hơn và khả năng kết nối tiên tiến. Tất cả các phiên bản đều trang bị màn hình Liquid Retina XDR thậm chí còn tuyệt vời hơn với tùy chọn màn hình nano-texture hoàn toàn mới và độ sáng lên đến 1000 nit cho nội dung SDR, camera 12MP Center Stage tiên tiến và thời lượng pin lên đến 24 giờ, lâu nhất từng có ở máy Mac.
+                <p class='info-container__text'>Các phiên bản 14 inch và 16 inch với M4 Pro và M4 Max trang bị
+                  Thunderbolt 5 cho tốc độ truyền nhanh hơn và khả năng kết nối tiên tiến. Tất cả các phiên bản đều
+                  trang bị màn hình Liquid Retina XDR thậm chí còn tuyệt vời hơn với tùy chọn màn hình nano-texture hoàn
+                  toàn mới và độ sáng lên đến 1000 nit cho nội dung SDR, camera 12MP Center Stage tiên tiến và thời
+                  lượng pin lên đến 24 giờ, lâu nhất từng có ở máy Mac.
                 </p>
-                <h6 class="info-container__title">Siêu Mạnh Mẽ Với Dòng Chip M4</h6>
-                <p class="info-container__text">Được xây dựng trên công nghệ 3 nanômét thế hệ thứ hai, M4 là dòng chip tiên tiến nhất dành cho máy tính cá nhân. Dòng chip M4 mang đến hiệu năng CPU đơn luồng phi thường với lõi CPU nhanh nhất thế giới, cùng với hiệu năng CPU đa luồng vượt trội để xử lý các luồng công việc đòi hỏi khắt khe nhất. Kết hợp với bộ tăng tốc học máy trong CPU, GPU tiên tiến, Neural Engine nhanh và tiết kiệm điện hơn, Apple silicon được thiết kế từ đầu để mang lại hiệu năng đáng kinh ngạc cho AI.</p>
-                <p class="info-container__text">Cùng với bộ nhớ thống nhất nhanh hơn, mỗi chip cũng được tăng băng thông bộ nhớ, vậy nên các mô hình ngôn ngữ lớn và các dự án khủng khác đều chạy trên thiết bị một cách trơn tru. Ngoài ra, dòng M4 sở hữu hiệu năng trên mỗi watt hàng đầu ngành, cung cấp cho người dùng thời lượng pin lên đến 24 giờ, nâng cao tiêu chuẩn về những điều họ có thể làm được trong một lần sạc.</p>
+                <h6 class='info-container__title'>Siêu Mạnh Mẽ Với Dòng Chip M4</h6>
+                <p class='info-container__text'>Được xây dựng trên công nghệ 3 nanômét thế hệ thứ hai, M4 là dòng chip
+                  tiên tiến nhất dành cho máy tính cá nhân. Dòng chip M4 mang đến hiệu năng CPU đơn luồng phi thường với
+                  lõi CPU nhanh nhất thế giới, cùng với hiệu năng CPU đa luồng vượt trội để xử lý các luồng công việc
+                  đòi hỏi khắt khe nhất. Kết hợp với bộ tăng tốc học máy trong CPU, GPU tiên tiến, Neural Engine nhanh
+                  và tiết kiệm điện hơn, Apple silicon được thiết kế từ đầu để mang lại hiệu năng đáng kinh ngạc cho AI.</p>
+                <p class='info-container__text'>Cùng với bộ nhớ thống nhất nhanh hơn, mỗi chip cũng được tăng băng thông
+                  bộ nhớ, vậy nên các mô hình ngôn ngữ lớn và các dự án khủng khác đều chạy trên thiết bị một cách trơn
+                  tru. Ngoài ra, dòng M4 sở hữu hiệu năng trên mỗi watt hàng đầu ngành, cung cấp cho người dùng thời
+                  lượng pin lên đến 24 giờ, nâng cao tiêu chuẩn về những điều họ có thể làm được trong một lần sạc.</p>
               </div>
             </section>
           {{else if (eq activeTab '2')}}
-            <section id="touring-feature" class="touring-feature ">
-              <div class="feature__section mt-6"></div>
-              <div class="feature__grid feature__grid--reverse">
-                <div class="feature__content">
-                  <h4 class="feature__title">CABIN STRUCTURE</h4>
-                  <span class="feature__subtitle">Trail/Box 240</span>
-                  <ul class="feature__list">
+            <section id='touring-feature' class='touring-feature'>
+              <div class='feature__section mt-6'></div>
+              <div class='feature__grid feature__grid--reverse'>
+                <div class='feature__content'>
+                  <h4 class='feature__title'>CABIN STRUCTURE</h4>
+                  <span class='feature__subtitle'>Trail/Box 240</span>
+                  <ul class='feature__list'>
                     <li>Modern sandwich construction with walk-on roof</li>
                     <li>Stove-enamelled, smooth aluminum outer skin with various color design options</li>
                     <li>30 mm rigid foam insulation</li>
@@ -233,22 +342,27 @@
                     <li>Crank supports with plastic washers</li>
                   </ul>
                 </div>
-                <figure class="feature__image"><img src="/assets/images/touring/rec1.png" alt="" class="feature__img"></figure>
+                <figure class='feature__image'><img
+                    src='/assets/images/touring/rec1.png'
+                    alt=''
+                    class='feature__img'
+                  /></figure>
               </div>
 
-              <div class="feature__grid">
-                <figure class="feature__image">
-                  <img src="/assets/images/touring/rec1.png" alt="" class="feature__img">
+              <div class='feature__grid'>
+                <figure class='feature__image'>
+                  <img src='/assets/images/touring/rec1.png' alt='' class='feature__img' />
                 </figure>
 
-                <div class="feature__content">
-                  <h4 class="feature__title">LIVING AREA</h4>
-                  <span class="feature__subtitle">spacious and comfortable</span>
-                  <ul class="feature__list">
+                <div class='feature__content'>
+                  <h4 class='feature__title'>LIVING AREA</h4>
+                  <span class='feature__subtitle'>spacious and comfortable</span>
+                  <ul class='feature__list'>
                     <li>Decorative coating of the interior walls and PVC flooring</li>
                     <li>Furniture made from lightweight poplar plywood with a modern, easy-care coating</li>
                     <li>Kitchen furniture and table with hard-wearing surface</li>
-                    <li>Center seat  made of 8 cm high, high-quality foam upholstery, can be converted into a lying surface</li>
+                    <li>Center seat made of 8 cm high, high-quality foam upholstery, can be converted into a lying
+                      surface</li>
                     <li>Upholstery covers in a modern design can be removed using zippers</li>
                     <li>Curtains on the living room windows (various designs possible)</li>
                     <li>Ventilated backrests</li>
@@ -257,97 +371,120 @@
                 </div>
               </div>
 
-              <div class="feature__grid feature__grid--reverse">
-                <div class="feature__content">
-                  <h4 class="feature__title">KITCHEN</h4>
-                  <span class="feature__subtitle">Practically equipped</span>
-                  <ul class="feature__list">
-                    <li>Ignition-safe 2-burner gas hob with electr. "Nirosta" ignition and sink with split glass cover plate</li>
-                    <li>"Dometic RM 8405" absorption refrigerator, 90L (12V / 230 V gas operation) with AES system and removable freezer compartment</li>
+              <div class='feature__grid feature__grid--reverse'>
+                <div class='feature__content'>
+                  <h4 class='feature__title'>KITCHEN</h4>
+                  <span class='feature__subtitle'>Practically equipped</span>
+                  <ul class='feature__list'>
+                    <li>Ignition-safe 2-burner gas hob with electr. "Nirosta" ignition and sink with split glass cover
+                      plate</li>
+                    <li>"Dometic RM 8405" absorption refrigerator, 90L (12V / 230 V gas operation) with AES system and
+                      removable freezer compartment</li>
                     <li>Storage space</li>
                     <li>Basin up</li>
                   </ul>
                 </div>
-                <figure class="feature__image"><img src="/assets/images/touring/rec1.png" alt="" class="feature__img"></figure>
+                <figure class='feature__image'><img
+                    src='/assets/images/touring/rec1.png'
+                    alt=''
+                    class='feature__img'
+                  /></figure>
               </div>
 
-              <div class="feature__grid">
-                <figure class="feature__image">
-                  <img src="/assets/images/touring/rec1.png" alt="" class="feature__img">
+              <div class='feature__grid'>
+                <figure class='feature__image'>
+                  <img src='/assets/images/touring/rec1.png' alt='' class='feature__img' />
                 </figure>
 
-                <div class="feature__content">
-                  <h4 class="feature__title">BATHROOM</h4>
-                  <span class="feature__subtitle">cleverly designed</span>
-                  <ul class="feature__list">
-                    <li>Swivel toilet C-223-S from market leader Thetford offers a raised seat and waste-holding tank with wheels for easy disposal</li>
+                <div class='feature__content'>
+                  <h4 class='feature__title'>BATHROOM</h4>
+                  <span class='feature__subtitle'>cleverly designed</span>
+                  <ul class='feature__list'>
+                    <li>Swivel toilet C-223-S from market leader Thetford offers a raised seat and waste-holding tank
+                      with wheels for easy disposal</li>
                     <li>Folding washbasin creates free space for showering</li>
                     <li>Wall units offer sufficient storage space</li>
-                    <li>Sliding door made of high-quality plastic is water-resistant and allows free passage in the cabin</li>
+                    <li>Sliding door made of high-quality plastic is water-resistant and allows free passage in the
+                      cabin</li>
                   </ul>
                 </div>
               </div>
 
-              <div class="feature__grid feature__grid--reverse">
-                <div class="feature__content">
-                  <h4 class="feature__title">Gas-, Water-, Heating system</h4>
-                  <span class="feature__subtitle">Safe & functional</span>
-                  <ul class="feature__list">
+              <div class='feature__grid feature__grid--reverse'>
+                <div class='feature__content'>
+                  <h4 class='feature__title'>Gas-, Water-, Heating system</h4>
+                  <span class='feature__subtitle'>Safe & functional</span>
+                  <ul class='feature__list'>
                     <li>Storage space for two 5 kg gas cylinders, accessible from the outside</li>
                     <li>Gas heating "TRUMA Combi 4E" with hot water preparation (boiler 10 liters)</li>
                     <li>Stopcocks for each individual consumer</li>
                     <li>Fresh water supply with 96 liter tank and pressure pump</li>
-                    <li>45 liter waste water tank as underfloor tank
-                      12-V / 230-V-system</li>
+                    <li>45 liter waste water tank as underfloor tank 12-V / 230-V-system</li>
                     <li>Energy-saving 12 volt LED lighting in the living area</li>
                     <li>12 and 230 volt socket</li>
                     <li>CEE input socket with 10 A automatic circuit breaker</li>
-                    <li>AGM battery, 12 V 92 Ah with cut-off relay, with automatic charger and additional battery charge booster</li>
+                    <li>AGM battery, 12 V 92 Ah with cut-off relay, with automatic charger and additional battery charge
+                      booster</li>
                     <li>Cut-off relay for 12 volt refrigerator function</li>
                   </ul>
                 </div>
-                <figure class="feature__image"><img src="/assets/images/touring/rec1.png" alt="" class="feature__img"></figure>
+                <figure class='feature__image'><img
+                    src='/assets/images/touring/rec1.png'
+                    alt=''
+                    class='feature__img'
+                  /></figure>
               </div>
 
-              <div class="feature__grid">
-                <figure class="feature__image">
-                  <img src="/assets/images/touring/rec1.png" alt="" class="feature__img">
+              <div class='feature__grid'>
+                <figure class='feature__image'>
+                  <img src='/assets/images/touring/rec1.png' alt='' class='feature__img' />
                 </figure>
 
-                <div class="feature__content">
-                  <h4 class="feature__title">FABRICS</h4>
-                  <span class="feature__subtitle">modern & classically attractive</span>
-                  <p class="feature__text">With contemporary fabrics, the latest trendy colors and lots of extras for the individual interior design of your set-down cabin, we ensure that you feel comfortable. Our upholstery and curtain fabrics are available in five different variations.</p>
-                  <span class="feature__highlight">Set personal accents</span>
-                  <p class="feature__text">For even more individuality and personality, we offer our curtains in the classic sewing style with pleated tape as timeless blinds and over-curtains or in a modern form as panel curtains and Roman blinds.</p>
-                  <p class="feature__text">With our Carino, Alsoma, Delio, Lindo and Savaro fabric designs, there is something for everyone. Whether it's a striking color scheme or a discreet ambience:</p>
-                  <span class="feature__highlight">You choose according to your taste!</span>
+                <div class='feature__content'>
+                  <h4 class='feature__title'>FABRICS</h4>
+                  <span class='feature__subtitle'>modern & classically attractive</span>
+                  <p class='feature__text'>With contemporary fabrics, the latest trendy colors and lots of extras for
+                    the individual interior design of your set-down cabin, we ensure that you feel comfortable. Our
+                    upholstery and curtain fabrics are available in five different variations.</p>
+                  <span class='feature__highlight'>Set personal accents</span>
+                  <p class='feature__text'>For even more individuality and personality, we offer our curtains in the
+                    classic sewing style with pleated tape as timeless blinds and over-curtains or in a modern form as
+                    panel curtains and Roman blinds.</p>
+                  <p class='feature__text'>With our Carino, Alsoma, Delio, Lindo and Savaro fabric designs, there is
+                    something for everyone. Whether it's a striking color scheme or a discreet ambience:</p>
+                  <span class='feature__highlight'>You choose according to your taste!</span>
                 </div>
               </div>
 
-              <div class="feature__grid">
-                <div class="feature__content">
-                  <h4 class="feature__title">Optional accessories</h4>
-                  <span class="feature__subtitle">flexible & extensive</span>
-                  
-                  <p class="feature__text">There are numerous reasons for choosing the most flexible way to travel: Whether it's a modern interior for more self-fulfilment, high-horsepower base vehicles or the option of having a boat, horse or motorcycle with you when you travel.</p>
+              <div class='feature__grid'>
+                <div class='feature__content'>
+                  <h4 class='feature__title'>Optional accessories</h4>
+                  <span class='feature__subtitle'>flexible & extensive</span>
 
-                  <p class="feature__text">We will show you what a TISCHER cabin can do. In addition, you will find useful information on all suitable base vehicles, how flexible trailer transport is and how easy it is to mount and dismount the cab in the form of our product film.</p>
+                  <p class='feature__text'>There are numerous reasons for choosing the most flexible way to travel:
+                    Whether it's a modern interior for more self-fulfilment, high-horsepower base vehicles or the option
+                    of having a boat, horse or motorcycle with you when you travel.</p>
 
-                  <p class="feature__text">Be inspired by the variety of interior design options in our living worlds. Our current fabric collections and trend colors bring a new zest to travel.</p>
+                  <p class='feature__text'>We will show you what a TISCHER cabin can do. In addition, you will find
+                    useful information on all suitable base vehicles, how flexible trailer transport is and how easy it
+                    is to mount and dismount the cab in the form of our product film.</p>
+
+                  <p class='feature__text'>Be inspired by the variety of interior design options in our living worlds.
+                    Our current fabric collections and trend colors bring a new zest to travel.</p>
                 </div>
 
-                <figure class="feature__image">
-                  <img src="/assets/images/touring/rec1.png" alt="" class="feature__img">
+                <figure class='feature__image'>
+                  <img src='/assets/images/touring/rec1.png' alt='' class='feature__img' />
                 </figure>
               </div>
             </section>
           {{else}}
-            <section id="touring-description" class="touring-description">
-              <h6 class="">Spacious, comfortable, variable - our Trail/Box 240 model impresses with these and other features Further advantages</h6>
+            <section id='touring-description' class='touring-description'>
+              <h6 class=''>Spacious, comfortable, variable - our Trail/Box 240 model impresses with these and other
+                features Further advantages</h6>
             </section>
-            <section id="touring-tech" class="touring-tech">
-              <table class="text-base-content">
+            <section id='touring-tech' class='touring-tech'>
+              <table class='text-base-content'>
                 <thead>
                   <tr>
                     <th>Thông tin</th>
@@ -367,7 +504,7 @@
                     <td>98</td>
                     <td>98</td>
                   </tr>
-              
+
                   <tr>
                     <td>Overall Length (in)</td>
                     <td>195</td>
@@ -376,7 +513,7 @@
                     <td>218</td>
                     <td>218</td>
                   </tr>
-              
+
                   <tr>
                     <td>Overall Floor Length (in)</td>
                     <td>108</td>
@@ -385,7 +522,7 @@
                     <td>131</td>
                     <td>131</td>
                   </tr>
-              
+
                   <tr>
                     <td>Overall Height (in)</td>
                     <td>100</td>
@@ -394,7 +531,7 @@
                     <td>106</td>
                     <td>106</td>
                   </tr>
-              
+
                   <tr>
                     <td>Dinette Bed (in)</td>
                     <td>37×67</td>
@@ -403,7 +540,7 @@
                     <td>42X72</td>
                     <td>42X72</td>
                   </tr>
-              
+
                   <tr>
                     <td>U Shape Table Size (in)</td>
                     <td>24×26</td>
@@ -412,7 +549,7 @@
                     <td>24×29</td>
                     <td>24×29</td>
                   </tr>
-              
+
                   <tr>
                     <td>Face2Face Table Size (in)</td>
                     <td>26×36</td>
@@ -421,7 +558,7 @@
                     <td>30×38</td>
                     <td>30×38</td>
                   </tr>
-              
+
                   <tr>
                     <td>3X200 Watt Solar Panels</td>
                     <td></td>
@@ -430,61 +567,61 @@
                     <td></td>
                     <td></td>
                   </tr>
-              
+
                   <tr>
                     <td>2-12v/USB Charging Station</td>
-                    <td><img src="svg/check.svg" class="mxauto" alt=""></td>
-                    <td><img src="svg/check.svg" class="mxauto" alt=""></td>
-                    <td><img src="svg/check.svg" class="mxauto" alt=""></td>
-                    <td><img src="svg/check.svg" class="mxauto" alt=""></td>
-                    <td><img src="svg/check.svg" class="mxauto" alt=""></td>
+                    <td><img src='svg/check.svg' class='mxauto' alt='' /></td>
+                    <td><img src='svg/check.svg' class='mxauto' alt='' /></td>
+                    <td><img src='svg/check.svg' class='mxauto' alt='' /></td>
+                    <td><img src='svg/check.svg' class='mxauto' alt='' /></td>
+                    <td><img src='svg/check.svg' class='mxauto' alt='' /></td>
                   </tr>
-              
+
                   <tr>
                     <td>LCD TV Screen 12v</td>
-                    <td><img src="svg/check.svg" class="mxauto" alt=""></td>
-                    <td><img src="svg/check.svg" class="mxauto" alt=""></td>
-                    <td><img src="svg/check.svg" class="mxauto" alt=""></td>
-                    <td><img src="svg/check.svg" class="mxauto" alt=""></td>
-                    <td><img src="svg/check.svg" class="mxauto" alt=""></td>
+                    <td><img src='svg/check.svg' class='mxauto' alt='' /></td>
+                    <td><img src='svg/check.svg' class='mxauto' alt='' /></td>
+                    <td><img src='svg/check.svg' class='mxauto' alt='' /></td>
+                    <td><img src='svg/check.svg' class='mxauto' alt='' /></td>
+                    <td><img src='svg/check.svg' class='mxauto' alt='' /></td>
                   </tr>
-              
+
                   <tr>
                     <td>60"x80" High End Queen Mattress</td>
-                    <td><img src="svg/check.svg" class="mxauto" alt=""></td>
-                    <td><img src="svg/check.svg" class="mxauto" alt=""></td>
-                    <td><img src="svg/check.svg" class="mxauto" alt=""></td>
-                    <td><img src="svg/check.svg" class="mxauto" alt=""></td>
-                    <td><img src="svg/check.svg" class="mxauto" alt=""></td>
+                    <td><img src='svg/check.svg' class='mxauto' alt='' /></td>
+                    <td><img src='svg/check.svg' class='mxauto' alt='' /></td>
+                    <td><img src='svg/check.svg' class='mxauto' alt='' /></td>
+                    <td><img src='svg/check.svg' class='mxauto' alt='' /></td>
+                    <td><img src='svg/check.svg' class='mxauto' alt='' /></td>
                   </tr>
-              
+
                   <tr>
                     <td>6-Year Structural Warranty</td>
-                    <td><img src="svg/check.svg" class="mxauto" alt=""></td>
-                    <td><img src="svg/check.svg" class="mxauto" alt=""></td>
-                    <td><img src="svg/check.svg" class="mxauto" alt=""></td>
-                    <td><img src="svg/check.svg" class="mxauto" alt=""></td>
-                    <td><img src="svg/check.svg" class="mxauto" alt=""></td>
+                    <td><img src='svg/check.svg' class='mxauto' alt='' /></td>
+                    <td><img src='svg/check.svg' class='mxauto' alt='' /></td>
+                    <td><img src='svg/check.svg' class='mxauto' alt='' /></td>
+                    <td><img src='svg/check.svg' class='mxauto' alt='' /></td>
+                    <td><img src='svg/check.svg' class='mxauto' alt='' /></td>
                   </tr>
-              
+
                   <tr>
                     <td>Air Conditioner</td>
-                    <td><img src="svg/check.svg" class="mxauto" alt=""></td>
-                    <td><img src="svg/check.svg" class="mxauto" alt=""></td>
-                    <td><img src="svg/check.svg" class="mxauto" alt=""></td>
-                    <td><img src="svg/check.svg" class="mxauto" alt=""></td>
-                    <td><img src="svg/check.svg" class="mxauto" alt=""></td>
+                    <td><img src='svg/check.svg' class='mxauto' alt='' /></td>
+                    <td><img src='svg/check.svg' class='mxauto' alt='' /></td>
+                    <td><img src='svg/check.svg' class='mxauto' alt='' /></td>
+                    <td><img src='svg/check.svg' class='mxauto' alt='' /></td>
+                    <td><img src='svg/check.svg' class='mxauto' alt='' /></td>
                   </tr>
-              
+
                   <tr>
                     <td>Awning 10' Side</td>
-                    <td><div class="checkbox-tbl"></div></td>
-                    <td><div class="checkbox-tbl"></div></td>
-                    <td><div class="checkbox-tbl"></div></td>
-                    <td><img src="svg/check.svg" alt="" class="mxauto"></td>
-                    <td><img src="svg/check.svg" alt="" class="mxauto"></td>
+                    <td><div class='checkbox-tbl'></div></td>
+                    <td><div class='checkbox-tbl'></div></td>
+                    <td><div class='checkbox-tbl'></div></td>
+                    <td><img src='svg/check.svg' alt='' class='mxauto' /></td>
+                    <td><img src='svg/check.svg' alt='' class='mxauto' /></td>
                   </tr>
-              
+
                   <tr>
                     <td>Tổng giá</td>
                     <td>10,000,000đ</td>
@@ -493,14 +630,14 @@
                     <td>13,000,000đ</td>
                     <td>14,000,000đ</td>
                   </tr>
-              
+
                   <tr>
                     <td></td>
-                    <td class="price-tbl">Báo giá</td>
-                    <td class="price-tbl">Báo giá</td>
-                    <td class="price-tbl">Báo giá</td>
-                    <td class="price-tbl">Báo giá</td>
-                    <td class="price-tbl">Báo giá</td>
+                    <td class='price-tbl'>Báo giá</td>
+                    <td class='price-tbl'>Báo giá</td>
+                    <td class='price-tbl'>Báo giá</td>
+                    <td class='price-tbl'>Báo giá</td>
+                    <td class='price-tbl'>Báo giá</td>
                   </tr>
                 </tbody>
               </table>
@@ -509,12 +646,12 @@
         </script>
 
         <script>
-          Handlebars.registerHelper('eq', function(a, b) {
+          Handlebars.registerHelper('eq', function (a, b) {
             return a === b;
           });
 
           let state = {
-            activeTab: '1'
+            activeTab: '1',
           };
 
           function renderContent() {
@@ -522,7 +659,7 @@
               templateId: 'tab-content-template',
               urlOrData: state,
               targetId: 'tab-content',
-              keyData: 'activeTab'
+              keyData: 'activeTab',
             });
 
             document.querySelectorAll('.touring-detail__button').forEach(button => {
@@ -545,61 +682,56 @@
           });
 
           window.addEventListener('DOMContentLoaded', () => {
-
             renderContent();
-          })
+          });
         </script>
-
       </div>
     </main>
 
     <footer id="footer" class="footer">
-      <div class="footer__container ">
+      <div class="footer__container">
         <!-- shape -->
-        
-      
+
         <!-- footer content -->
-        <section class="footer__content ">
+        <section class="footer__content">
           <!-- flex row -->
-          <div class="footer__row ">
+          <div class="footer__row">
             <!-- single -->
-            <div class="footer__info ">
+            <div class="footer__info">
               <!-- footer logo -->
               <figure class="footer__logo">
-                <a href="#" class="footer__logo-link ">
-                  <img
-                    src="/assets/images/logo.svg"
-                    alt=""
-                    class="footer__logo-image"
-                  />
+                <a href="#" class="footer__logo-link">
+                  <img src="/assets/images/logo.svg" alt="" class="footer__logo-image" />
                 </a>
               </figure>
-              <p class="footer__description ">Được thiết kế với vật liệu bền bỉ và tính năng tiện nghi, mang đến trải nghiệm du lịch thoải mái và an toàn. Với không gian nội thất tối ưu và các tiện ích hiện đại, nó là lựa chọn lý tưởng cho những chuyến phiêu lưu trên đường.</p>
+              <p class="footer__description">
+                Được thiết kế với vật liệu bền bỉ và tính năng tiện nghi, mang đến trải nghiệm du lịch thoải mái và an
+                toàn. Với không gian nội thất tối ưu và các tiện ích hiện đại, nó là lựa chọn lý tưởng cho những chuyến
+                phiêu lưu trên đường.
+              </p>
             </div>
-      
+
             <!-- single -->
-            <div class="footer__nav ">
+            <div class="footer__nav">
               <div id="footer-category-list-1" class="footer-category-list">
                 <!-- title -->
                 <div id="category-template-1">
-                  <a class="footer__nav-title ">DANH MỤC</a>
-                  <ul class="footer__nav-list ">
+                  <a class="footer__nav-title">DANH MỤC</a>
+                  <ul class="footer__nav-list">
                     {{#each categories1}}
-                      <li class="footer__nav-item">
-                        <a href="{{this.link}}" class="footer__nav-link">
-                          {{this.name}}
-                        </a>
-                      </li>
+                    <li class="footer__nav-item">
+                      <a href="{{this.link}}" class="footer__nav-link"> {{this.name}} </a>
+                    </li>
                     {{/each}}
                   </ul>
                 </div>
                 <script>
                   const categories = [
-                    { name: 'Rơ moóc cắm trại', link: '/camping.html' } ,
-                    { name: 'Rơ moóc du lịch', link: '/touring.html' } ,
-                    { name: 'Dụng cụ', link: '/tool.html' } ,
-                    { name: 'Về chúng tôi', link: '/about.html' } ,
-                    { name: 'Tin tức', link: '/new.html' } ,
+                    { name: 'Rơ moóc cắm trại', link: '/camping.html' },
+                    { name: 'Rơ moóc du lịch', link: '/touring.html' },
+                    { name: 'Dụng cụ', link: '/tool.html' },
+                    { name: 'Về chúng tôi', link: '/about.html' },
+                    { name: 'Tin tức', link: '/new.html' },
                   ];
 
                   window.addEventListener('DOMContentLoaded', () => {
@@ -607,29 +739,27 @@
                       keyData: 'categories1',
                       templateId: 'category-template-1',
                       urlOrData: categories,
-                      targetId: 'footer-category-list-1'
+                      targetId: 'footer-category-list-1',
                     });
-                  })
+                  });
                 </script>
               </div>
-              
+
               <div id="footer-category-list-2" class="footer-category-list">
                 <div id="category-template-2">
-                  <a class="footer__nav-title ">RƠ MOÓC CẮM TRẠI</a>
+                  <a class="footer__nav-title">RƠ MOÓC CẮM TRẠI</a>
                   <ul class="footer__nav-list">
                     {{#each categories2}}
-                      <li class="footer__nav-item">
-                        <a href="{{this.link}}" class="footer__nav-link">
-                          {{this.name}}
-                        </a>
-                      </li>
+                    <li class="footer__nav-item">
+                      <a href="{{this.link}}" class="footer__nav-link"> {{this.name}} </a>
+                    </li>
                     {{/each}}
                   </ul>
                 </div>
-                <script >
+                <script>
                   const campingTrailers = Array.from({ length: 6 }, (_, i) => ({
-                    name: `Husky Towing ${i + 1}`, 
-                    link: '#' 
+                    name: `Husky Towing ${i + 1}`,
+                    link: '#',
                   }));
 
                   window.addEventListener('DOMContentLoaded', () => {
@@ -637,103 +767,90 @@
                       keyData: 'categories2',
                       templateId: 'category-template-2',
                       urlOrData: campingTrailers,
-                      targetId: 'footer-category-list-2'
+                      targetId: 'footer-category-list-2',
                     });
-                  })
+                  });
                 </script>
               </div>
-              
+
               <!-- single -->
               <div id="footer-category-list-3" class="footer-category-list">
                 <div id="category-template-3">
-                  <a class="footer__nav-title ">RƠ MOÓC DU LỊCH</a>
-                  <ul class="footer__nav-list ">
+                  <a class="footer__nav-title">RƠ MOÓC DU LỊCH</a>
+                  <ul class="footer__nav-list">
                     {{#each categories3}}
-                      <li class="footer__nav-item">
-                        <a href="{{this.link}}" class="footer__nav-link">
-                          {{this.name}}
-                        </a>
-                      </li>
+                    <li class="footer__nav-item">
+                      <a href="{{this.link}}" class="footer__nav-link"> {{this.name}} </a>
+                    </li>
                     {{/each}}
                   </ul>
                 </div>
                 <script>
                   const touringTrailers = Array.from({ length: 5 }, (_, i) => ({
-                    name: `Sonic Lite ${i + 1}`, 
-                    link: '#' 
+                    name: `Sonic Lite ${i + 1}`,
+                    link: '#',
                   }));
 
-                  window.addEventListener('DOMContentLoaded', () => {
+                  document.addEventListener('DOMContentLoaded', () => {
                     loadHandlebarsTemplate({
                       keyData: 'categories3',
                       templateId: 'category-template-3',
                       urlOrData: touringTrailers,
-                      targetId: 'footer-category-list-3'
+                      targetId: 'footer-category-list-3',
                     });
-                  })
+                  });
                 </script>
               </div>
-              
-              <div class="footer__contact">
-                <!-- title -->
-                <a class="footer__contact-title ">Contact</a>
-                  <!-- widget links -->
-                <div class="footer__contact-content">
-                  <p class="footer__contact-address">88 Broklyn Golden Road Street, New York. USA</p>
-                  <ul class="footer__contact-list ">
-                    <li class="footer__contact-item">
-                      <i class="footer__contact-icon las la-phone"></i>
-                      <a href="tel:3336660000" class="footer__contact-link ">0198-9526503</a>
-                    </li>
-                    <li class="footer__contact-item ">
-                      <i class="footer__contact-icon las la-envelope "></i>
-                      <a href="mailto:yourmail@email.com"
-                        class="footer__contact-link ">needhelp@company.com</a>
-                    </li>
-                  </ul>
-                  <!-- social link -->
-                  <ul class="footer__social ">
-                    <li class="footer__social-item  ">
-                      <a href="#"
-                        class="footer__social-link ">
-                        <span
-                          class="footer__social-hover  "></span>
-                        <span class="footer__social-icon lab la-facebook-f "></span>
-                      </a>
-                    </li>
-                    <li class="footer__social-item ">
-                      <a href="#"
-                        class="footer__social-link ">
-                        <span
-                          class="footer__social-hover  "></span>
-                        <span class="footer__social-icon lab la-twitter "></span>
-                      </a>
-                    </li>
-                    <li class="footer__social-item  ">
-                      <a href="#"
-                        class="footer__social-link ">
-                        <span
-                          class="footer__social-hover  "></span>
-                        <span class="footer__social-icon lab la-instagram "></span>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
+            </div>
+
+            <div class="footer__contact">
+              <!-- title -->
+              <a class="footer__contact-title">Contact</a>
+              <!-- widget links -->
+              <div class="footer__contact-content">
+                <p class="footer__contact-address">
+                  Liền Kề 226 No-04 khu A Khu đất dịch vụ yên Nghĩa, Quận Hà Đông, Hà Nội.
+                </p>
+                <ul class="footer__contact-list">
+                  <li class="footer__contact-item">
+                    <i class="footer__contact-icon las la-phone"></i>
+                    <a href="tel:0974891188" class="footer__contact-link">0974 891-188</a>
+                  </li>
+                  <li class="footer__contact-item">
+                    <i class="footer__contact-icon las la-envelope"></i>
+                    <a href="mailto:cskh@hotro.wesports.vn" class="footer__contact-link">cskh@hotro.wesports.vn</a>
+                  </li>
+                </ul>
+                <!-- social link -->
+                <ul class="footer__social">
+                  <li class="footer__social-item">
+                    <a href="#" class="footer__social-link">
+                      <span class="footer__social-hover"></span>
+                      <span class="footer__social-icon lab la-facebook-f"></span>
+                    </a>
+                  </li>
+                  <li class="footer__social-item">
+                    <a href="#" class="footer__social-link">
+                      <span class="footer__social-hover"></span>
+                      <span class="footer__social-icon lab la-twitter"></span>
+                    </a>
+                  </li>
+                  <li class="footer__social-item">
+                    <a href="#" class="footer__social-link">
+                      <span class="footer__social-hover"></span>
+                      <span class="footer__social-icon lab la-instagram"></span>
+                    </a>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
         </section>
-      
-        <section class="footer__copyright ">
-          2024, Name. All rights reserved. Design by langphongmtb
-        </section>
+
+        <section class="footer__copyright">2024, Name. All rights reserved. Design by langphongmtb</section>
       </div>
-      
     </footer>
 
     <script type="module" src="/src/main.ts"></script>
-
-    
-
   </body>
 </html>

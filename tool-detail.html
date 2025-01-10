@@ -86,62 +86,157 @@
       rel="stylesheet"
     />
     <link href="https://cdn.jsdelivr.net/npm/flag-icons@7/css/flag-icons.min.css" rel="stylesheet" />
-    
+
     <!-- Add Handlebars -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"></script>
   </head>
   <body>
     <header id="header" class="header">
-      <section class="header__top ">
-        <div class="header__top-wrapper ">
-          <div class="header__top-bg "></div>
-          <ul class="header__contact ">
-            <li class="header__contact-item ">
-              <i class="header__contact-icon las la-phone-volume "></i>
+      <section class="header__top">
+        <div class="header__top-wrapper">
+          <div class="header__top-bg"></div>
+          <ul class="header__contact">
+            <li class="header__contact-item">
+              <svg height="17" width="17" aria-hidden="true" class="header__contact-icon">
+                <use href="/icons/sprite.svg#icon-phone" />
+              </svg>
               <a class="header__contact-link" href="tel:0974891188">0974 891-188</a>
             </li>
             <li class="header__contact-item">
-              <i class="header__contact-icon las la-envelope"></i>
+              <svg height="17" width="17" aria-hidden="true" class="header__contact-icon">
+                <use href="/icons/sprite.svg#icon-mail" />
+              </svg>
               <a class="header__contact-link" href="mailto:cskh@hotro.wesports.vn">cskh@hotro.wesports.vn</a>
             </li>
             <li class="header__contact-item">
-              <i class="header__contact-icon las la-map-marker "></i>
-              <span class="header__contact-text">Liền Kề 226 No-04 khu A Khu đất dịch vụ yên Nghĩa, Quận Hà Đông, Hà Nội.</span>
+              <svg height="17" width="17" aria-hidden="true" class="header__contact-icon">
+                <use href="/icons/sprite.svg#icon-map" />
+              </svg>
+              <span class="header__contact-text"
+                >Liền Kề 226 No-04 khu A Khu đất dịch vụ yên Nghĩa, Quận Hà Đông, Hà Nội.</span
+              >
             </li>
           </ul>
-          <ul class="header__social ">
+          <ul class="header__social">
             <li class="header__social-item">
-              <a class="header__social-link" href="/"><i class="header__social-icon lab la-facebook-f"></i></a>
+              <a class="header__social-link" href="/">
+                <svg height="17" width="17" aria-hidden="true" class="header__social-icon">
+                  <use href="/icons/sprite.svg#icon-facebook" />
+                </svg>
+              </a>
             </li>
-            <li class="header__social-item ">
+            <li class="header__social-item">
               <span class="header__social-flag fi fi-us"></span>
-              <div class="header__social-dropdown ">
+              <div class="header__social-dropdown">
                 <span class="header__social-flag fi fi-vn"></span>
               </div>
             </li>
           </ul>
         </div>
       </section>
-      <section class="header__main ">
-        <div class="header__main-bg "></div>
-        <div class="header__main-wrapper ">
-          <figure class="header__logo ">
-            <a class="header__logo-link" href="/"><img class="header__logo-image" src="/assets/images/logo.svg" width="172" alt="" /></a>
+      <section class="header__main">
+        <div class="header__main-bg"></div>
+        <div class="header__main-wrapper">
+          <figure class="header__logo">
+            <a class="header__logo-link" href="/home.html"
+              ><img class="header__logo-image" src="/assets/images/logo.svg" width="172" alt=""
+            /></a>
           </figure>
-          <ul class="header__nav ">
+          <ul class="header__nav">
             <li class="header__nav-item"><a class="header__nav-link" href="/camping.html">Rơ moóc cắm trại</a></li>
             <li class="header__nav-item"><a class="header__nav-link" href="/touring.html">Rơ moóc du lịch</a></li>
             <li class="header__nav-item"><a class="header__nav-link" href="/tool.html">Dụng cụ</a></li>
             <li class="header__nav-item"><a class="header__nav-link" href="/about.html">Về chúng tôi</a></li>
             <li class="header__nav-item"><a class="header__nav-link" href="/new.html">Tin tức</a></li>
           </ul>
-          <button class="header__contact-btn ">Liên hệ</button>
+          <button class="header__contact-btn">Liên hệ</button>
+          <button id="hamburger" class="handle-menu hamburger">
+            <span class="top-bun"></span>
+            <span class="meat"></span>
+            <span class="bottom-bun"></span>
+          </button>
         </div>
       </section>
     </header>
 
+    <div
+      id="bg-menu"
+      class="handle-menu fixed top-0 h-full bg-base-content/50 transition-all duration-500 ease-in-out w-full z-30 opacity-0 -right-full"
+    ></div>
+    <div
+      id="menu"
+      class="w-80 bg-warning h-screen z-40 fixed top-0 p-5 text-base-100 transition-all duration-500 ease-in-out flex justify-between flex-col -right-80"
+    >
+      <div id="list-menu" class="transition-all duration-1000 ease-in-out relative top-10 opacity-0">
+        <div class="font-medium flex flex-col text-base-100">
+          <button class="text-base-100 border-base-100 py-3 flex justify-between border-b">
+            Rơ moóc cắm trại
+            <svg aria-hidden="true" class="w-4 h-4 relative fill-base-100">
+              <use href="/icons/sprite.svg#icon-arrow" />
+            </svg>
+          </button>
+          <button class="text-base-100 border-base-100 py-3 flex justify-between border-b">
+            Rơ moóc du lịch
+            <svg aria-hidden="true" class="w-4 h-4 relative fill-base-100">
+              <use href="/icons/sprite.svg#icon-arrow" />
+            </svg>
+          </button>
+          <button class="text-base-100 border-base-100 py-3 flex justify-between border-b">
+            Dụng cụ
+            <svg aria-hidden="true" class="w-4 h-4 relative fill-base-100">
+              <use href="/icons/sprite.svg#icon-arrow" />
+            </svg>
+          </button>
+          <button class="text-base-100 border-base-100 py-3 flex justify-between border-b">
+            Về chúng tôi
+            <svg aria-hidden="true" class="w-4 h-4 relative fill-base-100">
+              <use href="/icons/sprite.svg#icon-arrow" />
+            </svg>
+          </button>
+          <button class="text-base-100 py-3 flex justify-between">
+            Tin tức
+            <svg aria-hidden="true" class="w-4 h-4 relative fill-base-100">
+              <use href="/icons/sprite.svg#icon-arrow" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div id="contact-menu" class="transition-all duration-1000 ease-in-out relative opacity-100">
+        <div class="mt-4">
+          <a class="text-base-100 inline-flex" href="https://www.facebook.com" target="_blank" rel="noreferrer">
+            <svg height="25" width="25" aria-hidden="true" class="fill-base-100">
+              <use href="/icons/sprite.svg#icon-facebook" />
+            </svg>
+          </a>
+        </div>
+        <div class="flex items-center mt-5 gap-2">
+          <svg height="17" width="17" aria-hidden="true" class="fill-base-100">
+            <use href="/icons/sprite.svg#icon-phone" />
+          </svg>
+          <div class="leading-5">
+            <a href="tel:0974891188">0974 891-188</a>
+          </div>
+        </div>
+        <div class="flex items-center mt-5 gap-2">
+          <svg height="17" width="17" aria-hidden="true" class="fill-base-100">
+            <use href="/icons/sprite.svg#icon-mail" />
+          </svg>
+          <div class="leading-5">
+            <a href="mailto:cskh@hotro.wesports.vn">cskh@hotro.wesports.vn</a>
+          </div>
+        </div>
+        <div class="flex items-center mt-3 border-t border-base-100 pt-3 gap-2">
+          <svg height="25" width="32" aria-hidden="true" class="fill-base-100">
+            <use href="/icons/sprite.svg#icon-map" />
+          </svg>
+          <div class="leading-5">Liền Kề 226 No-04 khu A Khu đất dịch vụ yên Nghĩa, Quận Hà Đông, Hà Nội.</div>
+        </div>
+      </div>
+    </div>
+
     <main id="main">
-      <div class="home ">
+      <div class="home">
         <div class="home__bg"></div>
       </div>
       <section id="camping-banner" class="camping__banner">
@@ -151,7 +246,7 @@
             <img class="" src="{{this.imageUrl}}" alt="" />
           </figure>
           <div class="banner-contents">
-            <div class="con-container ">
+            <div class="con-container">
               <div class="container-div">
                 <p>{{this.subtitle}}</p>
                 <h1>{{this.title}}</h1>
@@ -159,13 +254,12 @@
             </div>
           </div>
         </div>
-        
       </section>
       <script>
         const bannerData = {
           imageUrl: '/assets/images/banner/camping.png',
           title: 'Dụng cụ',
-          subtitle: 'Bắt đầu hành trình của cuộc đời!'
+          subtitle: 'Bắt đầu hành trình của cuộc đời!',
         };
 
         window.addEventListener('DOMContentLoaded', () => {
@@ -173,35 +267,43 @@
             templateId: 'camping-banner',
             urlOrData: bannerData,
             targetId: 'camping-banner',
-            keyData: 'banner'
+            keyData: 'banner',
           });
-        })
-  
+        });
       </script>
 
-      <section class="tool-detail ">
-        <div class="tool-detail__container ">
-          <div class="tool-detail__image-container ">
-            <div id="imageZoom" class="tool-detail__image " style="--url: url(/assets/images/tool/frame1.png); --zoom-x: 0%; --zoom-y: 0%; --display: none;">
-              <img id="main-image" src="/assets/images/tool/frame1.png" alt="Main product image" class="tool-detail__main-image" />
+      <section class="tool-detail">
+        <div class="tool-detail__container">
+          <div class="tool-detail__image-container">
+            <div
+              id="imageZoom"
+              class="tool-detail__image"
+              style="--url: url(/assets/images/tool/frame1.png); --zoom-x: 0%; --zoom-y: 0%; --display: none"
+            >
+              <img
+                id="main-image"
+                src="/assets/images/tool/frame1.png"
+                alt="Main product image"
+                class="tool-detail__main-image"
+              />
             </div>
             <div id="thumbnail-container" class="tool-detail__thumbnails">
               {{#each data}}
-                <img loading="lazy" 
-                  src="{{this.image}}" 
-                  alt="{{this.alt}}" 
-                  class="" 
-                  data-index="{{index}}"
-                  onclick="handleThumbnailClick('{{image}}', '{{alt}}', this)"
-                >
+              <img
+                loading="lazy"
+                src="{{this.image}}"
+                alt="{{this.alt}}"
+                class=""
+                data-index="{{index}}"
+                onclick="handleThumbnailClick('{{image}}', '{{alt}}', this)"
+              />
               {{/each}}
-              
             </div>
             <script>
               const thumbnailData = Array.from({ length: 7 }, (_, i) => ({
-                image: `/assets/images/tool/frame${i + 1}.png`, 
+                image: `/assets/images/tool/frame${i + 1}.png`,
                 alt: `Thumbnail${i + 1}`,
-                index: i
+                index: i,
               }));
 
               window.addEventListener('DOMContentLoaded', () => {
@@ -209,50 +311,55 @@
                   keyData: 'data',
                   templateId: 'thumbnail-container',
                   urlOrData: thumbnailData,
-                  targetId: 'thumbnail-container'
+                  targetId: 'thumbnail-container',
                 });
-              })
+              });
             </script>
           </div>
-      
-          <div class="tool-detail__info ">
+
+          <div class="tool-detail__info">
             <h5 class="tool-detail__title">
               GasStop GasGear 90-Degree Propane Braided Stainless Pigtail Hose, 1/4" Inverted
             </h5>
             <p class="tool-detail__description">
-              Các phiên bản 14 inch và 16 inch với M4 Pro và M4 Max trang bị Thunderbolt
-              5 cho tốc độ truyền nhanh hơn và khả năng kết nối tiên tiến. Tất cả các
-              phiên bản đều trang bị màn hình Liquid Retina
+              Các phiên bản 14 inch và 16 inch với M4 Pro và M4 Max trang bị Thunderbolt 5 cho tốc độ truyền nhanh hơn
+              và khả năng kết nối tiên tiến. Tất cả các phiên bản đều trang bị màn hình Liquid Retina
             </p>
-            <div class="tool-detail__price ">
-              <span class="tool-detail__price-label ">Giá tiền:</span>
+            <div class="tool-detail__price">
+              <span class="tool-detail__price-label">Giá tiền:</span>
               <h6 class="tool-detail__price-value">$4.56</h6>
             </div>
             <form class="tool-detail__form">
               <label for="quantity"><h6>Số lượng:</h6></label>
-              <button type="button" aria-label="Decrease quantity" class="tool-detail__button tool-detail__button--decrease" id="decrease-button">
-                <img loading="lazy"
-                  src="svg/decrease.svg"
-                  alt="" class="tool-detail__icon" />
+              <button
+                type="button"
+                aria-label="Decrease quantity"
+                class="tool-detail__button tool-detail__button--decrease"
+                id="decrease-button"
+              >
+                <img loading="lazy" src="svg/decrease.svg" alt="" class="tool-detail__icon" />
               </button>
-              <input type="number" id="quantity" value="1" min="1"
-                class="tool-detail__quantity no-spinner "
-                aria-label="Product quantity" 
+              <input
+                type="number"
+                id="quantity"
+                value="1"
+                min="1"
+                class="tool-detail__quantity no-spinner"
+                aria-label="Product quantity"
               />
-              <button type="button" aria-label="Increase quantity" class="tool-detail__button tool-detail__button--increase " id="increase-button">
-                <img loading="lazy"
-                  src="svg/increase.svg"
-                  alt="" class="tool-detail__icon" />
+              <button
+                type="button"
+                aria-label="Increase quantity"
+                class="tool-detail__button tool-detail__button--increase"
+                id="increase-button"
+              >
+                <img loading="lazy" src="svg/increase.svg" alt="" class="tool-detail__icon" />
               </button>
             </form>
-            <button
-              aria-label="Add to cart"
-              class="tool-detail__add-to-cart home__product-button ">
-              Cho vào giỏ
-            </button>
-            <div class="tool-detail__separator " role="separator"></div>
-            <div class="tool-detail__additional-info ">
-              <div class="tool-detail__product-code ">
+            <button aria-label="Add to cart" class="tool-detail__add-to-cart home__product-button">Cho vào giỏ</button>
+            <div class="tool-detail__separator" role="separator"></div>
+            <div class="tool-detail__additional-info">
+              <div class="tool-detail__product-code">
                 <span class="font-bold">Mã sản phẩm</span>
                 : PRT584E63A
               </div>
@@ -260,13 +367,17 @@
                 <span class="font-bold">Danh mục:</span>
                 Danh mục 1
               </div>
-              <div class="tool-detail__share ">
+              <div class="tool-detail__share">
                 <div><span class="font-bold">Chia sẻ:</span></div>
                 <button aria-label="Share on social media">
-                  <img loading="lazy"
+                  <img
+                    loading="lazy"
                     src="svg/facebook.svg"
-                    alt="" class="tool-detail__share-icon " 
-                    style="filter: invert(100%) sepia(0%) saturate(7470%) hue-rotate(116deg) brightness(109%) contrast(109%);"
+                    alt=""
+                    class="tool-detail__share-icon"
+                    style="
+                      filter: invert(100%) sepia(0%) saturate(7470%) hue-rotate(116deg) brightness(109%) contrast(109%);
+                    "
                   />
                 </button>
               </div>
@@ -274,39 +385,58 @@
           </div>
         </div>
       </section>
-      
+
       <section class="main-content" id="tool-info">
         <div class="info-container">
-          <p class="info-container__description">Chiếc máy tính để bàn đa năng, nhỏ gọn nay sở hữu sức mạnh của M4 và M4 Pro, đánh dấu một cột mốc quan trọng về môi trường với vai trò là máy Mac trung hòa carbon đầu tiên</p>
+          <p class="info-container__description">
+            Chiếc máy tính để bàn đa năng, nhỏ gọn nay sở hữu sức mạnh của M4 và M4 Pro, đánh dấu một cột mốc quan trọng
+            về môi trường với vai trò là máy Mac trung hòa carbon đầu tiên
+          </p>
           <figure class="info-container__image">
-            <img loading="lazy"
+            <img
+              loading="lazy"
               src="/assets/images/tool/rectangle5.png"
               alt="Product image"
-              class="info-container__image--cover" />
+              class="info-container__image--cover"
+            />
           </figure>
-          <p class="info-container__text">Các phiên bản 14 inch và 16 inch với M4 Pro và M4 Max trang bị Thunderbolt 5 cho tốc độ truyền nhanh hơn và khả năng kết nối tiên tiến. Tất cả các phiên bản đều trang bị màn hình Liquid Retina XDR thậm chí còn tuyệt vời hơn với tùy chọn màn hình nano-texture hoàn toàn mới và độ sáng lên đến 1000 nit cho nội dung SDR, camera 12MP Center Stage tiên tiến và thời lượng pin lên đến 24 giờ, lâu nhất từng có ở máy Mac.
+          <p class="info-container__text">
+            Các phiên bản 14 inch và 16 inch với M4 Pro và M4 Max trang bị Thunderbolt 5 cho tốc độ truyền nhanh hơn và
+            khả năng kết nối tiên tiến. Tất cả các phiên bản đều trang bị màn hình Liquid Retina XDR thậm chí còn tuyệt
+            vời hơn với tùy chọn màn hình nano-texture hoàn toàn mới và độ sáng lên đến 1000 nit cho nội dung SDR,
+            camera 12MP Center Stage tiên tiến và thời lượng pin lên đến 24 giờ, lâu nhất từng có ở máy Mac.
           </p>
           <h6 class="info-container__title">Siêu Mạnh Mẽ Với Dòng Chip M4</h6>
-          <p class="info-container__text">Được xây dựng trên công nghệ 3 nanômét thế hệ thứ hai, M4 là dòng chip tiên tiến nhất dành cho máy tính cá nhân. Dòng chip M4 mang đến hiệu năng CPU đơn luồng phi thường với lõi CPU nhanh nhất thế giới, cùng với hiệu năng CPU đa luồng vượt trội để xử lý các luồng công việc đòi hỏi khắt khe nhất. Kết hợp với bộ tăng tốc học máy trong CPU, GPU tiên tiến, Neural Engine nhanh và tiết kiệm điện hơn, Apple silicon được thiết kế từ đầu để mang lại hiệu năng đáng kinh ngạc cho AI.</p>
-          <p class="info-container__text">Cùng với bộ nhớ thống nhất nhanh hơn, mỗi chip cũng được tăng băng thông bộ nhớ, vậy nên các mô hình ngôn ngữ lớn và các dự án khủng khác đều chạy trên thiết bị một cách trơn tru. Ngoài ra, dòng M4 sở hữu hiệu năng trên mỗi watt hàng đầu ngành, cung cấp cho người dùng thời lượng pin lên đến 24 giờ, nâng cao tiêu chuẩn về những điều họ có thể làm được trong một lần sạc.</p>
+          <p class="info-container__text">
+            Được xây dựng trên công nghệ 3 nanômét thế hệ thứ hai, M4 là dòng chip tiên tiến nhất dành cho máy tính cá
+            nhân. Dòng chip M4 mang đến hiệu năng CPU đơn luồng phi thường với lõi CPU nhanh nhất thế giới, cùng với
+            hiệu năng CPU đa luồng vượt trội để xử lý các luồng công việc đòi hỏi khắt khe nhất. Kết hợp với bộ tăng tốc
+            học máy trong CPU, GPU tiên tiến, Neural Engine nhanh và tiết kiệm điện hơn, Apple silicon được thiết kế từ
+            đầu để mang lại hiệu năng đáng kinh ngạc cho AI.
+          </p>
+          <p class="info-container__text">
+            Cùng với bộ nhớ thống nhất nhanh hơn, mỗi chip cũng được tăng băng thông bộ nhớ, vậy nên các mô hình ngôn
+            ngữ lớn và các dự án khủng khác đều chạy trên thiết bị một cách trơn tru. Ngoài ra, dòng M4 sở hữu hiệu năng
+            trên mỗi watt hàng đầu ngành, cung cấp cho người dùng thời lượng pin lên đến 24 giờ, nâng cao tiêu chuẩn về
+            những điều họ có thể làm được trong một lần sạc.
+          </p>
         </div>
       </section>
-      
+
       <section id="tool-new">
-        <div class="tool-new-container ">
+        <div class="tool-new-container">
           <h5 class="">Sản phẩm liên quan</h5>
           <div id="news-list" class="">
             <!-- hbs -->
             {{#each data}}
-              <div class="home__news-item ">
-                <figure class="home__news-figure ">
-                  <img class="" src="{{this.image}}" alt="" />
-                </figure>
-                <h6 class="home__news-title ">{{this.name}}</h6>
-                <button class="home__news-button " onclick="location.href='/news?id={{this.id}}'" >Chi tiết</button>
-              </div>
+            <div class="home__news-item">
+              <figure class="home__news-figure">
+                <img class="" src="{{this.image}}" alt="" />
+              </figure>
+              <h6 class="home__news-title">{{this.name}}</h6>
+              <button class="home__news-button" onclick="location.href='/news?id={{this.id}}'">Chi tiết</button>
+            </div>
             {{/each}}
-            
           </div>
           <script>
             window.addEventListener('DOMContentLoaded', () => {
@@ -315,59 +445,56 @@
                 urlOrData: 'src/data/news.json',
                 targetId: 'news-list',
               });
-            })
+            });
           </script>
         </div>
       </section>
     </main>
 
     <footer id="footer" class="footer">
-      <div class="footer__container ">
+      <div class="footer__container">
         <!-- shape -->
-        
-      
+
         <!-- footer content -->
-        <section class="footer__content ">
+        <section class="footer__content">
           <!-- flex row -->
-          <div class="footer__row ">
+          <div class="footer__row">
             <!-- single -->
-            <div class="footer__info ">
+            <div class="footer__info">
               <!-- footer logo -->
               <figure class="footer__logo">
-                <a href="#" class="footer__logo-link ">
-                  <img
-                    src="/assets/images/logo.svg"
-                    alt=""
-                    class="footer__logo-image"
-                  />
+                <a href="#" class="footer__logo-link">
+                  <img src="/assets/images/logo.svg" alt="" class="footer__logo-image" />
                 </a>
               </figure>
-              <p class="footer__description ">Được thiết kế với vật liệu bền bỉ và tính năng tiện nghi, mang đến trải nghiệm du lịch thoải mái và an toàn. Với không gian nội thất tối ưu và các tiện ích hiện đại, nó là lựa chọn lý tưởng cho những chuyến phiêu lưu trên đường.</p>
+              <p class="footer__description">
+                Được thiết kế với vật liệu bền bỉ và tính năng tiện nghi, mang đến trải nghiệm du lịch thoải mái và an
+                toàn. Với không gian nội thất tối ưu và các tiện ích hiện đại, nó là lựa chọn lý tưởng cho những chuyến
+                phiêu lưu trên đường.
+              </p>
             </div>
-      
+
             <!-- single -->
-            <div class="footer__nav ">
+            <div class="footer__nav">
               <div id="footer-category-list-1" class="footer-category-list">
                 <!-- title -->
                 <div id="category-template-1">
-                  <a class="footer__nav-title ">DANH MỤC</a>
-                  <ul class="footer__nav-list ">
+                  <a class="footer__nav-title">DANH MỤC</a>
+                  <ul class="footer__nav-list">
                     {{#each categories1}}
-                      <li class="footer__nav-item">
-                        <a href="{{this.link}}" class="footer__nav-link">
-                          {{this.name}}
-                        </a>
-                      </li>
+                    <li class="footer__nav-item">
+                      <a href="{{this.link}}" class="footer__nav-link"> {{this.name}} </a>
+                    </li>
                     {{/each}}
                   </ul>
                 </div>
                 <script>
                   const categories = [
-                    { name: 'Rơ moóc cắm trại', link: '/camping.html' } ,
-                    { name: 'Rơ moóc du lịch', link: '/touring.html' } ,
-                    { name: 'Dụng cụ', link: '/tool.html' } ,
-                    { name: 'Về chúng tôi', link: '/about.html' } ,
-                    { name: 'Tin tức', link: '/new.html' } ,
+                    { name: 'Rơ moóc cắm trại', link: '/camping.html' },
+                    { name: 'Rơ moóc du lịch', link: '/touring.html' },
+                    { name: 'Dụng cụ', link: '/tool.html' },
+                    { name: 'Về chúng tôi', link: '/about.html' },
+                    { name: 'Tin tức', link: '/new.html' },
                   ];
 
                   window.addEventListener('DOMContentLoaded', () => {
@@ -375,29 +502,27 @@
                       keyData: 'categories1',
                       templateId: 'category-template-1',
                       urlOrData: categories,
-                      targetId: 'footer-category-list-1'
+                      targetId: 'footer-category-list-1',
                     });
-                  })
+                  });
                 </script>
               </div>
-              
+
               <div id="footer-category-list-2" class="footer-category-list">
                 <div id="category-template-2">
-                  <a class="footer__nav-title ">RƠ MOÓC CẮM TRẠI</a>
+                  <a class="footer__nav-title">RƠ MOÓC CẮM TRẠI</a>
                   <ul class="footer__nav-list">
                     {{#each categories2}}
-                      <li class="footer__nav-item">
-                        <a href="{{this.link}}" class="footer__nav-link">
-                          {{this.name}}
-                        </a>
-                      </li>
+                    <li class="footer__nav-item">
+                      <a href="{{this.link}}" class="footer__nav-link"> {{this.name}} </a>
+                    </li>
                     {{/each}}
                   </ul>
                 </div>
                 <script>
                   const campingTrailers = Array.from({ length: 6 }, (_, i) => ({
-                    name: `Husky Towing ${i + 1}`, 
-                    link: '#' 
+                    name: `Husky Towing ${i + 1}`,
+                    link: '#',
                   }));
 
                   window.addEventListener('DOMContentLoaded', () => {
@@ -405,103 +530,90 @@
                       keyData: 'categories2',
                       templateId: 'category-template-2',
                       urlOrData: campingTrailers,
-                      targetId: 'footer-category-list-2'
+                      targetId: 'footer-category-list-2',
                     });
-                  })
+                  });
                 </script>
               </div>
-              
+
               <!-- single -->
               <div id="footer-category-list-3" class="footer-category-list">
                 <div id="category-template-3">
-                  <a class="footer__nav-title ">RƠ MOÓC DU LỊCH</a>
-                  <ul class="footer__nav-list ">
+                  <a class="footer__nav-title">RƠ MOÓC DU LỊCH</a>
+                  <ul class="footer__nav-list">
                     {{#each categories3}}
-                      <li class="footer__nav-item">
-                        <a href="{{this.link}}" class="footer__nav-link">
-                          {{this.name}}
-                        </a>
-                      </li>
+                    <li class="footer__nav-item">
+                      <a href="{{this.link}}" class="footer__nav-link"> {{this.name}} </a>
+                    </li>
                     {{/each}}
                   </ul>
                 </div>
                 <script>
                   const touringTrailers = Array.from({ length: 5 }, (_, i) => ({
-                    name: `Sonic Lite ${i + 1}`, 
-                    link: '#' 
+                    name: `Sonic Lite ${i + 1}`,
+                    link: '#',
                   }));
 
-                  window.addEventListener('DOMContentLoaded', () => {
+                  document.addEventListener('DOMContentLoaded', () => {
                     loadHandlebarsTemplate({
                       keyData: 'categories3',
                       templateId: 'category-template-3',
                       urlOrData: touringTrailers,
-                      targetId: 'footer-category-list-3'
+                      targetId: 'footer-category-list-3',
                     });
-                  })
+                  });
                 </script>
               </div>
-              
-              <div class="footer__contact">
-                <!-- title -->
-                <a class="footer__contact-title ">Contact</a>
-                  <!-- widget links -->
-                <div class="footer__contact-content">
-                  <p class="footer__contact-address">88 Broklyn Golden Road Street, New York. USA</p>
-                  <ul class="footer__contact-list ">
-                    <li class="footer__contact-item">
-                      <i class="footer__contact-icon las la-phone"></i>
-                      <a href="tel:3336660000" class="footer__contact-link ">0198-9526503</a>
-                    </li>
-                    <li class="footer__contact-item ">
-                      <i class="footer__contact-icon las la-envelope "></i>
-                      <a href="mailto:yourmail@email.com"
-                        class="footer__contact-link ">needhelp@company.com</a>
-                    </li>
-                  </ul>
-                  <!-- social link -->
-                  <ul class="footer__social ">
-                    <li class="footer__social-item  ">
-                      <a href="#"
-                        class="footer__social-link ">
-                        <span
-                          class="footer__social-hover  "></span>
-                        <span class="footer__social-icon lab la-facebook-f "></span>
-                      </a>
-                    </li>
-                    <li class="footer__social-item ">
-                      <a href="#"
-                        class="footer__social-link ">
-                        <span
-                          class="footer__social-hover  "></span>
-                        <span class="footer__social-icon lab la-twitter "></span>
-                      </a>
-                    </li>
-                    <li class="footer__social-item  ">
-                      <a href="#"
-                        class="footer__social-link ">
-                        <span
-                          class="footer__social-hover  "></span>
-                        <span class="footer__social-icon lab la-instagram "></span>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
+            </div>
+
+            <div class="footer__contact">
+              <!-- title -->
+              <a class="footer__contact-title">Contact</a>
+              <!-- widget links -->
+              <div class="footer__contact-content">
+                <p class="footer__contact-address">
+                  Liền Kề 226 No-04 khu A Khu đất dịch vụ yên Nghĩa, Quận Hà Đông, Hà Nội.
+                </p>
+                <ul class="footer__contact-list">
+                  <li class="footer__contact-item">
+                    <i class="footer__contact-icon las la-phone"></i>
+                    <a href="tel:0974891188" class="footer__contact-link">0974 891-188</a>
+                  </li>
+                  <li class="footer__contact-item">
+                    <i class="footer__contact-icon las la-envelope"></i>
+                    <a href="mailto:cskh@hotro.wesports.vn" class="footer__contact-link">cskh@hotro.wesports.vn</a>
+                  </li>
+                </ul>
+                <!-- social link -->
+                <ul class="footer__social">
+                  <li class="footer__social-item">
+                    <a href="#" class="footer__social-link">
+                      <span class="footer__social-hover"></span>
+                      <span class="footer__social-icon lab la-facebook-f"></span>
+                    </a>
+                  </li>
+                  <li class="footer__social-item">
+                    <a href="#" class="footer__social-link">
+                      <span class="footer__social-hover"></span>
+                      <span class="footer__social-icon lab la-twitter"></span>
+                    </a>
+                  </li>
+                  <li class="footer__social-item">
+                    <a href="#" class="footer__social-link">
+                      <span class="footer__social-hover"></span>
+                      <span class="footer__social-icon lab la-instagram"></span>
+                    </a>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
         </section>
-      
-        <section class="footer__copyright ">
-          2024, Name. All rights reserved. Design by langphongmtb
-        </section>
+
+        <section class="footer__copyright">2024, Name. All rights reserved. Design by langphongmtb</section>
       </div>
-      
     </footer>
 
     <script type="module" src="/src/main.ts"></script>
-
-    
-
   </body>
 </html>

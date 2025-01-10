@@ -2,21 +2,21 @@
   {
     "title": "chất lượng",
     "description": "Được thiết kế chắc chắn, bền bỉ và hiệu suất cao, phù hợp cho việc vận chuyển hàng hóa nặng trong nhiều ngành công nghiệp.",
-    "imgSrc": "/svg/five-star-service.svg"
+    "imgSrc": "/icons/sprite.svg#icon-quality"
   },
   {
     "title": "hIỆN ĐẠI",
     "description": "Với công nghệ tiên tiến và tính năng an toàn, rơ moóc du lịch đảm bảo hiệu quả làm việc tối ưu và giảm thiểu chi phí vận hành.",
-    "imgSrc": "/svg/triple-warranty-protection.svg"
+    "imgSrc": "/icons/sprite.svg#icon-modern"
   },
   {
     "title": "bảo hành",
     "description": "Dịch vụ sửa chữa và thay thế linh kiện miễn phí trong một khoảng thời gian nhất định, giúp người dùng yên tâm về độ bền của sản phẩm.",
-    "imgSrc": "/svg/art-production-facilities.svg"
+    "imgSrc": "/icons/sprite.svg#icon-guarantee"
   },
   {
     "title": "KIểm tra",
     "description": "Việc kiểm tra toàn diện bao gồm đánh giá các bộ phận cơ khí, hệ thống điện và an toàn là rất quan trọng để đảm bảo xe hoạt động ổn định.",
-    "imgSrc": "/svg/pre-delivery-testing.svg"
+    "imgSrc": "/icons/sprite.svg#icon-testing"
   }
-] 
+]

@@ -1,5 +1,6 @@
 [
   {
+    "type": "type1",
     "name": "Sonic Lite",
     "price": "$61,050",
     "sleeps": "2+",
@@ -8,6 +9,7 @@
     "image": "assets/images/home/product-1.png"
   },
   {
+    "type": "type2",
     "name": "Product 2",
     "price": "$50,000",
     "sleeps": "4",
@@ -16,6 +18,7 @@
     "image": "assets/images/home/product-1.png"
   },
   {
+    "type": "type3",
     "name": "Product 3",
     "price": "$70,000",
     "sleeps": "3",
@@ -24,6 +27,7 @@
     "image": "assets/images/home/product-1.png"
   },
   {
+    "type": "type1",
     "name": "Product 4",
     "price": "$80,000",
     "sleeps": "5",
@@ -32,6 +36,7 @@
     "image": "assets/images/home/product-1.png"
   },
   {
+    "type": "type2",
     "name": "Product 5",
     "price": "$90,000",
     "sleeps": "6",
@@ -40,6 +45,7 @@
     "image": "assets/images/home/product-1.png"
   },
   {
+    "type": "type3",
     "name": "Product 6",
     "price": "$100,000",
     "sleeps": "7",
