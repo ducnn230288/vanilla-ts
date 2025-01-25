@@ -1,12 +1,21 @@
+@import '../variables.less';
+
 .camping__section {
   @apply bg-base-200;
   .camping__container {
-    @apply container mx-auto py-12 flex gap-6;
+    @apply container mx-auto flex gap-6 py-12;
     .camping__category {
       @apply ~'w-[300px]';
+      @media (max-width: @media-md) {
+        @apply fixed top-0 z-50 overflow-auto bg-white p-2 transition-all duration-500 ease-in-out;
+        height: 100%;
+      }
     }
     .camping__products {
       @apply ~'w-[calc(100%-300px)]' text-base-content;
+      @media (max-width: @media-md) {
+        @apply w-full;
+      }
     }
   }
 }

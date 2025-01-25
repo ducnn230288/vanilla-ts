@@ -275,7 +275,165 @@
       <section class="tool-detail">
         <div class="tool-detail__container">
           <div class="tool-detail__image-container">
-            <div
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+            <style>
+              .swiper {
+                width: 100%;
+                height: 300px;
+                margin-left: auto;
+                margin-right: auto;
+              }
+
+              .swiper-slide {
+                background-size: cover;
+                background-position: center;
+              }
+
+              .mySwiper2 {
+                height: 80%;
+                width: 100%;
+              }
+
+              .mySwiper {
+                height: 20%;
+                box-sizing: border-box;
+                padding: 10px 0;
+              }
+
+              .mySwiper .swiper-slide {
+                width: 25%;
+                height: 100%;
+                opacity: 0.4;
+              }
+
+              .mySwiper .swiper-slide-thumb-active {
+                opacity: 1;
+              }
+
+              .swiper-slide img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+              }
+            </style>
+
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3/dist/css/glightbox.min.css" />
+            <script src="https://cdn.jsdelivr.net/npm/glightbox@3/dist/js/glightbox.min.js"></script>
+            <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a href="https://swiperjs.com/demos/images/nature-1.jpg" class="glightbox">
+                    <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="https://swiperjs.com/demos/images/nature-2.jpg" class="glightbox">
+                    <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="https://swiperjs.com/demos/images/nature-3.jpg" class="glightbox">
+                    <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="https://swiperjs.com/demos/images/nature-4.jpg" class="glightbox">
+                    <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="https://swiperjs.com/demos/images/nature-5.jpg" class="glightbox">
+                    <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="https://swiperjs.com/demos/images/nature-6.jpg" class="glightbox">
+                    <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="https://swiperjs.com/demos/images/nature-7.jpg" class="glightbox">
+                    <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="https://swiperjs.com/demos/images/nature-8.jpg" class="glightbox">
+                    <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="https://swiperjs.com/demos/images/nature-9.jpg" class="glightbox">
+                    <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="https://swiperjs.com/demos/images/nature-10.jpg" class="glightbox">
+                    <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+            <div thumbsSlider="" class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
+                </div>
+              </div>
+            </div>
+            <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+            <script>
+              var swiper = new Swiper('.mySwiper', {
+                loop: true,
+                spaceBetween: 8,
+                slidesPerView: 8,
+                freeMode: true,
+                watchSlidesProgress: true,
+              });
+              var swiper2 = new Swiper('.mySwiper2', {
+                loop: true,
+                spaceBetween: 10,
+                navigation: {
+                  nextEl: '.swiper-button-next',
+                  prevEl: '.swiper-button-prev',
+                },
+                thumbs: {
+                  swiper: swiper,
+                },
+              });
+              GLightbox({});
+            </script>
+
+            <!-- <div
               id="imageZoom"
               class="tool-detail__image"
               style="--url: url(/assets/images/tool/frame1.png); --zoom-x: 0%; --zoom-y: 0%; --display: none"
@@ -314,7 +472,7 @@
                   targetId: 'thumbnail-container',
                 });
               });
-            </script>
+            </script> -->
           </div>
 
           <div class="tool-detail__info">
@@ -337,7 +495,9 @@
                 class="tool-detail__button tool-detail__button--decrease"
                 id="decrease-button"
               >
-                <img loading="lazy" src="svg/decrease.svg" alt="" class="tool-detail__icon" />
+                <svg height="25" width="25" aria-hidden="true" class="tool-detail__icon">
+                  <use href="/icons/sprite.svg#icon-decrease" />
+                </svg>
               </button>
               <input
                 type="number"
@@ -353,7 +513,9 @@
                 class="tool-detail__button tool-detail__button--increase"
                 id="increase-button"
               >
-                <img loading="lazy" src="svg/increase.svg" alt="" class="tool-detail__icon" />
+                <svg height="25" width="25" aria-hidden="true" class="tool-detail__icon">
+                  <use href="/icons/sprite.svg#icon-increase" />
+                </svg>
               </button>
             </form>
             <button aria-label="Add to cart" class="tool-detail__add-to-cart home__product-button">Cho vào giỏ</button>
@@ -370,15 +532,9 @@
               <div class="tool-detail__share">
                 <div><span class="font-bold">Chia sẻ:</span></div>
                 <button aria-label="Share on social media">
-                  <img
-                    loading="lazy"
-                    src="svg/facebook.svg"
-                    alt=""
-                    class="tool-detail__share-icon"
-                    style="
-                      filter: invert(100%) sepia(0%) saturate(7470%) hue-rotate(116deg) brightness(109%) contrast(109%);
-                    "
-                  />
+                  <svg height="25" width="25" aria-hidden="true">
+                    <use href="/icons/sprite.svg#icon-facebook" />
+                  </svg>
                 </button>
               </div>
             </div>
@@ -589,19 +745,9 @@
                   <li class="footer__social-item">
                     <a href="#" class="footer__social-link">
                       <span class="footer__social-hover"></span>
-                      <span class="footer__social-icon lab la-facebook-f"></span>
-                    </a>
-                  </li>
-                  <li class="footer__social-item">
-                    <a href="#" class="footer__social-link">
-                      <span class="footer__social-hover"></span>
-                      <span class="footer__social-icon lab la-twitter"></span>
-                    </a>
-                  </li>
-                  <li class="footer__social-item">
-                    <a href="#" class="footer__social-link">
-                      <span class="footer__social-hover"></span>
-                      <span class="footer__social-icon lab la-instagram"></span>
+                      <svg height="25" width="25" aria-hidden="true" class="fill-base-content mx-auto">
+                        <use href="/icons/sprite.svg#icon-facebook" />
+                      </svg>
                     </a>
                   </li>
                 </ul>

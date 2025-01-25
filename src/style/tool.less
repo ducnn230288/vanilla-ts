@@ -1,3 +1,5 @@
+@import '../variables.less';
+
 .tool-banner {
   // Add styles if needed
 }
@@ -5,7 +7,7 @@
 .tool-section {
   @apply bg-base-200;
   &__container {
-    @apply container mx-auto py-12 flex gap-6;
+    @apply container mx-auto flex gap-6 py-12;
   }
   &__category {
     @apply ~'w-[300px]';
@@ -18,22 +20,24 @@
 .tool-detail {
   @apply bg-base-100;
   &__container {
-    @apply flex flex-wrap gap-8 py-12 items-start w-full max-md:max-w-full container mx-auto;
+    @apply container mx-auto flex w-full flex-wrap items-start gap-8 py-12 max-md:max-w-full;
   }
   &__image-container {
-    @apply flex flex-col ~'min-w-[240px]' w-1/2 max-md:max-w-full;
+    @apply flex w-1/2 flex-col max-md:max-w-full;
+    min-width: 240px;
+    @media (max-width: @media-lg) {
+      @apply min-w-full;
+    }
   }
-  &__image {
-    @apply ~'w-[585px] h-[545px]';
-  }
+
   &__main-image {
-    @apply w-full h-full object-contain;
+    @apply h-full w-full object-contain;
   }
   &__thumbnails {
-    @apply flex flex-wrap gap-3 items-center mt-1 w-fit;
+    @apply mt-1 flex w-fit flex-wrap items-center gap-3;
   }
   &__info {
-    @apply flex overflow-hidden flex-col flex-1 shrink gap-6 p-6;
+    @apply flex flex-1 shrink flex-col gap-6 overflow-hidden p-6;
   }
   &__title {
     @apply text-warning;
@@ -51,10 +55,10 @@
     @apply text-warning;
   }
   &__form {
-    @apply flex gap-3 items-start w-full max-md:max-w-full border-none shadow-none bg-transparent m-0 p-0;
+    @apply m-0 flex w-full items-start gap-3 border-none bg-transparent p-0 shadow-none max-md:max-w-full;
   }
   &__button {
-    @apply object-contain shrink-0 aspect-square ~'w-[39px]' bg-base-300 rounded-full flex items-center justify-center;
+    @apply ~'w-[39px]' flex aspect-square shrink-0 items-center justify-center rounded-full bg-base-300 object-contain;
     &--decrease {
       // Add styles if needed
     }
@@ -66,16 +70,16 @@
     // Add styles if needed
   }
   &__quantity {
-    @apply flex flex-col text-lg text-center ~'w-[39px]' px-1 bg-base-100 ~'h-[39px]' ~'rounded-[30px]' shadow;
+    @apply ~'w-[39px]' ~'h-[39px]' ~'rounded-[30px]' flex flex-col bg-base-100 px-1 text-center text-lg shadow;
   }
   &__add-to-cart {
-    @apply w-fit font-bold bg-warning text-base-100 rounded-md py-3 px-7 relative overflow-hidden;
+    @apply relative w-fit overflow-hidden rounded-md bg-warning px-7 py-3 font-bold text-base-100;
   }
   &__separator {
-    @apply max-w-full border border-solid ~'min-h-[1px] w-[481px]';
+    @apply ~'min-h-[1px] w-[481px]' max-w-full border border-solid;
   }
   &__additional-info {
-    @apply flex flex-col w-full text-gray-800 max-md:max-w-full;
+    @apply flex w-full flex-col text-gray-800 max-md:max-w-full;
   }
   &__product-code {
     @apply max-md:max-w-full;
@@ -84,10 +88,10 @@
     @apply mt-1 max-md:max-w-full;
   }
   &__share {
-    @apply flex gap-2 py-px pr-20 mt-1 max-w-full ~'w-[480px]' max-md:pr-5;
+    @apply ~'w-[480px]' mt-1 flex max-w-full gap-2 py-px pr-20 max-md:pr-5;
   }
   &__share-icon {
-    @apply object-contain shrink-0 self-start w-6 aspect-square text-base-content;
+    @apply aspect-square w-6 shrink-0 self-start object-contain text-base-content;
   }
 }
 
@@ -98,25 +102,25 @@
 .tool-related {
   // Add styles if needed
   &__container {
-    @apply container py-12 text-center mx-auto flex flex-col gap-y-6;
+    @apply container mx-auto flex flex-col gap-y-6 py-12 text-center;
   }
   &__title {
     @apply text-warning;
   }
   &__list {
-    @apply grid grid-cols-3 gap-6 w-full;
+    @apply grid w-full grid-cols-3 gap-6;
   }
 }
 
-#tool-new{
+#tool-new {
   @apply bg-base-200;
-  .tool-new-container{
-    @apply container py-12 text-center mx-auto flex flex-col gap-y-6;
-    h5{
+  .tool-new-container {
+    @apply container mx-auto flex flex-col gap-y-6 py-12 text-center;
+    h5 {
       @apply text-warning;
     }
-    #news-list{
-      @apply grid grid-cols-3 gap-6 w-full;
+    #news-list {
+      @apply grid w-full grid-cols-3 gap-6;
     }
   }
 }

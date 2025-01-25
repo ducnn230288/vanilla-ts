@@ -1,10 +1,10 @@
 import './less.less';
+import './style/camping.less';
 import './style/home.less';
 import './style/layout.less';
-import './style/camping.less';
 import './style/new.less';
-import './style/touring.less';
 import './style/tool.less';
+import './style/touring.less';
 
 // sweetalert2 11
 import { API } from './api';
@@ -24,7 +24,7 @@ setupFormValid();
   compare: 'Xin vui lòng nhập không quá ',
 };
 
-import { setupMenuMobile } from './menu-mobile';
+import { setupMenuMobile, toggleClassList } from './menu-mobile';
 setupMenuMobile(document.getElementsByClassName('handle-menu'));
 // swiper 10
 // setupSwiper();
@@ -33,18 +33,24 @@ setupMenuMobile(document.getElementsByClassName('handle-menu'));
 // setupEchart();
 
 window.onload = async () => {
-  const test = await API.post({
-    url: '/authentication/jwt/login',
-    values: {
-      deviceName: 'Chrome/116.0.0.0 desktop/mac-os-x-15 ccfeecc0-533f-8a96-f60d-8d6253b60420',
-      deviceNo: 'Macintosh',
-      deviceType: 'BROWSER',
-      password: '41234231',
-      remember: false,
-      username: '12342134',
-    },
+  Array.from(document.getElementsByClassName('handle-filter')).forEach(el => {
+    el.addEventListener('click', () => {
+      const isShow = document.getElementById('filter')!.classList.contains('active');
+      setTimeout(
+        () => {
+          toggleClassList(document.getElementById('bg-filter'), ['opacity-0', '-left-full', 'opacity-50', 'left-0']);
+        },
+        !isShow ? 0 : 200,
+      );
+      setTimeout(
+        () => {
+          toggleClassList(document.getElementById('filter'), ['active']);
+          toggleClassList(document.getElementById('cate-container'), ['-left-80', 'left-0']);
+        },
+        !isShow ? 200 : 0,
+      );
+    });
   });
-  console.log(test);
 };
 
 export const loadHandlebarsTemplate = async ({

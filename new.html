@@ -235,6 +235,11 @@
       </div>
     </div>
 
+    <div
+      id="bg-filter"
+      class="handle-filter fixed top-0 h-full bg-base-content/50 transition-all duration-500 ease-in-out w-full z-30 opacity-0 -left-full"
+    ></div>
+
     <main id="main">
       <div class="home">
         <div class="home__bg"></div>
@@ -274,7 +279,7 @@
 
       <section class="new-section">
         <div class="new-container">
-          <div class="new-sidebar">
+          <div class="new-sidebar -left-80" id="cate-container">
             <div class="new-search-header">
               <div class="new-search-line"></div>
               <h5 class="new-search-title">Tìm kiếm</h5>
@@ -283,7 +288,11 @@
             <div class="mb-2"></div>
 
             <form action="" class="new-search-form">
-              <button type="button"><img src="svg/magnifying-glass.svg" alt="magnifying-glass" /></button>
+              <button type="button">
+                <svg aria-hidden="true" class="w-4 h-4 relative">
+                  <use href="/icons/sprite.svg#icon-search" />
+                </svg>
+              </button>
               <input type="text" placeholder="Tìm kiếm ..." />
             </form>
 
@@ -366,6 +375,19 @@
             </script>
           </div>
           <div class="new-content">
+            <div class="product-list__header">
+              <span>Hiển thị 1–5 trong số 50 tin tức</span>
+              <div class="flex gap-2">
+                <button class="btn-find handle-filter" id="filter">Tìm kiếm</button>
+                <div class="product-list__sort">
+                  Mới nhất
+                  <svg aria-hidden="true" class="w-4 h-4 relative rotate-90">
+                    <use href="/icons/sprite.svg#icon-arrow" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+
             <!-- javascript innerHTML -->
             <div class="new-container" id="new-container">
               {{#each news}}
@@ -396,12 +418,20 @@
             </script>
 
             <!-- pagination -->
-            <div class="new-pagination">
-              <div class="new-pagination-item"><img src="svg/line-arrow-r.svg" alt="" /></div>
-              <div class="new-pagination-item new-pagination-item--active">1</div>
-              <div class="new-pagination-item">2</div>
-              <div class="new-pagination-item">3</div>
-              <div class="new-pagination-item"><img src="svg/line-arrow-r.svg" alt="" /></div>
+            <div class="pagination">
+              <a>
+                <svg aria-hidden="true">
+                  <use href="/icons/sprite.svg#icon-arrow" />
+                </svg>
+              </a>
+              <a class="active">1</a>
+              <a>2</a>
+              <a>3</a>
+              <a>
+                <svg aria-hidden="true">
+                  <use href="/icons/sprite.svg#icon-arrow" />
+                </svg>
+              </a>
             </div>
           </div>
         </div>
@@ -546,19 +576,9 @@
                   <li class="footer__social-item">
                     <a href="#" class="footer__social-link">
                       <span class="footer__social-hover"></span>
-                      <span class="footer__social-icon lab la-facebook-f"></span>
-                    </a>
-                  </li>
-                  <li class="footer__social-item">
-                    <a href="#" class="footer__social-link">
-                      <span class="footer__social-hover"></span>
-                      <span class="footer__social-icon lab la-twitter"></span>
-                    </a>
-                  </li>
-                  <li class="footer__social-item">
-                    <a href="#" class="footer__social-link">
-                      <span class="footer__social-hover"></span>
-                      <span class="footer__social-icon lab la-instagram"></span>
+                      <svg height="25" width="25" aria-hidden="true" class="fill-base-content mx-auto">
+                        <use href="/icons/sprite.svg#icon-facebook" />
+                      </svg>
                     </a>
                   </li>
                 </ul>

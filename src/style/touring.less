@@ -1,30 +1,33 @@
+@import '../variables.less';
+
 #touring-tech {
-  .mxauto{
+  .mxauto {
     @apply mx-auto;
   }
-  .checkbox-tbl{
-    @apply mx-auto ~'size-[18px]' rounded border border-base-content/50;
+  .checkbox-tbl {
+    @apply ~'size-[18px]' mx-auto rounded border border-base-content/50;
   }
-  .price-tbl{
-    @apply bg-warning text-base-100 text-center;
+  .price-tbl {
+    @apply bg-warning text-center text-base-100;
   }
   table {
-    @apply border-separate border-spacing-0 overflow-hidden w-full;
+    @apply w-full border-separate border-spacing-0 overflow-hidden;
   }
   th {
-    @apply bg-warning text-white font-semibold;
+    @apply bg-warning font-semibold text-white;
   }
-  th, td {
-    @apply  ~'border-[0.5px] h-[44px]' px-3 border-base-content/50 ;
+  th,
+  td {
+    @apply ~'border-[0.5px] h-[44px]' border-base-content/50 px-3;
   }
 
-  thead{
-    th{
+  thead {
+    th {
       @apply border-t;
     }
   }
-  tbody{
-    tr:last-child td{
+  tbody {
+    tr:last-child td {
       @apply border-b;
     }
     tr:not(:last-child) {
@@ -57,7 +60,7 @@
 .touring__section {
   @apply bg-base-200;
   .touring__container {
-    @apply container mx-auto py-12 flex gap-6;
+    @apply container mx-auto flex gap-6 py-12;
     .touring__category {
       @apply ~'w-[300px]';
     }
@@ -74,28 +77,28 @@
 .touring-detail {
   @apply bg-base-100 py-12;
   &__header {
-    @apply container mx-auto relative flex items-center justify-center ~'h-[54px]';
+    @apply ~'h-[54px]' container relative mx-auto flex items-center justify-center;
   }
   &__divider {
     @apply w-full border-b border-base-300;
   }
   &__buttons {
-    @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center gap-8 font-serif;
+    @apply absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 items-center gap-8 font-serif;
   }
   &__button {
-    @apply px-6 py-3 rounded-xl;
+    @apply rounded-xl px-6 py-3;
     &--active {
       @apply bg-warning text-base-100;
     }
     &--inactive {
-      @apply bg-base-100 text-warning border border-warning;
+      @apply border border-warning bg-base-100 text-warning;
     }
   }
 }
 
 .touring-description {
-  h6{
-    @apply container mx-auto border-l-4 border-warning pl-3 text-base-content/60 my-8;
+  h6 {
+    @apply container mx-auto my-8 border-l-4 border-warning pl-3 text-base-content/60;
   }
 }
 
@@ -108,7 +111,7 @@
 }
 
 .touring-tech {
-  @apply container mx-auto;
+  @apply container mx-auto overflow-auto;
 }
 
 .feature__section {
@@ -117,6 +120,10 @@
 
 .feature__grid {
   @apply grid w-full;
+
+  @media (max-width: @media-md) {
+    @apply block;
+  }
   &--reverse {
     @apply ~'grid-cols-[51%,49%]';
   }
@@ -126,15 +133,15 @@
 }
 
 .feature__title {
-  @apply text-base-content uppercase;
+  @apply uppercase text-base-content;
 }
 
 .feature__subtitle {
-  @apply text-base-content/50 uppercase;
+  @apply uppercase text-base-content/50;
 }
 
 .feature__list {
-  @apply text-base-100 list-disc pl-5;
+  @apply list-disc pl-5 text-base-100;
 }
 .feature__text {
   @apply text-base-100;
@@ -145,7 +152,7 @@
 }
 
 .feature__img {
-  @apply w-full h-full object-cover;
+  @apply h-full w-full object-cover;
 }
 
 .feature__highlight {
@@ -153,7 +160,5 @@
 }
 
 .feature__content {
-  @apply px-14 py-12 flex flex-col gap-3 ~"bg-[url('/assets/images/home/bg-2.png')]";
+  @apply ~"bg-[url('/assets/images/home/bg-2.png')]" flex flex-col gap-3 px-14 py-12;
 }
-
-
