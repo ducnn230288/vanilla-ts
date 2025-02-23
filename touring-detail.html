@@ -161,56 +161,56 @@
 
     <div
       id="bg-menu"
-      class="handle-menu fixed top-0 h-full bg-base-content/50 transition-all duration-500 ease-in-out w-full z-30 opacity-0 -right-full"
+      class="handle-menu fixed -right-full top-0 z-30 h-full w-full bg-base-content/50 opacity-0 transition-all duration-500 ease-in-out"
     ></div>
     <div
       id="menu"
-      class="w-80 bg-warning h-screen z-40 fixed top-0 p-5 text-base-100 transition-all duration-500 ease-in-out flex justify-between flex-col -right-80"
+      class="fixed -right-80 top-0 z-40 flex h-screen w-80 flex-col justify-between bg-warning p-5 text-base-100 transition-all duration-500 ease-in-out"
     >
-      <div id="list-menu" class="transition-all duration-1000 ease-in-out relative top-10 opacity-0">
-        <div class="font-medium flex flex-col text-base-100">
-          <button class="text-base-100 border-base-100 py-3 flex justify-between border-b">
+      <div id="list-menu" class="relative top-10 opacity-0 transition-all duration-1000 ease-in-out">
+        <div class="flex flex-col font-medium text-base-100">
+          <button class="flex justify-between border-b border-base-100 py-3 text-base-100">
             Rơ moóc cắm trại
-            <svg aria-hidden="true" class="w-4 h-4 relative fill-base-100">
+            <svg aria-hidden="true" class="relative h-4 w-4 fill-base-100">
               <use href="/icons/sprite.svg#icon-arrow" />
             </svg>
           </button>
-          <button class="text-base-100 border-base-100 py-3 flex justify-between border-b">
+          <button class="flex justify-between border-b border-base-100 py-3 text-base-100">
             Rơ moóc du lịch
-            <svg aria-hidden="true" class="w-4 h-4 relative fill-base-100">
+            <svg aria-hidden="true" class="relative h-4 w-4 fill-base-100">
               <use href="/icons/sprite.svg#icon-arrow" />
             </svg>
           </button>
-          <button class="text-base-100 border-base-100 py-3 flex justify-between border-b">
+          <button class="flex justify-between border-b border-base-100 py-3 text-base-100">
             Dụng cụ
-            <svg aria-hidden="true" class="w-4 h-4 relative fill-base-100">
+            <svg aria-hidden="true" class="relative h-4 w-4 fill-base-100">
               <use href="/icons/sprite.svg#icon-arrow" />
             </svg>
           </button>
-          <button class="text-base-100 border-base-100 py-3 flex justify-between border-b">
+          <button class="flex justify-between border-b border-base-100 py-3 text-base-100">
             Về chúng tôi
-            <svg aria-hidden="true" class="w-4 h-4 relative fill-base-100">
+            <svg aria-hidden="true" class="relative h-4 w-4 fill-base-100">
               <use href="/icons/sprite.svg#icon-arrow" />
             </svg>
           </button>
-          <button class="text-base-100 py-3 flex justify-between">
+          <button class="flex justify-between py-3 text-base-100">
             Tin tức
-            <svg aria-hidden="true" class="w-4 h-4 relative fill-base-100">
+            <svg aria-hidden="true" class="relative h-4 w-4 fill-base-100">
               <use href="/icons/sprite.svg#icon-arrow" />
             </svg>
           </button>
         </div>
       </div>
 
-      <div id="contact-menu" class="transition-all duration-1000 ease-in-out relative opacity-100">
+      <div id="contact-menu" class="relative opacity-100 transition-all duration-1000 ease-in-out">
         <div class="mt-4">
-          <a class="text-base-100 inline-flex" href="https://www.facebook.com" target="_blank" rel="noreferrer">
+          <a class="inline-flex text-base-100" href="https://www.facebook.com" target="_blank" rel="noreferrer">
             <svg height="25" width="25" aria-hidden="true" class="fill-base-100">
               <use href="/icons/sprite.svg#icon-facebook" />
             </svg>
           </a>
         </div>
-        <div class="flex items-center mt-5 gap-2">
+        <div class="mt-5 flex items-center gap-2">
           <svg height="17" width="17" aria-hidden="true" class="fill-base-100">
             <use href="/icons/sprite.svg#icon-phone" />
           </svg>
@@ -218,7 +218,7 @@
             <a href="tel:0974891188">0974 891-188</a>
           </div>
         </div>
-        <div class="flex items-center mt-5 gap-2">
+        <div class="mt-5 flex items-center gap-2">
           <svg height="17" width="17" aria-hidden="true" class="fill-base-100">
             <use href="/icons/sprite.svg#icon-mail" />
           </svg>
@@ -226,7 +226,7 @@
             <a href="mailto:cskh@hotro.wesports.vn">cskh@hotro.wesports.vn</a>
           </div>
         </div>
-        <div class="flex items-center mt-3 border-t border-base-100 pt-3 gap-2">
+        <div class="mt-3 flex items-center gap-2 border-t border-base-100 pt-3">
           <svg height="25" width="32" aria-hidden="true" class="fill-base-100">
             <use href="/icons/sprite.svg#icon-map" />
           </svg>
@@ -276,215 +276,238 @@
         <section class="touring-detail__header">
           <div class="touring-detail__divider"></div>
           <div class="touring-detail__buttons">
-            <button data-tabKey="1" class="touring-detail__button touring-detail__button--active">MÔ TẢ</button>
-            <button data-tabKey="2" class="touring-detail__button touring-detail__button--inactive">TÍNH NĂNG</button>
-            <button data-tabKey="3" class="touring-detail__button touring-detail__button--inactive">KỸ THUẬT</button>
+            <button data-tabKey="0" class="touring-detail__button touring-detail__button--active">MÔ TẢ</button>
+            <button data-tabKey="1" class="touring-detail__button touring-detail__button--inactive">TÍNH NĂNG</button>
+            <button data-tabKey="2" class="touring-detail__button touring-detail__button--inactive">KỸ THUẬT</button>
           </div>
         </section>
 
-        <div id="tab-content">
-          <!-- handlebars render -->
-        </div>
+        <div class="tab-content">
+          <section>
+            <div class="touring-description">
+              <h6>
+                Spacious, comfortable, variable - our Trail/Box 240 model impresses with these and other features
+                Further advantages
+              </h6>
+            </div>
 
-        <script id="tab-content-template" type="text/x-handlebars-template">
-          {{#if (eq activeTab '1')}}
-            <section id='touring-description' class='touring-description'>
-              <h6>Spacious, comfortable, variable - our Trail/Box 240 model impresses with these and other features
-                Further advantages</h6>
-            </section>
-
-            <section id='touring-info' class='touring-info'>
-              <div class='info-container'>
-                <p class='info-container__description'>Chiếc máy tính để bàn đa năng, nhỏ gọn nay sở hữu sức mạnh của M4
-                  và M4 Pro, đánh dấu một cột mốc quan trọng về môi trường với vai trò là máy Mac trung hòa carbon đầu
-                  tiên</p>
-                <figure class='info-container__image'>
+            <div class="touring-info">
+              <div class="info-container">
+                <p class="info-container__description">
+                  Chiếc máy tính để bàn đa năng, nhỏ gọn nay sở hữu sức mạnh của M4 và M4 Pro, đánh dấu một cột mốc quan
+                  trọng về môi trường với vai trò là máy Mac trung hòa carbon đầu tiên
+                </p>
+                <figure class="info-container__image">
                   <img
-                    loading='lazy'
-                    src='/assets/images/tool/rectangle5.png'
-                    alt='Product image'
-                    class='info-container__image--cover'
+                    loading="lazy"
+                    src="/assets/images/tool/rectangle5.png"
+                    alt="Product image"
+                    class="info-container__image--cover"
                   />
                 </figure>
-                <p class='info-container__text'>Các phiên bản 14 inch và 16 inch với M4 Pro và M4 Max trang bị
-                  Thunderbolt 5 cho tốc độ truyền nhanh hơn và khả năng kết nối tiên tiến. Tất cả các phiên bản đều
-                  trang bị màn hình Liquid Retina XDR thậm chí còn tuyệt vời hơn với tùy chọn màn hình nano-texture hoàn
-                  toàn mới và độ sáng lên đến 1000 nit cho nội dung SDR, camera 12MP Center Stage tiên tiến và thời
-                  lượng pin lên đến 24 giờ, lâu nhất từng có ở máy Mac.
+                <p class="info-container__text">
+                  Các phiên bản 14 inch và 16 inch với M4 Pro và M4 Max trang bị Thunderbolt 5 cho tốc độ truyền nhanh
+                  hơn và khả năng kết nối tiên tiến. Tất cả các phiên bản đều trang bị màn hình Liquid Retina XDR thậm
+                  chí còn tuyệt vời hơn với tùy chọn màn hình nano-texture hoàn toàn mới và độ sáng lên đến 1000 nit cho
+                  nội dung SDR, camera 12MP Center Stage tiên tiến và thời lượng pin lên đến 24 giờ, lâu nhất từng có ở
+                  máy Mac.
                 </p>
-                <h6 class='info-container__title'>Siêu Mạnh Mẽ Với Dòng Chip M4</h6>
-                <p class='info-container__text'>Được xây dựng trên công nghệ 3 nanômét thế hệ thứ hai, M4 là dòng chip
-                  tiên tiến nhất dành cho máy tính cá nhân. Dòng chip M4 mang đến hiệu năng CPU đơn luồng phi thường với
-                  lõi CPU nhanh nhất thế giới, cùng với hiệu năng CPU đa luồng vượt trội để xử lý các luồng công việc
-                  đòi hỏi khắt khe nhất. Kết hợp với bộ tăng tốc học máy trong CPU, GPU tiên tiến, Neural Engine nhanh
-                  và tiết kiệm điện hơn, Apple silicon được thiết kế từ đầu để mang lại hiệu năng đáng kinh ngạc cho AI.</p>
-                <p class='info-container__text'>Cùng với bộ nhớ thống nhất nhanh hơn, mỗi chip cũng được tăng băng thông
-                  bộ nhớ, vậy nên các mô hình ngôn ngữ lớn và các dự án khủng khác đều chạy trên thiết bị một cách trơn
-                  tru. Ngoài ra, dòng M4 sở hữu hiệu năng trên mỗi watt hàng đầu ngành, cung cấp cho người dùng thời
-                  lượng pin lên đến 24 giờ, nâng cao tiêu chuẩn về những điều họ có thể làm được trong một lần sạc.</p>
+                <h6 class="info-container__title">Siêu Mạnh Mẽ Với Dòng Chip M4</h6>
+                <p class="info-container__text">
+                  Được xây dựng trên công nghệ 3 nanômét thế hệ thứ hai, M4 là dòng chip tiên tiến nhất dành cho máy
+                  tính cá nhân. Dòng chip M4 mang đến hiệu năng CPU đơn luồng phi thường với lõi CPU nhanh nhất thế
+                  giới, cùng với hiệu năng CPU đa luồng vượt trội để xử lý các luồng công việc đòi hỏi khắt khe nhất.
+                  Kết hợp với bộ tăng tốc học máy trong CPU, GPU tiên tiến, Neural Engine nhanh và tiết kiệm điện
+                  hơn, Apple silicon được thiết kế từ đầu để mang lại hiệu năng đáng kinh ngạc cho AI.
+                </p>
+                <p class="info-container__text">
+                  Cùng với bộ nhớ thống nhất nhanh hơn, mỗi chip cũng được tăng băng thông bộ nhớ, vậy nên các mô hình
+                  ngôn ngữ lớn và các dự án khủng khác đều chạy trên thiết bị một cách trơn tru. Ngoài ra, dòng M4 sở
+                  hữu hiệu năng trên mỗi watt hàng đầu ngành, cung cấp cho người dùng thời lượng pin lên đến 24 giờ,
+                  nâng cao tiêu chuẩn về những điều họ có thể làm được trong một lần sạc.
+                </p>
               </div>
-            </section>
-          {{else if (eq activeTab '2')}}
-            <section id='touring-feature' class='touring-feature'>
-              <div class='feature__section mt-6'></div>
-              <div class='feature__grid feature__grid--reverse'>
-                <div class='feature__content'>
-                  <h4 class='feature__title'>CABIN STRUCTURE</h4>
-                  <span class='feature__subtitle'>Trail/Box 240</span>
-                  <ul class='feature__list'>
-                    <li>Modern sandwich construction with walk-on roof</li>
-                    <li>Stove-enamelled, smooth aluminum outer skin with various color design options</li>
-                    <li>30 mm rigid foam insulation</li>
-                    <li>3 mm poplar plywood interior cladding</li>
-                    <li>SEITZ" double windows without thermal bridges incl. Mosquito net and blackout blind</li>
-                    <li>Entrance door with security lock, window incl. Mosquito roller blind</li>
-                    <li>Double-skin roof hoods incl. Mosquito net and blackout</li>
-                    <li>Crank supports with plastic washers</li>
-                  </ul>
-                </div>
-                <figure class='feature__image'><img
-                    src='/assets/images/touring/rec1.png'
-                    alt=''
-                    class='feature__img'
-                  /></figure>
+            </div>
+          </section>
+
+          <section class="touring-feature inactive">
+            <div class="feature__section mt-6"></div>
+            <div class="feature__grid feature__grid--reverse">
+              <div class="feature__content">
+                <h4>CABIN STRUCTURE</h4>
+                <h5>Trail/Box 240</h5>
+                <ul>
+                  <li>Modern sandwich construction with walk-on roof</li>
+                  <li>Stove-enamelled, smooth aluminum outer skin with various color design options</li>
+                  <li>30 mm rigid foam insulation</li>
+                  <li>3 mm poplar plywood interior cladding</li>
+                  <li>SEITZ" double windows without thermal bridges incl. Mosquito net and blackout blind</li>
+                  <li>Entrance door with security lock, window incl. Mosquito roller blind</li>
+                  <li>Double-skin roof hoods incl. Mosquito net and blackout</li>
+                  <li>Crank supports with plastic washers</li>
+                </ul>
+              </div>
+              <figure class="feature__image">
+                <img src="/assets/images/touring/rec1.png" alt="" class="feature__img" />
+              </figure>
+            </div>
+
+            <div class="feature__grid">
+              <figure class="feature__image">
+                <img src="/assets/images/touring/rec1.png" alt="" class="feature__img" />
+              </figure>
+
+              <div class="feature__content">
+                <h4>LIVING AREA</h4>
+                <h5>spacious and comfortable</h5>
+                <ul>
+                  <li>Decorative coating of the interior walls and PVC flooring</li>
+                  <li>Furniture made from lightweight poplar plywood with a modern, easy-care coating</li>
+                  <li>Kitchen furniture and table with hard-wearing surface</li>
+                  <li>
+                    Center seat made of 8 cm high, high-quality foam upholstery, can be converted into a lying surface
+                  </li>
+                  <li>Upholstery covers in a modern design can be removed using zippers</li>
+                  <li>Curtains on the living room windows (various designs possible)</li>
+                  <li>Ventilated backrests</li>
+                  <li>Forced ventilation on all storage cupboards</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="feature__grid feature__grid--reverse">
+              <div class="feature__content">
+                <h4>KITCHEN</h4>
+                <h5>Practically equipped</h5>
+                <ul>
+                  <li>
+                    Ignition-safe 2-burner gas hob with electr. "Nirosta" ignition and sink with split glass cover plate
+                  </li>
+                  <li>
+                    "Dometic RM 8405" absorption refrigerator, 90L (12V / 230 V gas operation) with AES system and
+                    removable freezer compartment
+                  </li>
+                  <li>Storage space</li>
+                  <li>Basin up</li>
+                </ul>
+              </div>
+              <figure class="feature__image">
+                <img src="/assets/images/touring/rec1.png" alt="" class="feature__img" />
+              </figure>
+            </div>
+
+            <div class="feature__grid">
+              <figure class="feature__image">
+                <img src="/assets/images/touring/rec1.png" alt="" class="feature__img" />
+              </figure>
+
+              <div class="feature__content">
+                <h4>BATHROOM</h4>
+                <h5>cleverly designed</h5>
+                <ul>
+                  <li>
+                    Swivel toilet C-223-S from market leader Thetford offers a raised seat and waste-holding tank with
+                    wheels for easy disposal
+                  </li>
+                  <li>Folding washbasin creates free space for showering</li>
+                  <li>Wall units offer sufficient storage space</li>
+                  <li>
+                    Sliding door made of high-quality plastic is water-resistant and allows free passage in the cabin
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="feature__grid feature__grid--reverse">
+              <div class="feature__content">
+                <h4>Gas-, Water-, Heating system</h4>
+                <h5>Safe & functional</h5>
+                <ul>
+                  <li>Storage space for two 5 kg gas cylinders, accessible from the outside</li>
+                  <li>Gas heating "TRUMA Combi 4E" with hot water preparation (boiler 10 liters)</li>
+                  <li>Stopcocks for each individual consumer</li>
+                  <li>Fresh water supply with 96 liter tank and pressure pump</li>
+                  <li>45 liter waste water tank as underfloor tank 12-V / 230-V-system</li>
+                  <li>Energy-saving 12 volt LED lighting in the living area</li>
+                  <li>12 and 230 volt socket</li>
+                  <li>CEE input socket with 10 A automatic circuit breaker</li>
+                  <li>
+                    AGM battery, 12 V 92 Ah with cut-off relay, with automatic charger and additional battery charge
+                    booster
+                  </li>
+                  <li>Cut-off relay for 12 volt refrigerator function</li>
+                </ul>
+              </div>
+              <figure class="feature__image">
+                <img src="/assets/images/touring/rec1.png" alt="" class="feature__img" />
+              </figure>
+            </div>
+
+            <div class="feature__grid">
+              <figure class="feature__image">
+                <img src="/assets/images/touring/rec1.png" alt="" class="feature__img" />
+              </figure>
+
+              <div class="feature__content">
+                <h4>FABRICS</h4>
+                <h5>modern & classically attractive</h5>
+                <p>
+                  With contemporary fabrics, the latest trendy colors and lots of extras for the individual interior
+                  design of your set-down cabin, we ensure that you feel comfortable. Our upholstery and curtain fabrics
+                  are available in five different variations.
+                </p>
+                <h6>Set personal accents</h6>
+                <p>
+                  For even more individuality and personality, we offer our curtains in the classic sewing style with
+                  pleated tape as timeless blinds and over-curtains or in a modern form as panel curtains and Roman
+                  blinds.
+                </p>
+                <p>
+                  With our Carino, Alsoma, Delio, Lindo and Savaro fabric designs, there is something for everyone.
+                  Whether it's a striking color scheme or a discreet ambience:
+                </p>
+                <h6>You choose according to your taste!</h6>
+              </div>
+            </div>
+
+            <div class="feature__grid">
+              <div class="feature__content">
+                <h4>Optional accessories</h4>
+                <h5>flexible & extensive</h5>
+
+                <p>
+                  There are numerous reasons for choosing the most flexible way to travel: Whether it's a modern
+                  interior for more self-fulfilment, high-horsepower base vehicles or the option of having a boat, horse
+                  or motorcycle with you when you travel.
+                </p>
+
+                <p>
+                  We will show you what a TISCHER cabin can do. In addition, you will find useful information on all
+                  suitable base vehicles, how flexible trailer transport is and how easy it is to mount and dismount the
+                  cab in the form of our product film.
+                </p>
+
+                <p>
+                  Be inspired by the variety of interior design options in our living worlds. Our current fabric
+                  collections and trend colors bring a new zest to travel.
+                </p>
               </div>
 
-              <div class='feature__grid'>
-                <figure class='feature__image'>
-                  <img src='/assets/images/touring/rec1.png' alt='' class='feature__img' />
-                </figure>
+              <figure class="feature__image">
+                <img src="/assets/images/touring/rec1.png" alt="" class="feature__img" />
+              </figure>
+            </div>
+          </section>
 
-                <div class='feature__content'>
-                  <h4 class='feature__title'>LIVING AREA</h4>
-                  <span class='feature__subtitle'>spacious and comfortable</span>
-                  <ul class='feature__list'>
-                    <li>Decorative coating of the interior walls and PVC flooring</li>
-                    <li>Furniture made from lightweight poplar plywood with a modern, easy-care coating</li>
-                    <li>Kitchen furniture and table with hard-wearing surface</li>
-                    <li>Center seat made of 8 cm high, high-quality foam upholstery, can be converted into a lying
-                      surface</li>
-                    <li>Upholstery covers in a modern design can be removed using zippers</li>
-                    <li>Curtains on the living room windows (various designs possible)</li>
-                    <li>Ventilated backrests</li>
-                    <li>Forced ventilation on all storage cupboards</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class='feature__grid feature__grid--reverse'>
-                <div class='feature__content'>
-                  <h4 class='feature__title'>KITCHEN</h4>
-                  <span class='feature__subtitle'>Practically equipped</span>
-                  <ul class='feature__list'>
-                    <li>Ignition-safe 2-burner gas hob with electr. "Nirosta" ignition and sink with split glass cover
-                      plate</li>
-                    <li>"Dometic RM 8405" absorption refrigerator, 90L (12V / 230 V gas operation) with AES system and
-                      removable freezer compartment</li>
-                    <li>Storage space</li>
-                    <li>Basin up</li>
-                  </ul>
-                </div>
-                <figure class='feature__image'><img
-                    src='/assets/images/touring/rec1.png'
-                    alt=''
-                    class='feature__img'
-                  /></figure>
-              </div>
-
-              <div class='feature__grid'>
-                <figure class='feature__image'>
-                  <img src='/assets/images/touring/rec1.png' alt='' class='feature__img' />
-                </figure>
-
-                <div class='feature__content'>
-                  <h4 class='feature__title'>BATHROOM</h4>
-                  <span class='feature__subtitle'>cleverly designed</span>
-                  <ul class='feature__list'>
-                    <li>Swivel toilet C-223-S from market leader Thetford offers a raised seat and waste-holding tank
-                      with wheels for easy disposal</li>
-                    <li>Folding washbasin creates free space for showering</li>
-                    <li>Wall units offer sufficient storage space</li>
-                    <li>Sliding door made of high-quality plastic is water-resistant and allows free passage in the
-                      cabin</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class='feature__grid feature__grid--reverse'>
-                <div class='feature__content'>
-                  <h4 class='feature__title'>Gas-, Water-, Heating system</h4>
-                  <span class='feature__subtitle'>Safe & functional</span>
-                  <ul class='feature__list'>
-                    <li>Storage space for two 5 kg gas cylinders, accessible from the outside</li>
-                    <li>Gas heating "TRUMA Combi 4E" with hot water preparation (boiler 10 liters)</li>
-                    <li>Stopcocks for each individual consumer</li>
-                    <li>Fresh water supply with 96 liter tank and pressure pump</li>
-                    <li>45 liter waste water tank as underfloor tank 12-V / 230-V-system</li>
-                    <li>Energy-saving 12 volt LED lighting in the living area</li>
-                    <li>12 and 230 volt socket</li>
-                    <li>CEE input socket with 10 A automatic circuit breaker</li>
-                    <li>AGM battery, 12 V 92 Ah with cut-off relay, with automatic charger and additional battery charge
-                      booster</li>
-                    <li>Cut-off relay for 12 volt refrigerator function</li>
-                  </ul>
-                </div>
-                <figure class='feature__image'><img
-                    src='/assets/images/touring/rec1.png'
-                    alt=''
-                    class='feature__img'
-                  /></figure>
-              </div>
-
-              <div class='feature__grid'>
-                <figure class='feature__image'>
-                  <img src='/assets/images/touring/rec1.png' alt='' class='feature__img' />
-                </figure>
-
-                <div class='feature__content'>
-                  <h4 class='feature__title'>FABRICS</h4>
-                  <span class='feature__subtitle'>modern & classically attractive</span>
-                  <p class='feature__text'>With contemporary fabrics, the latest trendy colors and lots of extras for
-                    the individual interior design of your set-down cabin, we ensure that you feel comfortable. Our
-                    upholstery and curtain fabrics are available in five different variations.</p>
-                  <span class='feature__highlight'>Set personal accents</span>
-                  <p class='feature__text'>For even more individuality and personality, we offer our curtains in the
-                    classic sewing style with pleated tape as timeless blinds and over-curtains or in a modern form as
-                    panel curtains and Roman blinds.</p>
-                  <p class='feature__text'>With our Carino, Alsoma, Delio, Lindo and Savaro fabric designs, there is
-                    something for everyone. Whether it's a striking color scheme or a discreet ambience:</p>
-                  <span class='feature__highlight'>You choose according to your taste!</span>
-                </div>
-              </div>
-
-              <div class='feature__grid'>
-                <div class='feature__content'>
-                  <h4 class='feature__title'>Optional accessories</h4>
-                  <span class='feature__subtitle'>flexible & extensive</span>
-
-                  <p class='feature__text'>There are numerous reasons for choosing the most flexible way to travel:
-                    Whether it's a modern interior for more self-fulfilment, high-horsepower base vehicles or the option
-                    of having a boat, horse or motorcycle with you when you travel.</p>
-
-                  <p class='feature__text'>We will show you what a TISCHER cabin can do. In addition, you will find
-                    useful information on all suitable base vehicles, how flexible trailer transport is and how easy it
-                    is to mount and dismount the cab in the form of our product film.</p>
-
-                  <p class='feature__text'>Be inspired by the variety of interior design options in our living worlds.
-                    Our current fabric collections and trend colors bring a new zest to travel.</p>
-                </div>
-
-                <figure class='feature__image'>
-                  <img src='/assets/images/touring/rec1.png' alt='' class='feature__img' />
-                </figure>
-              </div>
-            </section>
-          {{else}}
-            <section id='touring-description' class='touring-description'>
-              <h6 class=''>Spacious, comfortable, variable - our Trail/Box 240 model impresses with these and other
-                features Further advantages</h6>
-            </section>
-            <section id='touring-tech' class='touring-tech'>
-              <table class='text-base-content'>
+          <section class="inactive">
+            <div class="touring-description">
+              <h6 class="">
+                Spacious, comfortable, variable - our Trail/Box 240 model impresses with these and other features
+                Further advantages
+              </h6>
+            </div>
+            <div id="touring-tech" class="touring-tech">
+              <table class="text-base-content">
                 <thead>
                   <tr>
                     <th>Thông tin</th>
@@ -571,28 +594,28 @@
                   <tr>
                     <td>2-12v/USB Charging Station</td>
                     <td>
-                      <svg class='fill-warning mxauto' height='25' width='25' aria-hidden='true'>
-                        <use href='/icons/sprite.svg#icon-circe-check' />
+                      <svg class="mxauto fill-warning" height="25" width="25" aria-hidden="true">
+                        <use href="/icons/sprite.svg#icon-circe-check" />
                       </svg>
                     </td>
                     <td>
-                      <svg class='fill-warning mxauto' height='25' width='25' aria-hidden='true'>
-                        <use href='/icons/sprite.svg#icon-circe-check' />
+                      <svg class="mxauto fill-warning" height="25" width="25" aria-hidden="true">
+                        <use href="/icons/sprite.svg#icon-circe-check" />
                       </svg>
                     </td>
                     <td>
-                      <svg class='fill-warning mxauto' height='25' width='25' aria-hidden='true'>
-                        <use href='/icons/sprite.svg#icon-circe-check' />
+                      <svg class="mxauto fill-warning" height="25" width="25" aria-hidden="true">
+                        <use href="/icons/sprite.svg#icon-circe-check" />
                       </svg>
                     </td>
                     <td>
-                      <svg class='fill-warning mxauto' height='25' width='25' aria-hidden='true'>
-                        <use href='/icons/sprite.svg#icon-circe-check' />
+                      <svg class="mxauto fill-warning" height="25" width="25" aria-hidden="true">
+                        <use href="/icons/sprite.svg#icon-circe-check" />
                       </svg>
                     </td>
                     <td>
-                      <svg class='fill-warning mxauto' height='25' width='25' aria-hidden='true'>
-                        <use href='/icons/sprite.svg#icon-circe-check' />
+                      <svg class="mxauto fill-warning" height="25" width="25" aria-hidden="true">
+                        <use href="/icons/sprite.svg#icon-circe-check" />
                       </svg>
                     </td>
                   </tr>
@@ -600,28 +623,28 @@
                   <tr>
                     <td>LCD TV Screen 12v</td>
                     <td>
-                      <svg class='fill-warning mxauto' height='25' width='25' aria-hidden='true'>
-                        <use href='/icons/sprite.svg#icon-circe-check' />
+                      <svg class="mxauto fill-warning" height="25" width="25" aria-hidden="true">
+                        <use href="/icons/sprite.svg#icon-circe-check" />
                       </svg>
                     </td>
                     <td>
-                      <svg class='fill-warning mxauto' height='25' width='25' aria-hidden='true'>
-                        <use href='/icons/sprite.svg#icon-circe-check' />
+                      <svg class="mxauto fill-warning" height="25" width="25" aria-hidden="true">
+                        <use href="/icons/sprite.svg#icon-circe-check" />
                       </svg>
                     </td>
                     <td>
-                      <svg class='fill-warning mxauto' height='25' width='25' aria-hidden='true'>
-                        <use href='/icons/sprite.svg#icon-circe-check' />
+                      <svg class="mxauto fill-warning" height="25" width="25" aria-hidden="true">
+                        <use href="/icons/sprite.svg#icon-circe-check" />
                       </svg>
                     </td>
                     <td>
-                      <svg class='fill-warning mxauto' height='25' width='25' aria-hidden='true'>
-                        <use href='/icons/sprite.svg#icon-circe-check' />
+                      <svg class="mxauto fill-warning" height="25" width="25" aria-hidden="true">
+                        <use href="/icons/sprite.svg#icon-circe-check" />
                       </svg>
                     </td>
                     <td>
-                      <svg class='fill-warning mxauto' height='25' width='25' aria-hidden='true'>
-                        <use href='/icons/sprite.svg#icon-circe-check' />
+                      <svg class="mxauto fill-warning" height="25" width="25" aria-hidden="true">
+                        <use href="/icons/sprite.svg#icon-circe-check" />
                       </svg>
                     </td>
                   </tr>
@@ -629,28 +652,28 @@
                   <tr>
                     <td>60"x80" High End Queen Mattress</td>
                     <td>
-                      <svg class='fill-warning mxauto' height='25' width='25' aria-hidden='true'>
-                        <use href='/icons/sprite.svg#icon-circe-check' />
+                      <svg class="mxauto fill-warning" height="25" width="25" aria-hidden="true">
+                        <use href="/icons/sprite.svg#icon-circe-check" />
                       </svg>
                     </td>
                     <td>
-                      <svg class='fill-warning mxauto' height='25' width='25' aria-hidden='true'>
-                        <use href='/icons/sprite.svg#icon-circe-check' />
+                      <svg class="mxauto fill-warning" height="25" width="25" aria-hidden="true">
+                        <use href="/icons/sprite.svg#icon-circe-check" />
                       </svg>
                     </td>
                     <td>
-                      <svg class='fill-warning mxauto' height='25' width='25' aria-hidden='true'>
-                        <use href='/icons/sprite.svg#icon-circe-check' />
+                      <svg class="mxauto fill-warning" height="25" width="25" aria-hidden="true">
+                        <use href="/icons/sprite.svg#icon-circe-check" />
                       </svg>
                     </td>
                     <td>
-                      <svg class='fill-warning mxauto' height='25' width='25' aria-hidden='true'>
-                        <use href='/icons/sprite.svg#icon-circe-check' />
+                      <svg class="mxauto fill-warning" height="25" width="25" aria-hidden="true">
+                        <use href="/icons/sprite.svg#icon-circe-check" />
                       </svg>
                     </td>
                     <td>
-                      <svg class='fill-warning mxauto' height='25' width='25' aria-hidden='true'>
-                        <use href='/icons/sprite.svg#icon-circe-check' />
+                      <svg class="mxauto fill-warning" height="25" width="25" aria-hidden="true">
+                        <use href="/icons/sprite.svg#icon-circe-check" />
                       </svg>
                     </td>
                   </tr>
@@ -658,28 +681,28 @@
                   <tr>
                     <td>6-Year Structural Warranty</td>
                     <td>
-                      <svg class='fill-warning mxauto' height='25' width='25' aria-hidden='true'>
-                        <use href='/icons/sprite.svg#icon-circe-check' />
+                      <svg class="mxauto fill-warning" height="25" width="25" aria-hidden="true">
+                        <use href="/icons/sprite.svg#icon-circe-check" />
                       </svg>
                     </td>
                     <td>
-                      <svg class='fill-warning mxauto' height='25' width='25' aria-hidden='true'>
-                        <use href='/icons/sprite.svg#icon-circe-check' />
+                      <svg class="mxauto fill-warning" height="25" width="25" aria-hidden="true">
+                        <use href="/icons/sprite.svg#icon-circe-check" />
                       </svg>
                     </td>
                     <td>
-                      <svg class='fill-warning mxauto' height='25' width='25' aria-hidden='true'>
-                        <use href='/icons/sprite.svg#icon-circe-check' />
+                      <svg class="mxauto fill-warning" height="25" width="25" aria-hidden="true">
+                        <use href="/icons/sprite.svg#icon-circe-check" />
                       </svg>
                     </td>
                     <td>
-                      <svg class='fill-warning mxauto' height='25' width='25' aria-hidden='true'>
-                        <use href='/icons/sprite.svg#icon-circe-check' />
+                      <svg class="mxauto fill-warning" height="25" width="25" aria-hidden="true">
+                        <use href="/icons/sprite.svg#icon-circe-check" />
                       </svg>
                     </td>
                     <td>
-                      <svg class='fill-warning mxauto' height='25' width='25' aria-hidden='true'>
-                        <use href='/icons/sprite.svg#icon-circe-check' />
+                      <svg class="mxauto fill-warning" height="25" width="25" aria-hidden="true">
+                        <use href="/icons/sprite.svg#icon-circe-check" />
                       </svg>
                     </td>
                   </tr>
@@ -687,45 +710,45 @@
                   <tr>
                     <td>Air Conditioner</td>
                     <td>
-                      <svg class='fill-warning mxauto' height='25' width='25' aria-hidden='true'>
-                        <use href='/icons/sprite.svg#icon-circe-check' />
+                      <svg class="mxauto fill-warning" height="25" width="25" aria-hidden="true">
+                        <use href="/icons/sprite.svg#icon-circe-check" />
                       </svg>
                     </td>
                     <td>
-                      <svg class='fill-warning mxauto' height='25' width='25' aria-hidden='true'>
-                        <use href='/icons/sprite.svg#icon-circe-check' />
+                      <svg class="mxauto fill-warning" height="25" width="25" aria-hidden="true">
+                        <use href="/icons/sprite.svg#icon-circe-check" />
                       </svg>
                     </td>
                     <td>
-                      <svg class='fill-warning mxauto' height='25' width='25' aria-hidden='true'>
-                        <use href='/icons/sprite.svg#icon-circe-check' />
+                      <svg class="mxauto fill-warning" height="25" width="25" aria-hidden="true">
+                        <use href="/icons/sprite.svg#icon-circe-check" />
                       </svg>
                     </td>
                     <td>
-                      <svg class='fill-warning mxauto' height='25' width='25' aria-hidden='true'>
-                        <use href='/icons/sprite.svg#icon-circe-check' />
+                      <svg class="mxauto fill-warning" height="25" width="25" aria-hidden="true">
+                        <use href="/icons/sprite.svg#icon-circe-check" />
                       </svg>
                     </td>
                     <td>
-                      <svg class='fill-warning mxauto' height='25' width='25' aria-hidden='true'>
-                        <use href='/icons/sprite.svg#icon-circe-check' />
+                      <svg class="mxauto fill-warning" height="25" width="25" aria-hidden="true">
+                        <use href="/icons/sprite.svg#icon-circe-check" />
                       </svg>
                     </td>
                   </tr>
 
                   <tr>
                     <td>Awning 10' Side</td>
-                    <td><div class='checkbox-tbl'></div></td>
-                    <td><div class='checkbox-tbl'></div></td>
-                    <td><div class='checkbox-tbl'></div></td>
+                    <td><div class="checkbox-tbl"></div></td>
+                    <td><div class="checkbox-tbl"></div></td>
+                    <td><div class="checkbox-tbl"></div></td>
                     <td>
-                      <svg class='fill-warning mxauto' height='25' width='25' aria-hidden='true'>
-                        <use href='/icons/sprite.svg#icon-circe-check' />
+                      <svg class="mxauto fill-warning" height="25" width="25" aria-hidden="true">
+                        <use href="/icons/sprite.svg#icon-circe-check" />
                       </svg>
                     </td>
                     <td>
-                      <svg class='fill-warning mxauto' height='25' width='25' aria-hidden='true'>
-                        <use href='/icons/sprite.svg#icon-circe-check' />
+                      <svg class="mxauto fill-warning" height="25" width="25" aria-hidden="true">
+                        <use href="/icons/sprite.svg#icon-circe-check" />
                       </svg>
                     </td>
                   </tr>
@@ -741,56 +764,39 @@
 
                   <tr>
                     <td></td>
-                    <td class='price-tbl'>Báo giá</td>
-                    <td class='price-tbl'>Báo giá</td>
-                    <td class='price-tbl'>Báo giá</td>
-                    <td class='price-tbl'>Báo giá</td>
-                    <td class='price-tbl'>Báo giá</td>
+                    <td class="price-tbl">Báo giá</td>
+                    <td class="price-tbl">Báo giá</td>
+                    <td class="price-tbl">Báo giá</td>
+                    <td class="price-tbl">Báo giá</td>
+                    <td class="price-tbl">Báo giá</td>
                   </tr>
                 </tbody>
               </table>
-            </section>
-          {{/if}}
-        </script>
+            </div>
+          </section>
+        </div>
 
         <script>
-          Handlebars.registerHelper('eq', function (a, b) {
-            return a === b;
-          });
-
-          let state = {
-            activeTab: '1',
-          };
-
-          function renderContent() {
-            loadHandlebarsTemplate({
-              templateId: 'tab-content-template',
-              urlOrData: state,
-              targetId: 'tab-content',
-              keyData: 'activeTab',
-            });
-
-            document.querySelectorAll('.touring-detail__button').forEach(button => {
-              const tabKey = button.getAttribute('data-tabKey');
-              if (tabKey === state.activeTab) {
-                button.classList.remove('touring-detail__button--inactive');
-                button.classList.add('touring-detail__button--active');
-              } else {
-                button.classList.remove('touring-detail__button--active');
-                button.classList.add('touring-detail__button--inactive');
-              }
-            });
-          }
-
           document.querySelectorAll('.touring-detail__button').forEach(button => {
             button.addEventListener('click', () => {
-              state.activeTab = button.getAttribute('data-tabKey');
-              renderContent();
+              const tabKey = parseInt(button.getAttribute('data-tabKey'));
+              document.querySelectorAll('.tab-content > section').forEach((item, index) => {
+                if (index === tabKey) {
+                  item.classList.remove('inactive');
+                } else {
+                  item.classList.add('inactive');
+                }
+              });
+              document.querySelectorAll('.touring-detail__button').forEach((button, index) => {
+                if (tabKey === index) {
+                  button.classList.remove('touring-detail__button--inactive');
+                  button.classList.add('touring-detail__button--active');
+                } else {
+                  button.classList.remove('touring-detail__button--active');
+                  button.classList.add('touring-detail__button--inactive');
+                }
+              });
             });
-          });
-
-          window.addEventListener('DOMContentLoaded', () => {
-            renderContent();
           });
         </script>
       </div>
@@ -934,7 +940,7 @@
                   <li class="footer__social-item">
                     <a href="#" class="footer__social-link">
                       <span class="footer__social-hover"></span>
-                      <svg height="25" width="25" aria-hidden="true" class="fill-base-content mx-auto">
+                      <svg height="25" width="25" aria-hidden="true" class="mx-auto fill-base-content">
                         <use href="/icons/sprite.svg#icon-facebook" />
                       </svg>
                     </a>

@@ -104,24 +104,43 @@ form .group {
   input:checked ~ .state,
   &.p-toggle .state {
     label:after {
-      @apply !bg-primary;
+      @apply !bg-warning;
     }
     label:before {
-      @apply border-primary;
+      @apply border-warning;
     }
   }
   &.p-default:not(.p-fill) input:checked ~ .state label:after {
-    @apply !bg-primary;
+    @apply !bg-warning;
   }
   &.p-switch {
     input:checked ~ .state:before {
-      @apply border-primary;
+      @apply border-warning;
     }
     &.p-fill input:checked ~ .state:before {
-      @apply !bg-primary;
+      @apply !bg-warning;
     }
     &.p-slim input:checked ~ .state:before {
-      @apply border-primary !bg-primary;
+      @apply border-warning !bg-warning;
+    }
+  }
+  &.checkbox {
+    @apply mb-2;
+    .state {
+      svg {
+        @apply absolute left-0 opacity-0;
+        z-index: 1;
+        width: calc(1em + 2px);
+        height: calc(1em + 2px);
+        top: calc((0% - (100% - 1em)) - 8%);
+      }
+      label:after,
+      label:before {
+        @apply rounded;
+      }
+    }
+    input:checked ~ .state svg {
+      opacity: 1;
     }
   }
 }
@@ -367,8 +386,6 @@ form .group {
   }
 }
 form {
-  @apply m-10 grid gap-2 rounded-md bg-base-100 p-5 shadow md:p-10;
-
   > button[type='submit'] {
     @apply ~'p-2.5' rounded-lg border bg-primary text-primary-content;
   }
@@ -388,28 +405,9 @@ form {
       }
     }
   }
-  .checkbox {
-    @apply mb-2;
-    .state {
-      svg {
-        @apply absolute left-0 opacity-0;
-        z-index: 1;
-        width: calc(1em + 2px);
-        height: calc(1em + 2px);
-        top: calc((0% - (100% - 1em)) - 8%);
-      }
-      label:after,
-      label:before {
-        @apply rounded;
-      }
-    }
-    input:checked ~ .state svg {
-      opacity: 1;
-    }
-  }
 }
 .header {
-  @apply fixed left-0 top-0 z-30 w-full;
+  @apply absolute left-0 top-0 z-30 w-full;
 
   > div {
     @apply container mx-auto flex items-center justify-between bg-primary py-4 pl-5 pr-4;
@@ -442,4 +440,80 @@ body {
   > .active {
     @apply bg-warning text-base-100;
   }
+}
+.tooltip {
+  @apply absolute rounded bg-base-content px-2 py-1 text-sm text-base-100 opacity-0 transition-opacity duration-300 ease-in-out;
+
+  &.show {
+    @apply opacity-100;
+  }
+  .arrow {
+    @apply absolute size-2 bg-base-content;
+  }
+}
+
+.dropdown {
+  @apply absolute z-50 flex w-32 flex-col rounded bg-base-content px-2 py-1 text-sm text-base-100 opacity-0 transition-opacity duration-300 ease-in-out;
+
+  &.show {
+    @apply opacity-100;
+  }
+  .arrow {
+    @apply absolute size-2 bg-base-content;
+  }
+  > a {
+    @apply px-2 py-1;
+  }
+}
+.tab-content section {
+  @apply transition-all duration-300 ease-in-out;
+
+  &.inactive {
+    @apply invisible h-0 overflow-hidden opacity-0;
+  }
+}
+.modal {
+  @apply invisible fixed left-0 top-0 z-30 flex h-full w-full overflow-auto bg-base-content/50 p-5 transition-all duration-300 ease-out;
+
+  &.show {
+    @apply visible;
+
+    .content {
+      animation: modal-fade-in 0.3s ease-out;
+    }
+  }
+  &:not(.show) .content {
+    animation: modal-fade-out 0.3s ease-out;
+  }
+  &.small .content {
+    @apply top-1/2 -translate-y-1/2;
+  }
+
+  .content {
+    @apply relative left-1/2 h-fit w-full max-w-xl -translate-x-1/2 rounded-lg bg-base-100 p-5 shadow-lg;
+  }
+}
+
+@keyframes modal-fade-in {
+  from {
+    opacity: 0;
+    margin-top: 20px;
+  }
+  to {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+@keyframes modal-fade-out {
+  from {
+    opacity: 1;
+    margin-top: 0;
+  }
+  to {
+    opacity: 0;
+    margin-top: 20px;
+  }
+}
+.-order-1 {
+  order: -1;
 }

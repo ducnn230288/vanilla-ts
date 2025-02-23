@@ -10,8 +10,22 @@ import { API } from './api';
 import { setupDropdown } from './dropdown';
 import { setupMenuMobile } from './menu-mobile';
 import { Message } from './message';
+import { setupModal } from './modal';
 import { setupTooltip } from './tooltip';
 import { setupFormValid } from './validation';
+
+declare global {
+  interface Window {
+    SetupFormValid: typeof setupFormValid;
+    API: typeof API;
+    Message: typeof Message;
+    _FORMSTATUS_: Record<string, boolean>;
+    _MESSAGE_: Record<string, string>;
+    _FORM_: { [formName: string]: { [fieldName: string]: unknown } };
+    _SELECT_: { [formName: string]: { [fieldName: string]: typeof Choices } };
+    _CLOSE_MODAL_: { [modalName: string]: () => void };
+  }
+}
 
 const Theme = (() => {
   /* Function ============ */
@@ -34,6 +48,7 @@ const Theme = (() => {
         maxLength: 'Xin vui lòng nhập không quá ',
         compare: 'Xin vui lòng nhập không quá ',
       };
+      setupModal();
     },
 
     load: () => {
