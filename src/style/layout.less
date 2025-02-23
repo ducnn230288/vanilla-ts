@@ -5,14 +5,14 @@
     @apply absolute left-0 top-0 -z-20 w-full;
     img {
       @apply w-full object-cover;
-      height: 500px;
+      height: 700px;
     }
   }
   .banner-contents {
     @apply relative overflow-hidden;
-    height: 500px;
+    height: 700px;
     .con-container {
-      @apply absolute left-0 top-1/2 w-full -translate-y-1/2 bg-gradient-to-r from-base-content/80 py-5;
+      @apply ~'py-2.5' absolute left-0 top-1/2 w-5/12 -translate-y-1/2 bg-gradient-to-r from-base-content/80 pl-12;
       .container-div {
         @apply container mx-auto px-3 text-base-100 md:px-0;
         p {
@@ -145,11 +145,16 @@
 
 .info-container {
   @apply container mx-auto flex flex-col gap-6 text-base-content;
+
+  > *:not(figure) {
+    @apply mx-auto max-w-3xl;
+  }
+
   .info-container__description {
     @apply font-semibold;
   }
   .info-container__image {
-    @apply ~'h-[365px]' w-full overflow-hidden rounded-xl;
+    @apply w-full overflow-hidden rounded-xl;
     img {
       @apply h-full w-full object-cover;
     }
@@ -170,10 +175,25 @@
     }
   }
   .product-list__container {
-    @apply mb-3 grid grid-cols-3 gap-4;
+    @apply mb-3 grid gap-20;
 
-    @media (max-width: @media-lg) {
-      @apply grid-cols-2;
+    .product-item {
+      @apply flex cursor-pointer flex-col gap-5;
+      figure {
+        @apply w-full flex-none px-10;
+        img {
+          @apply h-full w-full overflow-hidden rounded-xl object-cover;
+        }
+      }
+      div {
+        @apply flex h-full flex-col items-center justify-between p-1;
+        p {
+          @apply font-semibold;
+        }
+        span {
+          @apply py-1 font-medium text-warning;
+        }
+      }
     }
   }
   .product-list__pagination {
@@ -187,27 +207,6 @@
     }
     .product-list__pagination-item--active {
       @apply bg-warning text-base-100;
-    }
-  }
-}
-
-#new-container {
-  div {
-    @apply flex w-full flex-col gap-6 rounded-xl bg-base-100 p-3 shadow-lg;
-    figure {
-      @apply ~'h-[252px]' w-full overflow-hidden rounded-xl;
-      img {
-        @apply h-full w-full object-cover;
-      }
-    }
-    h6 {
-      @apply text-base-content;
-    }
-    p {
-      @apply text-base-content/60;
-    }
-    button {
-      @apply ~'rounded-[5px]' ~'py-[14.5px]' w-fit bg-warning px-8 text-base-100;
     }
   }
 }
@@ -254,24 +253,6 @@
 }
 
 #product-list {
-  .product-item {
-    @apply ~'h-[300px]' flex cursor-pointer flex-col gap-1 overflow-hidden rounded-xl bg-base-100 shadow-lg;
-    figure {
-      @apply ~'h-[168px]' w-full flex-none bg-base-300;
-      img {
-        @apply h-full w-full object-cover;
-      }
-    }
-    div {
-      @apply flex h-full flex-col items-center justify-between p-1;
-      p {
-        @apply font-semibold;
-      }
-      span {
-        @apply py-1 font-medium text-warning;
-      }
-    }
-  }
 }
 
 .home__product-item {
@@ -442,83 +423,72 @@
   }
 }
 
-#header {
-  .header__top {
-    @apply container mx-auto px-3 py-1 text-base-100 md:px-0;
-    @media (max-width: @media-md) {
-      @apply hidden;
+.header__top {
+  @apply my-1 w-full bg-primary/50 px-3 text-base-100 md:px-0;
+  @media (max-width: @media-md) {
+    @apply hidden;
+  }
+
+  .header__top-wrapper {
+    @apply relative mx-auto flex max-w-4xl items-center justify-between py-1;
+
+    .header__contact {
+      @apply flex justify-between gap-4 text-sm;
+      @media (max-width: @media-lg) {
+        @apply w-full;
+      }
+      .header__contact-item {
+        @apply flex items-center;
+
+        &:nth-of-type(1) {
+          @apply whitespace-nowrap;
+        }
+
+        .header__contact-icon {
+          @apply mr-1 fill-base-100;
+        }
+        .header__contact-link {
+        }
+      }
     }
-
-    .header__top-wrapper {
-      @apply relative flex items-center justify-between gap-4 py-1;
-      .header__top-bg {
-        @apply ~'w-[200%]' absolute -right-8 top-0 -z-10 h-full rounded-full bg-primary/50;
-      }
-      .header__contact {
-        @apply flex justify-between text-sm;
-        width: 900px;
-        @media (max-width: @media-lg) {
-          @apply w-full;
+    .header__social {
+      @apply ~'text-[14px] leading-[18.67px]' flex justify-end gap-3;
+      .header__social-item {
+        @apply relative;
+        .header__social-icon {
+          @apply fill-base-100;
         }
-        .header__contact-item {
-          @apply flex items-center;
-
-          &:nth-of-type(1) {
-            @apply whitespace-nowrap;
-          }
-
-          .header__contact-icon {
-            @apply mr-3 fill-base-100;
-          }
-          .header__contact-link {
-          }
-        }
-      }
-      .header__social {
-        @apply ~'text-[14px] leading-[18.67px]' flex justify-end gap-3;
-        .header__social-item {
-          @apply relative;
-          .header__social-icon {
-            @apply fill-base-100;
-          }
-          .header__social-dropdown {
-            @apply absolute left-0 top-full z-10 hidden;
-          }
+        .header__social-dropdown {
+          @apply absolute left-0 top-full z-10 hidden;
         }
       }
     }
   }
-  .header__main {
-    @apply relative mx-auto w-10/12 px-3 md:px-0;
+}
+.header__main {
+  @apply sticky top-0 z-50 mx-auto max-w-4xl px-3 md:px-0;
 
-    @media (max-width: @media-md) {
-      @apply mt-1;
+  @media (max-width: @media-md) {
+    @apply mt-1;
+  }
+  .header__main-bg {
+    @apply ~'w-[115%]' absolute -left-16 -z-10 h-full rounded-full bg-base-100/70;
+  }
+  .header__main-wrapper {
+    @apply flex items-center justify-between py-3;
+
+    @media (max-width: @media-lg) and (min-width: (@media-md - 1)) {
+      @apply flex-col;
     }
-    .header__main-bg {
-      @apply ~'w-[200%]' absolute -left-16 -z-10 h-full rounded-full bg-base-100;
+
+    .header__logo {
+      @apply flex-none;
     }
-    .header__main-wrapper {
-      @apply flex items-center justify-between py-3;
+    .header__nav {
+      @apply flex justify-around gap-6 text-lg font-medium uppercase text-base-content;
 
-      @media (max-width: @media-lg) and (min-width: (@media-md - 1)) {
-        @apply flex-col;
-      }
-
-      .header__logo {
-        @apply flex-none;
-      }
-      .header__nav {
-        @apply flex justify-around gap-10 text-lg text-base-content;
-
-        @media (max-width: @media-md) {
-          @apply hidden;
-        }
-      }
-      .header__contact-btn {
-        @apply flex-none rounded-md bg-warning px-5 py-2 font-medium text-base-100;
-        @media (max-width: @media-lg) {
-          @apply hidden;
-        }
+      @media (max-width: @media-md) {
+        @apply hidden;
       }
     }
   }
@@ -530,4 +500,7 @@
 
 .main-content {
   @apply bg-base-100 py-12;
+}
+.btn-yellow {
+  @apply flex-none rounded-md bg-warning px-5 py-2 font-medium text-base-100;
 }

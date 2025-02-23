@@ -1,7 +1,8 @@
 @import '../variables.less';
 
 .camping__section {
-  @apply bg-base-200;
+  background-image: url('/assets/images/map.svg');
+
   .camping__container {
     @apply container mx-auto flex gap-6 py-12;
     .camping__category {
@@ -15,6 +16,42 @@
       @apply ~'w-[calc(100%-300px)]' text-base-content;
       @media (max-width: @media-md) {
         @apply w-full;
+      }
+    }
+  }
+}
+.features {
+  @apply mx-auto max-w-4xl pt-6;
+
+  > nav {
+    @apply grid grid-cols-4 overflow-hidden rounded-xl;
+
+    > button {
+      @apply flex-none bg-warning px-5 py-2 font-medium text-base-100;
+
+      &.active {
+        @apply bg-primary;
+      }
+    }
+  }
+  .content {
+    @apply hidden;
+
+    &.active {
+      @apply block;
+    }
+
+    table {
+      @apply my-3 w-full overflow-hidden rounded-lg;
+
+      thead th {
+        @apply bg-primary py-1 text-base-100;
+      }
+      tbody > tr:nth-child(even) > td {
+        @apply bg-base-300 p-1;
+      }
+      tbody > tr:nth-child(odd) > td {
+        @apply bg-base-200 p-1;
       }
     }
   }

@@ -1,6 +1,8 @@
 @import '../variables.less';
 
-#touring-tech {
+.touring-tech {
+  @apply container mx-auto overflow-auto;
+
   .mxauto {
     @apply mx-auto;
   }
@@ -80,25 +82,25 @@
     @apply ~'h-[54px]' container relative mx-auto flex items-center justify-center;
   }
   &__divider {
-    @apply w-full border-b border-base-300;
+    @apply w-full border-b border-primary;
   }
   &__buttons {
     @apply absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 items-center gap-8 font-serif;
   }
   &__button {
-    @apply rounded-xl px-6 py-3;
+    @apply w-40 rounded-xl px-6 py-3;
     &--active {
-      @apply bg-warning text-base-100;
+      @apply bg-primary text-base-100;
     }
     &--inactive {
-      @apply border border-warning bg-base-100 text-warning;
+      @apply border-2 border-primary bg-base-100 text-primary;
     }
   }
 }
 
 .touring-description {
   h6 {
-    @apply container mx-auto my-8 border-l-4 border-warning pl-3 text-base-content/60;
+    @apply container mx-auto my-8 max-w-3xl border-l-4 border-warning pl-3 text-base-content/60;
   }
 }
 
@@ -107,11 +109,7 @@
 }
 
 .touring-feature {
-  @apply container mx-auto flex flex-col gap-6;
-}
-
-.touring-tech {
-  @apply container mx-auto overflow-auto;
+  @apply container mx-auto flex flex-col gap-16;
 }
 
 .feature__section {
@@ -119,7 +117,7 @@
 }
 
 .feature__grid {
-  @apply grid w-full;
+  @apply grid w-full overflow-hidden rounded-2xl;
 
   @media (max-width: @media-md) {
     @apply block;
@@ -141,18 +139,15 @@
 }
 
 .feature__list {
-  @apply list-disc pl-5 text-base-100;
-}
-.feature__text {
-  @apply text-base-100;
+  @apply list-disc pl-5;
 }
 
 .feature__image {
-  // Add styles if needed
+  @apply flex items-center;
 }
 
 .feature__img {
-  @apply h-full w-full object-cover;
+  @apply w-full overflow-hidden rounded-2xl object-cover;
 }
 
 .feature__highlight {
@@ -160,5 +155,32 @@
 }
 
 .feature__content {
-  @apply ~"bg-[url('/assets/images/home/bg-2.png')]" flex flex-col gap-3 px-14 py-12;
+  @apply flex flex-col gap-3 px-14 py-12;
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply uppercase text-base-content;
+  }
+
+  h5 {
+    @apply uppercase text-base-content/50;
+  }
+
+  h6 {
+    @apply text-base-content;
+  }
+
+  ul {
+    @apply list-disc pl-5 text-xl;
+  }
+
+  p {
+    @apply text-xl;
+  }
+
+  div {
+    @apply text-xl;
+  }
 }

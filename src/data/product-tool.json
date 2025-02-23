@@ -2,13 +2,13 @@
   "products": [
     {
       "uuid": "1a2b3c4d-5e6f-7g8h-9i0j-k1l2m3n4o5p6",
-      "image": "/assets/images/tool/rectangle5.png",
+      "image": "https://freshness.vn/storage/9f4370d9-b0d7-4194-8148-e2a898319a76/QaniTujclfyZbk6xENbZhOPvZP5n5zmsq9kOYNme.jpg",
       "name": "GasStop GasGear 90-Degree Propane Braided Stainless Pigtail Hose, 1/4\" Inverted 1",
       "price": 4.56
     },
     {
       "uuid": "2b3c4d5e-6f7g-8h9i-0j1k-l2m3n4o5p6q7",
-      "image": "/assets/images/tool/rectangle5.png",
+      "image": "https://freshness.vn/storage/9f4370d9-b0d7-4194-8148-e2a898319a76/QaniTujclfyZbk6xENbZhOPvZP5n5zmsq9kOYNme.jpg",
       "name": "GasStop GasGear 90-Degree Propane Braided Stainless Pigtail Hose, 1/4\" Inverted 2",
       "price": 4.56
     },
@@ -73,5 +73,4 @@
       "price": 4.56
     }
   ]
-  
 }

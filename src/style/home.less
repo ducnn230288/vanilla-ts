@@ -7,6 +7,8 @@
   }
 }
 .home__hero {
+  @apply -mt-24;
+
   .home__figure {
     @apply absolute left-0 -z-20 w-full overflow-hidden;
     height: 56vw;
@@ -21,28 +23,24 @@
   }
   .home__content {
     @apply relative;
-    height: calc(54vw - 2rem);
-    max-height: 930px;
-    min-height: 550px;
+    height: 58vw;
+    max-height: 980px;
+    min-height: 590px;
 
     .home__overlay {
-      @apply absolute left-0 top-1/2 w-full -translate-y-1/2 bg-gradient-to-r from-base-content/70 via-transparent via-80% py-5;
+      @apply absolute left-0 top-1/2 w-full -translate-y-1/2 bg-gradient-to-r from-base-content/70 via-transparent via-80% py-2;
     }
 
     .home__container {
-      @apply container mx-auto px-3 text-base-100 md:px-0;
+      @apply mx-auto pl-12 pr-3 text-base-100;
     }
 
     .home__description {
-      @apply text-base-100;
-    }
-
-    .home__title {
-      @apply my-2;
+      @apply pb-1 text-base-100;
     }
 
     .home__subtitle {
-      @apply ~'mb-[21px]' ml-10;
+      @apply ml-10;
     }
 
     .home__button {
@@ -85,7 +83,7 @@
 .home__journey {
   @apply h-fit w-full;
   .home__bg-container {
-    @apply ~'bg-[url(assets/images/home/bg-2.png)]' flex h-full w-full items-center justify-center;
+    @apply ~'bg-[url(/assets/images/home/bg-2.png)]' flex h-full w-full items-center justify-center;
     .home__inner-container {
       @apply container h-full w-full py-12;
       .home__journey-title {
@@ -133,7 +131,7 @@
 }
 
 .home__section.home__guide {
-  @apply ~'bg-[url(assets/images/home/bg-2.png)]' bg-base-100;
+  @apply ~'bg-[url(/assets/images/home/bg-2.png)]' bg-base-100;
   .home__container {
     @apply ~'h-[410px]' container mx-auto flex w-full;
     .home__guide {
@@ -163,7 +161,7 @@
       }
     }
     .home__image-container {
-      @apply ~'w-1/2 bg-[url(assets/images/home/frame5.png)]' bg-cover bg-no-repeat;
+      @apply ~'w-1/2 bg-[url(/assets/images/home/frame5.png)]' bg-cover bg-no-repeat;
     }
   }
 }
