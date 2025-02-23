@@ -9,7 +9,7 @@ html {
   }
 }
 body {
-  @apply min-h-screen overflow-x-hidden bg-base-100 leading-5 text-base-content;
+  @apply bg-base-100 text-base-content min-h-screen overflow-x-hidden leading-5;
 }
 h1,
 h2,
@@ -92,7 +92,7 @@ form .group {
       @apply !border-error !bg-error/10 text-error placeholder-error focus:ring-error;
     }
     p.error {
-      @apply text-sm text-error;
+      @apply text-error text-sm;
     }
   }
   > .choices {
@@ -104,31 +104,50 @@ form .group {
   input:checked ~ .state,
   &.p-toggle .state {
     label:after {
-      @apply !bg-primary;
+      @apply !bg-warning;
     }
     label:before {
-      @apply border-primary;
+      @apply border-warning;
     }
   }
   &.p-default:not(.p-fill) input:checked ~ .state label:after {
-    @apply !bg-primary;
+    @apply !bg-warning;
   }
   &.p-switch {
     input:checked ~ .state:before {
-      @apply border-primary;
+      @apply border-warning;
     }
     &.p-fill input:checked ~ .state:before {
-      @apply !bg-primary;
+      @apply !bg-warning;
     }
     &.p-slim input:checked ~ .state:before {
-      @apply border-primary !bg-primary;
+      @apply border-warning !bg-warning;
+    }
+  }
+  &.checkbox {
+    @apply mb-2;
+    .state {
+      svg {
+        @apply absolute left-0 opacity-0;
+        z-index: 1;
+        width: calc(1em + 2px);
+        height: calc(1em + 2px);
+        top: calc((0% - (100% - 1em)) - 8%);
+      }
+      label:after,
+      label:before {
+        @apply rounded;
+      }
+    }
+    input:checked ~ .state svg {
+      opacity: 1;
     }
   }
 }
 
 .choices {
   &__inner {
-    @apply !rounded-lg !border-base-200 !bg-base-100;
+    @apply !border-base-200 !bg-base-100 !rounded-lg;
   }
   &__list--multiple .choices__item {
     @apply !border-primary !bg-primary;
@@ -137,13 +156,15 @@ form .group {
     @apply !bg-transparent;
   }
 }
-
+range-slider {
+  @apply w-full;
+}
 .html-render {
   @apply text-justify;
   figure {
     @apply inline-block w-full py-5 text-center;
     figcaption {
-      @apply mt-1 inline-block border border-primary-content bg-primary-content px-2 py-1;
+      @apply border-primary-content bg-primary-content mt-1 inline-block border px-2 py-1;
     }
   }
   p {
@@ -153,28 +174,28 @@ form .group {
     @apply mx-auto;
   }
   h1 {
-    @apply mb-7 mt-0 text-primary;
+    @apply text-primary mb-7 mt-0;
   }
   h2 {
-    @apply mb-6 mt-0 text-primary;
+    @apply text-primary mb-6 mt-0;
   }
   h3 {
-    @apply mb-5 mt-0 text-primary;
+    @apply text-primary mb-5 mt-0;
   }
   h4 {
-    @apply mb-4 mt-0 text-primary;
+    @apply text-primary mb-4 mt-0;
   }
   h5 {
-    @apply mb-4 mt-0 text-primary;
+    @apply text-primary mb-4 mt-0;
   }
   h6 {
-    @apply mb-4 mt-0 text-primary;
+    @apply text-primary mb-4 mt-0;
   }
   table {
     @apply my-3 w-full;
     th,
     td {
-      @apply ~'py-1.5' border border-base-200 px-2 text-left;
+      @apply ~'py-1.5' border-base-200 border px-2 text-left;
     }
   }
   blockquote {
@@ -189,7 +210,7 @@ form .group {
 
     &:before,
     &:after {
-      @apply absolute text-3xl font-black text-primary;
+      @apply text-primary absolute text-3xl font-black;
       font-family:
         Line Awesome Free,
         serif;
@@ -214,7 +235,7 @@ form .group {
     @apply flex;
   }
   span {
-    @apply ~'h-0.5' w-full self-end bg-base-content transition-all duration-300 ease-in-out;
+    @apply ~'h-0.5' bg-base-content w-full self-end transition-all duration-300 ease-in-out;
   }
   .meat {
     @apply ~'w-10/12' transition-all duration-150 ease-in-out;
@@ -255,7 +276,7 @@ form .group {
 .hamburger-arrow {
   @apply relative h-6 w-9;
   span {
-    @apply ~'h-0.5' absolute left-0 w-full rounded-sm bg-base-100 transition-all duration-300 ease-in-out;
+    @apply ~'h-0.5' bg-base-100 absolute left-0 w-full rounded-sm transition-all duration-300 ease-in-out;
     &.top-bun {
       @apply top-0;
     }
@@ -279,7 +300,7 @@ form .group {
 .mega-menu {
   @apply flex items-center gap-10;
   > li > a {
-    @apply font-bold hover:text-primary;
+    @apply hover:text-primary font-bold;
   }
   &.col {
     @apply flex-col gap-2;
@@ -308,11 +329,11 @@ form .group {
     @apply relative;
 
     > a {
-      @apply ~'py-1.5' flex items-center gap-3 border-b border-base-300;
+      @apply ~'py-1.5' border-base-300 flex items-center gap-3 border-b;
       &:has(+ ul) {
         @apply pr-5;
         &::after {
-          @apply ~'size-3.5' absolute right-0 top-1/2 -translate-y-1/2 rotate-90 bg-base-content bg-cover;
+          @apply ~'size-3.5' bg-base-content absolute right-0 top-1/2 -translate-y-1/2 rotate-90 bg-cover;
           content: '';
           mask: url('/assets/images/arrow.svg') no-repeat 100% 100%;
           mask-size: cover;
@@ -321,7 +342,7 @@ form .group {
     }
     > ul {
       width: 250px;
-      @apply invisible absolute left-auto top-0 rounded border-t-4 border-warning bg-base-100 opacity-0 shadow transition-all duration-300 ease-in-out;
+      @apply border-warning bg-base-100 invisible absolute left-auto top-0 rounded border-t-4 opacity-0 shadow transition-all duration-300 ease-in-out;
 
       &.mega {
         @apply left-10 grid grid-cols-5;
@@ -334,7 +355,7 @@ form .group {
             @apply static m-0 w-full rounded-none border-none bg-transparent opacity-100;
 
             > li:not(:has(a)) {
-              @apply py-3 font-bold text-base-content/50;
+              @apply text-base-content/50 py-3 font-bold;
             }
           }
         }
@@ -367,10 +388,8 @@ form .group {
   }
 }
 form {
-  @apply m-10 grid gap-2 rounded-md bg-base-100 p-5 shadow md:p-10;
-
   > button[type='submit'] {
-    @apply ~'p-2.5' rounded-lg border bg-primary text-primary-content;
+    @apply ~'p-2.5' bg-primary text-primary-content rounded-lg border;
   }
   .radio {
     @apply mb-2;
@@ -388,31 +407,12 @@ form {
       }
     }
   }
-  .checkbox {
-    @apply mb-2;
-    .state {
-      svg {
-        @apply absolute left-0 opacity-0;
-        z-index: 1;
-        width: calc(1em + 2px);
-        height: calc(1em + 2px);
-        top: calc((0% - (100% - 1em)) - 8%);
-      }
-      label:after,
-      label:before {
-        @apply rounded;
-      }
-    }
-    input:checked ~ .state svg {
-      opacity: 1;
-    }
-  }
 }
 .header {
-  @apply fixed left-0 top-0 z-30 w-full;
+  @apply absolute left-0 top-0 z-30 w-full;
 
   > div {
-    @apply container mx-auto flex items-center justify-between bg-primary py-4 pl-5 pr-4;
+    @apply bg-primary container mx-auto flex items-center justify-between py-4 pl-5 pr-4;
 
     .menu {
       @apply hidden lg:block;
@@ -429,7 +429,7 @@ body {
 .pagination {
   @apply mx-auto mt-8 flex w-fit items-center gap-2 py-4;
   > a {
-    @apply ~'size-[42px]' flex items-center justify-center rounded-full border border-base-300 bg-base-100;
+    @apply ~'size-[42px]' border-base-300 bg-base-100 flex items-center justify-center rounded-full border;
 
     > svg {
       @apply h-4 w-4;
@@ -442,4 +442,80 @@ body {
   > .active {
     @apply bg-warning text-base-100;
   }
+}
+.tooltip {
+  @apply bg-base-content text-base-100 absolute rounded px-2 py-1 text-sm opacity-0 transition-opacity duration-300 ease-in-out;
+
+  &.show {
+    @apply opacity-100;
+  }
+  .arrow {
+    @apply bg-base-content absolute size-2;
+  }
+}
+
+.dropdown {
+  @apply bg-base-content text-base-100 absolute z-50 flex w-32 flex-col rounded px-2 py-1 text-sm opacity-0 transition-opacity duration-300 ease-in-out;
+
+  &.show {
+    @apply opacity-100;
+  }
+  .arrow {
+    @apply bg-base-content absolute size-2;
+  }
+  > a {
+    @apply px-2 py-1;
+  }
+}
+.tab-content section {
+  @apply transition-all duration-300 ease-in-out;
+
+  &.inactive {
+    @apply invisible h-0 overflow-hidden opacity-0;
+  }
+}
+.modal {
+  @apply bg-base-content/50 invisible fixed left-0 top-0 z-30 flex h-full w-full overflow-auto p-5 transition-all duration-300 ease-out;
+
+  &.show {
+    @apply visible;
+
+    .content {
+      animation: modal-fade-in 0.3s ease-out;
+    }
+  }
+  &:not(.show) .content {
+    animation: modal-fade-out 0.3s ease-out;
+  }
+  &.small .content {
+    @apply top-1/2 -translate-y-1/2;
+  }
+
+  .content {
+    @apply bg-base-100 relative left-1/2 h-fit w-full max-w-xl -translate-x-1/2 rounded-lg p-5 shadow-lg;
+  }
+}
+
+@keyframes modal-fade-in {
+  from {
+    opacity: 0;
+    margin-top: 20px;
+  }
+  to {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+@keyframes modal-fade-out {
+  from {
+    opacity: 1;
+    margin-top: 0;
+  }
+  to {
+    opacity: 0;
+    margin-top: 20px;
+  }
+}
+.-order-1 {
+  order: -1;
 }
