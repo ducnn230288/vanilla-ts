@@ -5,14 +5,14 @@
     @apply absolute left-0 top-0 -z-20 w-full;
     img {
       @apply w-full object-cover;
-      height: 500px;
+      height: 700px;
     }
   }
   .banner-contents {
     @apply relative overflow-hidden;
-    height: 500px;
+    height: 700px;
     .con-container {
-      @apply absolute left-0 top-1/2 w-full -translate-y-1/2 bg-gradient-to-r from-base-content/80 py-5;
+      @apply absolute left-0 top-1/2 w-7/12 -translate-y-1/2 bg-gradient-to-r from-base-content/80 py-5 pl-12;
       .container-div {
         @apply container mx-auto px-3 text-base-100 md:px-0;
         p {
@@ -444,19 +444,16 @@
 
 #header {
   .header__top {
-    @apply container mx-auto px-3 py-1 text-base-100 md:px-0;
+    @apply my-1 w-full bg-primary/50 px-3 text-base-100 md:px-0;
     @media (max-width: @media-md) {
       @apply hidden;
     }
 
     .header__top-wrapper {
-      @apply relative flex items-center justify-between gap-4 py-1;
-      .header__top-bg {
-        @apply ~'w-[200%]' absolute -right-8 top-0 -z-10 h-full rounded-full bg-primary/50;
-      }
+      @apply relative mx-auto flex max-w-4xl items-center justify-between py-1;
+
       .header__contact {
         @apply flex justify-between text-sm;
-        width: 900px;
         @media (max-width: @media-lg) {
           @apply w-full;
         }
@@ -489,13 +486,13 @@
     }
   }
   .header__main {
-    @apply relative mx-auto w-10/12 px-3 md:px-0;
+    @apply relative mx-auto max-w-4xl px-3 md:px-0;
 
     @media (max-width: @media-md) {
       @apply mt-1;
     }
     .header__main-bg {
-      @apply ~'w-[200%]' absolute -left-16 -z-10 h-full rounded-full bg-base-100;
+      @apply ~'w-[115%]' absolute -left-16 -z-10 h-full rounded-full bg-base-100/70;
     }
     .header__main-wrapper {
       @apply flex items-center justify-between py-3;
@@ -508,7 +505,7 @@
         @apply flex-none;
       }
       .header__nav {
-        @apply flex justify-around gap-10 text-lg text-base-content;
+        @apply flex justify-around gap-6 text-lg font-medium uppercase text-base-content;
 
         @media (max-width: @media-md) {
           @apply hidden;

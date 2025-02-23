@@ -11,7 +11,7 @@ export class Responses<T> {
 
 export const keyUser = 'm8nvn*&hKwcgb^D-D#Hz^5CXfKySpY';
 export const KEY_TOKEN = 'b7a2bdf4-ac40-4012-9635-ff4b7e55eae0';
-export const LINK_API = 'http://dev1.geneat.vn:7100/api/v1';
+export const LINK_API = '/api';
 export const API = {
   init: () =>
     ({

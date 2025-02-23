@@ -1,6 +1,8 @@
-@import '../variables.less';
+@import "../variables.less";
 
-#touring-tech {
+.touring-tech {
+  @apply container mx-auto overflow-auto;
+
   .mxauto {
     @apply mx-auto;
   }
@@ -110,10 +112,6 @@
   @apply container mx-auto flex flex-col gap-6;
 }
 
-.touring-tech {
-  @apply container mx-auto overflow-auto;
-}
-
 .feature__section {
   @apply mt-6;
 }
@@ -161,4 +159,27 @@
 
 .feature__content {
   @apply ~"bg-[url('/assets/images/home/bg-2.png')]" flex flex-col gap-3 px-14 py-12;
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply uppercase text-base-content;
+  }
+
+  h5 {
+    @apply text-base uppercase text-base-content/50;
+  }
+
+  h6 {
+    @apply text-base text-base-content;
+  }
+
+  ul {
+    @apply list-disc pl-5 text-base-100;
+  }
+
+  p {
+    @apply text-base-100;
+  }
 }

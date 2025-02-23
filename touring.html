@@ -94,7 +94,6 @@
     <header id="header" class="header">
       <section class="header__top">
         <div class="header__top-wrapper">
-          <div class="header__top-bg"></div>
           <ul class="header__contact">
             <li class="header__contact-item">
               <svg height="17" width="17" aria-hidden="true" class="header__contact-icon">
@@ -149,7 +148,6 @@
             <li class="header__nav-item"><a class="header__nav-link" href="/about.html">Về chúng tôi</a></li>
             <li class="header__nav-item"><a class="header__nav-link" href="/new.html">Tin tức</a></li>
           </ul>
-          <button class="header__contact-btn">Liên hệ</button>
           <button id="hamburger" class="handle-menu hamburger">
             <span class="top-bun"></span>
             <span class="meat"></span>
@@ -161,56 +159,56 @@
 
     <div
       id="bg-menu"
-      class="handle-menu fixed top-0 h-full bg-base-content/50 transition-all duration-500 ease-in-out w-full z-30 opacity-0 -right-full"
+      class="handle-menu fixed -right-full top-0 z-30 h-full w-full bg-base-content/50 opacity-0 transition-all duration-500 ease-in-out"
     ></div>
     <div
       id="menu"
-      class="w-80 bg-warning h-screen z-40 fixed top-0 p-5 text-base-100 transition-all duration-500 ease-in-out flex justify-between flex-col -right-80"
+      class="fixed -right-80 top-0 z-40 flex h-screen w-80 flex-col justify-between bg-warning p-5 text-base-100 transition-all duration-500 ease-in-out"
     >
-      <div id="list-menu" class="transition-all duration-1000 ease-in-out relative top-10 opacity-0">
-        <div class="font-medium flex flex-col text-base-100">
-          <button class="text-base-100 border-base-100 py-3 flex justify-between border-b">
+      <div id="list-menu" class="relative top-10 opacity-0 transition-all duration-1000 ease-in-out">
+        <div class="flex flex-col font-medium text-base-100">
+          <button class="flex justify-between border-b border-base-100 py-3 text-base-100">
             Rơ moóc cắm trại
-            <svg aria-hidden="true" class="w-4 h-4 relative fill-base-100">
+            <svg aria-hidden="true" class="relative h-4 w-4 fill-base-100">
               <use href="/icons/sprite.svg#icon-arrow" />
             </svg>
           </button>
-          <button class="text-base-100 border-base-100 py-3 flex justify-between border-b">
+          <button class="flex justify-between border-b border-base-100 py-3 text-base-100">
             Rơ moóc du lịch
-            <svg aria-hidden="true" class="w-4 h-4 relative fill-base-100">
+            <svg aria-hidden="true" class="relative h-4 w-4 fill-base-100">
               <use href="/icons/sprite.svg#icon-arrow" />
             </svg>
           </button>
-          <button class="text-base-100 border-base-100 py-3 flex justify-between border-b">
+          <button class="flex justify-between border-b border-base-100 py-3 text-base-100">
             Dụng cụ
-            <svg aria-hidden="true" class="w-4 h-4 relative fill-base-100">
+            <svg aria-hidden="true" class="relative h-4 w-4 fill-base-100">
               <use href="/icons/sprite.svg#icon-arrow" />
             </svg>
           </button>
-          <button class="text-base-100 border-base-100 py-3 flex justify-between border-b">
+          <button class="flex justify-between border-b border-base-100 py-3 text-base-100">
             Về chúng tôi
-            <svg aria-hidden="true" class="w-4 h-4 relative fill-base-100">
+            <svg aria-hidden="true" class="relative h-4 w-4 fill-base-100">
               <use href="/icons/sprite.svg#icon-arrow" />
             </svg>
           </button>
-          <button class="text-base-100 py-3 flex justify-between">
+          <button class="flex justify-between py-3 text-base-100">
             Tin tức
-            <svg aria-hidden="true" class="w-4 h-4 relative fill-base-100">
+            <svg aria-hidden="true" class="relative h-4 w-4 fill-base-100">
               <use href="/icons/sprite.svg#icon-arrow" />
             </svg>
           </button>
         </div>
       </div>
 
-      <div id="contact-menu" class="transition-all duration-1000 ease-in-out relative opacity-100">
+      <div id="contact-menu" class="relative opacity-100 transition-all duration-1000 ease-in-out">
         <div class="mt-4">
-          <a class="text-base-100 inline-flex" href="https://www.facebook.com" target="_blank" rel="noreferrer">
+          <a class="inline-flex text-base-100" href="https://www.facebook.com" target="_blank" rel="noreferrer">
             <svg height="25" width="25" aria-hidden="true" class="fill-base-100">
               <use href="/icons/sprite.svg#icon-facebook" />
             </svg>
           </a>
         </div>
-        <div class="flex items-center mt-5 gap-2">
+        <div class="mt-5 flex items-center gap-2">
           <svg height="17" width="17" aria-hidden="true" class="fill-base-100">
             <use href="/icons/sprite.svg#icon-phone" />
           </svg>
@@ -218,7 +216,7 @@
             <a href="tel:0974891188">0974 891-188</a>
           </div>
         </div>
-        <div class="flex items-center mt-5 gap-2">
+        <div class="mt-5 flex items-center gap-2">
           <svg height="17" width="17" aria-hidden="true" class="fill-base-100">
             <use href="/icons/sprite.svg#icon-mail" />
           </svg>
@@ -226,7 +224,7 @@
             <a href="mailto:cskh@hotro.wesports.vn">cskh@hotro.wesports.vn</a>
           </div>
         </div>
-        <div class="flex items-center mt-3 border-t border-base-100 pt-3 gap-2">
+        <div class="mt-3 flex items-center gap-2 border-t border-base-100 pt-3">
           <svg height="25" width="32" aria-hidden="true" class="fill-base-100">
             <use href="/icons/sprite.svg#icon-map" />
           </svg>
@@ -237,7 +235,7 @@
 
     <div
       id="bg-filter"
-      class="handle-filter fixed top-0 h-full bg-base-content/50 transition-all duration-500 ease-in-out w-full z-30 opacity-0 -left-full"
+      class="handle-filter fixed -left-full top-0 z-30 h-full w-full bg-base-content/50 opacity-0 transition-all duration-500 ease-in-out"
     ></div>
 
     <main id="main">
@@ -255,7 +253,7 @@
             <div class="con-container">
               <div class="container-div">
                 <p>{{this.subtitle}}</p>
-                <h1>{{this.title}}</h1>
+                <h3>{{this.title}}</h3>
               </div>
             </div>
           </div>
@@ -289,7 +287,7 @@
             <div class="search__spacer"></div>
             <form action="" class="search__form">
               <button type="button" class="search__button">
-                <svg aria-hidden="true" class="w-4 h-4 relative">
+                <svg aria-hidden="true" class="relative h-4 w-4">
                   <use href="/icons/sprite.svg#icon-search" />
                 </svg>
               </button>
@@ -387,7 +385,7 @@
                 <button class="btn-find handle-filter" id="filter">Tìm kiếm</button>
                 <div class="product-list__sort">
                   Mới nhất
-                  <svg aria-hidden="true" class="w-4 h-4 relative rotate-90">
+                  <svg aria-hidden="true" class="relative h-4 w-4 rotate-90">
                     <use href="/icons/sprite.svg#icon-arrow" />
                   </svg>
                 </div>
@@ -411,7 +409,7 @@
             <!-- pagination -->
             <div class="product-list__pagination">
               <div class="product-list__pagination-item">
-                <svg aria-hidden="true" class="w-4 h-4 relative">
+                <svg aria-hidden="true" class="relative h-4 w-4">
                   <use href="/icons/sprite.svg#icon-arrow" />
                 </svg>
               </div>
@@ -419,7 +417,7 @@
               <div class="product-list__pagination-item">2</div>
               <div class="product-list__pagination-item">3</div>
               <div class="product-list__pagination-item">
-                <svg aria-hidden="true" class="w-4 h-4 relative">
+                <svg aria-hidden="true" class="relative h-4 w-4">
                   <use href="/icons/sprite.svg#icon-arrow" />
                 </svg>
               </div>
@@ -577,7 +575,7 @@
                   <li class="footer__social-item">
                     <a href="#" class="footer__social-link">
                       <span class="footer__social-hover"></span>
-                      <svg height="25" width="25" aria-hidden="true" class="fill-base-content mx-auto">
+                      <svg height="25" width="25" aria-hidden="true" class="mx-auto fill-base-content">
                         <use href="/icons/sprite.svg#icon-facebook" />
                       </svg>
                     </a>
