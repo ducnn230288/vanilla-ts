@@ -443,3 +443,27 @@ body {
     @apply bg-warning text-base-100;
   }
 }
+.tooltip {
+  @apply absolute rounded bg-base-content px-2 py-1 text-sm text-base-100 opacity-0 transition-opacity duration-300 ease-in-out;
+
+  &.show {
+    @apply opacity-100;
+  }
+  .arrow {
+    @apply absolute size-2 bg-base-content;
+  }
+}
+
+.dropdown {
+  @apply absolute z-50 flex w-32 flex-col rounded bg-base-content px-2 py-1 text-sm text-base-100 opacity-0 transition-opacity duration-300 ease-in-out;
+
+  &.show {
+    @apply opacity-100;
+  }
+  .arrow {
+    @apply absolute size-2 bg-base-content;
+  }
+  > a {
+    @apply px-2 py-1;
+  }
+}
